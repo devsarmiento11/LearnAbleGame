@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "183472480070",
+    "project_id": "learnable-fb251",
+    "storage_bucket": "learnable-fb251.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:183472480070:android:adc6ffa56045627cde8f47",
+        "android_client_info": {
+          "package_name": "com.defaultcompany.learnablegame"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnaHtZw7wAXr1ILBZHkXL3ErPFSksKOAQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

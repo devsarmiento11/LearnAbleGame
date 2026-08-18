@@ -1,0 +1,767 @@
+fileFormatVersion: 2
+guid: 2fc2e60db55c8654a85962c9dc2c7dcc
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3538802354667056408
+    second: VerticalLineIcon_0
+  - first:
+      213: 4459881802023502544
+    second: VerticalLineIcon_1
+  - first:
+      213: 5982676031419660489
+    second: VerticalLineIcon_2
+  - first:
+      213: -3860176866070759279
+    second: VerticalLineIcon_3
+  - first:
+      213: -7154294552949321430
+    second: VerticalLineIcon_4
+  - first:
+      213: 8756459965125064616
+    second: VerticalLineIcon_5
+  - first:
+      213: 1115904795261437738
+    second: VerticalLineIcon_6
+  - first:
+      213: 8445817723454979882
+    second: VerticalLineIcon_7
+  - first:
+      213: 8718985075786246801
+    second: VerticalLineIcon_8
+  - first:
+      213: -4298225293112631474
+    second: VerticalLineIcon_9
+  - first:
+      213: -4278324309339490820
+    second: VerticalLineIcon_10
+  - first:
+      213: -3241359144189243531
+    second: VerticalLineIcon_11
+  - first:
+      213: -2321334488907739112
+    second: VerticalLineIcon_12
+  - first:
+      213: -19764264675949827
+    second: VerticalLineIcon_13
+  - first:
+      213: 617434950951333677
+    second: VerticalLineIcon_14
+  - first:
+      213: 1154531358202362208
+    second: VerticalLineIcon_15
+  - first:
+      213: -5343093565716839326
+    second: VerticalLineIcon_16
+  - first:
+      213: -6082273247147136070
+    second: VerticalLineIcon_17
+  - first:
+      213: 7711307114258627722
+    second: VerticalLineIcon_18
+  - first:
+      213: 3754003357679316940
+    second: VerticalLineIcon_19
+  - first:
+      213: 8523717411885148510
+    second: VerticalLineIcon_20
+  - first:
+      213: -4620216795102099773
+    second: VerticalLineIcon_21
+  - first:
+      213: -8420879830021682012
+    second: VerticalLineIcon_22
+  - first:
+      213: 9083684175291579171
+    second: VerticalLineIcon_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: VerticalLineIcon_0
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 1232
+        width: 36
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e211cff106a3eec0800000000000000
+      internalID: -3538802354667056408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VerticalLineIcon_1
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 1232
+        width: 37
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d207d59edea4ed30800000000000000
+      internalID: 4459881802023502544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VerticalLineIcon_2
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 1232
+        width: 33
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c8330b272cb60350800000000000000
+      internalID: 5982676031419660489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VerticalLineIcon_3
+      rect:
+        serializedVersion: 2
+        x: 1193
+        y: 1232
+        width: 32
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 198fba7a795ed6ac0800000000000000
+      internalID: -3860176866070759279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VerticalLineIcon_4
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 1232
+        width: 37
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2191f85207d6bc90800000000000000
+      internalID: -7154294552949321430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VerticalLineIcon_5
+      rect:
+        serializedVersion: 2
+        x: 1895
+        y: 1232
+        width: 37
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a7753fc1f1358970800000000000000
+      internalID: 8756459965125064616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VerticalLineIcon_6
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 1019
+        width: 36
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2786bcbf7d7c7f00800000000000000
+      internalID: 1115904795261437738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VerticalLineIcon_7
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 1019
+        width: 37
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2f7b3cb872953570800000000000000
+      internalID: 8445817723454979882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VerticalLineIcon_8
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 1019
+        width: 35
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19aeb243bbe000970800000000000000
+      internalID: 8718985075786246801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VerticalLineIcon_9
+      rect:
+        serializedVersion: 2
+        x: 1193
+        y: 1019
+        width: 32
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4f1c6f6ed2a954c0800000000000000
+      internalID: -4298225293112631474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VerticalLineIcon_10
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 1019
+        width: 37
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf5b6eb45b650a4c0800000000000000
+      internalID: -4278324309339490820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VerticalLineIcon_11
+      rect:
+        serializedVersion: 2
+        x: 1895
+        y: 1019
+        width: 37
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57fc22528016403d0800000000000000
+      internalID: -3241359144189243531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VerticalLineIcon_12
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 810
+        width: 33
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8109acfc496f8cfd0800000000000000
+      internalID: -2321334488907739112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VerticalLineIcon_13
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 810
+        width: 37
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df24eb88188c9bff0800000000000000
+      internalID: -19764264675949827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VerticalLineIcon_14
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 810
+        width: 36
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2f6d5b01d1919800800000000000000
+      internalID: 617434950951333677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VerticalLineIcon_15
+      rect:
+        serializedVersion: 2
+        x: 1193
+        y: 810
+        width: 32
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06973bf3728b50010800000000000000
+      internalID: 1154531358202362208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VerticalLineIcon_16
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 810
+        width: 37
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 264c5cdf5b489d5b0800000000000000
+      internalID: -5343093565716839326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VerticalLineIcon_17
+      rect:
+        serializedVersion: 2
+        x: 1895
+        y: 810
+        width: 37
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abbeeecf4bc679ba0800000000000000
+      internalID: -6082273247147136070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VerticalLineIcon_18
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 597
+        width: 36
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8cf353d6f0140b60800000000000000
+      internalID: 7711307114258627722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VerticalLineIcon_19
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 597
+        width: 37
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccf691c0a26e81430800000000000000
+      internalID: 3754003357679316940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VerticalLineIcon_20
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 598
+        width: 40
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e59e93553d35a4670800000000000000
+      internalID: 8523717411885148510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VerticalLineIcon_21
+      rect:
+        serializedVersion: 2
+        x: 1193
+        y: 599
+        width: 35
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c645a6cd41b1efb0800000000000000
+      internalID: -4620216795102099773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VerticalLineIcon_22
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 597
+        width: 37
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ac4e4b0966032b80800000000000000
+      internalID: -8420879830021682012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VerticalLineIcon_23
+      rect:
+        serializedVersion: 2
+        x: 1895
+        y: 598
+        width: 37
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32b771841aabf0e70800000000000000
+      internalID: 9083684175291579171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      VerticalLineIcon_0: -3538802354667056408
+      VerticalLineIcon_1: 4459881802023502544
+      VerticalLineIcon_10: -4278324309339490820
+      VerticalLineIcon_11: -3241359144189243531
+      VerticalLineIcon_12: -2321334488907739112
+      VerticalLineIcon_13: -19764264675949827
+      VerticalLineIcon_14: 617434950951333677
+      VerticalLineIcon_15: 1154531358202362208
+      VerticalLineIcon_16: -5343093565716839326
+      VerticalLineIcon_17: -6082273247147136070
+      VerticalLineIcon_18: 7711307114258627722
+      VerticalLineIcon_19: 3754003357679316940
+      VerticalLineIcon_2: 5982676031419660489
+      VerticalLineIcon_20: 8523717411885148510
+      VerticalLineIcon_21: -4620216795102099773
+      VerticalLineIcon_22: -8420879830021682012
+      VerticalLineIcon_23: 9083684175291579171
+      VerticalLineIcon_3: -3860176866070759279
+      VerticalLineIcon_4: -7154294552949321430
+      VerticalLineIcon_5: 8756459965125064616
+      VerticalLineIcon_6: 1115904795261437738
+      VerticalLineIcon_7: 8445817723454979882
+      VerticalLineIcon_8: 8718985075786246801
+      VerticalLineIcon_9: -4298225293112631474
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

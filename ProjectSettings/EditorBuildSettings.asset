@@ -1,0 +1,246 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Settings/Scenes/MainMenu.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Settings/Scenes/LoginScene.unity
+    guid: 638fd714bd2e9904eb14c5877d6d7a87
+  - enabled: 1
+    path: Assets/Settings/Scenes/CharacterSelect.unity
+    guid: f380de59faf2da14ebe29cdf31a86610
+  - enabled: 1
+    path: Assets/Settings/Scenes/PlayScene.unity
+    guid: ad193e46e3292cf4ca055749a88ea990
+  - enabled: 1
+    path: Assets/Settings/Scenes/SettingsScene.unity
+    guid: 4912401b30519914c8af635fec918ffb
+  - enabled: 1
+    path: Assets/Settings/Scenes/LeaderboardScene.unity
+    guid: 5bf102bed9a877641be29efefa66334e
+  - enabled: 0
+    path: Assets/Settings/Scenes/AdminDashboard.unity
+    guid: c0319d430d7747649894625cc7b20310
+  - enabled: 1
+    path: Assets/Settings/Scenes/EnglishGameScene.unity
+    guid: d4ec1e4b0d460b3468d77dad94e8da8a
+  - enabled: 1
+    path: Assets/Settings/Scenes/ScienceGameScene.unity
+    guid: eb2b830c7b5b1c74894e95cdac1f3849
+  - enabled: 1
+    path: Assets/Settings/Scenes/MathGameScene.unity
+    guid: 565d73e056870564eb535f994399c386
+  - enabled: 1
+    path: Assets/Settings/Scenes/EnglishGame1Level5.unity
+    guid: 7314505eaa1ced84695c6d8c786877a6
+  - enabled: 1
+    path: Assets/Settings/Scenes/EnglishGame1InstructionScene.unity
+    guid: a25019729f7cc7e41a7786f2543f3d3c
+  - enabled: 1
+    path: Assets/Settings/Scenes/EnglishGame2Instruction.unity
+    guid: 82b4b500516cd9e409f0270c453fb3b5
+  - enabled: 1
+    path: Assets/Settings/Scenes/EnglishGame2Level5.unity
+    guid: acc70acb4ded18a44bcf6a911c60784b
+  - enabled: 1
+    path: Assets/Settings/Scenes/EnglishGame3Instruction.unity
+    guid: f567ab1b799b87b43918aa0a63969e37
+  - enabled: 1
+    path: Assets/Settings/Scenes/EnglishGame3Level5.unity
+    guid: d3d96dc27ac8cce409c9f5445caa4ce8
+  - enabled: 1
+    path: Assets/Settings/Scenes/EnglishGame4Instruction.unity
+    guid: 0189d0369d3ba2e4ba6f53929e0c0d54
+  - enabled: 1
+    path: Assets/Settings/Scenes/EnglishGame4Level5.unity
+    guid: c60f56a858d0ca44095da81adc7c90d7
+  - enabled: 1
+    path: Assets/Settings/Scenes/EnglishGame5Instruction.unity
+    guid: 5565701f86622144a9ae40627568652a
+  - enabled: 1
+    path: Assets/Settings/Scenes/EnglishGame5Level3.unity
+    guid: adc7b809a5cd03340b7497037dc354a6
+  - enabled: 1
+    path: Assets/Settings/Scenes/ScienceGame1Instruction.unity
+    guid: 6305426f437b2a14dac41b9ea5f3c92d
+  - enabled: 1
+    path: Assets/Settings/Scenes/ScienceGame1Level3.unity
+    guid: fbf792cc6ec196343b7fe90068ff84d0
+  - enabled: 1
+    path: Assets/Settings/Scenes/ScienceGame2Instruction.unity
+    guid: 59eb6ebab69795947ba8bdf4e354c6ac
+  - enabled: 1
+    path: Assets/Settings/Scenes/ScienceGame2Level5.unity
+    guid: d8520859038bf3f43a09f50927ae702c
+  - enabled: 1
+    path: Assets/Settings/Scenes/ScienceGame3Instruction.unity
+    guid: 3a7003cd39449f34ebbfafe821e94aca
+  - enabled: 1
+    path: Assets/Settings/Scenes/ScienceGame3Level5.unity
+    guid: 21cab7a5d1079a44094309924d216802
+  - enabled: 1
+    path: Assets/Settings/Scenes/MathGame1Instruction.unity
+    guid: 597aff79a47f7e3498b04d076da67781
+  - enabled: 1
+    path: Assets/Settings/Scenes/MathGame1Level1.unity
+    guid: 3fa4aacf4d051cd4fa44a81e133a8d05
+  - enabled: 1
+    path: Assets/Settings/Scenes/MathLevel2InstructionScene.unity
+    guid: 457f93578aa4d984cb92bdcf8586e075
+  - enabled: 1
+    path: Assets/Settings/Scenes/MathLevel2GameScene.unity
+    guid: 1f8d80b32a43cc643b2914e5c96cab3f
+  - enabled: 1
+    path: Assets/Settings/Scenes/MainMenuTeacher.unity
+    guid: 3e0526112e5d40e4486d4895f45cefaf
+  - enabled: 1
+    path: Assets/Settings/Scenes/PagsubaybayAntasScene.unity
+    guid: 3e5acdacb7701ac448e7edc6e6c3edfe
+  - enabled: 1
+    path: Assets/Settings/Scenes/IskorScene.unity
+    guid: a576b9aab8eb8844db3827ad4de85aa7
+  - enabled: 1
+    path: Assets/Settings/Scenes/ScoreScene.unity
+    guid: 4246ac24e29d894479e4b857093a302e
+  - enabled: 1
+    path: Assets/Settings/Scenes/ModuleActivitiesScene.unity
+    guid: bb71ef99cf1417a458477944c291cb7b
+  - enabled: 1
+    path: Assets/Settings/Scenes/EnglishGame1Level2.unity
+    guid: 92c50a63cf8f6ec419bd86c651e2541f
+  - enabled: 1
+    path: Assets/Settings/Scenes/EnglishGame1Level1.unity
+    guid: c7e92b8ddb87236409fd22b24b3c8999
+  - enabled: 1
+    path: Assets/Settings/Scenes/EnglishGame1.unity
+    guid: 9ee479c134cb4784d9371815b21a686e
+  - enabled: 1
+    path: Assets/Settings/Scenes/EnglishGame2.unity
+    guid: 8702d375e2fabc64a84ba43ecaffeb59
+  - enabled: 1
+    path: Assets/Settings/Scenes/EnglishGame2Level1.unity
+    guid: e2f4e41f187f8e140a9935647fc24ba7
+  - enabled: 1
+    path: Assets/Settings/Scenes/EnglishGame2Level2.unity
+    guid: 0a469204fd06e0c4d865fab24b17defe
+  - enabled: 1
+    path: Assets/Settings/Scenes/EnglishGame3.unity
+    guid: b505e02b4f04d3243989461502efd7f3
+  - enabled: 1
+    path: Assets/Settings/Scenes/EnglishGame3Level1.unity
+    guid: 560996f3994a0bf42a87cd6beb362884
+  - enabled: 1
+    path: Assets/Settings/Scenes/EnglishGame3Level2.unity
+    guid: ce5da6bac2dfffe4e9bf0b8e0c5d2e46
+  - enabled: 1
+    path: Assets/Settings/Scenes/EnglishGame4.unity
+    guid: 7113f34b649fdd64d8b1ae418c5d7a49
+  - enabled: 1
+    path: Assets/Settings/Scenes/EnglishGame4Level3.unity
+    guid: 4443642d7e386d543942b17762350937
+  - enabled: 1
+    path: Assets/Settings/Scenes/EnglishGame4Level4.unity
+    guid: 0c3bf84a9e325d741bfd78d53ebd5a3d
+  - enabled: 1
+    path: Assets/Settings/Scenes/EnglishGame5.unity
+    guid: 7bed45972a22f764b8eafd2b786d592b
+  - enabled: 1
+    path: Assets/Settings/Scenes/EnglishGame5Level1.unity
+    guid: 530bac3581cfc9a4aa12456f81f4b9e6
+  - enabled: 1
+    path: Assets/Settings/Scenes/EnglishGame5Level2.unity
+    guid: 19df593049f2b5e42988b6a9d2d73632
+  - enabled: 1
+    path: Assets/Settings/Scenes/ScienceGame1.unity
+    guid: 85cf210a3783b7e4c9e4511c421c4e1b
+  - enabled: 1
+    path: Assets/Settings/Scenes/ScienceGame2.unity
+    guid: 9e23da6d7720a8541ace41dc38b93bc5
+  - enabled: 1
+    path: Assets/Settings/Scenes/ScienceGame1Level1.unity
+    guid: 1de46987e7644044ab8679bd3eb1aa9a
+  - enabled: 1
+    path: Assets/Settings/Scenes/ScienceGame1Level2.unity
+    guid: 1e3c683a1117f7e4f9e2d89bd4a3aee5
+  - enabled: 1
+    path: Assets/Settings/Scenes/ScienceGame2Level1.unity
+    guid: 388062d2e2c337445b052cbc48227a36
+  - enabled: 1
+    path: Assets/Settings/Scenes/ScienceGame2Level4.unity
+    guid: 304cbbbeccfa31a42b0e24c1aa7120e4
+  - enabled: 1
+    path: Assets/Settings/Scenes/ScienceGame3.unity
+    guid: e137ab35af996d34eb46c315179309a9
+  - enabled: 1
+    path: Assets/Settings/Scenes/ScienceGame3Level1.unity
+    guid: 1da8e13b2a4283447a7ade865ac3c714
+  - enabled: 1
+    path: Assets/Settings/Scenes/ScienceGame3Level4.unity
+    guid: cb9a4ae910a5db04f865b991f75cefce
+  - enabled: 1
+    path: Assets/Settings/Scenes/MathGame1Level2.unity
+    guid: bdbc8a14a9f92164683add9c8a3c515b
+  - enabled: 1
+    path: Assets/Settings/Scenes/MathGame1Level3.unity
+    guid: 6f8e4637ddd4397499a98ecb934f95b1
+  - enabled: 1
+    path: Assets/Settings/Scenes/ScoreSceneFailed.unity
+    guid: 7cc127e5a908bec41ad8b1317e776f02
+  - enabled: 1
+    path: Assets/Settings/Scenes/MathGame1.unity
+    guid: 443e8ab3a10609546a5a8b0163fe9b79
+  - enabled: 1
+    path: Assets/Settings/Scenes/EnglishGame1Level3.unity
+    guid: a29ef80f07b416041b029cb2ebef621d
+  - enabled: 1
+    path: Assets/Settings/Scenes/EnglishGame1Level4.unity
+    guid: d10a297c8c87b9e4e84a5cd386585afe
+  - enabled: 1
+    path: Assets/Settings/Scenes/EnglishGame2Level4.unity
+    guid: ee99b69ebd451c841b71afe02a3fb430
+  - enabled: 1
+    path: Assets/Settings/Scenes/EnglishGame2Level3.unity
+    guid: ea87df70fab67f5428c4a7aeb57a57fd
+  - enabled: 1
+    path: Assets/Settings/Scenes/EnglishGame3Level3.unity
+    guid: f6c4fd4e444df554697ad6416154e74d
+  - enabled: 1
+    path: Assets/Settings/Scenes/EnglishGame3Level4.unity
+    guid: f3d1d76b7eeca5845ba852ac1d5dd00c
+  - enabled: 1
+    path: Assets/Settings/Scenes/EnglishGame4Level1.unity
+    guid: 29cb0ad7aad897544a828b5b93dab63c
+  - enabled: 1
+    path: Assets/Settings/Scenes/EnglishGame4Level2.unity
+    guid: f94494a10a46f9e4aad0d7afb9aeb6f5
+  - enabled: 1
+    path: Assets/Settings/Scenes/EnglishGame5Level4.unity
+    guid: 4564b04e4b60daa4e8f2c4f48bcd2fd1
+  - enabled: 1
+    path: Assets/Settings/Scenes/ScienceGame1Level4.unity
+    guid: c4ea291741650304da98bdfdc3aa417e
+  - enabled: 1
+    path: Assets/Settings/Scenes/ScienceGame1Level5.unity
+    guid: a060392ea84175544b25246552355da7
+  - enabled: 1
+    path: Assets/Settings/Scenes/ScienceGame2Level2.unity
+    guid: 76edd7a101ce394458b362f5ef45f63e
+  - enabled: 1
+    path: Assets/Settings/Scenes/ScienceGame2Level3.unity
+    guid: 035644d537de0574e99d0ca94e989a40
+  - enabled: 1
+    path: Assets/Settings/Scenes/ScienceGame3Level2.unity
+    guid: 66d0ed48a1e690c4fa8fa8018db62660
+  - enabled: 1
+    path: Assets/Settings/Scenes/ScienceGame3Level3.unity
+    guid: c2a0ffeb3311795459ea813dcd34d1be
+  m_configObjects:
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

@@ -1,0 +1,611 @@
+fileFormatVersion: 2
+guid: 5f1f42798829b4e4d801ac0fbd0f5d00
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3804281406134284549
+    second: IgMicOn_0
+  - first:
+      213: -6499296257882865749
+    second: IgMicOn_1
+  - first:
+      213: 6313228264359183782
+    second: IgMicOn_2
+  - first:
+      213: -7013338109750430930
+    second: IgMicOn_3
+  - first:
+      213: 9116051945558046454
+    second: IgMicOn_4
+  - first:
+      213: 1284342937280780553
+    second: IgMicOn_5
+  - first:
+      213: -8748833783114336675
+    second: IgMicOn_6
+  - first:
+      213: -3249548192552491741
+    second: IgMicOn_7
+  - first:
+      213: -7219809249641937842
+    second: IgMicOn_8
+  - first:
+      213: -3092241341560104755
+    second: IgMicOn_9
+  - first:
+      213: 2429647061910968487
+    second: IgMicOn_10
+  - first:
+      213: -6242390481771308874
+    second: IgMicOn_11
+  - first:
+      213: 8005511054656053620
+    second: IgMicOn_12
+  - first:
+      213: -3570716615215879604
+    second: IgMicOn_13
+  - first:
+      213: -6054600003459943581
+    second: IgMicOn_14
+  - first:
+      213: -8604010923495505795
+    second: IgMicOn_15
+  - first:
+      213: 5458200733142559174
+    second: IgMicOn_16
+  - first:
+      213: 5049987386771263265
+    second: IgMicOn_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: IgMicOn_0
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 1900
+        width: 6
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 501f14e68c58bc430800000000000000
+      internalID: 3804281406134284549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgMicOn_1
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 0
+        width: 1884
+        height: 1884
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bafbddafc7cddc5a0800000000000000
+      internalID: -6499296257882865749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgMicOn_2
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 1031
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a5c51358a71d9750800000000000000
+      internalID: 6313228264359183782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgMicOn_3
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 997
+        width: 13
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e23bd9eb52e9bae90800000000000000
+      internalID: -7013338109750430930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgMicOn_4
+      rect:
+        serializedVersion: 2
+        x: 1922
+        y: 984
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f6fef012f8b28e70800000000000000
+      internalID: 9116051945558046454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgMicOn_5
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 945
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9091762c817e2d110800000000000000
+      internalID: 1284342937280780553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgMicOn_6
+      rect:
+        serializedVersion: 2
+        x: 1926
+        y: 936
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d56788e0706e59680800000000000000
+      internalID: -8748833783114336675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgMicOn_7
+      rect:
+        serializedVersion: 2
+        x: 1923
+        y: 915
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 325656eb22947e2d0800000000000000
+      internalID: -3249548192552491741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgMicOn_8
+      rect:
+        serializedVersion: 2
+        x: 1931
+        y: 893
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4443095db51ecb90800000000000000
+      internalID: -7219809249641937842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgMicOn_9
+      rect:
+        serializedVersion: 2
+        x: 1923
+        y: 880
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc8588c12e62615d0800000000000000
+      internalID: -3092241341560104755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgMicOn_10
+      rect:
+        serializedVersion: 2
+        x: 1925
+        y: 866
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a856c64127d7b120800000000000000
+      internalID: 2429647061910968487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgMicOn_11
+      rect:
+        serializedVersion: 2
+        x: 1931
+        y: 858
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b8ddb03ee29e59a0800000000000000
+      internalID: -6242390481771308874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgMicOn_12
+      rect:
+        serializedVersion: 2
+        x: 1936
+        y: 841
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 471ac32a3e9491f60800000000000000
+      internalID: 8005511054656053620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgMicOn_13
+      rect:
+        serializedVersion: 2
+        x: 1925
+        y: 832
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4ae87c2824427ec0800000000000000
+      internalID: -3570716615215879604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgMicOn_14
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 811
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 363f0b0206db9fba0800000000000000
+      internalID: -6054600003459943581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgMicOn_15
+      rect:
+        serializedVersion: 2
+        x: 1923
+        y: 776
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d70487da6a9689880800000000000000
+      internalID: -8604010923495505795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgMicOn_16
+      rect:
+        serializedVersion: 2
+        x: 1927
+        y: 728
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c92db3e5ac6fbb40800000000000000
+      internalID: 5458200733142559174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgMicOn_17
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 12
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12f44b4b5c8251640800000000000000
+      internalID: 5049987386771263265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      IgMicOn_0: 3804281406134284549
+      IgMicOn_1: -6499296257882865749
+      IgMicOn_10: 2429647061910968487
+      IgMicOn_11: -6242390481771308874
+      IgMicOn_12: 8005511054656053620
+      IgMicOn_13: -3570716615215879604
+      IgMicOn_14: -6054600003459943581
+      IgMicOn_15: -8604010923495505795
+      IgMicOn_16: 5458200733142559174
+      IgMicOn_17: 5049987386771263265
+      IgMicOn_2: 6313228264359183782
+      IgMicOn_3: -7013338109750430930
+      IgMicOn_4: 9116051945558046454
+      IgMicOn_5: 1284342937280780553
+      IgMicOn_6: -8748833783114336675
+      IgMicOn_7: -3249548192552491741
+      IgMicOn_8: -7219809249641937842
+      IgMicOn_9: -3092241341560104755
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

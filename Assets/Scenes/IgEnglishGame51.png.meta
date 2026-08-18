@@ -1,0 +1,507 @@
+fileFormatVersion: 2
+guid: 32ef38d7d271f1f4393abb7482ef5aa9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7377111495897570465
+    second: IgEnglishGame51_0
+  - first:
+      213: -1301336876126169118
+    second: IgEnglishGame51_1
+  - first:
+      213: 6509626049528448566
+    second: IgEnglishGame51_2
+  - first:
+      213: 6576072502985104406
+    second: IgEnglishGame51_3
+  - first:
+      213: 7004321436092721105
+    second: IgEnglishGame51_4
+  - first:
+      213: 1437316175261523519
+    second: IgEnglishGame51_5
+  - first:
+      213: -7078393393361312392
+    second: IgEnglishGame51_6
+  - first:
+      213: -3639630742224230773
+    second: IgEnglishGame51_7
+  - first:
+      213: 3130030508618327038
+    second: IgEnglishGame51_8
+  - first:
+      213: -870962135307781211
+    second: IgEnglishGame51_9
+  - first:
+      213: -5946696105588489344
+    second: IgEnglishGame51_10
+  - first:
+      213: -4929274396614859941
+    second: IgEnglishGame51_11
+  - first:
+      213: -246665575183824418
+    second: IgEnglishGame51_12
+  - first:
+      213: -7847435134337121886
+    second: IgEnglishGame51_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: IgEnglishGame51_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 989
+        width: 123
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f53239a1e2c3f9990800000000000000
+      internalID: -7377111495897570465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgEnglishGame51_1
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 989
+        width: 123
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e712658109b0fde0800000000000000
+      internalID: -1301336876126169118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgEnglishGame51_2
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 989
+        width: 123
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 636c5ce0766d65a50800000000000000
+      internalID: 6509626049528448566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgEnglishGame51_3
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 989
+        width: 123
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61c14a59917e24b50800000000000000
+      internalID: 6576072502985104406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgEnglishGame51_4
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 989
+        width: 123
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d7e5f25c39543160800000000000000
+      internalID: 7004321436092721105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgEnglishGame51_5
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 989
+        width: 123
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3ed268327f52f310800000000000000
+      internalID: 1437316175261523519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgEnglishGame51_6
+      rect:
+        serializedVersion: 2
+        x: 857
+        y: 989
+        width: 123
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8752a3036be74cd90800000000000000
+      internalID: -7078393393361312392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgEnglishGame51_7
+      rect:
+        serializedVersion: 2
+        x: 997
+        y: 989
+        width: 123
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b862220af1f6d7dc0800000000000000
+      internalID: -3639630742224230773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgEnglishGame51_8
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 989
+        width: 123
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef3a45af92a107b20800000000000000
+      internalID: 3130030508618327038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgEnglishGame51_9
+      rect:
+        serializedVersion: 2
+        x: 1277
+        y: 989
+        width: 123
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5abf9207d88b9e3f0800000000000000
+      internalID: -870962135307781211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgEnglishGame51_10
+      rect:
+        serializedVersion: 2
+        x: 1417
+        y: 989
+        width: 123
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 083033f1667197da0800000000000000
+      internalID: -5946696105588489344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgEnglishGame51_11
+      rect:
+        serializedVersion: 2
+        x: 1557
+        y: 989
+        width: 123
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b53e75d7d03b79bb0800000000000000
+      internalID: -4929274396614859941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgEnglishGame51_12
+      rect:
+        serializedVersion: 2
+        x: 1697
+        y: 989
+        width: 123
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed9c9dc57faa39cf0800000000000000
+      internalID: -246665575183824418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgEnglishGame51_13
+      rect:
+        serializedVersion: 2
+        x: 1837
+        y: 989
+        width: 123
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a18ae3a25f481390800000000000000
+      internalID: -7847435134337121886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      IgEnglishGame51_0: -7377111495897570465
+      IgEnglishGame51_1: -1301336876126169118
+      IgEnglishGame51_10: -5946696105588489344
+      IgEnglishGame51_11: -4929274396614859941
+      IgEnglishGame51_12: -246665575183824418
+      IgEnglishGame51_13: -7847435134337121886
+      IgEnglishGame51_2: 6509626049528448566
+      IgEnglishGame51_3: 6576072502985104406
+      IgEnglishGame51_4: 7004321436092721105
+      IgEnglishGame51_5: 1437316175261523519
+      IgEnglishGame51_6: -7078393393361312392
+      IgEnglishGame51_7: -3639630742224230773
+      IgEnglishGame51_8: 3130030508618327038
+      IgEnglishGame51_9: -870962135307781211
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

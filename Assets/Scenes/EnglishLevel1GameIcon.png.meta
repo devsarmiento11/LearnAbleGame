@@ -1,0 +1,767 @@
+fileFormatVersion: 2
+guid: f3762336bd3bdf047acc57f0b9e3a754
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3155443594154763868
+    second: EnglishLevel1GameIcon_0
+  - first:
+      213: -8664828872610469266
+    second: EnglishLevel1GameIcon_1
+  - first:
+      213: 6118697429662062344
+    second: EnglishLevel1GameIcon_2
+  - first:
+      213: -8754369155147891633
+    second: EnglishLevel1GameIcon_3
+  - first:
+      213: 446082529487345045
+    second: EnglishLevel1GameIcon_4
+  - first:
+      213: 3484187966921187205
+    second: EnglishLevel1GameIcon_5
+  - first:
+      213: 1723898696876202337
+    second: EnglishLevel1GameIcon_6
+  - first:
+      213: -7783170583281207226
+    second: EnglishLevel1GameIcon_7
+  - first:
+      213: -4591451018351200666
+    second: EnglishLevel1GameIcon_8
+  - first:
+      213: -6238179121016508932
+    second: EnglishLevel1GameIcon_9
+  - first:
+      213: -1574840683681243663
+    second: EnglishLevel1GameIcon_10
+  - first:
+      213: 3842728548958771409
+    second: EnglishLevel1GameIcon_11
+  - first:
+      213: 17145794545094691
+    second: EnglishLevel1GameIcon_12
+  - first:
+      213: 2291252976099954965
+    second: EnglishLevel1GameIcon_13
+  - first:
+      213: -1156536436045913068
+    second: EnglishLevel1GameIcon_14
+  - first:
+      213: -1805664487987048580
+    second: EnglishLevel1GameIcon_15
+  - first:
+      213: -6705898504885664361
+    second: EnglishLevel1GameIcon_16
+  - first:
+      213: -5477750115477728250
+    second: EnglishLevel1GameIcon_17
+  - first:
+      213: -5622748310619454183
+    second: EnglishLevel1GameIcon_18
+  - first:
+      213: 5677156136507503381
+    second: EnglishLevel1GameIcon_19
+  - first:
+      213: 7425364159795059680
+    second: EnglishLevel1GameIcon_20
+  - first:
+      213: -2921421011201233943
+    second: EnglishLevel1GameIcon_21
+  - first:
+      213: 8019955434147782488
+    second: EnglishLevel1GameIcon_22
+  - first:
+      213: 4844050712226196168
+    second: EnglishLevel1GameIcon_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: EnglishLevel1GameIcon_0
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 1232
+        width: 36
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c56606a0b336acb20800000000000000
+      internalID: 3155443594154763868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnglishLevel1GameIcon_1
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 1232
+        width: 37
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6a21807c0850c780800000000000000
+      internalID: -8664828872610469266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnglishLevel1GameIcon_2
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 1232
+        width: 33
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8075a1fd4eaf9e450800000000000000
+      internalID: 6118697429662062344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnglishLevel1GameIcon_3
+      rect:
+        serializedVersion: 2
+        x: 1193
+        y: 1232
+        width: 32
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4cf5c2d2ab328680800000000000000
+      internalID: -8754369155147891633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnglishLevel1GameIcon_4
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 1232
+        width: 37
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 595d99672bdc03600800000000000000
+      internalID: 446082529487345045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnglishLevel1GameIcon_5
+      rect:
+        serializedVersion: 2
+        x: 1895
+        y: 1232
+        width: 37
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58f1703fe725a5030800000000000000
+      internalID: 3484187966921187205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnglishLevel1GameIcon_6
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 1019
+        width: 36
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16990103bb48ce710800000000000000
+      internalID: 1723898696876202337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnglishLevel1GameIcon_7
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 1019
+        width: 37
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 648f04d679f9cf390800000000000000
+      internalID: -7783170583281207226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnglishLevel1GameIcon_8
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 1019
+        width: 35
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 666329710a3e740c0800000000000000
+      internalID: -4591451018351200666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnglishLevel1GameIcon_9
+      rect:
+        serializedVersion: 2
+        x: 1193
+        y: 1019
+        width: 32
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfd6d8604298d69a0800000000000000
+      internalID: -6238179121016508932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnglishLevel1GameIcon_10
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 1019
+        width: 37
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fd9857fdba052ae0800000000000000
+      internalID: -1574840683681243663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnglishLevel1GameIcon_11
+      rect:
+        serializedVersion: 2
+        x: 1895
+        y: 1019
+        width: 37
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d890f0714d145530800000000000000
+      internalID: 3842728548958771409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnglishLevel1GameIcon_12
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 810
+        width: 33
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3209041620aec3000800000000000000
+      internalID: 17145794545094691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnglishLevel1GameIcon_13
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 810
+        width: 37
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5119ef2317a2ccf10800000000000000
+      internalID: 2291252976099954965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnglishLevel1GameIcon_14
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 810
+        width: 36
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 414efaf2d3823ffe0800000000000000
+      internalID: -1156536436045913068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnglishLevel1GameIcon_15
+      rect:
+        serializedVersion: 2
+        x: 1193
+        y: 810
+        width: 32
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7f8ef907bdf0f6e0800000000000000
+      internalID: -1805664487987048580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnglishLevel1GameIcon_16
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 810
+        width: 37
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7958774d6dcdfe2a0800000000000000
+      internalID: -6705898504885664361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnglishLevel1GameIcon_17
+      rect:
+        serializedVersion: 2
+        x: 1895
+        y: 810
+        width: 37
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6045896da4f1bf3b0800000000000000
+      internalID: -5477750115477728250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnglishLevel1GameIcon_18
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 597
+        width: 36
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 915891cb33cf7f1b0800000000000000
+      internalID: -5622748310619454183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnglishLevel1GameIcon_19
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 597
+        width: 37
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51375f26d6f49ce40800000000000000
+      internalID: 5677156136507503381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnglishLevel1GameIcon_20
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 598
+        width: 40
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0eb5080bc513c0760800000000000000
+      internalID: 7425364159795059680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnglishLevel1GameIcon_21
+      rect:
+        serializedVersion: 2
+        x: 1193
+        y: 599
+        width: 35
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ebecf391170577d0800000000000000
+      internalID: -2921421011201233943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnglishLevel1GameIcon_22
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 597
+        width: 37
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85f97dec9fa9c4f60800000000000000
+      internalID: 8019955434147782488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnglishLevel1GameIcon_23
+      rect:
+        serializedVersion: 2
+        x: 1895
+        y: 598
+        width: 37
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ca68383576893340800000000000000
+      internalID: 4844050712226196168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      EnglishLevel1GameIcon_0: 3155443594154763868
+      EnglishLevel1GameIcon_1: -8664828872610469266
+      EnglishLevel1GameIcon_10: -1574840683681243663
+      EnglishLevel1GameIcon_11: 3842728548958771409
+      EnglishLevel1GameIcon_12: 17145794545094691
+      EnglishLevel1GameIcon_13: 2291252976099954965
+      EnglishLevel1GameIcon_14: -1156536436045913068
+      EnglishLevel1GameIcon_15: -1805664487987048580
+      EnglishLevel1GameIcon_16: -6705898504885664361
+      EnglishLevel1GameIcon_17: -5477750115477728250
+      EnglishLevel1GameIcon_18: -5622748310619454183
+      EnglishLevel1GameIcon_19: 5677156136507503381
+      EnglishLevel1GameIcon_2: 6118697429662062344
+      EnglishLevel1GameIcon_20: 7425364159795059680
+      EnglishLevel1GameIcon_21: -2921421011201233943
+      EnglishLevel1GameIcon_22: 8019955434147782488
+      EnglishLevel1GameIcon_23: 4844050712226196168
+      EnglishLevel1GameIcon_3: -8754369155147891633
+      EnglishLevel1GameIcon_4: 446082529487345045
+      EnglishLevel1GameIcon_5: 3484187966921187205
+      EnglishLevel1GameIcon_6: 1723898696876202337
+      EnglishLevel1GameIcon_7: -7783170583281207226
+      EnglishLevel1GameIcon_8: -4591451018351200666
+      EnglishLevel1GameIcon_9: -6238179121016508932
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

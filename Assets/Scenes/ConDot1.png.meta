@@ -1,0 +1,2743 @@
+fileFormatVersion: 2
+guid: acd9da5fdb5934143939bf5de4497534
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8301981622298481467
+    second: ConDot1_0
+  - first:
+      213: 7437169391533828747
+    second: ConDot1_1
+  - first:
+      213: 1741179643636963544
+    second: ConDot1_2
+  - first:
+      213: 6464815797595801258
+    second: ConDot1_3
+  - first:
+      213: 5397846364204540640
+    second: ConDot1_4
+  - first:
+      213: 1784685306456077389
+    second: ConDot1_5
+  - first:
+      213: 182194291334560596
+    second: ConDot1_6
+  - first:
+      213: 3246418701813115285
+    second: ConDot1_7
+  - first:
+      213: -5751599106357864863
+    second: ConDot1_8
+  - first:
+      213: -7054918721807250368
+    second: ConDot1_9
+  - first:
+      213: -2258782641821555333
+    second: ConDot1_10
+  - first:
+      213: -4288820837980692980
+    second: ConDot1_11
+  - first:
+      213: -5219416617369402499
+    second: ConDot1_12
+  - first:
+      213: -7526649053137900787
+    second: ConDot1_13
+  - first:
+      213: -340830928786420989
+    second: ConDot1_14
+  - first:
+      213: -4879084650486468441
+    second: ConDot1_15
+  - first:
+      213: 4992557967212988536
+    second: ConDot1_16
+  - first:
+      213: -8638288241082012666
+    second: ConDot1_17
+  - first:
+      213: 1376949965708305442
+    second: ConDot1_18
+  - first:
+      213: -3713395228611618164
+    second: ConDot1_19
+  - first:
+      213: 2616580673495110324
+    second: ConDot1_20
+  - first:
+      213: 3453533169223405048
+    second: ConDot1_21
+  - first:
+      213: -4828808777095804295
+    second: ConDot1_22
+  - first:
+      213: -3056500596615902408
+    second: ConDot1_23
+  - first:
+      213: 4097142877255149601
+    second: ConDot1_24
+  - first:
+      213: 6996832477499729618
+    second: ConDot1_25
+  - first:
+      213: 1115339097365754838
+    second: ConDot1_26
+  - first:
+      213: -3905040381786362517
+    second: ConDot1_27
+  - first:
+      213: -2088628099617791575
+    second: ConDot1_28
+  - first:
+      213: -8471246025433607020
+    second: ConDot1_29
+  - first:
+      213: -7810649013149334155
+    second: ConDot1_30
+  - first:
+      213: -2130751558375603153
+    second: ConDot1_31
+  - first:
+      213: -8491086251673194909
+    second: ConDot1_32
+  - first:
+      213: 3849260238484261482
+    second: ConDot1_33
+  - first:
+      213: -2141802197833299644
+    second: ConDot1_34
+  - first:
+      213: 7804007241413963549
+    second: ConDot1_35
+  - first:
+      213: -8393096201211672701
+    second: ConDot1_36
+  - first:
+      213: 8677937382150844616
+    second: ConDot1_37
+  - first:
+      213: 1727181196180985592
+    second: ConDot1_38
+  - first:
+      213: -8284114669009750673
+    second: ConDot1_39
+  - first:
+      213: 8848648602911668486
+    second: ConDot1_40
+  - first:
+      213: 4332042308401274960
+    second: ConDot1_41
+  - first:
+      213: 3538426013052837146
+    second: ConDot1_42
+  - first:
+      213: 808484009751313198
+    second: ConDot1_43
+  - first:
+      213: -3724822116939038603
+    second: ConDot1_44
+  - first:
+      213: 7270099159530626853
+    second: ConDot1_45
+  - first:
+      213: 3353080932371847706
+    second: ConDot1_46
+  - first:
+      213: 7698402318819725302
+    second: ConDot1_47
+  - first:
+      213: 407114416641400493
+    second: ConDot1_48
+  - first:
+      213: 3947600429135743066
+    second: ConDot1_49
+  - first:
+      213: 1633460035917351156
+    second: ConDot1_50
+  - first:
+      213: -4884134909694227392
+    second: ConDot1_51
+  - first:
+      213: -4319477894466255211
+    second: ConDot1_52
+  - first:
+      213: -7944027017085700563
+    second: ConDot1_53
+  - first:
+      213: 1292940825590013108
+    second: ConDot1_54
+  - first:
+      213: 4247972958687125084
+    second: ConDot1_55
+  - first:
+      213: -7563915619996435444
+    second: ConDot1_56
+  - first:
+      213: -4737097068962850520
+    second: ConDot1_57
+  - first:
+      213: -5587206313298389754
+    second: ConDot1_58
+  - first:
+      213: -5670559958803763157
+    second: ConDot1_59
+  - first:
+      213: -1359901943345810839
+    second: ConDot1_60
+  - first:
+      213: -7799974447473791069
+    second: ConDot1_61
+  - first:
+      213: -3811355445337347034
+    second: ConDot1_62
+  - first:
+      213: 118794344338800782
+    second: ConDot1_63
+  - first:
+      213: -5018400658991467251
+    second: ConDot1_64
+  - first:
+      213: 8787725182104847911
+    second: ConDot1_65
+  - first:
+      213: 6381217135663845631
+    second: ConDot1_66
+  - first:
+      213: -3481324557152201515
+    second: ConDot1_67
+  - first:
+      213: 6499879331296162085
+    second: ConDot1_68
+  - first:
+      213: 9140505066362542964
+    second: ConDot1_69
+  - first:
+      213: 8347573725676342710
+    second: ConDot1_70
+  - first:
+      213: 3383450011011236182
+    second: ConDot1_71
+  - first:
+      213: 9210912998081859397
+    second: ConDot1_72
+  - first:
+      213: -4210875798010048627
+    second: ConDot1_73
+  - first:
+      213: -8784886275185025952
+    second: ConDot1_74
+  - first:
+      213: -5329498298630712863
+    second: ConDot1_75
+  - first:
+      213: 8491348906079242501
+    second: ConDot1_76
+  - first:
+      213: 8218909714493873810
+    second: ConDot1_77
+  - first:
+      213: -2052226795399108657
+    second: ConDot1_78
+  - first:
+      213: 8439512834364002652
+    second: ConDot1_79
+  - first:
+      213: 497290946472238769
+    second: ConDot1_80
+  - first:
+      213: -984968657327821175
+    second: ConDot1_81
+  - first:
+      213: 9127598179975532670
+    second: ConDot1_82
+  - first:
+      213: -5668450155025709768
+    second: ConDot1_83
+  - first:
+      213: 221740672556432439
+    second: ConDot1_84
+  - first:
+      213: -8141453441657027572
+    second: ConDot1_85
+  - first:
+      213: 6428455831052698688
+    second: ConDot1_86
+  - first:
+      213: 5774763344788138255
+    second: ConDot1_87
+  - first:
+      213: 4537988727780370477
+    second: ConDot1_88
+  - first:
+      213: -7526027140704399251
+    second: ConDot1_89
+  - first:
+      213: 4907752525138572811
+    second: ConDot1_90
+  - first:
+      213: 2836845991411674982
+    second: ConDot1_91
+  - first:
+      213: 2586380662246062591
+    second: ConDot1_92
+  - first:
+      213: 3212802444762099626
+    second: ConDot1_93
+  - first:
+      213: 6976830313427524675
+    second: ConDot1_94
+  - first:
+      213: 5342727165600881282
+    second: ConDot1_95
+  - first:
+      213: -8101052718841983801
+    second: ConDot1_96
+  - first:
+      213: 7282193518293324731
+    second: ConDot1_97
+  - first:
+      213: -9139681416224221406
+    second: ConDot1_98
+  - first:
+      213: -3371345729216588372
+    second: ConDot1_99
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ConDot1_0
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 317
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b331ce8bc40963370800000000000000
+      internalID: 8301981622298481467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_1
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 316
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8a28c46822263760800000000000000
+      internalID: 7437169391533828747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_2
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 316
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d85f1529a9e92810800000000000000
+      internalID: 1741179643636963544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_3
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 316
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa6080247b3a7b950800000000000000
+      internalID: 6464815797595801258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_4
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 316
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e2ab825ba009ea40800000000000000
+      internalID: 5397846364204540640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_5
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 316
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d447c2f94d974c810800000000000000
+      internalID: 1784685306456077389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_6
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 271
+        width: 53
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45bb91f1eb8478200800000000000000
+      internalID: 182194291334560596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_7
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 316
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59961c9eb989d0d20800000000000000
+      internalID: 3246418701813115285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_8
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 316
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 166d51706173e20b0800000000000000
+      internalID: -5751599106357864863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_9
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 316
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04c0d631dc4e71e90800000000000000
+      internalID: -7054918721807250368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_10
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 316
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b756861a72137a0e0800000000000000
+      internalID: -2258782641821555333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_11
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 316
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0e1ed6cb2c0b74c0800000000000000
+      internalID: -4288820837980692980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_12
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 316
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d730dea7d38e097b0800000000000000
+      internalID: -5219416617369402499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_13
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 316
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0b6fa66098fb8790800000000000000
+      internalID: -7526649053137900787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_14
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 316
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30b08397310254bf0800000000000000
+      internalID: -340830928786420989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_15
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 316
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a071b26c520a4cb0800000000000000
+      internalID: -4879084650486468441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_16
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 271
+        width: 53
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 878c64cf401294540800000000000000
+      internalID: 4992557967212988536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_17
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 316
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60c6fd2cc92ae1880800000000000000
+      internalID: -8638288241082012666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_18
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 316
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 224a78bc2b8eb1310800000000000000
+      internalID: 1376949965708305442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_19
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 316
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8a59f7c6be577cc0800000000000000
+      internalID: -3713395228611618164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_20
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 316
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b214d16246ff4420800000000000000
+      internalID: 2616580673495110324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_21
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 316
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fd079bae1a6def20800000000000000
+      internalID: 3453533169223405048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_22
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 316
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97a8ae85000acfcb0800000000000000
+      internalID: -4828808777095804295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_23
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 316
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83b80f2c6e02595d0800000000000000
+      internalID: -3056500596615902408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_24
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 316
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 128a0d04db9fbd830800000000000000
+      internalID: 4097142877255149601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_25
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 316
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d6a946411eb91160800000000000000
+      internalID: 6996832477499729618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_26
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 271
+        width: 53
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d3379eeffa7a7f00800000000000000
+      internalID: 1115339097365754838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_27
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 316
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6d611a66728ec9c0800000000000000
+      internalID: -3905040381786362517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_28
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 316
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a1e1663fc3b303e0800000000000000
+      internalID: -2088628099617791575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_29
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 316
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49417195f96107a80800000000000000
+      internalID: -8471246025433607020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_30
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 316
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5758af9ea100b9390800000000000000
+      internalID: -7810649013149334155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_31
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 316
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2489623fbc0e62e0800000000000000
+      internalID: -2130751558375603153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_32
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 172
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36ee0d3ba0a992a80800000000000000
+      internalID: -8491086251673194909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_33
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 171
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6ac3eaeac15b6530800000000000000
+      internalID: 3849260238484261482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_34
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 171
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 449cef2bf3ac642e0800000000000000
+      internalID: -2141802197833299644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_35
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 171
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1f2e091d376d4c60800000000000000
+      internalID: 7804007241413963549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_36
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 171
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3870919397bb58b80800000000000000
+      internalID: -8393096201211672701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_37
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 171
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c03f26421a3e6870800000000000000
+      internalID: 8677937382150844616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_38
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 171
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f61a1d952e28f710800000000000000
+      internalID: 1727181196180985592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_39
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 171
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6532138999e80d80800000000000000
+      internalID: -8284114669009750673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_40
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 171
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6097ecea507bcca70800000000000000
+      internalID: 8848648602911668486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_41
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 171
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 050a83007818e1c30800000000000000
+      internalID: 4332042308401274960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_42
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 171
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1d140426b30b1130800000000000000
+      internalID: 3538426013052837146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_43
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 171
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2b7fcf5cef483b00800000000000000
+      internalID: 808484009751313198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_44
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 171
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57084540506ce4cc0800000000000000
+      internalID: -3724822116939038603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_45
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 171
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52f50bdbaa494e460800000000000000
+      internalID: 7270099159530626853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_46
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 171
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1ad825b759888e20800000000000000
+      internalID: 3353080932371847706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_47
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 171
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ff0b4ffe1836da60800000000000000
+      internalID: 7698402318819725302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_48
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 171
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daed9daa76c56a500800000000000000
+      internalID: 407114416641400493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_49
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 171
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a58c0ddcca1b8c630800000000000000
+      internalID: 3947600429135743066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_50
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 171
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f886ab8f373ba610800000000000000
+      internalID: 1633460035917351156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_51
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 171
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04c47984d21183cb0800000000000000
+      internalID: -4884134909694227392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_52
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 171
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 596cf259db12e04c0800000000000000
+      internalID: -4319477894466255211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_53
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 171
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d263088648521c190800000000000000
+      internalID: -7944027017085700563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_54
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 171
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bc94e0a4d271f110800000000000000
+      internalID: 1292940825590013108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_55
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 171
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5ed20236e4d3fa30800000000000000
+      internalID: 4247972958687125084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_56
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 171
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0c7517a1d2970790800000000000000
+      internalID: -7563915619996435444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_57
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 171
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 829dce16053724eb0800000000000000
+      internalID: -4737097068962850520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_58
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 171
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6059709d5714672b0800000000000000
+      internalID: -5587206313298389754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_59
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 171
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b20b2f9e2cf1e41b0800000000000000
+      internalID: -5670559958803763157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_60
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 171
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96272893368a02de0800000000000000
+      internalID: -1359901943345810839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_61
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 171
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3af6339e09ce0c390800000000000000
+      internalID: -7799974447473791069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_62
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 171
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62caae77a685b1bc0800000000000000
+      internalID: -3811355445337347034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_63
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 171
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e80c3a7a3da06a100800000000000000
+      internalID: 118794344338800782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_64
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 171
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d053a34703f0b5ab0800000000000000
+      internalID: -5018400658991467251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_65
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 171
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7264d176e7544f970800000000000000
+      internalID: 8787725182104847911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_66
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 171
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff011edfc23ae8850800000000000000
+      internalID: 6381217135663845631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_67
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 171
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d4591792c9dfafc0800000000000000
+      internalID: -3481324557152201515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_68
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 171
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 521bfc060d5343a50800000000000000
+      internalID: 6499879331296162085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_69
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 171
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47b923cede899de70800000000000000
+      internalID: 9140505066362542964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_70
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 27
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bd825f731a88d370800000000000000
+      internalID: 8347573725676342710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_71
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 27
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 651cd95dbdd64fe20800000000000000
+      internalID: 3383450011011236182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_72
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 27
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54f82bbf19cb3df70800000000000000
+      internalID: 9210912998081859397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_73
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 27
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8f425a95c6ff85c0800000000000000
+      internalID: -4210875798010048627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_74
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 27
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06c546f1a70d51680800000000000000
+      internalID: -8784886275185025952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_75
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 26
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e15117c881d906b0800000000000000
+      internalID: -5329498298630712863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_76
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 26
+        width: 53
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50941ca47d457d570800000000000000
+      internalID: 8491348906079242501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_77
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 27
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29e1a65f6de6f0270800000000000000
+      internalID: 8218909714493873810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_78
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 27
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc7a2bd4a960583e0800000000000000
+      internalID: -2052226795399108657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_79
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 27
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c51dd99553c2f1570800000000000000
+      internalID: 8439512834364002652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_80
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 27
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bede762b7bb6e600800000000000000
+      internalID: 497290946472238769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_81
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 27
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98ee4198930b452f0800000000000000
+      internalID: -984968657327821175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_82
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 27
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7091f14f2ebbae70800000000000000
+      internalID: 9127598179975532670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_83
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 27
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8354fa2ed9e9551b0800000000000000
+      internalID: -5668450155025709768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_84
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 27
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73c7bf387f7c31300800000000000000
+      internalID: 221740672556432439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_85
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 27
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c04c6a6ea3fb30f80800000000000000
+      internalID: -8141453441657027572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_86
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 26
+        width: 53
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0444f28d486763950800000000000000
+      internalID: 6428455831052698688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_87
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 27
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f092b048aa4142050800000000000000
+      internalID: 5774763344788138255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_88
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 27
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d28631264bc2afe30800000000000000
+      internalID: 4537988727780370477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_89
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 27
+        width: 24
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d609d5ca03e2e8790800000000000000
+      internalID: -7526027140704399251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_90
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 27
+        width: 28
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0639625be6db1440800000000000000
+      internalID: 4907752525138572811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_91
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 27
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66f659026608e5720800000000000000
+      internalID: 2836845991411674982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_92
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 27
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff9bd13528ba4e320800000000000000
+      internalID: 2586380662246062591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_93
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 26
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aaf2d852dca269c20800000000000000
+      internalID: 3212802444762099626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_94
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 26
+        width: 53
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34c560a843ea2d060800000000000000
+      internalID: 6976830313427524675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_95
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 27
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28a5875dc0e252a40800000000000000
+      internalID: 5342727165600881282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_96
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 27
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cc06b23977439f80800000000000000
+      internalID: -8101052718841983801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_97
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 26
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb396831c6c8f0560800000000000000
+      internalID: 7282193518293324731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_98
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 26
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22757b11d24592180800000000000000
+      internalID: -9139681416224221406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConDot1_99
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 26
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca5d303ebe29631d0800000000000000
+      internalID: -3371345729216588372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ConDot1_0: 8301981622298481467
+      ConDot1_1: 7437169391533828747
+      ConDot1_10: -2258782641821555333
+      ConDot1_11: -4288820837980692980
+      ConDot1_12: -5219416617369402499
+      ConDot1_13: -7526649053137900787
+      ConDot1_14: -340830928786420989
+      ConDot1_15: -4879084650486468441
+      ConDot1_16: 4992557967212988536
+      ConDot1_17: -8638288241082012666
+      ConDot1_18: 1376949965708305442
+      ConDot1_19: -3713395228611618164
+      ConDot1_2: 1741179643636963544
+      ConDot1_20: 2616580673495110324
+      ConDot1_21: 3453533169223405048
+      ConDot1_22: -4828808777095804295
+      ConDot1_23: -3056500596615902408
+      ConDot1_24: 4097142877255149601
+      ConDot1_25: 6996832477499729618
+      ConDot1_26: 1115339097365754838
+      ConDot1_27: -3905040381786362517
+      ConDot1_28: -2088628099617791575
+      ConDot1_29: -8471246025433607020
+      ConDot1_3: 6464815797595801258
+      ConDot1_30: -7810649013149334155
+      ConDot1_31: -2130751558375603153
+      ConDot1_32: -8491086251673194909
+      ConDot1_33: 3849260238484261482
+      ConDot1_34: -2141802197833299644
+      ConDot1_35: 7804007241413963549
+      ConDot1_36: -8393096201211672701
+      ConDot1_37: 8677937382150844616
+      ConDot1_38: 1727181196180985592
+      ConDot1_39: -8284114669009750673
+      ConDot1_4: 5397846364204540640
+      ConDot1_40: 8848648602911668486
+      ConDot1_41: 4332042308401274960
+      ConDot1_42: 3538426013052837146
+      ConDot1_43: 808484009751313198
+      ConDot1_44: -3724822116939038603
+      ConDot1_45: 7270099159530626853
+      ConDot1_46: 3353080932371847706
+      ConDot1_47: 7698402318819725302
+      ConDot1_48: 407114416641400493
+      ConDot1_49: 3947600429135743066
+      ConDot1_5: 1784685306456077389
+      ConDot1_50: 1633460035917351156
+      ConDot1_51: -4884134909694227392
+      ConDot1_52: -4319477894466255211
+      ConDot1_53: -7944027017085700563
+      ConDot1_54: 1292940825590013108
+      ConDot1_55: 4247972958687125084
+      ConDot1_56: -7563915619996435444
+      ConDot1_57: -4737097068962850520
+      ConDot1_58: -5587206313298389754
+      ConDot1_59: -5670559958803763157
+      ConDot1_6: 182194291334560596
+      ConDot1_60: -1359901943345810839
+      ConDot1_61: -7799974447473791069
+      ConDot1_62: -3811355445337347034
+      ConDot1_63: 118794344338800782
+      ConDot1_64: -5018400658991467251
+      ConDot1_65: 8787725182104847911
+      ConDot1_66: 6381217135663845631
+      ConDot1_67: -3481324557152201515
+      ConDot1_68: 6499879331296162085
+      ConDot1_69: 9140505066362542964
+      ConDot1_7: 3246418701813115285
+      ConDot1_70: 8347573725676342710
+      ConDot1_71: 3383450011011236182
+      ConDot1_72: 9210912998081859397
+      ConDot1_73: -4210875798010048627
+      ConDot1_74: -8784886275185025952
+      ConDot1_75: -5329498298630712863
+      ConDot1_76: 8491348906079242501
+      ConDot1_77: 8218909714493873810
+      ConDot1_78: -2052226795399108657
+      ConDot1_79: 8439512834364002652
+      ConDot1_8: -5751599106357864863
+      ConDot1_80: 497290946472238769
+      ConDot1_81: -984968657327821175
+      ConDot1_82: 9127598179975532670
+      ConDot1_83: -5668450155025709768
+      ConDot1_84: 221740672556432439
+      ConDot1_85: -8141453441657027572
+      ConDot1_86: 6428455831052698688
+      ConDot1_87: 5774763344788138255
+      ConDot1_88: 4537988727780370477
+      ConDot1_89: -7526027140704399251
+      ConDot1_9: -7054918721807250368
+      ConDot1_90: 4907752525138572811
+      ConDot1_91: 2836845991411674982
+      ConDot1_92: 2586380662246062591
+      ConDot1_93: 3212802444762099626
+      ConDot1_94: 6976830313427524675
+      ConDot1_95: 5342727165600881282
+      ConDot1_96: -8101052718841983801
+      ConDot1_97: 7282193518293324731
+      ConDot1_98: -9139681416224221406
+      ConDot1_99: -3371345729216588372
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

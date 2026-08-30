@@ -154,8 +154,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 492.21, y: -169}
-  m_SizeDelta: {x: 120.3588, y: 98.4711}
+  m_AnchoredPosition: {x: 486, y: -166.0121}
+  m_SizeDelta: {x: 132.78, y: 104.4468}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &90841196
 MonoBehaviour:
@@ -689,8 +689,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 12, y: 0}
-  m_SizeDelta: {x: 94.0434, y: 87.4127}
+  m_AnchoredPosition: {x: 10, y: -15}
+  m_SizeDelta: {x: 110.104, y: 98.8845}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &453588680
 MonoBehaviour:
@@ -765,8 +765,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 92.0928, y: -17.701}
-  m_SizeDelta: {x: 128.419, y: 135.4}
+  m_AnchoredPosition: {x: 133, y: -13.1012}
+  m_SizeDelta: {x: 172.8742, y: 184.4539}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &564164660
 MonoBehaviour:
@@ -882,6 +882,7 @@ GameObject:
   - component: {fileID: 709151408}
   - component: {fileID: 709151410}
   - component: {fileID: 709151409}
+  - component: {fileID: 709151411}
   m_Layer: 5
   m_Name: Text (TMP) (1)
   m_TagString: Untagged
@@ -1008,6 +1009,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 709151407}
   m_CullTransparentMesh: 1
+--- !u!114 &709151411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 709151407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed09efbe614f6de45b9639ca1d0a6200, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  textComponent: {fileID: 709151409}
+  englishText: Look at the pictures. Tap the things that your body needs.
+  tagalogText: 'Pindutin ang kailangan ng katawan.
+
+'
 --- !u!1 &917961533
 GameObject:
   m_ObjectHideFlags: 0
@@ -1117,8 +1135,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00015068, y: -0.00017166}
-  m_SizeDelta: {x: 94.044, y: 87.412}
+  m_AnchoredPosition: {x: 0.00095224, y: -0.00012589}
+  m_SizeDelta: {x: 110.1, y: 98.884}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &969586727
 MonoBehaviour:
@@ -1169,6 +1187,7 @@ GameObject:
   - component: {fileID: 1096823122}
   - component: {fileID: 1096823124}
   - component: {fileID: 1096823123}
+  - component: {fileID: 1096823125}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1295,6 +1314,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1096823121}
   m_CullTransparentMesh: 1
+--- !u!114 &1096823125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096823121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed09efbe614f6de45b9639ca1d0a6200, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  textComponent: {fileID: 1096823123}
+  englishText: level 2
+  tagalogText: antas 2
 --- !u!1 &1310616519
 GameObject:
   m_ObjectHideFlags: 0
@@ -1324,6 +1358,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59445af4fe9dcef40b353fde55732874, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneLoader
+  logoutButton: {fileID: 0}
+  loginSceneName: LoginScene
+  settingsFallbackSceneName: MainMenu
 --- !u!4 &1310616521
 Transform:
   m_ObjectHideFlags: 0
@@ -1453,8 +1490,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 486, y: 183.77}
-  m_SizeDelta: {x: 132.78, y: 101.0744}
+  m_AnchoredPosition: {x: 485.99976, y: 180.0352}
+  m_SizeDelta: {x: 132.78, y: 108.544}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1460111625
 MonoBehaviour:
@@ -1629,8 +1666,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -89, y: -17.7005}
-  m_SizeDelta: {x: 121.5485, y: 135.401}
+  m_AnchoredPosition: {x: -114.29346, y: -13.1}
+  m_SizeDelta: {x: 172.1354, y: 184.46}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1565087351
 MonoBehaviour:
@@ -1812,8 +1849,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -467, y: 0.0000038146973}
-  m_SizeDelta: {x: 96.8988, y: 79.7529}
+  m_AnchoredPosition: {x: -480.85, y: -11.4118}
+  m_SizeDelta: {x: 124.6, y: 102.5765}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1762502400
 MonoBehaviour:
@@ -1996,8 +2033,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -470.64, y: 192}
-  m_SizeDelta: {x: 104.1797, y: 84.6068}
+  m_AnchoredPosition: {x: -480.85, y: 186.95}
+  m_SizeDelta: {x: 124.6008, y: 107.4304}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2051518348
 MonoBehaviour:

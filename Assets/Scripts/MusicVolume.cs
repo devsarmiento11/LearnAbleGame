@@ -7,26 +7,45 @@ public class MusicVolume : MonoBehaviour
 
     void Start()
     {
-        if (MusicManager.Instance == null)
+        if (slider == null)
+            slider = GetComponent<Slider>();
+
+        if (slider == null)
         {
-            Debug.LogError("MusicManager not found!");
+            Debug.LogWarning("MusicVolume: Slider component is not assigned.");
+            enabled = false;
             return;
         }
 
         float volume = PlayerPrefs.GetFloat("MusicVolume", 1f);
 
-        slider.value = volume;
+        slider.SetValueWithoutNotify(volume);
 
-        MusicManager.Instance.musicSource.volume = volume;
+        ApplyToMusicManager(volume);
 
         slider.onValueChanged.AddListener(ChangeVolume);
     }
 
     void ChangeVolume(float value)
     {
-        MusicManager.Instance.musicSource.volume = value;
+        ApplyToMusicManager(value);
 
         PlayerPrefs.SetFloat("MusicVolume", value);
         PlayerPrefs.Save();
+    }
+
+    private static void ApplyToMusicManager(float value)
+    {
+        if (MusicManager.Instance != null &&
+            MusicManager.Instance.musicSource != null)
+        {
+            MusicManager.Instance.musicSource.volume = value;
+        }
+    }
+
+    private void OnDestroy()
+    {
+        if (slider != null)
+            slider.onValueChanged.RemoveListener(ChangeVolume);
     }
 }

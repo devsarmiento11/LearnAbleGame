@@ -59,7 +59,7 @@ public static class LearningDataStore
             .ContinueWith(task => LogResult(task, "save user profile"));
     }
 
-    public static void RecordSuccessfulActivity(string activityName, int score, int correctAnswers, int totalItems)
+    public static void RecordActivity(string activityName, int score, int correctAnswers, int totalItems, int timeUsedSeconds)
     {
         if (string.IsNullOrWhiteSpace(CurrentUserId))
         {
@@ -74,6 +74,7 @@ public static class LearningDataStore
             { "score", Mathf.Clamp(score, 0, 100) },
             { "correctAnswers", Mathf.Max(0, correctAnswers) },
             { "totalItems", Mathf.Max(0, totalItems) },
+            { "timeUsedSeconds", Mathf.Max(0, timeUsedSeconds) },
             { "completedAt", FieldValue.ServerTimestamp }
         };
 
@@ -82,6 +83,11 @@ public static class LearningDataStore
             .Document()
             .SetAsync(activity)
             .ContinueWith(task => LogResult(task, "save activity score"));
+    }
+
+    public static void RecordSuccessfulActivity(string activityName, int score, int correctAnswers, int totalItems, int timeUsedSeconds)
+    {
+        RecordActivity(activityName, score, correctAnswers, totalItems, timeUsedSeconds);
     }
 
     private static void LogResult(System.Threading.Tasks.Task task, string operation)

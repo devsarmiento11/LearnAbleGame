@@ -41,10 +41,11 @@ public class TracingLevelManager : MonoBehaviour
 
         PlayerPrefs.Save();
 
+        ScoreManager.RecordActivity(SceneManager.GetActiveScene().name, totalLines);
+
         // 50 or higher = passed
         if (ScoreManager.CurrentScore >= 50)
         {
-            ScoreManager.RecordSuccessfulActivity(SceneManager.GetActiveScene().name, totalLines);
             SceneManager.LoadScene(scoreSceneName);
         }
         else

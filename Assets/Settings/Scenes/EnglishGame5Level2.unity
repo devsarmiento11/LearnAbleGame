@@ -153,8 +153,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00012398, y: -0.000015259}
-  m_SizeDelta: {x: 85.481, y: 81.164}
+  m_AnchoredPosition: {x: 0.00013161, y: -0.000024796}
+  m_SizeDelta: {x: 103.52, y: 99.204}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &59261312
 MonoBehaviour:
@@ -229,8 +229,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -483.81512, y: 28}
-  m_SizeDelta: {x: 140.9175, y: 104.9666}
+  m_AnchoredPosition: {x: -480.65, y: 17}
+  m_SizeDelta: {x: 134.59, y: 110.4559}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &100561742
 MonoBehaviour:
@@ -584,8 +584,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 11.1, y: -34.1}
-  m_SizeDelta: {x: 85.4815, y: 81.1641}
+  m_AnchoredPosition: {x: 14.4, y: -30.8}
+  m_SizeDelta: {x: 103.5215, y: 99.2041}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &474293407
 MonoBehaviour:
@@ -817,8 +817,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -93.030106, y: -69.37827}
-  m_SizeDelta: {x: 6.4275, y: 6.7616}
+  m_AnchoredPosition: {x: -109.8145, y: -95.732}
+  m_SizeDelta: {x: 14.5978, y: 14.046}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &618906235
 BoxCollider2D:
@@ -915,6 +915,7 @@ GameObject:
   - component: {fileID: 678437254}
   - component: {fileID: 678437256}
   - component: {fileID: 678437255}
+  - component: {fileID: 678437257}
   m_Layer: 5
   m_Name: Title (1)
   m_TagString: Untagged
@@ -1041,6 +1042,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 678437253}
   m_CullTransparentMesh: 1
+--- !u!114 &678437257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 678437253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed09efbe614f6de45b9639ca1d0a6200, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  textComponent: {fileID: 678437255}
+  englishText: level 2
+  tagalogText: antas 2
 --- !u!1 &722114834
 GameObject:
   m_ObjectHideFlags: 0
@@ -1442,8 +1458,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 112.814896, y: -68.784805}
-  m_SizeDelta: {x: 8.3012, y: 7.9487}
+  m_AnchoredPosition: {x: 112.4523, y: -95.732}
+  m_SizeDelta: {x: 7.9497, y: 14.046}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &967531098
 BoxCollider2D:
@@ -1564,8 +1580,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -483.81512, y: 193.6882}
-  m_SizeDelta: {x: 140.9175, y: 104.9666}
+  m_AnchoredPosition: {x: -483.82, y: 188.51}
+  m_SizeDelta: {x: 128.259, y: 115.3236}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &975747588
 MonoBehaviour:
@@ -1701,7 +1717,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 4.3, y: -7.2}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1184274833
@@ -1739,8 +1755,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7.700782, y: -69.48124}
-  m_SizeDelta: {x: 6.0919, y: 6.5564}
+  m_AnchoredPosition: {x: 0.8374, y: -95.732}
+  m_SizeDelta: {x: 29.8181, y: 14.046}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1184274835
 BoxCollider2D:
@@ -1936,8 +1952,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -70.55911, y: -31.877007}
-  m_SizeDelta: {x: 7.3666, y: 8.2391}
+  m_AnchoredPosition: {x: -84.9446, y: -42.218}
+  m_SizeDelta: {x: 13.8686, y: 25.064}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1199125801
 BoxCollider2D:
@@ -2058,8 +2074,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -33.2, y: 21.3}
-  m_SizeDelta: {x: 7.4436, y: 9.3076}
+  m_AnchoredPosition: {x: -52.508984, y: 22.6}
+  m_SizeDelta: {x: 18.4895, y: 32.543}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1278322653
 BoxCollider2D:
@@ -2180,8 +2196,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 41.170464, y: 21.299793}
-  m_SizeDelta: {x: 6.6525, y: 9.3071}
+  m_AnchoredPosition: {x: 46.5, y: 19.379}
+  m_SizeDelta: {x: 17.5821, y: 26.101}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1350312300
 BoxCollider2D:
@@ -2296,6 +2312,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59445af4fe9dcef40b353fde55732874, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneLoader
+  logoutButton: {fileID: 0}
+  loginSceneName: LoginScene
+  settingsFallbackSceneName: MainMenu
 --- !u!4 &1370806003
 Transform:
   m_ObjectHideFlags: 0
@@ -2346,8 +2365,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6.6557913, y: 66.12258}
-  m_SizeDelta: {x: 8.1819, y: 9.2553}
+  m_AnchoredPosition: {x: 2.1058, y: 94.5}
+  m_SizeDelta: {x: 14.0984, y: 23.609}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1447789362
 BoxCollider2D:
@@ -2508,8 +2527,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 74.06874, y: -31.779926}
-  m_SizeDelta: {x: 6.9345, y: 8.3638}
+  m_AnchoredPosition: {x: 83.5, y: -42.218}
+  m_SizeDelta: {x: 13.1915, y: 25.0638}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1728940492
 BoxCollider2D:
@@ -2629,8 +2648,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 12, y: -12.9066}
-  m_SizeDelta: {x: 293.039, y: 258.2471}
+  m_AnchoredPosition: {x: 9, y: -21}
+  m_SizeDelta: {x: 344.8212, y: 303.3905}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1812619590
 MonoBehaviour:
@@ -2890,8 +2909,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 491.4, y: -156.1916}
-  m_SizeDelta: {x: 129.74, y: 106.3296}
+  m_AnchoredPosition: {x: 487.1334, y: -153.75354}
+  m_SizeDelta: {x: 138.2733, y: 111.2057}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1920847744
 MonoBehaviour:
@@ -2998,6 +3017,7 @@ GameObject:
   - component: {fileID: 2082672081}
   - component: {fileID: 2082672083}
   - component: {fileID: 2082672082}
+  - component: {fileID: 2082672084}
   m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
@@ -3124,6 +3144,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2082672080}
   m_CullTransparentMesh: 1
+--- !u!114 &2082672084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2082672080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed09efbe614f6de45b9639ca1d0a6200, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  textComponent: {fileID: 2082672082}
+  englishText: Draw triangle inside the circle.
+  tagalogText: Gumuhit ng tatsulok sa loob ng bilog.
 --- !u!1 &2098460663
 GameObject:
   m_ObjectHideFlags: 0
@@ -3157,6 +3192,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UIDrawing
   drawingArea: {fileID: 2098460665}
   brushPrefab: {fileID: 3972186943593266523, guid: 762b883335043804b86f6762772b7362, type: 3}
+  brushSpacing: 8
   lineEnds:
   - {fileID: 1278322652}
   - {fileID: 1199125800}

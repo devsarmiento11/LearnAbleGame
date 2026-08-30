@@ -171,6 +171,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UIDrawing
   drawingArea: {fileID: 236346996}
   brushPrefab: {fileID: 3972186943593266523, guid: 762b883335043804b86f6762772b7362, type: 3}
+  brushSpacing: 8
   lineEnds:
   - {fileID: 1395062777}
   - {fileID: 412224363}
@@ -227,6 +228,7 @@ GameObject:
   - component: {fileID: 267822933}
   - component: {fileID: 267822935}
   - component: {fileID: 267822934}
+  - component: {fileID: 267822936}
   m_Layer: 5
   m_Name: Title (1)
   m_TagString: Untagged
@@ -353,6 +355,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 267822932}
   m_CullTransparentMesh: 1
+--- !u!114 &267822936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 267822932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed09efbe614f6de45b9639ca1d0a6200, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  textComponent: {fileID: 267822934}
+  englishText: level 2
+  tagalogText: ANTAS 2
 --- !u!1 &301472591
 GameObject:
   m_ObjectHideFlags: 0
@@ -428,7 +445,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 64, y: -9.2578}
+  m_AnchoredPosition: {x: 148.1, y: -24}
   m_SizeDelta: {x: 20.0073, y: 18.516}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &412224364
@@ -490,7 +507,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.3529412}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -550,7 +567,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 151.9, y: -9.2578}
+  m_AnchoredPosition: {x: 244.3, y: -25}
   m_SizeDelta: {x: 20.0073, y: 18.516}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &560000300
@@ -612,7 +629,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.3529412}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -872,8 +889,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -82, y: 57}
-  m_SizeDelta: {x: 128.1021, y: 123.4184}
+  m_AnchoredPosition: {x: 11, y: 36}
+  m_SizeDelta: {x: 214.6465, y: 219.5322}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &767242216
 MonoBehaviour:
@@ -947,8 +964,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -310, y: 57}
-  m_SizeDelta: {x: 128.1021, y: 123.4184}
+  m_AnchoredPosition: {x: -371.03427, y: 36.000008}
+  m_SizeDelta: {x: 214.6465, y: 219.5322}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &849140031
 MonoBehaviour:
@@ -1199,8 +1216,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -486.0807, y: 42}
-  m_SizeDelta: {x: 118.7986, y: 98.0012}
+  m_AnchoredPosition: {x: -486.08, y: 17.7743}
+  m_SizeDelta: {x: 118.8, y: 102.4527}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1282342090
 MonoBehaviour:
@@ -1407,7 +1424,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -164.6437, y: -9.2578}
+  m_AnchoredPosition: {x: -234.9, y: -26.8}
   m_SizeDelta: {x: 20.0073, y: 18.516}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1395062778
@@ -1469,7 +1486,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.3529412}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1505,6 +1522,7 @@ GameObject:
   - component: {fileID: 1514512097}
   - component: {fileID: 1514512099}
   - component: {fileID: 1514512098}
+  - component: {fileID: 1514512100}
   m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
@@ -1631,6 +1649,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1514512096}
   m_CullTransparentMesh: 1
+--- !u!114 &1514512100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1514512096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed09efbe614f6de45b9639ca1d0a6200, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  textComponent: {fileID: 1514512098}
+  englishText: Draw a horizontal line on the pizza to split it into two equal halves.
+  tagalogText: Hatiin ang pizza nang pahalang sa dalawang pantay na bahagi.
 --- !u!1 &1595804608
 GameObject:
   m_ObjectHideFlags: 0
@@ -1660,6 +1693,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59445af4fe9dcef40b353fde55732874, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneLoader
+  logoutButton: {fileID: 0}
+  loginSceneName: LoginScene
+  settingsFallbackSceneName: MainMenu
 --- !u!4 &1595804610
 Transform:
   m_ObjectHideFlags: 0
@@ -1710,7 +1746,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -75.8, y: -9.2578}
+  m_AnchoredPosition: {x: -133.1, y: -25}
   m_SizeDelta: {x: 20.0073, y: 18.516}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1595903617
@@ -1772,7 +1808,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.3529412}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2003,8 +2039,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -486.0807, y: 193.34332}
-  m_SizeDelta: {x: 118.7986, y: 98.0012}
+  m_AnchoredPosition: {x: -482.773, y: 186.14}
+  m_SizeDelta: {x: 125.4139, y: 112.41}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1707071312
 MonoBehaviour:
@@ -2135,8 +2171,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 479.95386, y: -177.79309}
-  m_SizeDelta: {x: 136.5671, y: 99.2334}
+  m_AnchoredPosition: {x: 488.2, y: -164}
+  m_SizeDelta: {x: 143.031, y: 112.1611}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1845381314
 MonoBehaviour:
@@ -2267,8 +2303,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 488.1991, y: 179}
-  m_SizeDelta: {x: 120.0766, y: 98.134}
+  m_AnchoredPosition: {x: 488.2, y: 174}
+  m_SizeDelta: {x: 122.7974, y: 110.3773}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1849397552
 MonoBehaviour:
@@ -2447,7 +2483,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -421, y: -137}
+  m_AnchoredPosition: {x: -419, y: -164}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1968480154

@@ -154,8 +154,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 487, y: 186}
-  m_SizeDelta: {x: 127.629, y: 103.1866}
+  m_AnchoredPosition: {x: 490.3, y: 179}
+  m_SizeDelta: {x: 134.23, y: 110.6628}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &10513768
 MonoBehaviour:
@@ -286,8 +286,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -462, y: 198}
-  m_SizeDelta: {x: 116.5507, y: 91.1006}
+  m_AnchoredPosition: {x: -473.6167, y: 188.98}
+  m_SizeDelta: {x: 139.7841, y: 109.14}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &148663380
 MonoBehaviour:
@@ -418,8 +418,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -102, y: -12.83}
-  m_SizeDelta: {x: 133.3635, y: 136.94}
+  m_AnchoredPosition: {x: -146, y: -24}
+  m_SizeDelta: {x: 190.2713, y: 181.3558}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &197381961
 MonoBehaviour:
@@ -509,8 +509,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 489.11, y: -157}
-  m_SizeDelta: {x: 131.8513, y: 90.5197}
+  m_AnchoredPosition: {x: 487, y: -157}
+  m_SizeDelta: {x: 140.8227, y: 103.9768}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &248248636
 MonoBehaviour:
@@ -692,6 +692,7 @@ GameObject:
   - component: {fileID: 682589858}
   - component: {fileID: 682589860}
   - component: {fileID: 682589859}
+  - component: {fileID: 682589861}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -818,6 +819,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 682589857}
   m_CullTransparentMesh: 1
+--- !u!114 &682589861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 682589857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed09efbe614f6de45b9639ca1d0a6200, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  textComponent: {fileID: 682589859}
+  englishText: level 3
+  tagalogText: antas 3
 --- !u!1 &689572345
 GameObject:
   m_ObjectHideFlags: 0
@@ -879,6 +895,7 @@ GameObject:
   - component: {fileID: 736620007}
   - component: {fileID: 736620009}
   - component: {fileID: 736620008}
+  - component: {fileID: 736620010}
   m_Layer: 5
   m_Name: Text (TMP) (1)
   m_TagString: Untagged
@@ -1005,6 +1022,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 736620006}
   m_CullTransparentMesh: 1
+--- !u!114 &736620010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 736620006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed09efbe614f6de45b9639ca1d0a6200, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  textComponent: {fileID: 736620008}
+  englishText: Look at the pictures. Tap the things that your body needs.
+  tagalogText: 'Pindutin ang kailangan ng katawan.
+
+'
 --- !u!1 &790182012
 GameObject:
   m_ObjectHideFlags: 0
@@ -1093,8 +1127,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 97, y: -10.4464}
-  m_SizeDelta: {x: 134.5551, y: 132.1719}
+  m_AnchoredPosition: {x: 138.40552, y: -24}
+  m_SizeDelta: {x: 193.2138, y: 181.36}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &845680212
 GameObject:
@@ -1131,8 +1165,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -468.79, y: 8.523}
-  m_SizeDelta: {x: 102.9727, y: 82.9539}
+  m_AnchoredPosition: {x: -477.01, y: -0.0000019073}
+  m_SizeDelta: {x: 132.99, y: 109.6589}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &845680214
 MonoBehaviour:
@@ -1422,8 +1456,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 15, y: 0.0000038147}
-  m_SizeDelta: {x: 110.7118, y: 99.6247}
+  m_AnchoredPosition: {x: 5, y: -10}
+  m_SizeDelta: {x: 134.8236, y: 113.403}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &942065767
 MonoBehaviour:
@@ -1708,6 +1742,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59445af4fe9dcef40b353fde55732874, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneLoader
+  logoutButton: {fileID: 0}
+  loginSceneName: LoginScene
+  settingsFallbackSceneName: MainMenu
 --- !u!4 &1129678757
 Transform:
   m_ObjectHideFlags: 0
@@ -1838,8 +1875,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000051498, y: -0.00017357}
-  m_SizeDelta: {x: 110.71, y: 99.624}
+  m_AnchoredPosition: {x: -0.00079679, y: -0.00090241}
+  m_SizeDelta: {x: 134.83, y: 113.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1345164895
 MonoBehaviour:

@@ -19,7 +19,7 @@ public class EnglishLevel2Manager : MonoBehaviour
         Debug.Log("Completed Lines = " + completed);
         Debug.Log("Final Score = " + ScoreManager.CurrentScore);
 
-        ScoreManager.RecordSuccessfulActivity(SceneManager.GetActiveScene().name, 16);
+        ScoreManager.RecordActivity(SceneManager.GetActiveScene().name, 16);
         SceneManager.LoadScene("ScoreScene");
     }
 }

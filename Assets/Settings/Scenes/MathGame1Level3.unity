@@ -185,8 +185,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 488.18, y: -168.79097}
-  m_SizeDelta: {x: 129.3372, y: 97.7016}
+  m_AnchoredPosition: {x: 485.19952, y: -162.8301}
+  m_SizeDelta: {x: 135.2981, y: 109.6234}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &180143362
 MonoBehaviour:
@@ -311,6 +311,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59445af4fe9dcef40b353fde55732874, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneLoader
+  logoutButton: {fileID: 0}
+  loginSceneName: LoginScene
+  settingsFallbackSceneName: MainMenu
 --- !u!4 &273142157
 Transform:
   m_ObjectHideFlags: 0
@@ -575,8 +578,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -490, y: 193.17792}
-  m_SizeDelta: {x: 120.3672, y: 94.0894}
+  m_AnchoredPosition: {x: -476.89996, y: 180.0238}
+  m_SizeDelta: {x: 140.6963, y: 120.3976}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &780943901
 MonoBehaviour:
@@ -1043,8 +1046,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0001564, y: 0.00018501}
-  m_SizeDelta: {x: 93.696, y: 79.627}
+  m_AnchoredPosition: {x: -0.00088024, y: 0.000019073}
+  m_SizeDelta: {x: 128.2, y: 106.34}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1222074618
 MonoBehaviour:
@@ -1094,6 +1097,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1261763064}
   - component: {fileID: 1261763065}
+  - component: {fileID: 1261763066}
   m_Layer: 5
   m_Name: MusicToggle
   m_TagString: Untagged
@@ -1168,7 +1172,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1315823503}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MusicToggle, Assembly-CSharp
         m_MethodName: ToggleMusic
         m_Mode: 6
@@ -1181,51 +1185,19 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
   m_IsOn: 1
---- !u!1 &1315823502
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1315823504}
-  - component: {fileID: 1315823503}
-  m_Layer: 0
-  m_Name: MusicToggle
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1315823503
+--- !u!114 &1261763066
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1315823502}
+  m_GameObject: {fileID: 1261763063}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: adb26dabdfbf9a1479b509d08a6c5f88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MusicToggle
-  musicToggle: {fileID: 0}
---- !u!4 &1315823504
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1315823502}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 220.87065, y: 281.0811, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  musicToggle: {fileID: 1261763065}
 --- !u!1 &1418168705
 GameObject:
   m_ObjectHideFlags: 0
@@ -1278,6 +1250,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UIDrawing
   drawingArea: {fileID: 1418168706}
   brushPrefab: {fileID: 3972186943593266523, guid: 762b883335043804b86f6762772b7362, type: 3}
+  brushSpacing: 8
   lineEnds:
   - {fileID: 1895297037}
   detectDistance: 10
@@ -1331,6 +1304,7 @@ GameObject:
   - component: {fileID: 1454098487}
   - component: {fileID: 1454098489}
   - component: {fileID: 1454098488}
+  - component: {fileID: 1454098490}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1457,6 +1431,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1454098486}
   m_CullTransparentMesh: 1
+--- !u!114 &1454098490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1454098486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed09efbe614f6de45b9639ca1d0a6200, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  textComponent: {fileID: 1454098488}
+  englishText: level 3
+  tagalogText: antas 3
 --- !u!1 &1576273875
 GameObject:
   m_ObjectHideFlags: 0
@@ -1468,6 +1457,7 @@ GameObject:
   - component: {fileID: 1576273876}
   - component: {fileID: 1576273878}
   - component: {fileID: 1576273877}
+  - component: {fileID: 1576273879}
   m_Layer: 5
   m_Name: Text (TMP) (1)
   m_TagString: Untagged
@@ -1595,6 +1585,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1576273875}
   m_CullTransparentMesh: 1
+--- !u!114 &1576273879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1576273875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed09efbe614f6de45b9639ca1d0a6200, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  textComponent: {fileID: 1576273877}
+  englishText: How old are you? Draw the number of your age on the cake according
+    to your age.
+  tagalogText: Ilang taon ka na? Isulat ang iyong edad sa cake.
 --- !u!1 &1644332093
 GameObject:
   m_ObjectHideFlags: 0
@@ -1738,8 +1744,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000023842, y: -95}
-  m_SizeDelta: {x: 237.4657, y: 162.2108}
+  m_AnchoredPosition: {x: -0.8071, y: -103.8781}
+  m_SizeDelta: {x: 264.9073, y: 179.9671}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1679401430
 MonoBehaviour:
@@ -1814,8 +1820,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 21.339508, y: -39.812737}
-  m_SizeDelta: {x: 93.6954, y: 79.6263}
+  m_AnchoredPosition: {x: 17, y: -31}
+  m_SizeDelta: {x: 128.1971, y: 106.3373}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1759926213
 MonoBehaviour:
@@ -2087,8 +2093,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -485, y: 2}
-  m_SizeDelta: {x: 107.8118, y: 82.8265}
+  m_AnchoredPosition: {x: -476.9, y: -0.0000038147}
+  m_SizeDelta: {x: 118.3673, y: 103.9376}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2005631261
 MonoBehaviour:
@@ -2267,8 +2273,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 488.18, y: 184.83}
-  m_SizeDelta: {x: 113.6414, y: 77.3888}
+  m_AnchoredPosition: {x: 488.25, y: 172}
+  m_SizeDelta: {x: 129.1872, y: 116.8511}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2137595302
 MonoBehaviour:
@@ -2414,4 +2420,3 @@ SceneRoots:
   - {fileID: 2045123954}
   - {fileID: 273142157}
   - {fileID: 400986860}
-  - {fileID: 1315823504}

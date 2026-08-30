@@ -17,7 +17,10 @@ public class GameTimer : MonoBehaviour
     public string failedSceneName = "ScoreSceneFailed";
 
     private float currentTime;
+    private float elapsedTime;
     private bool timerRunning = true;
+
+    public float ElapsedTime => elapsedTime;
 
     // Colors
     public Color normalColor = Color.white;
@@ -25,7 +28,9 @@ public class GameTimer : MonoBehaviour
 
     void Start()
     {
+        ScoreManager.BeginActivity();
         currentTime = startingTime;
+        elapsedTime = 0f;
 
         // Start with normal color
         if (timerText != null)
@@ -41,7 +46,9 @@ public class GameTimer : MonoBehaviour
         if (!timerRunning)
             return;
 
-        currentTime -= Time.deltaTime;
+        float frameTime = Mathf.Min(Time.deltaTime, currentTime);
+        elapsedTime += frameTime;
+        currentTime -= frameTime;
 
         if (currentTime <= 0f)
         {
@@ -57,6 +64,11 @@ public class GameTimer : MonoBehaviour
         }
 
         UpdateTimerDisplay();
+    }
+
+    public int GetElapsedSeconds()
+    {
+        return Mathf.Max(0, Mathf.CeilToInt(elapsedTime));
     }
 
     void UpdateTimerDisplay()
@@ -82,6 +94,10 @@ public class GameTimer : MonoBehaviour
     void TimeUp()
     {
         Debug.Log("TIME'S UP!");
+
+        ScoreManager.CurrentScore = 0;
+        ScoreManager.CorrectLines = 0;
+        ScoreManager.RecordActivity(SceneManager.GetActiveScene().name, 0);
 
         PlayerPrefs.SetString(
             "PreviousGameScene",

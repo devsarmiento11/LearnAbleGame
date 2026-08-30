@@ -39,10 +39,11 @@ public class ScienceMatchingManager : MonoBehaviour
 
         PlayerPrefs.Save();
 
+        ScoreManager.RecordActivity(SceneManager.GetActiveScene().name, totalMatches);
+
         // 50 or higher = PASS
         if (ScoreManager.CurrentScore >= 50)
         {
-            ScoreManager.RecordSuccessfulActivity(SceneManager.GetActiveScene().name, totalMatches);
             SceneManager.LoadScene(scoreScene);
         }
         else

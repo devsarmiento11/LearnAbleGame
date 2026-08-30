@@ -201,8 +201,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 137.4, y: 40}
-  m_SizeDelta: {x: 12.8901, y: 12.2332}
+  m_AnchoredPosition: {x: 134.8, y: 42.671}
+  m_SizeDelta: {x: 14.9555, y: 14.6574}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &195613263
 MonoBehaviour:
@@ -289,8 +289,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -148.91, y: 53.674}
-  m_SizeDelta: {x: 76.704, y: 77.8519}
+  m_AnchoredPosition: {x: -160.12674, y: 64.35661}
+  m_SizeDelta: {x: 99.1375, y: 99.2171}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &199860843
 MonoBehaviour:
@@ -475,8 +475,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -84.1, y: -159.7}
-  m_SizeDelta: {x: 12.8901, y: 12.2332}
+  m_AnchoredPosition: {x: -82.29998, y: -158.8}
+  m_SizeDelta: {x: 15.3934, y: 14.6449}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &293017635
 MonoBehaviour:
@@ -769,6 +769,7 @@ GameObject:
   - component: {fileID: 602479575}
   - component: {fileID: 602479577}
   - component: {fileID: 602479576}
+  - component: {fileID: 602479578}
   m_Layer: 5
   m_Name: Text (TMP) (1)
   m_TagString: Untagged
@@ -896,6 +897,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 602479574}
   m_CullTransparentMesh: 1
+--- !u!114 &602479578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 602479574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed09efbe614f6de45b9639ca1d0a6200, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  textComponent: {fileID: 602479576}
+  englishText: Match the pictures to the correct answers. Drag or connect each picture
+    to the correct answer.
+  tagalogText: Itugma ang mga larawan sa tamang sagot. I-drag o ikonekta ang bawat
+    larawan sa tamang sagot.
 --- !u!1 &646334079
 GameObject:
   m_ObjectHideFlags: 0
@@ -931,8 +949,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -84.1, y: -59}
-  m_SizeDelta: {x: 12.8901, y: 12.2332}
+  m_AnchoredPosition: {x: -82.29998, y: -57.7}
+  m_SizeDelta: {x: 15.3934, y: 14.6449}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &646334081
 MonoBehaviour:
@@ -996,6 +1014,7 @@ GameObject:
   - component: {fileID: 660194628}
   - component: {fileID: 660194630}
   - component: {fileID: 660194629}
+  - component: {fileID: 660194631}
   m_Layer: 5
   m_Name: Text (TMP) (1)
   m_TagString: Untagged
@@ -1122,6 +1141,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 660194627}
   m_CullTransparentMesh: 1
+--- !u!114 &660194631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660194627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed09efbe614f6de45b9639ca1d0a6200, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  textComponent: {fileID: 0}
+  englishText: clothes
+  tagalogText: damit
 --- !u!1 &685519079
 GameObject:
   m_ObjectHideFlags: 0
@@ -1267,8 +1301,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -147.7, y: -48.71507}
-  m_SizeDelta: {x: 79.1178, y: 78.6484}
+  m_AnchoredPosition: {x: -155.1778, y: -44.02}
+  m_SizeDelta: {x: 94.0735, y: 88.039}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &691973183
 MonoBehaviour:
@@ -1343,8 +1377,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -473, y: 191.03}
-  m_SizeDelta: {x: 104.183, y: 99.4865}
+  m_AnchoredPosition: {x: -478.87543, y: 184.0863}
+  m_SizeDelta: {x: 115.9339, y: 113.3739}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &717293215
 MonoBehaviour:
@@ -1654,8 +1688,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 137.40002, y: -59}
-  m_SizeDelta: {x: 12.8901, y: 12.2332}
+  m_AnchoredPosition: {x: 134.79999, y: -56.1}
+  m_SizeDelta: {x: 14.9555, y: 14.6574}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1024547580
 MonoBehaviour:
@@ -1737,6 +1771,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59445af4fe9dcef40b353fde55732874, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneLoader
+  logoutButton: {fileID: 0}
+  loginSceneName: LoginScene
+  settingsFallbackSceneName: MainMenu
 --- !u!4 &1070907573
 Transform:
   m_ObjectHideFlags: 0
@@ -1787,8 +1824,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 5.8, y: -10}
-  m_SizeDelta: {x: 88.7915, y: 84.3173}
+  m_AnchoredPosition: {x: 6, y: -10}
+  m_SizeDelta: {x: 108.0201, y: 98.2047}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1306155032
 MonoBehaviour:
@@ -1862,8 +1899,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -148.2, y: -149.1}
-  m_SizeDelta: {x: 85.4899, y: 77.0554}
+  m_AnchoredPosition: {x: -153.83, y: -146.9635}
+  m_SizeDelta: {x: 96.759, y: 81.3284}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1356637241
 MonoBehaviour:
@@ -1938,8 +1975,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 137.40002, y: -159.7}
-  m_SizeDelta: {x: 12.8901, y: 12.2332}
+  m_AnchoredPosition: {x: 134.79999, y: -158.07317}
+  m_SizeDelta: {x: 14.9555, y: 14.6574}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1418460919
 MonoBehaviour:
@@ -2026,8 +2063,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00012398, y: -0.000070572}
-  m_SizeDelta: {x: 88.792, y: 84.317}
+  m_AnchoredPosition: {x: -0.000031948, y: 0.000021935}
+  m_SizeDelta: {x: 108.02, y: 98.205}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1509644522
 MonoBehaviour:
@@ -2150,8 +2187,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -473, y: -15}
-  m_SizeDelta: {x: 104.1799, y: 83.0071}
+  m_AnchoredPosition: {x: -476.21, y: -10}
+  m_SizeDelta: {x: 121.2713, y: 101.1676}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1674795274
 MonoBehaviour:
@@ -2258,6 +2295,7 @@ GameObject:
   - component: {fileID: 1808513158}
   - component: {fileID: 1808513160}
   - component: {fileID: 1808513159}
+  - component: {fileID: 1808513161}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -2384,6 +2422,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1808513157}
   m_CullTransparentMesh: 1
+--- !u!114 &1808513161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1808513157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed09efbe614f6de45b9639ca1d0a6200, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  textComponent: {fileID: 1808513159}
+  englishText: water
+  tagalogText: tubig
 --- !u!1 &1811010136
 GameObject:
   m_ObjectHideFlags: 0
@@ -2419,8 +2472,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -84.1, y: 40}
-  m_SizeDelta: {x: 12.8901, y: 12.2332}
+  m_AnchoredPosition: {x: -82.3, y: 41.7}
+  m_SizeDelta: {x: 15.3934, y: 14.6449}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1811010138
 MonoBehaviour:
@@ -2659,6 +2712,7 @@ GameObject:
   - component: {fileID: 2042092388}
   - component: {fileID: 2042092390}
   - component: {fileID: 2042092389}
+  - component: {fileID: 2042092391}
   m_Layer: 5
   m_Name: Text (TMP) (2)
   m_TagString: Untagged
@@ -2785,6 +2839,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2042092387}
   m_CullTransparentMesh: 1
+--- !u!114 &2042092391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042092387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed09efbe614f6de45b9639ca1d0a6200, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  textComponent: {fileID: 0}
+  englishText: apple
+  tagalogText: mansanas
 --- !u!1 &2094441580
 GameObject:
   m_ObjectHideFlags: 0
@@ -2820,8 +2889,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 480.58, y: 199}
-  m_SizeDelta: {x: 109.8787, y: 83.5388}
+  m_AnchoredPosition: {x: 488.63, y: 187.9734}
+  m_SizeDelta: {x: 125.62, y: 105.6007}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2094441582
 MonoBehaviour:
@@ -2996,8 +3065,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 484, y: -170}
-  m_SizeDelta: {x: 116.7133, y: 96.0691}
+  m_AnchoredPosition: {x: 488.63, y: -169}
+  m_SizeDelta: {x: 138.6135, y: 103.7344}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2137628531
 MonoBehaviour:
@@ -3183,6 +3252,7 @@ GameObject:
   - component: {fileID: 2146047187}
   - component: {fileID: 2146047189}
   - component: {fileID: 2146047188}
+  - component: {fileID: 2146047190}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -3309,6 +3379,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2146047186}
   m_CullTransparentMesh: 1
+--- !u!114 &2146047190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2146047186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed09efbe614f6de45b9639ca1d0a6200, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  textComponent: {fileID: 2146047188}
+  englishText: level 3
+  tagalogText: antas 3
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

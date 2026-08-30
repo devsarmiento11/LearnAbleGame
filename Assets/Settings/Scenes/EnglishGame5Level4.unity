@@ -435,7 +435,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 480, y: 184}
+  m_AnchoredPosition: {x: 482.96997, y: 184}
   m_SizeDelta: {x: 131.7682, y: 98.7383}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &81761152
@@ -1689,6 +1689,7 @@ GameObject:
   - component: {fileID: 1005001116}
   - component: {fileID: 1005001118}
   - component: {fileID: 1005001117}
+  - component: {fileID: 1005001119}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1815,6 +1816,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1005001115}
   m_CullTransparentMesh: 1
+--- !u!114 &1005001119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005001115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed09efbe614f6de45b9639ca1d0a6200, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  textComponent: {fileID: 1005001117}
+  englishText: level 4
+  tagalogText: antas 4
 --- !u!1 &1109198406
 GameObject:
   m_ObjectHideFlags: 0
@@ -2184,6 +2200,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59445af4fe9dcef40b353fde55732874, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneLoader
+  logoutButton: {fileID: 0}
+  loginSceneName: LoginScene
+  settingsFallbackSceneName: MainMenu
 --- !u!4 &1341958489
 Transform:
   m_ObjectHideFlags: 0
@@ -2356,8 +2375,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -483, y: 194.3176}
-  m_SizeDelta: {x: 108.45, y: 97.5109}
+  m_AnchoredPosition: {x: -477, y: 184}
+  m_SizeDelta: {x: 137.1969, y: 127.6952}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1476082107
 MonoBehaviour:
@@ -2589,6 +2608,7 @@ GameObject:
   - component: {fileID: 1566430673}
   - component: {fileID: 1566430675}
   - component: {fileID: 1566430674}
+  - component: {fileID: 1566430676}
   m_Layer: 5
   m_Name: Text (TMP) (1)
   m_TagString: Untagged
@@ -2715,6 +2735,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1566430672}
   m_CullTransparentMesh: 1
+--- !u!114 &1566430676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566430672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed09efbe614f6de45b9639ca1d0a6200, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  textComponent: {fileID: 1566430674}
+  englishText: Draw square inside the circle.
+  tagalogText: "Gumuhit ng parisukat (\u25A1) sa bawat bilog."
 --- !u!1 &1605339456
 GameObject:
   m_ObjectHideFlags: 0
@@ -2872,8 +2907,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 9.4, y: -25.5}
-  m_SizeDelta: {x: 103.084, y: 95.4848}
+  m_AnchoredPosition: {x: 7.2440033, y: -29.812082}
+  m_SizeDelta: {x: 116.0201, y: 109.8583}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1614968273
 MonoBehaviour:
@@ -2947,8 +2982,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000038147, y: -0.00020027}
-  m_SizeDelta: {x: 103.08, y: 95.484}
+  m_AnchoredPosition: {x: 0.000031233, y: -0.0003264}
+  m_SizeDelta: {x: 116.02, y: 109.86}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1649495731
 MonoBehaviour:
@@ -3195,8 +3230,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 480, y: -144}
-  m_SizeDelta: {x: 121.9484, y: 87.6911}
+  m_AnchoredPosition: {x: 482.97, y: -161}
+  m_SizeDelta: {x: 137.7107, y: 107.8885}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1821605021
 MonoBehaviour:
@@ -3546,6 +3581,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UIDrawing
   drawingArea: {fileID: 1916521847}
   brushPrefab: {fileID: 3972186943593266523, guid: 762b883335043804b86f6762772b7362, type: 3}
+  brushSpacing: 8
   lineEnds:
   - {fileID: 5237236}
   - {fileID: 1109198407}
@@ -3579,8 +3615,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.1095, y: -22.8757}
-  m_SizeDelta: {x: 759.9268, y: 360.594}
+  m_AnchoredPosition: {x: -4.7145, y: -22.8757}
+  m_SizeDelta: {x: 585.5352, y: 360.594}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1916521848
 MonoBehaviour:
@@ -3730,8 +3766,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -477, y: -19}
-  m_SizeDelta: {x: 108.4462, y: 82.7812}
+  m_AnchoredPosition: {x: -477, y: -22}
+  m_SizeDelta: {x: 122.82, y: 100.0293}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2009100841
 MonoBehaviour:

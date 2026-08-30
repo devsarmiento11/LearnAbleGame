@@ -241,8 +241,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000097275, y: 0.000095367}
-  m_SizeDelta: {x: 90.816, y: 70.583}
+  m_AnchoredPosition: {x: -0.00025368, y: 0.00072765}
+  m_SizeDelta: {x: 119.1, y: 110.21}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &88003696
 MonoBehaviour:
@@ -318,8 +318,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -476, y: 183}
-  m_SizeDelta: {x: 126.8949, y: 101.5069}
+  m_AnchoredPosition: {x: -473.8094, y: 174.53748}
+  m_SizeDelta: {x: 131.2762, y: 118.4319}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &118843493
 MonoBehaviour:
@@ -461,8 +461,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 20.7, y: -69.4}
-  m_SizeDelta: {x: 149.9598, y: 114.64}
+  m_AnchoredPosition: {x: 6, y: -52.261}
+  m_SizeDelta: {x: 176.9604, y: 119.81}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &166423715
 MonoBehaviour:
@@ -531,6 +531,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59445af4fe9dcef40b353fde55732874, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneLoader
+  logoutButton: {fileID: 0}
+  loginSceneName: LoginScene
+  settingsFallbackSceneName: MainMenu
 --- !u!4 &187385027
 Transform:
   m_ObjectHideFlags: 0
@@ -558,6 +561,7 @@ GameObject:
   - component: {fileID: 228173492}
   - component: {fileID: 228173491}
   - component: {fileID: 228173493}
+  - component: {fileID: 228173494}
   m_Layer: 5
   m_Name: Cat
   m_TagString: Untagged
@@ -696,6 +700,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efb6b9c83f14eae43b16647d0cf91664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DraggableWord
+--- !u!114 &228173494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 228173489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed09efbe614f6de45b9639ca1d0a6200, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  textComponent: {fileID: 228173491}
+  englishText: cat
+  tagalogText: pusa
 --- !u!1 &259811219
 GameObject:
   m_ObjectHideFlags: 0
@@ -732,8 +751,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -476, y: -16.4}
-  m_SizeDelta: {x: 107.72, y: 102.074}
+  m_AnchoredPosition: {x: -473.81, y: -7.7908}
+  m_SizeDelta: {x: 131.28, y: 115.5817}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &259811221
 MonoBehaviour:
@@ -1061,8 +1080,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 481.6095, y: -147.17145}
-  m_SizeDelta: {x: 108.1407, y: 77.7919}
+  m_AnchoredPosition: {x: 486.34534, y: -165.38403}
+  m_SizeDelta: {x: 140.9809, y: 118.2497}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &455207489
 MonoBehaviour:
@@ -1170,51 +1189,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f7fb6f57e1bbbe4cbfeb3024275056e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIButton
---- !u!1 &514670552
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 514670554}
-  - component: {fileID: 514670553}
-  m_Layer: 0
-  m_Name: MusicToggle
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &514670553
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 514670552}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adb26dabdfbf9a1479b509d08a6c5f88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MusicToggle
-  musicToggle: {fileID: 0}
---- !u!4 &514670554
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 514670552}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 220.87065, y: 281.0811, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &525454256
 GameObject:
   m_ObjectHideFlags: 0
@@ -1300,8 +1274,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -209.8, y: -62.700005}
-  m_SizeDelta: {x: 121.5344, y: 114.6434}
+  m_AnchoredPosition: {x: -212.40968, y: -52.261375}
+  m_SizeDelta: {x: 142.4117, y: 135.5207}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &630279057
 MonoBehaviour:
@@ -1351,6 +1325,7 @@ GameObject:
   m_Component:
   - component: {fileID: 711224192}
   - component: {fileID: 711224193}
+  - component: {fileID: 711224194}
   m_Layer: 5
   m_Name: MusicToggle
   m_TagString: Untagged
@@ -1425,7 +1400,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 514670553}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MusicToggle, Assembly-CSharp
         m_MethodName: ToggleMusic
         m_Mode: 6
@@ -1438,6 +1413,19 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   m_IsOn: 1
+--- !u!114 &711224194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711224191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adb26dabdfbf9a1479b509d08a6c5f88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MusicToggle
+  musicToggle: {fileID: 711224193}
 --- !u!1 &726491350
 GameObject:
   m_ObjectHideFlags: 0
@@ -1450,6 +1438,7 @@ GameObject:
   - component: {fileID: 726491353}
   - component: {fileID: 726491352}
   - component: {fileID: 726491354}
+  - component: {fileID: 726491355}
   m_Layer: 5
   m_Name: Bird
   m_TagString: Untagged
@@ -1588,6 +1577,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efb6b9c83f14eae43b16647d0cf91664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DraggableWord
+--- !u!114 &726491355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 726491350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed09efbe614f6de45b9639ca1d0a6200, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  textComponent: {fileID: 726491352}
+  englishText: bird
+  tagalogText: ibon
 --- !u!1 &731626342
 GameObject:
   m_ObjectHideFlags: 0
@@ -1624,8 +1628,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 486, y: 198}
-  m_SizeDelta: {x: 108.1407, y: 89.9941}
+  m_AnchoredPosition: {x: 486.35, y: 187.8781}
+  m_SizeDelta: {x: 131.09, y: 112.1009}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &731626344
 MonoBehaviour:
@@ -1783,6 +1787,7 @@ GameObject:
   - component: {fileID: 914097811}
   - component: {fileID: 914097810}
   - component: {fileID: 914097812}
+  - component: {fileID: 914097813}
   m_Layer: 5
   m_Name: Fish
   m_TagString: Untagged
@@ -1921,6 +1926,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efb6b9c83f14eae43b16647d0cf91664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DraggableWord
+--- !u!114 &914097813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 914097808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed09efbe614f6de45b9639ca1d0a6200, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  textComponent: {fileID: 914097810}
+  englishText: fish
+  tagalogText: isda
 --- !u!1 &990049298
 GameObject:
   m_ObjectHideFlags: 0
@@ -1969,6 +1989,7 @@ GameObject:
   - component: {fileID: 1004926343}
   - component: {fileID: 1004926345}
   - component: {fileID: 1004926344}
+  - component: {fileID: 1004926346}
   m_Layer: 5
   m_Name: Text (TMP) (1)
   m_TagString: Untagged
@@ -1992,8 +2013,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.1, y: 178.5}
-  m_SizeDelta: {x: 696.3297, y: 50}
+  m_AnchoredPosition: {x: -0, y: 178.5}
+  m_SizeDelta: {x: 634.1682, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1004926344
 MonoBehaviour:
@@ -2095,6 +2116,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1004926342}
   m_CullTransparentMesh: 1
+--- !u!114 &1004926346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1004926342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed09efbe614f6de45b9639ca1d0a6200, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  textComponent: {fileID: 1004926344}
+  englishText: Match the picture by dragging and dropping the correct answer.
+  tagalogText: 'Itugma ang larawan sa pamamagitan ng pag-drag at pag-drop ng tamang
+    sagot.
+
+'
 --- !u!1 &1135125929
 GameObject:
   m_ObjectHideFlags: 0
@@ -2209,8 +2248,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 251.5, y: -157.8}
-  m_SizeDelta: {x: 0, y: -70.3718}
+  m_AnchoredPosition: {x: 242.19385, y: -152.46686}
+  m_SizeDelta: {x: 8.7625, y: -59.7055}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1405698104
 MonoBehaviour:
@@ -2225,7 +2264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 0.8941177, b: 0.7098039, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2527,8 +2566,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -228.5, y: -157.8}
-  m_SizeDelta: {x: 0, y: -70.3718}
+  m_AnchoredPosition: {x: -216, y: -152.46686}
+  m_SizeDelta: {x: 8.7625, y: -59.7055}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1805237603
 MonoBehaviour:
@@ -2543,7 +2582,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 0.8941177, b: 0.7098039, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2694,8 +2733,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 17.8, y: -157.8}
-  m_SizeDelta: {x: 0, y: -70.3718}
+  m_AnchoredPosition: {x: 1, y: -152.46686}
+  m_SizeDelta: {x: 8.7625, y: -59.7055}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1838860440
 MonoBehaviour:
@@ -2710,7 +2749,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 0.8941177, b: 0.7098039, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2783,8 +2822,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0.124298096, y: -8.3139}
-  m_SizeDelta: {x: 90.8157, y: 70.5826}
+  m_AnchoredPosition: {x: 16.1606, y: -19.2808}
+  m_SizeDelta: {x: 119.0984, y: 110.2077}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1950589063
 MonoBehaviour:
@@ -2835,6 +2874,7 @@ GameObject:
   - component: {fileID: 2072604774}
   - component: {fileID: 2072604776}
   - component: {fileID: 2072604775}
+  - component: {fileID: 2072604777}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -2961,6 +3001,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2072604773}
   m_CullTransparentMesh: 1
+--- !u!114 &2072604777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2072604773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed09efbe614f6de45b9639ca1d0a6200, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  textComponent: {fileID: 2072604775}
+  englishText: level 2
+  tagalogText: antas 2
 --- !u!1 &2145233079
 GameObject:
   m_ObjectHideFlags: 0
@@ -2995,8 +3050,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 251.4, y: -66.814}
-  m_SizeDelta: {x: 115.5048, y: 119.8116}
+  m_AnchoredPosition: {x: 241, y: -55}
+  m_SizeDelta: {x: 130.1302, y: 134.36}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2145233081
 MonoBehaviour:
@@ -3090,5 +3145,4 @@ SceneRoots:
   - {fileID: 2145813253}
   - {fileID: 525454258}
   - {fileID: 187385027}
-  - {fileID: 514670554}
   - {fileID: 77286480}

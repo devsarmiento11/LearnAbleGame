@@ -9,14 +9,15 @@ using UnityEngine.SceneManagement;
 /// <summary>
 /// Development login for the existing ID-and-username screen.
 /// It verifies the entered values against a Firestore user profile before
-/// opening the character selection screen.
+/// opening the correct menu for the account's role.
 /// </summary>
 public class FirestoreProfileLogin : MonoBehaviour
 {
     private const string IdInputObjectName = "EnterId";
     private const string UsernameInputObjectName = "EnterName";
     private const string LoginLabelObjectName = "LoginTxt";
-    private const string NextSceneName = "CharacterSelect";
+    private const string StudentSceneName = "CharacterSelect";
+    private const string TeacherSceneName = "MainMenuTeacher";
 
     private TMP_InputField idInput;
     private TMP_InputField usernameInput;
@@ -113,8 +114,52 @@ public class FirestoreProfileLogin : MonoBehaviour
             return;
         }
 
+        string role = profile.ContainsField("role")
+            ? profile.GetValue<string>("role").Trim().ToLowerInvariant()
+            : string.Empty;
+
+        string fullName = GetString(profile, "name");
+        if (string.IsNullOrWhiteSpace(fullName))
+        {
+            fullName = string.Join(" ", new[]
+            {
+                GetString(profile, "firstName"),
+                GetString(profile, "middleName"),
+                GetString(profile, "lastName")
+            }).Trim();
+        }
+
+        string firstName = GetString(profile, "firstName");
+        LoginSession.Login(profile.Id, fullName, firstName);
+
         LearningDataStore.SetCurrentUser(profile.Id);
-        SceneManager.LoadScene(NextSceneName);
+
+        if (role == "teacher")
+        {
+            SceneLoader.SetStudentLoggedIn();
+            SceneManager.LoadScene(TeacherSceneName);
+            return;
+        }
+
+        if (role == "student")
+        {
+            SceneLoader.SetStudentLoggedIn();
+            SceneManager.LoadScene(StudentSceneName);
+            return;
+        }
+
+        LearningDataStore.ClearCurrentUser();
+        LoginSession.Logout();
+        ShowStatus("This account cannot use the game");
+    }
+
+    private static string GetString(DocumentSnapshot profile, string field)
+    {
+        if (!profile.ContainsField(field))
+            return string.Empty;
+
+        string value = profile.GetValue<string>(field);
+        return string.IsNullOrWhiteSpace(value) ? string.Empty : value.Trim();
     }
 
     private void ShowStatus(string message)

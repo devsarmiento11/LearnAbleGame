@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
@@ -242,5 +242,47 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Settings/Scenes/ScienceGame3Level3.unity
     guid: c2a0ffeb3311795459ea813dcd34d1be
+  - enabled: 1
+    path: Assets/Settings/Scenes/StudentsScoreScene.unity
+    guid: c2969d73a6cc8c74fbe7a9ecff6b35ac
+  - enabled: 1
+    path: Assets/Settings/Scenes/EnglishGame5Level5.unity
+    guid: f81c40d214b414c4e82ce5ce584c407c
+  - enabled: 1
+    path: Assets/Settings/Scenes/ScienceModule.unity
+    guid: 69c0fc4683f77b5489e39c6335a48873
+  - enabled: 1
+    path: Assets/Settings/Scenes/EnglishModule.unity
+    guid: 2085e022061557342b4a5cef8451baa1
+  - enabled: 0
+    path: Assets/Settings/Scenes/ScienceGame1Level44.unity
+    guid: 42944ef882a8df84eb9fa47e83bd0bf8
+  - enabled: 1
+    path: Assets/MathModule.unity
+    guid: a8d31abdf4f8b8644826811de2a4fd86
+  - enabled: 1
+    path: Assets/Settings/Scenes/UnlocklLevelActivities.unity
+    guid: 3e018c0ed361fc24a91ee242df120227
+  - enabled: 1
+    path: Assets/Settings/Scenes/EnglishUnlock.unity
+    guid: ad0174b530385e24b97fc34b6789d5cc
+  - enabled: 1
+    path: Assets/Settings/Scenes/EnglishUnlockGame1.unity
+    guid: b02f2fa7af4023a428b59a1b57f76fb8
+  - enabled: 1
+    path: Assets/Settings/Scenes/EnglishUnlockGame2.unity
+    guid: 62e2dc5a6f404004da70456bc548cbae
+  - enabled: 1
+    path: Assets/Settings/Scenes/EnglishUnlockGame3.unity
+    guid: 5e2228426f360ec4fa07d344ec9c4258
+  - enabled: 1
+    path: Assets/Settings/Scenes/EnglishUnlockGame4.unity
+    guid: 05906babfd9d3124caa8e7f4a28f5e35
+  - enabled: 1
+    path: Assets/Settings/Scenes/EnglishUnlockGame5.unity
+    guid: 3a3465cc5074719439db2b3e2b676c4d
+  - enabled: 1
+    path: Assets/Settings/Scenes/ScienceUnlock.unity
+    guid: c7647490e427fe94f81ce547a0f4448f
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

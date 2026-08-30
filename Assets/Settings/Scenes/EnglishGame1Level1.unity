@@ -2446,8 +2446,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -474.33, y: -31.3}
-  m_SizeDelta: {x: 103.5428, y: 82.9829}
+  m_AnchoredPosition: {x: -464.58, y: -16.21249}
+  m_SizeDelta: {x: 126.79, y: 113.1579}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1215038546
 MonoBehaviour:
@@ -2740,6 +2740,7 @@ GameObject:
   - component: {fileID: 1352805799}
   - component: {fileID: 1352805801}
   - component: {fileID: 1352805800}
+  - component: {fileID: 1352805802}
   m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
@@ -2866,6 +2867,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1352805798}
   m_CullTransparentMesh: 1
+--- !u!114 &1352805802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352805798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed09efbe614f6de45b9639ca1d0a6200, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  textComponent: {fileID: 1352805800}
+  englishText: Trace the broken lines to form vertical lines.
+  tagalogText: I-trace ang putol-putol na linya nang patayo.
 --- !u!1 &1422645532
 GameObject:
   m_ObjectHideFlags: 0
@@ -2952,6 +2968,7 @@ GameObject:
   - component: {fileID: 1430208715}
   - component: {fileID: 1430208717}
   - component: {fileID: 1430208716}
+  - component: {fileID: 1430208718}
   m_Layer: 5
   m_Name: Title (1)
   m_TagString: Untagged
@@ -3078,6 +3095,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1430208714}
   m_CullTransparentMesh: 1
+--- !u!114 &1430208718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430208714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed09efbe614f6de45b9639ca1d0a6200, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  textComponent: {fileID: 1430208716}
+  englishText: LEVEL 1
+  tagalogText: ANTAS 1
 --- !u!1 &1444589971
 GameObject:
   m_ObjectHideFlags: 0
@@ -3419,6 +3451,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59445af4fe9dcef40b353fde55732874, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneLoader
+  logoutButton: {fileID: 0}
+  loginSceneName: LoginScene
+  settingsFallbackSceneName: MainMenu
 --- !u!4 &1532764186
 Transform:
   m_ObjectHideFlags: 0
@@ -3486,6 +3521,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UIDrawing
   drawingArea: {fileID: 1688620169}
   brushPrefab: {fileID: 3972186943593266523, guid: 762b883335043804b86f6762772b7362, type: 3}
+  brushSpacing: 8
   lineEnds:
   - {fileID: 1808924970}
   - {fileID: 294616687}
@@ -3572,8 +3608,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -474.33063, y: 199.33868}
-  m_SizeDelta: {x: 107.2814, y: 99.0832}
+  m_AnchoredPosition: {x: -469.31, y: 183.37}
+  m_SizeDelta: {x: 117.3398, y: 111.6561}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1719639805
 MonoBehaviour:

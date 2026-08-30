@@ -1662,8 +1662,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 483.01, y: 176.811}
-  m_SizeDelta: {x: 117.43, y: 91.3631}
+  m_AnchoredPosition: {x: 484.87, y: 172.9797}
+  m_SizeDelta: {x: 121.14, y: 99.0257}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &686870153
 MonoBehaviour:
@@ -2706,8 +2706,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 483.01, y: -165}
-  m_SizeDelta: {x: 124.8586, y: 92.1649}
+  m_AnchoredPosition: {x: 486.8413, y: -168.19276}
+  m_SizeDelta: {x: 132.5213, y: 98.5504}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1121628554
 MonoBehaviour:
@@ -2926,8 +2926,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -478.3, y: -32.6411}
-  m_SizeDelta: {x: 117.26, y: 97.0388}
+  m_AnchoredPosition: {x: -475.21, y: -30.0869}
+  m_SizeDelta: {x: 123.44, y: 102.1472}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1135749647
 MonoBehaviour:
@@ -3457,6 +3457,7 @@ GameObject:
   - component: {fileID: 1219493714}
   - component: {fileID: 1219493716}
   - component: {fileID: 1219493715}
+  - component: {fileID: 1219493717}
   m_Layer: 5
   m_Name: Title (1)
   m_TagString: Untagged
@@ -3583,6 +3584,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1219493713}
   m_CullTransparentMesh: 1
+--- !u!114 &1219493717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1219493713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed09efbe614f6de45b9639ca1d0a6200, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  textComponent: {fileID: 0}
+  englishText: Trace the broken lines to form vertical lines.
+  tagalogText: I-trace ang putol-putol na linya nang patayo.
 --- !u!1 &1251374253
 GameObject:
   m_ObjectHideFlags: 0
@@ -4094,8 +4110,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -481.06085, y: 195.59735}
-  m_SizeDelta: {x: 111.7329, y: 94.0956}
+  m_AnchoredPosition: {x: -478.3, y: 186.89}
+  m_SizeDelta: {x: 129.6124, y: 111.52}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1425245444
 MonoBehaviour:
@@ -4641,6 +4657,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59445af4fe9dcef40b353fde55732874, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneLoader
+  logoutButton: {fileID: 0}
+  loginSceneName: LoginScene
+  settingsFallbackSceneName: MainMenu
 --- !u!4 &1731080622
 Transform:
   m_ObjectHideFlags: 0
@@ -4667,6 +4686,7 @@ GameObject:
   - component: {fileID: 1819463699}
   - component: {fileID: 1819463701}
   - component: {fileID: 1819463700}
+  - component: {fileID: 1819463702}
   m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
@@ -4793,6 +4813,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1819463698}
   m_CullTransparentMesh: 1
+--- !u!114 &1819463702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819463698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed09efbe614f6de45b9639ca1d0a6200, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  textComponent: {fileID: 0}
+  englishText: ANTAS 3
+  tagalogText: LEVEL 3
 --- !u!1 &1824615848
 GameObject:
   m_ObjectHideFlags: 0

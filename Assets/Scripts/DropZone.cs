@@ -25,8 +25,9 @@ public class DropZone : MonoBehaviour, IDropHandler
         // Save for Undo
         ScienceUndoDraggableManager.Instance.RecordMove(word);
 
-        // Snap word
-        wordRect.anchoredPosition = zoneRect.anchoredPosition;
+        // Snap in world space because the draggable words and drop zones can
+        // belong to UI containers with different anchored positions.
+        wordRect.position = zoneRect.position;
 
         // Check correctness
         isCorrect = word.gameObject.name == correctWord;

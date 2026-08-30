@@ -42,10 +42,11 @@ public class ScienceLevelManager : MonoBehaviour
 
         PlayerPrefs.Save();
 
+        ScoreManager.RecordActivity(SceneManager.GetActiveScene().name, totalQuestions);
+
         // 50 or higher = passed
         if (ScoreManager.CurrentScore >= 50)
         {
-            ScoreManager.RecordSuccessfulActivity(SceneManager.GetActiveScene().name, totalQuestions);
             SceneManager.LoadScene(scoreSceneName);
         }
         else

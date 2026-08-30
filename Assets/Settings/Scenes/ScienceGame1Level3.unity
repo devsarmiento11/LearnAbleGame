@@ -119,6 +119,95 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &10211592
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 10211593}
+  - component: {fileID: 10211596}
+  - component: {fileID: 10211595}
+  - component: {fileID: 10211594}
+  m_Layer: 5
+  m_Name: Dancing
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &10211593
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 10211592}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 947211905}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -211.47717, y: -160.21008}
+  m_SizeDelta: {x: 13.8221, y: -65.176}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &10211594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 10211592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 007f32d989e4665408fa25a96d73642a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DropZone
+  correctWord: Dancing
+--- !u!114 &10211595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 10211592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.6666667}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &10211596
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 10211592}
+  m_CullTransparentMesh: 1
 --- !u!1 &58283958
 GameObject:
   m_ObjectHideFlags: 0
@@ -153,8 +242,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 225.49072, y: -67.0213}
-  m_SizeDelta: {x: 152.6033, y: 50.276}
+  m_AnchoredPosition: {x: 215.4, y: -62.6162}
+  m_SizeDelta: {x: 169.1142, y: 54.0325}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &58283960
 MonoBehaviour:
@@ -437,7 +526,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 338, y: 181}
+  m_AnchoredPosition: {x: 347, y: 181}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &130713594
@@ -475,8 +564,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -466.98, y: 0}
-  m_SizeDelta: {x: 89.1126, y: 82.5744}
+  m_AnchoredPosition: {x: -476.46, y: -16.0739}
+  m_SizeDelta: {x: 135.88, y: 112.5869}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &130713596
 MonoBehaviour:
@@ -607,8 +696,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.36130142, y: -156.69772}
-  m_SizeDelta: {x: 8.3774, y: -70.1512}
+  m_AnchoredPosition: {x: 3.2332, y: -160.21132}
+  m_SizeDelta: {x: 14.1211, y: -65.1738}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &235733110
 MonoBehaviour:
@@ -636,7 +725,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.6666667}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -773,51 +862,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &378595150
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 378595152}
-  - component: {fileID: 378595151}
-  m_Layer: 0
-  m_Name: MusicToggle
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &378595151
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 378595150}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adb26dabdfbf9a1479b509d08a6c5f88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MusicToggle
-  musicToggle: {fileID: 0}
---- !u!4 &378595152
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 378595150}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 220.87065, y: 281.0811, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &433309147
 GameObject:
   m_ObjectHideFlags: 0
@@ -852,8 +896,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -194.4, y: -71.1}
-  m_SizeDelta: {x: 111.2032, y: 119.4365}
+  m_AnchoredPosition: {x: -188.9, y: -58}
+  m_SizeDelta: {x: 131.423, y: 140.1099}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &433309149
 MonoBehaviour:
@@ -893,95 +937,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 433309147}
   m_CullTransparentMesh: 1
---- !u!1 &437458627
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 437458628}
-  - component: {fileID: 437458631}
-  - component: {fileID: 437458630}
-  - component: {fileID: 437458629}
-  m_Layer: 5
-  m_Name: Dancing
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &437458628
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 437458627}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 947211905}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -211.19122, y: -156.6977}
-  m_SizeDelta: {x: 8.3774, y: -70.1512}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &437458629
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 437458627}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 007f32d989e4665408fa25a96d73642a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DropZone
-  correctWord: Dancing
---- !u!114 &437458630
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 437458627}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &437458631
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 437458627}
-  m_CullTransparentMesh: 1
 --- !u!1 &446813563
 GameObject:
   m_ObjectHideFlags: 0
@@ -993,6 +948,7 @@ GameObject:
   - component: {fileID: 446813564}
   - component: {fileID: 446813566}
   - component: {fileID: 446813565}
+  - component: {fileID: 446813567}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1119,6 +1075,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 446813563}
   m_CullTransparentMesh: 1
+--- !u!114 &446813567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446813563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed09efbe614f6de45b9639ca1d0a6200, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  textComponent: {fileID: 446813565}
+  englishText: Level 3
+  tagalogText: antas 3
 --- !u!1 &462289163
 GameObject:
   m_ObjectHideFlags: 0
@@ -1193,8 +1164,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3, y: -70.2433}
-  m_SizeDelta: {x: 156.0008, y: 120.8907}
+  m_AnchoredPosition: {x: 2.9622, y: -62.9051}
+  m_SizeDelta: {x: 167.9253, y: 135.5671}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &472556136
 MonoBehaviour:
@@ -1268,8 +1239,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 210.60278, y: -28.349396}
-  m_SizeDelta: {x: 122.8272, y: 50.276}
+  m_AnchoredPosition: {x: 198.90129, y: -21.0549}
+  m_SizeDelta: {x: 136.1165, y: 54.0325}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &517796162
 MonoBehaviour:
@@ -1387,8 +1358,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 210.60266, y: -99.64273}
-  m_SizeDelta: {x: 122.8272, y: 52.6699}
+  m_AnchoredPosition: {x: 198.90118, y: -97.67505}
+  m_SizeDelta: {x: 136.1165, y: 56.6052}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &546551282
 MonoBehaviour:
@@ -1582,6 +1553,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59445af4fe9dcef40b353fde55732874, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneLoader
+  logoutButton: {fileID: 0}
+  loginSceneName: LoginScene
+  settingsFallbackSceneName: MainMenu
 --- !u!4 &590438549
 Transform:
   m_ObjectHideFlags: 0
@@ -1631,8 +1605,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -272.0198, y: -99.84957}
-  m_SizeDelta: {x: 36.2427, y: 44.5771}
+  m_AnchoredPosition: {x: -280.6332, y: -91.72587}
+  m_SizeDelta: {x: 42.8326, y: 52.293}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &738732453
 MonoBehaviour:
@@ -1763,6 +1737,7 @@ GameObject:
   - component: {fileID: 827690404}
   - component: {fileID: 827690403}
   - component: {fileID: 827690402}
+  - component: {fileID: 827690405}
   m_Layer: 5
   m_Name: Dancing
   m_TagString: Untagged
@@ -1786,8 +1761,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -26.299994, y: 50.00001}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -6, y: 77.2}
+  m_SizeDelta: {x: 329.1074, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &827690402
 MonoBehaviour:
@@ -1848,8 +1823,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 32
+  m_fontSizeBase: 32
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1887,7 +1862,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -1.163208, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1901,6 +1876,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 827690400}
   m_CullTransparentMesh: 1
+--- !u!114 &827690405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827690400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed09efbe614f6de45b9639ca1d0a6200, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  textComponent: {fileID: 827690403}
+  englishText: dancing
+  tagalogText: sayaw
 --- !u!1 &847690921
 GameObject:
   m_ObjectHideFlags: 0
@@ -2028,8 +2018,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 485.47, y: -150}
-  m_SizeDelta: {x: 111.4711, y: 86.2763}
+  m_AnchoredPosition: {x: 485.47, y: -160}
+  m_SizeDelta: {x: 139.178, y: 112.9779}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &856695300
 MonoBehaviour:
@@ -2137,6 +2127,7 @@ GameObject:
   - component: {fileID: 871505995}
   - component: {fileID: 871505994}
   - component: {fileID: 871505993}
+  - component: {fileID: 871505996}
   m_Layer: 5
   m_Name: Air
   m_TagString: Untagged
@@ -2160,7 +2151,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -215, y: 50}
+  m_AnchoredPosition: {x: -197, y: 77}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &871505993
@@ -2222,8 +2213,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 32
+  m_fontSizeBase: 32
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2275,6 +2266,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 871505991}
   m_CullTransparentMesh: 1
+--- !u!114 &871505996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871505991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed09efbe614f6de45b9639ca1d0a6200, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  textComponent: {fileID: 871505994}
+  englishText: air
+  tagalogText: hangin
 --- !u!1 &947211904
 GameObject:
   m_ObjectHideFlags: 0
@@ -2303,9 +2309,9 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 437458628}
   - {fileID: 235733109}
   - {fileID: 1697323679}
+  - {fileID: 10211593}
   m_Father: {fileID: 105761329}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -2324,6 +2330,7 @@ GameObject:
   - component: {fileID: 1075145477}
   - component: {fileID: 1075145479}
   - component: {fileID: 1075145478}
+  - component: {fileID: 1075145480}
   m_Layer: 5
   m_Name: Text (TMP) (1)
   m_TagString: Untagged
@@ -2450,6 +2457,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1075145476}
   m_CullTransparentMesh: 1
+--- !u!114 &1075145480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1075145476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed09efbe614f6de45b9639ca1d0a6200, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  textComponent: {fileID: 1075145478}
+  englishText: Match the picture by dragging and dropping the correct answer.
+  tagalogText: 'Itugma ang larawan sa pamamagitan ng pag-drag at pag-drop ng tamang
+    sagot.
+
+'
 --- !u!1 &1219188951
 GameObject:
   m_ObjectHideFlags: 0
@@ -2522,8 +2547,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -258.67868, y: -55.272198}
-  m_SizeDelta: {x: 36.2427, y: 44.5771}
+  m_AnchoredPosition: {x: -264.86627, y: -39.432594}
+  m_SizeDelta: {x: 42.8326, y: 52.293}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1344500781
 MonoBehaviour:
@@ -2619,6 +2644,7 @@ GameObject:
   - component: {fileID: 1472018823}
   - component: {fileID: 1472018822}
   - component: {fileID: 1472018821}
+  - component: {fileID: 1472018824}
   m_Layer: 5
   m_Name: Sleeping
   m_TagString: Untagged
@@ -2642,8 +2668,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 218, y: 50.00001}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 209, y: 77.2}
+  m_SizeDelta: {x: 370.98, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1472018821
 MonoBehaviour:
@@ -2704,8 +2730,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 32
+  m_fontSizeBase: 32
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2757,6 +2783,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1472018819}
   m_CullTransparentMesh: 1
+--- !u!114 &1472018824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472018819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed09efbe614f6de45b9639ca1d0a6200, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  textComponent: {fileID: 1472018822}
+  englishText: sleeping
+  tagalogText: natutulog
 --- !u!1 &1519290408
 GameObject:
   m_ObjectHideFlags: 0
@@ -2792,8 +2833,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 33.2045, y: -20.402}
-  m_SizeDelta: {x: 80.2784, y: 65.3421}
+  m_AnchoredPosition: {x: 41.504005, y: -27.863}
+  m_SizeDelta: {x: 125.3421, y: 102.5907}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1519290410
 MonoBehaviour:
@@ -2863,7 +2904,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScienceLevelManager
   dropZones:
-  - {fileID: 437458629}
+  - {fileID: 0}
   - {fileID: 235733110}
   - {fileID: 1697323680}
   totalQuestions: 3
@@ -2918,8 +2959,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -178.83154, y: -15.323137}
-  m_SizeDelta: {x: 40.4375, y: 44.5771}
+  m_AnchoredPosition: {x: -170.50076, y: 7.431306}
+  m_SizeDelta: {x: 47.7901, y: 52.293}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1694832212
 MonoBehaviour:
@@ -2994,8 +3035,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 227.19513, y: -156.6977}
-  m_SizeDelta: {x: 8.3774, y: -70.1512}
+  m_AnchoredPosition: {x: 222.70251, y: -160.21129}
+  m_SizeDelta: {x: 12.9723, y: -65.1738}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1697323680
 MonoBehaviour:
@@ -3023,7 +3064,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.6666667}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3083,8 +3124,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 492.9098, y: 197.2558}
-  m_SizeDelta: {x: 96.5906, y: 77.5554}
+  m_AnchoredPosition: {x: 485.47, y: 183.09}
+  m_SizeDelta: {x: 130.37, y: 113.6655}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1795105194
 MonoBehaviour:
@@ -3214,8 +3255,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00024414, y: 0.00022244}
-  m_SizeDelta: {x: 80.279, y: 65.343}
+  m_AnchoredPosition: {x: 0.00021601, y: 0.000028372}
+  m_SizeDelta: {x: 125.34, y: 102.59}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1909803630
 MonoBehaviour:
@@ -3290,8 +3331,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -477.6, y: 174.7796}
-  m_SizeDelta: {x: 110.3548, y: 106.0606}
+  m_AnchoredPosition: {x: -476.45825, y: 178.04456}
+  m_SizeDelta: {x: 135.8793, y: 123.7661}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1991198440
 MonoBehaviour:
@@ -3397,6 +3438,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2133504765}
   - component: {fileID: 2133504766}
+  - component: {fileID: 2133504767}
   m_Layer: 5
   m_Name: MusicToggle
   m_TagString: Untagged
@@ -3472,6 +3514,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_IsOn: 1
+--- !u!114 &2133504767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2133504764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adb26dabdfbf9a1479b509d08a6c5f88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MusicToggle
+  musicToggle: {fileID: 2133504766}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -3482,5 +3537,4 @@ SceneRoots:
   - {fileID: 590438549}
   - {fileID: 537913220}
   - {fileID: 1570074106}
-  - {fileID: 378595152}
   - {fileID: 566265895}

@@ -110,10 +110,11 @@ public class ScienceSelectionManager : MonoBehaviour
 
         PlayerPrefs.Save();
 
+        ScoreManager.RecordActivity(SceneManager.GetActiveScene().name, totalCorrectAnswers);
+
         // 50 or higher = pass
         if (finalScore >= 50)
         {
-            ScoreManager.RecordSuccessfulActivity(SceneManager.GetActiveScene().name, totalCorrectAnswers);
             SceneManager.LoadScene(scoreSceneName);
         }
         else

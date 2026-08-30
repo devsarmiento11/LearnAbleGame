@@ -193,8 +193,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000095367, y: 0.00017738}
-  m_SizeDelta: {x: 86.4, y: 74.683}
+  m_AnchoredPosition: {x: -0.00020838, y: 0.0000050068}
+  m_SizeDelta: {x: 105.95, y: 89.577}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &115428337
 MonoBehaviour:
@@ -851,8 +851,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 43.199997, y: -37.34117}
-  m_SizeDelta: {x: 86.4, y: 74.6823}
+  m_AnchoredPosition: {x: 45.527298, y: -29.893784}
+  m_SizeDelta: {x: 105.9494, y: 89.577}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &358191642
 MonoBehaviour:
@@ -978,6 +978,7 @@ GameObject:
   - component: {fileID: 556940137}
   - component: {fileID: 556940139}
   - component: {fileID: 556940138}
+  - component: {fileID: 556940140}
   m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
@@ -1057,8 +1058,8 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
-  m_HorizontalAlignment: 1
+  m_fontStyle: 17
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1104,6 +1105,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 556940136}
   m_CullTransparentMesh: 1
+--- !u!114 &556940140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 556940136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed09efbe614f6de45b9639ca1d0a6200, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  textComponent: {fileID: 556940138}
+  englishText: MATCH IT!
+  tagalogText: Itugma!
 --- !u!1 &561402244
 GameObject:
   m_ObjectHideFlags: 0
@@ -1507,8 +1523,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -468.5561, y: 185.92682}
-  m_SizeDelta: {x: 140.3878, y: 122.4477}
+  m_AnchoredPosition: {x: -497, y: 192}
+  m_SizeDelta: {x: 123.6001, y: 113.4942}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &957834814
 MonoBehaviour:
@@ -1704,6 +1720,7 @@ GameObject:
   - component: {fileID: 1060017715}
   - component: {fileID: 1060017717}
   - component: {fileID: 1060017716}
+  - component: {fileID: 1060017718}
   m_Layer: 5
   m_Name: Title (1)
   m_TagString: Untagged
@@ -1830,6 +1847,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1060017714}
   m_CullTransparentMesh: 1
+--- !u!114 &1060017718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1060017714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed09efbe614f6de45b9639ca1d0a6200, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  textComponent: {fileID: 1060017716}
+  englishText: select an activity
+  tagalogText: 'Pumili ng antas
+
+'
 --- !u!1 &1098442633
 GameObject:
   m_ObjectHideFlags: 0
@@ -1841,6 +1875,7 @@ GameObject:
   - component: {fileID: 1098442634}
   - component: {fileID: 1098442636}
   - component: {fileID: 1098442635}
+  - component: {fileID: 1098442637}
   m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
@@ -1864,8 +1899,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7, y: 127}
-  m_SizeDelta: {x: 614.6218, y: 50}
+  m_AnchoredPosition: {x: -9.3676, y: 127}
+  m_SizeDelta: {x: 698.5942, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1098442635
 MonoBehaviour:
@@ -1967,6 +2002,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1098442633}
   m_CullTransparentMesh: 1
+--- !u!114 &1098442637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1098442633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed09efbe614f6de45b9639ca1d0a6200, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  textComponent: {fileID: 1098442635}
+  englishText: Functional Academics - Science
+  tagalogText: 'Praktikal na Akademiko - Agham
+
+'
 --- !u!1 &1274927520
 GameObject:
   m_ObjectHideFlags: 0
@@ -2149,6 +2201,7 @@ GameObject:
   - component: {fileID: 1401176761}
   - component: {fileID: 1401176763}
   - component: {fileID: 1401176762}
+  - component: {fileID: 1401176764}
   m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
@@ -2172,8 +2225,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 35}
-  m_SizeDelta: {x: 541.9792, y: 50}
+  m_AnchoredPosition: {x: 1.5826, y: 35}
+  m_SizeDelta: {x: 844.2692, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1401176762
 MonoBehaviour:
@@ -2229,7 +2282,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -2275,6 +2328,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1401176760}
   m_CullTransparentMesh: 1
+--- !u!114 &1401176764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1401176760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed09efbe614f6de45b9639ca1d0a6200, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  textComponent: {fileID: 1401176762}
+  englishText: ' WHAT DOES YOUR BODY NEED?'
+  tagalogText: 'ANO ANG KAILANGAN NG IYONG KATAWAN?
+
+'
 --- !u!1 &1565009753
 GameObject:
   m_ObjectHideFlags: 0
@@ -2413,6 +2483,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59445af4fe9dcef40b353fde55732874, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneLoader
+  logoutButton: {fileID: 0}
+  loginSceneName: LoginScene
+  settingsFallbackSceneName: MainMenu
 --- !u!4 &1575330914
 Transform:
   m_ObjectHideFlags: 0
@@ -2584,6 +2657,7 @@ GameObject:
   - component: {fileID: 1968685858}
   - component: {fileID: 1968685860}
   - component: {fileID: 1968685859}
+  - component: {fileID: 1968685861}
   m_Layer: 5
   m_Name: TItle
   m_TagString: Untagged
@@ -2607,8 +2681,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4, y: 35}
-  m_SizeDelta: {x: 498.7755, y: 50}
+  m_AnchoredPosition: {x: 2.9077, y: 35}
+  m_SizeDelta: {x: 843.9381, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1968685859
 MonoBehaviour:
@@ -2664,7 +2738,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -2710,6 +2784,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1968685857}
   m_CullTransparentMesh: 1
+--- !u!114 &1968685861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1968685857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed09efbe614f6de45b9639ca1d0a6200, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
+  textComponent: {fileID: 1968685859}
+  englishText: DRAG THE CORRECT ANSWER
+  tagalogText: 'I-DRAG ANG TAMANG SAGOT
+
+'
 --- !u!1 &1979249588
 GameObject:
   m_ObjectHideFlags: 0

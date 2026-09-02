@@ -360,7 +360,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: MainMenuTeacher
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &248299946
@@ -729,6 +729,7 @@ GameObject:
   - component: {fileID: 709661972}
   - component: {fileID: 709661971}
   - component: {fileID: 709661970}
+  - component: {fileID: 709661973}
   m_Layer: 5
   m_Name: English
   m_TagString: Untagged
@@ -849,6 +850,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 709661968}
   m_CullTransparentMesh: 1
+--- !u!114 &709661973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 709661968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f7fb6f57e1bbbe4cbfeb3024275056e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIButton
 --- !u!1 &758579871
 GameObject:
   m_ObjectHideFlags: 0
@@ -861,6 +874,7 @@ GameObject:
   - component: {fileID: 758579875}
   - component: {fileID: 758579874}
   - component: {fileID: 758579873}
+  - component: {fileID: 758579876}
   m_Layer: 5
   m_Name: Math
   m_TagString: Untagged
@@ -981,6 +995,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 758579871}
   m_CullTransparentMesh: 1
+--- !u!114 &758579876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758579871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f7fb6f57e1bbbe4cbfeb3024275056e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIButton
 --- !u!1 &858589106
 GameObject:
   m_ObjectHideFlags: 0
@@ -1069,6 +1095,7 @@ GameObject:
   - component: {fileID: 1167998827}
   - component: {fileID: 1167998826}
   - component: {fileID: 1167998825}
+  - component: {fileID: 1167998828}
   m_Layer: 5
   m_Name: Science
   m_TagString: Untagged
@@ -1189,6 +1216,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1167998823}
   m_CullTransparentMesh: 1
+--- !u!114 &1167998828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1167998823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f7fb6f57e1bbbe4cbfeb3024275056e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIButton
 --- !u!1 &1177438203
 GameObject:
   m_ObjectHideFlags: 0

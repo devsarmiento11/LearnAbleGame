@@ -1,3 +1,4 @@
+using Firebase.Auth;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -236,6 +237,7 @@ public class SceneLoader : MonoBehaviour
         // Do not leave the previous Firestore profile active after logout.
         LearningDataStore.ClearCurrentUser();
         LoginSession.Logout();
+        FirebaseAuth.DefaultInstance.SignOut();
 
         PlayerPrefs.Save();
 

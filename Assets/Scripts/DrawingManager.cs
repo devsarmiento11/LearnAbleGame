@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
 public class DrawingManager : MonoBehaviour
 {
@@ -17,37 +17,48 @@ public class DrawingManager : MonoBehaviour
 
     void Update()
     {
-        // Mouse
-        if (Input.GetMouseButtonDown(0))
-            BeginDraw(Input.mousePosition);
-
-        if (Input.GetMouseButton(0) && isDrawing)
-            ContinueDraw(Input.mousePosition);
-
-        if (Input.GetMouseButtonUp(0))
-            EndDraw();
-
-        // Touch
-        if (Input.touchCount > 0)
+        // PRIORITY: Touch first (Android)
+        if (Touchscreen.current != null &&
+            (Touchscreen.current.primaryTouch.press.isPressed ||
+             Touchscreen.current.primaryTouch.press.wasPressedThisFrame ||
+             Touchscreen.current.primaryTouch.press.wasReleasedThisFrame))
         {
-            Touch touch = Input.GetTouch(0);
+            var touch = Touchscreen.current.primaryTouch;
 
-            switch (touch.phase)
+            if (touch.press.wasPressedThisFrame)
             {
-                case TouchPhase.Began:
-                    BeginDraw(touch.position);
-                    break;
+                BeginDraw(touch.position.ReadValue());
+            }
 
-                case TouchPhase.Moved:
-                case TouchPhase.Stationary:
-                    if (isDrawing)
-                        ContinueDraw(touch.position);
-                    break;
+            if (touch.press.isPressed && isDrawing)
+            {
+                ContinueDraw(touch.position.ReadValue());
+            }
 
-                case TouchPhase.Ended:
-                case TouchPhase.Canceled:
-                    EndDraw();
-                    break;
+            if (touch.press.wasReleasedThisFrame)
+            {
+                EndDraw();
+            }
+
+            return;
+        }
+
+        // FALLBACK: Mouse (Unity Editor / PC)
+        if (Mouse.current != null)
+        {
+            if (Mouse.current.leftButton.wasPressedThisFrame)
+            {
+                BeginDraw(Mouse.current.position.ReadValue());
+            }
+
+            if (Mouse.current.leftButton.isPressed && isDrawing)
+            {
+                ContinueDraw(Mouse.current.position.ReadValue());
+            }
+
+            if (Mouse.current.leftButton.wasReleasedThisFrame)
+            {
+                EndDraw();
             }
         }
     }
@@ -55,7 +66,7 @@ public class DrawingManager : MonoBehaviour
     void BeginDraw(Vector2 screenPos)
     {
         // Only allow drawing inside the drawing area
-        if (!RectTransformUtility.RectangleContainsScreenPoint(drawingArea, screenPos))
+        if (!RectTransformUtility.RectangleContainsScreenPoint(drawingArea, screenPos, GetUICamera()))
             return;
 
         isDrawing = true;
@@ -68,8 +79,9 @@ public class DrawingManager : MonoBehaviour
         RectTransformUtility.ScreenPointToLocalPointInRectangle(
             drawingArea,
             screenPos,
-            null,
-            out localPoint);
+            GetUICamera(),
+            out localPoint
+        );
 
         lastPoint = localPoint;
 
@@ -86,8 +98,9 @@ public class DrawingManager : MonoBehaviour
         RectTransformUtility.ScreenPointToLocalPointInRectangle(
             drawingArea,
             screenPos,
-            null,
-            out localPoint);
+            GetUICamera(),
+            out localPoint
+        );
 
         if (Vector2.Distance(localPoint, lastPoint) >= brushSpacing)
         {
@@ -99,6 +112,13 @@ public class DrawingManager : MonoBehaviour
     void EndDraw()
     {
         isDrawing = false;
+    }
+
+    private Camera GetUICamera()
+    {
+        Canvas canvas = drawingArea.GetComponentInParent<Canvas>();
+        return canvas == null || canvas.renderMode == RenderMode.ScreenSpaceOverlay
+            ? null : canvas.worldCamera;
     }
 
     void CreateBrush(Vector2 localPoint)

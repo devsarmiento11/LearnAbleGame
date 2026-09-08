@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Controls;
 using System.Collections;
 
 
@@ -57,8 +59,7 @@ namespace TMPro.Examples
             else
                 Application.targetFrameRate = -1;
 
-            if (Application.platform == RuntimePlatform.IPhonePlayer || Application.platform == RuntimePlatform.Android)
-                Input.simulateMouseWithTouches = false;
+            // Mouse and touch are read separately; no legacy touch-to-mouse simulation.
 
             cameraTransform = transform;
             previousSmoothing = MovementSmoothing;
@@ -128,29 +129,53 @@ namespace TMPro.Examples
             moveVector = Vector3.zero;
 
             // Check Mouse Wheel Input prior to Shift Key so we can apply multiplier on Shift for Scrolling
-            mouseWheel = Input.GetAxis("Mouse ScrollWheel");
+            var mouse = Mouse.current;
+            var keyboard = Keyboard.current;
+            var touchscreen = Touchscreen.current;
+            TouchControl firstTouch = null;
+            TouchControl secondTouch = null;
+            int activeTouchCount = 0;
+            if (touchscreen != null)
+            {
+                foreach (var touch in touchscreen.touches)
+                {
+                    if (!touch.press.isPressed) continue;
+                    if (activeTouchCount == 0) firstTouch = touch;
+                    else if (activeTouchCount == 1) secondTouch = touch;
+                    activeTouchCount++;
+                }
+            }
 
-            float touchCount = Input.touchCount;
+            bool useMouse = activeTouchCount == 0 && mouse != null;
+            Vector2 mouseDelta = useMouse ? mouse.delta.ReadValue() * 0.1f : Vector2.zero;
+            // Preserve the InputManager asset's 0.1 sensitivity for all three mouse axes.
+            mouseWheel = useMouse ? mouse.scroll.y.ReadValue() * 0.1f : 0f;
+#if UNITY_EDITOR_WIN || UNITY_STANDALONE_WIN
+            if (InputSystem.settings.scrollDeltaBehavior == InputSettings.ScrollDeltaBehavior.KeepPlatformSpecificInputRange)
+                mouseWheel /= 120f;
+#endif
 
-            if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift) || touchCount > 0)
+
+
+            if (TMP_ExamplePointer.ShiftPressed || activeTouchCount > 0)
             {
                 mouseWheel *= 10;
 
-                if (Input.GetKeyDown(KeyCode.I))
+                if (keyboard != null && keyboard.iKey.wasPressedThisFrame)
                     CameraMode = CameraModes.Isometric;
 
-                if (Input.GetKeyDown(KeyCode.F))
+                if (keyboard != null && keyboard.fKey.wasPressedThisFrame)
                     CameraMode = CameraModes.Follow;
 
-                if (Input.GetKeyDown(KeyCode.S))
+                if (keyboard != null && keyboard.sKey.wasPressedThisFrame)
                     MovementSmoothing = !MovementSmoothing;
 
 
                 // Check for right mouse button to change camera follow and elevation angle
-                if (Input.GetMouseButton(1))
+                if (useMouse && mouse.rightButton.isPressed)
                 {
-                    mouseY = Input.GetAxis("Mouse Y");
-                    mouseX = Input.GetAxis("Mouse X");
+                    mouseY = mouseDelta.y;
+                    mouseX = mouseDelta.x;
 
                     if (mouseY > 0.01f || mouseY < -0.01f)
                     {
@@ -170,9 +195,9 @@ namespace TMPro.Examples
                 }
 
                 // Get Input from Mobile Device
-                if (touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Moved)
+                if (activeTouchCount == 1 && firstTouch.phase.ReadValue() == UnityEngine.InputSystem.TouchPhase.Moved)
                 {
-                    Vector2 deltaPosition = Input.GetTouch(0).deltaPosition;
+                    Vector2 deltaPosition = firstTouch.delta.ReadValue();
 
                     // Handle elevation changes
                     if (deltaPosition.y > 0.01f || deltaPosition.y < -0.01f)
@@ -196,9 +221,9 @@ namespace TMPro.Examples
                 }
 
                 // Check for left mouse button to select a new CameraTarget or to reset Follow position
-                if (Input.GetMouseButton(0))
+                if (useMouse && mouse.leftButton.isPressed)
                 {
-                    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                    Ray ray = Camera.main.ScreenPointToRay(mouse.position.ReadValue());
                     RaycastHit hit;
 
                     if (Physics.Raycast(ray, out hit, 300, 1 << 10 | 1 << 11 | 1 << 12 | 1 << 14))
@@ -219,7 +244,7 @@ namespace TMPro.Examples
                 }
 
 
-                if (Input.GetMouseButton(2))
+                if (useMouse && mouse.middleButton.isPressed)
                 {
                     if (dummyTarget == null)
                     {
@@ -242,8 +267,8 @@ namespace TMPro.Examples
                     }
 
 
-                    mouseY = Input.GetAxis("Mouse Y");
-                    mouseX = Input.GetAxis("Mouse X");
+                    mouseY = mouseDelta.y;
+                    mouseX = mouseDelta.x;
 
                     moveVector = cameraTransform.TransformDirection(mouseX, mouseY, 0);
 
@@ -254,16 +279,16 @@ namespace TMPro.Examples
             }
 
             // Check Pinching to Zoom in - out on Mobile device
-            if (touchCount == 2)
+            if (activeTouchCount == 2)
             {
-                Touch touch0 = Input.GetTouch(0);
-                Touch touch1 = Input.GetTouch(1);
+                var touch0 = firstTouch;
+                var touch1 = secondTouch;
 
-                Vector2 touch0PrevPos = touch0.position - touch0.deltaPosition;
-                Vector2 touch1PrevPos = touch1.position - touch1.deltaPosition;
+                Vector2 touch0PrevPos = touch0.position.ReadValue() - touch0.delta.ReadValue();
+                Vector2 touch1PrevPos = touch1.position.ReadValue() - touch1.delta.ReadValue();
 
                 float prevTouchDelta = (touch0PrevPos - touch1PrevPos).magnitude;
-                float touchDelta = (touch0.position - touch1.position).magnitude;
+                float touchDelta = (touch0.position.ReadValue() - touch1.position.ReadValue()).magnitude;
 
                 float zoomDelta = prevTouchDelta - touchDelta;
 

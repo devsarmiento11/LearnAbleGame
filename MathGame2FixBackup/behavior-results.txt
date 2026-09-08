@@ -1,0 +1,14 @@
+PASS answer hidden initially
+PASS wrong answer stays hidden
+PASS sixteen is not six
+PASS six reveals answer
+PASS correct score and success scene
+PASS Done cannot record twice
+PASS retry resets recording and unsolved level fails
+PASS numeric transcript accepted
+PASS recognition error cannot solve
+PASS permission granted after release does not start recording
+PASS Done waits for final transcript
+PASS final transcript included in score
+PASS leaving cancels recognition and ignores late results
+13 behavior checks passed (Unity and speech services simulated).

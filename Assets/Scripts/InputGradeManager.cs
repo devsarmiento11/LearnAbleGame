@@ -2,6 +2,7 @@ using TMPro;
 using UnityEngine;
 using System.Collections.Generic;
 using Firebase.Firestore;
+using Firebase.Auth;
 
 public class InputGradeManager : MonoBehaviour
 {
@@ -266,6 +267,15 @@ public class InputGradeManager : MonoBehaviour
     public async void ConfirmSaveGrade()
     {
         if (isSaving || !hasPendingGrade) return;
+        // PlayerPrefs alone is not authentication. Rules verify this profile's
+        // authUid against the signed-in Firebase user before accepting grades.
+        string teacherId = LearningDataStore.CurrentUserId;
+        if (FirebaseAuth.DefaultInstance.CurrentUser == null || string.IsNullOrWhiteSpace(teacherId))
+        {
+            if (confirmationPopup != null) confirmationPopup.SetActive(false);
+            ShowStatus("Sign in with your teacher account before saving grades.", true);
+            return;
+        }
         isSaving = true;
         SetInputEnabled(false);
         ShowStatus("Saving grade...", false);
@@ -274,7 +284,8 @@ public class InputGradeManager : MonoBehaviour
             var updates = new Dictionary<string, object>
             {
                 { "academicGrades." + AcademicGradeReport.Key(pendingSubject, pendingQuarter), pendingGrade },
-                { "gradesUpdatedAt", FieldValue.ServerTimestamp }
+                { "gradesUpdatedAt", FieldValue.ServerTimestamp },
+                { "gradesUpdatedBy", teacherId }
             };
             // An optional empty remark does not erase a previously saved teacher note.
             if (!string.IsNullOrWhiteSpace(pendingRemark))
@@ -293,7 +304,10 @@ public class InputGradeManager : MonoBehaviour
             if (this == null) return;
             Debug.LogError("Unable to save grade: " + exception);
             if (confirmationPopup != null) confirmationPopup.SetActive(false);
-            ShowStatus("Grade could not be saved. Please try again.", true);
+            ShowStatus(exception is FirestoreException firestoreException &&
+                firestoreException.ErrorCode == FirestoreError.PermissionDenied
+                ? "Grade save denied. Sign in as a teacher; the grade-saving Firestore rules must be published."
+                : "Grade could not be saved. Please try again.", true);
         }
         finally
         {

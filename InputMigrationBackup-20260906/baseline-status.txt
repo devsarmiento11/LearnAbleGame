@@ -1,0 +1,170 @@
+ M Assets/DefaultVolumeProfile.asset
+ M Assets/Firebase/m2repository/com/google/firebase/firebase-app-unity/13.15.0/firebase-app-unity-13.15.0.pom
+ M Assets/Firebase/m2repository/com/google/firebase/firebase-firestore-unity/13.15.0/firebase-firestore-unity-13.15.0.pom
+ M Assets/MathModule.unity
+ D Assets/Scenes/CakeIcon.png
+ D Assets/Scenes/CakeIcon.png.meta
+ M Assets/Scripts/DrawingManager.cs
+ M Assets/Scripts/FirestoreProfileLogin.cs
+ M Assets/Scripts/MatchManager.cs
+ M Assets/Scripts/RightDot.cs
+ M Assets/Scripts/SceneLoader.cs
+ M Assets/Scripts/SpeechGameManager.cs
+ M Assets/Settings/Scenes/CharacterSelect.unity
+ D Assets/Settings/Scenes/ContinuePlayScene.unity
+ D Assets/Settings/Scenes/ContinuePlayScene.unity.meta
+ M Assets/Settings/Scenes/EnglishGame/EnglishGame1.unity
+ M Assets/Settings/Scenes/EnglishGame/EnglishGame1Level1.unity
+ M Assets/Settings/Scenes/EnglishGame/EnglishGame1Level2.unity
+ M Assets/Settings/Scenes/EnglishGame/EnglishGame1Level3.unity
+ M Assets/Settings/Scenes/EnglishGame/EnglishGame1Level4.unity
+ M Assets/Settings/Scenes/EnglishGame/EnglishGame1Level5.unity
+ M Assets/Settings/Scenes/EnglishGame/EnglishGame2.unity
+ M Assets/Settings/Scenes/EnglishGame/EnglishGame2Level1.unity
+ M Assets/Settings/Scenes/EnglishGame/EnglishGame2Level2.unity
+ M Assets/Settings/Scenes/EnglishGame/EnglishGame2Level3.unity
+ M Assets/Settings/Scenes/EnglishGame/EnglishGame2Level4.unity
+ M Assets/Settings/Scenes/EnglishGame/EnglishGame2Level5.unity
+ M Assets/Settings/Scenes/EnglishGame/EnglishGame3.unity
+ M Assets/Settings/Scenes/EnglishGame/EnglishGame3Level1.unity
+ M Assets/Settings/Scenes/EnglishGame/EnglishGame3Level2.unity
+ M Assets/Settings/Scenes/EnglishGame/EnglishGame3Level3.unity
+ M Assets/Settings/Scenes/EnglishGame/EnglishGame3Level4.unity
+ M Assets/Settings/Scenes/EnglishGame/EnglishGame3Level5.unity
+ M Assets/Settings/Scenes/EnglishGame/EnglishGame4.unity
+ M Assets/Settings/Scenes/EnglishGame/EnglishGame4Level1.unity
+ M Assets/Settings/Scenes/EnglishGame/EnglishGame4Level2.unity
+ M Assets/Settings/Scenes/EnglishGame/EnglishGame4Level3.unity
+ M Assets/Settings/Scenes/EnglishGame/EnglishGame4Level4.unity
+ M Assets/Settings/Scenes/EnglishGame/EnglishGame4Level5.unity
+ M Assets/Settings/Scenes/EnglishGame/EnglishGame5.unity
+ M Assets/Settings/Scenes/EnglishGame/EnglishGame5Level1.unity
+ M Assets/Settings/Scenes/EnglishGame/EnglishGame5Level2.unity
+ M Assets/Settings/Scenes/EnglishGame/EnglishGame5Level3.unity
+ M Assets/Settings/Scenes/EnglishGame/EnglishGame5Level4.unity
+ M Assets/Settings/Scenes/EnglishGame/EnglishGame5Level5.unity
+ M Assets/Settings/Scenes/EnglishGame/EnglishGameScene.unity
+ M Assets/Settings/Scenes/EnglishGameInstructions/EnglishGame1InstructionScene.unity
+ M Assets/Settings/Scenes/EnglishGameInstructions/EnglishGame2Instruction.unity
+ M Assets/Settings/Scenes/EnglishGameInstructions/EnglishGame3Instruction.unity
+ M Assets/Settings/Scenes/EnglishGameInstructions/EnglishGame4Instruction.unity
+ M Assets/Settings/Scenes/EnglishGameInstructions/EnglishGame5Instruction.unity
+ M Assets/Settings/Scenes/EnglishUnlockFolder/EnglishUnlock.unity
+ M Assets/Settings/Scenes/EnglishUnlockFolder/EnglishUnlockGame1.unity
+ M Assets/Settings/Scenes/EnglishUnlockFolder/EnglishUnlockGame2.unity
+ M Assets/Settings/Scenes/EnglishUnlockFolder/EnglishUnlockGame3.unity
+ M Assets/Settings/Scenes/EnglishUnlockFolder/EnglishUnlockGame4.unity
+ M Assets/Settings/Scenes/EnglishUnlockFolder/EnglishUnlockGame5.unity
+ M Assets/Settings/Scenes/GradesScene.unity
+ M Assets/Settings/Scenes/InputGradeScene.unity
+ M Assets/Settings/Scenes/LoginScene.unity
+ M Assets/Settings/Scenes/MainMenu.unity
+ M Assets/Settings/Scenes/MainMenuTeacher.unity
+ M Assets/Settings/Scenes/MathGame/MathGame1.unity
+ M Assets/Settings/Scenes/MathGame/MathGame1Level1.unity
+ M Assets/Settings/Scenes/MathGame/MathGame1Level2.unity
+ M Assets/Settings/Scenes/MathGame/MathGame1Level3.unity
+ M Assets/Settings/Scenes/MathGame/MathGame2.unity
+ M Assets/Settings/Scenes/MathGame/MathGame2Level1.unity
+ M Assets/Settings/Scenes/MathGame/MathGameScene.unity
+ M Assets/Settings/Scenes/MathGameInstruction/MathGame1Instruction.unity
+ M Assets/Settings/Scenes/MathGameInstruction/MathLevel2InstructionScene.unity
+ M Assets/Settings/Scenes/MathUnlockFolder/MathUnlock.unity
+ M Assets/Settings/Scenes/MathUnlockFolder/MathUnlockGame1.unity
+ M Assets/Settings/Scenes/MathUnlockFolder/MathUnlockGame2.unity
+ M Assets/Settings/Scenes/ModuleActivitiesScene.unity
+ M Assets/Settings/Scenes/Modules/EnglishModule.unity
+ M Assets/Settings/Scenes/Modules/ScienceModule.unity
+ M Assets/Settings/Scenes/PlayContinueScene.unity
+ M Assets/Settings/Scenes/PlayScene.unity
+ M Assets/Settings/Scenes/ScienceGame/ScienceGame1.unity
+ M Assets/Settings/Scenes/ScienceGame/ScienceGame1Level1.unity
+ M Assets/Settings/Scenes/ScienceGame/ScienceGame1Level2.unity
+ M Assets/Settings/Scenes/ScienceGame/ScienceGame1Level3.unity
+ M Assets/Settings/Scenes/ScienceGame/ScienceGame1Level4.unity
+ M Assets/Settings/Scenes/ScienceGame/ScienceGame1Level5.unity
+ M Assets/Settings/Scenes/ScienceGame/ScienceGame2.unity
+ M Assets/Settings/Scenes/ScienceGame/ScienceGame2Level1.unity
+ M Assets/Settings/Scenes/ScienceGame/ScienceGame2Level2.unity
+ M Assets/Settings/Scenes/ScienceGame/ScienceGame2Level3.unity
+ M Assets/Settings/Scenes/ScienceGame/ScienceGame2Level4.unity
+ M Assets/Settings/Scenes/ScienceGame/ScienceGame2Level5.unity
+ M Assets/Settings/Scenes/ScienceGame/ScienceGame3.unity
+ M Assets/Settings/Scenes/ScienceGame/ScienceGame3Level1.unity
+ M Assets/Settings/Scenes/ScienceGame/ScienceGame3Level2.unity
+ M Assets/Settings/Scenes/ScienceGame/ScienceGame3Level3.unity
+ M Assets/Settings/Scenes/ScienceGame/ScienceGame3Level4.unity
+ M Assets/Settings/Scenes/ScienceGame/ScienceGame3Level5.unity
+ M Assets/Settings/Scenes/ScienceGame/ScienceGameScene.unity
+ M Assets/Settings/Scenes/ScienceGameInstruction/ScienceGame1Instruction.unity
+ M Assets/Settings/Scenes/ScienceGameInstruction/ScienceGame2Instruction.unity
+ M Assets/Settings/Scenes/ScienceGameInstruction/ScienceGame3Instruction.unity
+ M Assets/Settings/Scenes/ScienceUnlockFolder/ScienceUnlock.unity
+ M Assets/Settings/Scenes/ScienceUnlockFolder/ScienceUnlockGame1.unity
+ M Assets/Settings/Scenes/ScienceUnlockFolder/ScienceUnlockGame2.unity
+ M Assets/Settings/Scenes/ScienceUnlockFolder/ScienceUnlockGame3.unity
+ M Assets/Settings/Scenes/ScoreScene.unity
+ M Assets/Settings/Scenes/ScoreSceneFailed.unity
+ M Assets/Settings/Scenes/SettingsScene.unity
+ M Assets/Settings/Scenes/StudentGradesScene.unity
+ M Assets/Settings/Scenes/StudentProfileScene.unity
+ M Assets/Settings/Scenes/StudentsScoreScene.unity
+ M Assets/Settings/Scenes/UnlocklLevelActivities.unity
+ M Assets/Settings/UniversalRP.asset
+ M "Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Bangers SDF.asset"
+ M Assets/UniversalRenderPipelineGlobalSettings.asset
+ M ProjectSettings/EditorBuildSettings.asset
+ M ProjectSettings/GvhProjectSettings.xml
+ M ProjectSettings/ProjectSettings.asset
+ M ProjectSettings/UnityConnectSettings.asset
+?? .utmp/
+?? Assets/Firebase/Editor/AuthDependencies.xml
+?? Assets/Firebase/Editor/AuthDependencies.xml.meta
+?? Assets/Firebase/Editor/FirebaseAuth_version-13.15.0_manifest.txt
+?? Assets/Firebase/Editor/FirebaseAuth_version-13.15.0_manifest.txt.meta
+?? Assets/Firebase/Plugins/Firebase.Auth.dll
+?? Assets/Firebase/Plugins/Firebase.Auth.dll.meta
+?? Assets/Firebase/Plugins/Firebase.Auth.pdb
+?? Assets/Firebase/Plugins/Firebase.Auth.pdb.meta
+?? Assets/Firebase/Plugins/iOS/Firebase.Auth.dll
+?? Assets/Firebase/Plugins/iOS/Firebase.Auth.dll.meta
+?? Assets/Firebase/Plugins/iOS/Firebase.Auth.pdb
+?? Assets/Firebase/Plugins/iOS/Firebase.Auth.pdb.meta
+?? Assets/Firebase/Plugins/x86_64/FirebaseCppAuth.bundle
+?? Assets/Firebase/Plugins/x86_64/FirebaseCppAuth.bundle.meta
+?? Assets/Firebase/Plugins/x86_64/FirebaseCppAuth.dll
+?? Assets/Firebase/Plugins/x86_64/FirebaseCppAuth.dll.meta
+?? Assets/Firebase/Plugins/x86_64/FirebaseCppAuth.so
+?? Assets/Firebase/Plugins/x86_64/FirebaseCppAuth.so.meta
+?? Assets/Firebase/m2repository/com/google/firebase/firebase-auth-unity.meta
+?? Assets/Firebase/m2repository/com/google/firebase/firebase-auth-unity/
+?? Assets/GeneratedLocalRepo.meta
+?? Assets/GeneratedLocalRepo/
+?? Assets/Plugins/Android.meta
+?? Assets/Plugins/Android/
+?? Assets/Plugins/iOS/Firebase/libFirebaseCppAuth.a
+?? Assets/Plugins/iOS/Firebase/libFirebaseCppAuth.a.meta
+?? Assets/Plugins/tvOS/Firebase/libFirebaseCppAuth.a
+?? Assets/Plugins/tvOS/Firebase/libFirebaseCppAuth.a.meta
+?? Assets/Resources.meta
+?? Assets/Scenes/ButtonIcons/CakeIcon.png
+?? Assets/Scenes/ButtonIcons/CakeIcon.png.meta
+?? Assets/Scenes/ButtonIcons/IgBallooon.png
+?? Assets/Scenes/ButtonIcons/IgBallooon.png.meta
+?? Assets/Scenes/ButtonIcons/IgCandlee.png
+?? Assets/Scenes/ButtonIcons/IgCandlee.png.meta
+?? Assets/Scenes/ButtonIcons/IgMathNum.png
+?? Assets/Scenes/ButtonIcons/IgMathNum.png.meta
+?? Assets/Scenes/ButtonIcons/IgMicNumbers.png
+?? Assets/Scenes/ButtonIcons/IgMicNumbers.png.meta
+?? Assets/Scenes/ButtonIcons/Numberone.png
+?? Assets/Scenes/ButtonIcons/Numberone.png.meta
+?? Assets/Settings/Scenes/MathGame/MathGame1Level4.unity
+?? Assets/Settings/Scenes/MathGame/MathGame1Level4.unity.meta
+?? Assets/Settings/Scenes/MathGame/MathGame1Level5.unity
+?? Assets/Settings/Scenes/MathGame/MathGame1Level5.unity.meta
+?? LearnAble-Test-v1.apk
+?? LearnAble-Test-v1_BackUpThisFolder_ButDontShipItWithYourGame/
+?? LearnAbleGame_BurstDebugInformation_DoNotShip/
+?? ProjectSettings/AndroidResolverDependencies.xml
+?? ResponsiveUIReport.Modified.txt

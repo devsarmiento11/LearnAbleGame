@@ -1,0 +1,96 @@
+LearnAble responsive UI migration
+2026-09-05 02:11:26Z
+Reference resolution: 1120 x 577; match: 0.5
+
+SCENE  Assets/MathModule.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/EnglishGame/EnglishGame1.unity | Canvas=0, backgrounds=0, back=0, settings=0, sound/music=0, panels=6, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/EnglishGame/EnglishGame1Level1.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/EnglishGame/EnglishGame1Level2.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/EnglishGame/EnglishGame1Level3.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/EnglishGame/EnglishGame1Level4.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/EnglishGame/EnglishGame1Level5.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=2
+SCENE  Assets/Settings/Scenes/EnglishGame/EnglishGame2.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=6, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/EnglishGame/EnglishGame2Level1.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/EnglishGame/EnglishGame2Level2.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/EnglishGame/EnglishGame2Level3.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/EnglishGame/EnglishGame2Level4.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/EnglishGame/EnglishGame2Level5.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=1
+SCENE  Assets/Settings/Scenes/EnglishGame/EnglishGame3.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=5, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/EnglishGame/EnglishGame3Level1.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/EnglishGame/EnglishGame3Level2.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/EnglishGame/EnglishGame3Level3.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/EnglishGame/EnglishGame3Level4.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/EnglishGame/EnglishGame3Level5.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=2
+SCENE  Assets/Settings/Scenes/EnglishGame/EnglishGame4.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=5, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/EnglishGame/EnglishGame4Level1.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/EnglishGame/EnglishGame4Level2.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/EnglishGame/EnglishGame4Level3.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/EnglishGame/EnglishGame4Level4.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/EnglishGame/EnglishGame4Level5.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/EnglishGame/EnglishGame5.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=5, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/EnglishGame/EnglishGame5Level1.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/EnglishGame/EnglishGame5Level2.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/EnglishGame/EnglishGame5Level3.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/EnglishGame/EnglishGame5Level4.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/EnglishGame/EnglishGame5Level5.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/EnglishGame/EnglishGameScene.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=5, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/EnglishGameInstructions/EnglishGame1InstructionScene.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=1
+SCENE  Assets/Settings/Scenes/EnglishGameInstructions/EnglishGame2Instruction.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=1
+SCENE  Assets/Settings/Scenes/EnglishGameInstructions/EnglishGame3Instruction.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=1, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/EnglishGameInstructions/EnglishGame4Instruction.unity | Canvas=1, backgrounds=0, back=1, settings=1, sound/music=1, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/EnglishGameInstructions/EnglishGame5Instruction.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=1, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/EnglishUnlockFolder/EnglishUnlock.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/EnglishUnlockFolder/EnglishUnlockGame1.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/EnglishUnlockFolder/EnglishUnlockGame2.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/EnglishUnlockFolder/EnglishUnlockGame3.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/EnglishUnlockFolder/EnglishUnlockGame4.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/EnglishUnlockFolder/EnglishUnlockGame5.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/InputGradeScene.unity | Canvas=0, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=2, aspect images=0
+SCENE  Assets/Settings/Scenes/LoginScene.unity | Canvas=0, backgrounds=0, back=1, settings=1, sound/music=1, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/MathGame/MathGame1.unity | Canvas=0, backgrounds=1, back=0, settings=0, sound/music=0, panels=5, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/MathGame/MathGame2.unity | Canvas=0, backgrounds=0, back=0, settings=0, sound/music=0, panels=5, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/MathGame/MathGame2Level1.unity | Canvas=1, backgrounds=1, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/MathGame/MathGameScene.unity | Canvas=0, backgrounds=0, back=0, settings=0, sound/music=1, panels=2, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/MathGameInstruction/MathGame1Instruction.unity | Canvas=1, backgrounds=0, back=1, settings=1, sound/music=1, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/MathGameInstruction/MathLevel2InstructionScene.unity | Canvas=1, backgrounds=0, back=1, settings=1, sound/music=1, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/MathUnlockFolder/MathUnlock.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/MathUnlockFolder/MathUnlockGame1.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/MathUnlockFolder/MathUnlockGame2.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/ModuleActivitiesScene.unity | Canvas=0, backgrounds=1, back=0, settings=0, sound/music=1, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/Modules/EnglishModule.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/Modules/ScienceModule.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/ScienceGame/ScienceGame1.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=5, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/ScienceGame/ScienceGame1Level1.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/ScienceGame/ScienceGame1Level2.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/ScienceGame/ScienceGame1Level3.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/ScienceGame/ScienceGame1Level4.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/ScienceGame/ScienceGame1Level5.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/ScienceGame/ScienceGame2.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=5, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/ScienceGame/ScienceGame2Level1.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/ScienceGame/ScienceGame2Level2.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/ScienceGame/ScienceGame2Level3.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/ScienceGame/ScienceGame2Level4.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/ScienceGame/ScienceGame2Level5.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/ScienceGame/ScienceGame3.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=5, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/ScienceGame/ScienceGame3Level1.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/ScienceGame/ScienceGame3Level2.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/ScienceGame/ScienceGame3Level3.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/ScienceGame/ScienceGame3Level4.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/ScienceGame/ScienceGame3Level5.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/ScienceGame/ScienceGameScene.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=3, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/ScienceGameInstruction/ScienceGame1Instruction.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/ScienceGameInstruction/ScienceGame2Instruction.unity | Canvas=1, backgrounds=0, back=1, settings=0, sound/music=1, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/ScienceGameInstruction/ScienceGame3Instruction.unity | Canvas=1, backgrounds=0, back=1, settings=1, sound/music=0, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/ScienceUnlockFolder/ScienceUnlock.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/ScienceUnlockFolder/ScienceUnlockGame1.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/ScienceUnlockFolder/ScienceUnlockGame2.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/ScienceUnlockFolder/ScienceUnlockGame3.unity | Canvas=1, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/ScoreScene.unity | Canvas=1, backgrounds=0, back=0, settings=1, sound/music=0, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/SettingsScene.unity | Canvas=0, backgrounds=0, back=1, settings=0, sound/music=0, panels=0, long text=0, aspect images=0
+SCENE  Assets/Settings/Scenes/StudentGradesScene.unity | Canvas=0, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=1, aspect images=0
+SCENE  Assets/Settings/Scenes/StudentProfileScene.unity | Canvas=0, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=2, aspect images=0
+SCENE  Assets/Settings/Scenes/StudentsScoreScene.unity | Canvas=0, backgrounds=0, back=0, settings=0, sound/music=0, panels=0, long text=1, aspect images=0
+
+Modified assets: 88
+Totals: Canvas=77, backgrounds=3, back=7, settings=6, sound/music=9, panels=62, long text=6, aspect images=7
+STATUS: SUCCESS

@@ -22,3 +22,9 @@ Recordings/
 # OS files
 .DS_Store
 Thumbs.db
+# Android build outputs and Unity build diagnostics
+*.apk
+*.aab
+*_BackUpThisFolder_ButDontShipItWithYourGame/
+*_BurstDebugInformation_DoNotShip
+.utmp/

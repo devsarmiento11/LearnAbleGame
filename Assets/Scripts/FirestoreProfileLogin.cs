@@ -1,34 +1,50 @@
 using System;
+using System.Linq;
 using System.Threading.Tasks;
 using Firebase;
+using Firebase.Auth;
+using Firebase.Extensions;
 using Firebase.Firestore;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 /// <summary>
-/// Development login for the existing ID-and-username screen.
-/// It verifies the entered values against a Firestore user profile before
-/// opening the correct menu for the account's role.
+/// Authenticates Flutter-managed accounts, then loads the matching Firestore
+/// profile while preserving its school ID as the active game user ID.
 /// </summary>
 public class FirestoreProfileLogin : MonoBehaviour
 {
-    private const string IdInputObjectName = "EnterId";
+    private const string PasswordInputObjectName = "EnterId";
     private const string UsernameInputObjectName = "EnterName";
     private const string LoginLabelObjectName = "LoginTxt";
     private const string StudentSceneName = "CharacterSelect";
     private const string TeacherSceneName = "MainMenuTeacher";
 
-    private TMP_InputField idInput;
+    private const string ManagedEmailDomain = "users.learnable.app";
+
+    private TMP_InputField passwordInput;
     private TMP_InputField usernameInput;
     private TMP_Text loginLabel;
+    private FirebaseAuth auth;
     private bool firebaseReady;
+    private bool loginInProgress;
 
     private void Start()
     {
-        idInput = GameObject.Find(IdInputObjectName)?.GetComponent<TMP_InputField>();
+        passwordInput = GameObject.Find(PasswordInputObjectName)?.GetComponent<TMP_InputField>();
         usernameInput = GameObject.Find(UsernameInputObjectName)?.GetComponent<TMP_InputField>();
         loginLabel = GameObject.Find(LoginLabelObjectName)?.GetComponent<TMP_Text>();
+
+        if (passwordInput != null)
+        {
+            passwordInput.contentType = TMP_InputField.ContentType.Password;
+            passwordInput.ForceLabelUpdate();
+
+            TMP_Text placeholder = passwordInput.placeholder as TMP_Text;
+            if (placeholder != null)
+                placeholder.text = "Password";
+        }
 
         FirebaseApp.CheckAndFixDependenciesAsync().ContinueWith(
             task => OnDependenciesChecked(task),
@@ -43,31 +59,33 @@ public class FirestoreProfileLogin : MonoBehaviour
             return;
         }
 
-        string enteredId = idInput == null ? string.Empty : idInput.text.Trim();
         string enteredUsername = usernameInput == null ? string.Empty : usernameInput.text.Trim();
+        string enteredPassword = passwordInput == null ? string.Empty : passwordInput.text;
 
-        if (string.IsNullOrWhiteSpace(enteredId) || string.IsNullOrWhiteSpace(enteredUsername))
+        if (string.IsNullOrWhiteSpace(enteredUsername) || string.IsNullOrEmpty(enteredPassword))
         {
-            ShowStatus("Enter ID and username");
+            ShowStatus("Enter username and password");
             return;
         }
 
-        ShowStatus("Checking...");
+        if (loginInProgress)
+            return;
 
-        FirebaseFirestore.DefaultInstance
-            .Collection(LearningDataStore.UsersCollection)
-            .WhereEqualTo("userId", enteredId)
-            .Limit(1)
-            .GetSnapshotAsync()
-            .ContinueWith(
-                task => OnProfileLoaded(task, enteredUsername),
-                TaskScheduler.FromCurrentSynchronizationContext());
+        loginInProgress = true;
+        ShowStatus("Signing in...");
+
+        string email = BuildManagedEmail(enteredUsername);
+        auth.SignInWithEmailAndPasswordAsync(email, enteredPassword)
+            .ContinueWithOnMainThread(OnAuthenticationCompleted);
     }
 
     private void OnDependenciesChecked(Task<DependencyStatus> task)
     {
         firebaseReady = task.Status == TaskStatus.RanToCompletion &&
                         task.Result == DependencyStatus.Available;
+
+        if (firebaseReady)
+            auth = FirebaseAuth.DefaultInstance;
 
         if (!firebaseReady)
         {
@@ -77,10 +95,33 @@ public class FirestoreProfileLogin : MonoBehaviour
         }
     }
 
-    private void OnProfileLoaded(Task<QuerySnapshot> task, string enteredUsername)
+    private void OnAuthenticationCompleted(Task<AuthResult> task)
+    {
+        if (task.IsFaulted || task.IsCanceled || task.Result == null || task.Result.User == null)
+        {
+            loginInProgress = false;
+            Debug.LogWarning("Firebase Authentication sign-in failed: " + task.Exception);
+            ShowStatus("Invalid username or password");
+            return;
+        }
+
+        string authUid = task.Result.User.UserId;
+        ShowStatus("Loading profile...");
+
+        FirebaseFirestore.DefaultInstance
+            .Collection(LearningDataStore.UsersCollection)
+            .WhereEqualTo("authUid", authUid)
+            .Limit(1)
+            .GetSnapshotAsync()
+            .ContinueWithOnMainThread(OnProfileLoaded);
+    }
+
+    private void OnProfileLoaded(Task<QuerySnapshot> task)
     {
         if (task.IsFaulted || task.IsCanceled)
         {
+            loginInProgress = false;
+            auth.SignOut();
             Debug.LogError("Unable to retrieve user profile: " + task.Exception);
             ShowStatus("Login failed");
             return;
@@ -88,6 +129,8 @@ public class FirestoreProfileLogin : MonoBehaviour
 
         if (task.Result.Count != 1)
         {
+            loginInProgress = false;
+            auth.SignOut();
             ShowStatus("Profile not found");
             return;
         }
@@ -101,16 +144,9 @@ public class FirestoreProfileLogin : MonoBehaviour
 
         if (profile == null)
         {
+            loginInProgress = false;
+            auth.SignOut();
             ShowStatus("Profile not found");
-            return;
-        }
-        string savedUsername = profile.ContainsField("username")
-            ? profile.GetValue<string>("username")
-            : string.Empty;
-
-        if (!string.Equals(savedUsername, enteredUsername, StringComparison.OrdinalIgnoreCase))
-        {
-            ShowStatus("Username does not match");
             return;
         }
 
@@ -132,7 +168,10 @@ public class FirestoreProfileLogin : MonoBehaviour
         string firstName = GetString(profile, "firstName");
         LoginSession.Login(profile.Id, fullName, firstName);
 
+        // The document ID is the existing school ID. authUid remains a
+        // separate Firestore field and never replaces this value.
         LearningDataStore.SetCurrentUser(profile.Id);
+        loginInProgress = false;
 
         if (role == "teacher")
         {
@@ -150,7 +189,24 @@ public class FirestoreProfileLogin : MonoBehaviour
 
         LearningDataStore.ClearCurrentUser();
         LoginSession.Logout();
+        auth.SignOut();
         ShowStatus("This account cannot use the game");
+    }
+
+    private static string BuildManagedEmail(string username)
+    {
+        string normalized = username.Trim().ToLowerInvariant();
+        if (normalized.Contains("@"))
+            return normalized;
+
+        char[] safe = normalized.Select(character =>
+            (character >= 'a' && character <= 'z') ||
+            (character >= '0' && character <= '9') ||
+            character == '.' || character == '_' || character == '-'
+                ? character
+                : '-').ToArray();
+
+        return new string(safe) + "@" + ManagedEmailDomain;
     }
 
     private static string GetString(DocumentSnapshot profile, string field)

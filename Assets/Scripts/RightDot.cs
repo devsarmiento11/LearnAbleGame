@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
 public class RightDot : MonoBehaviour, IPointerEnterHandler
 {
@@ -7,10 +8,38 @@ public class RightDot : MonoBehaviour, IPointerEnterHandler
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        // Only allow the connection to end on a RIGHT dot
-        if (Input.GetMouseButton(0))
+        // Only finish the connection if the
+        // player is still holding the pointer.
+        if (IsPointerPressed())
         {
-            MatchManager.Instance.EndConnection(this);
+            if (MatchManager.Instance != null)
+            {
+                MatchManager.Instance.EndConnection(this);
+            }
         }
+    }
+
+    // ==========================================
+    // CHECK POINTER
+    // Android Touch + Unity Editor Mouse
+    // ==========================================
+
+    private bool IsPointerPressed()
+    {
+        // Android / touchscreen
+        if (Touchscreen.current != null &&
+            Touchscreen.current.primaryTouch.press.isPressed)
+        {
+            return true;
+        }
+
+        // Unity Editor / PC mouse
+        if (Mouse.current != null &&
+            Mouse.current.leftButton.isPressed)
+        {
+            return true;
+        }
+
+        return false;
     }
 }

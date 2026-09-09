@@ -434,7 +434,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: asjdjasdjajd
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a63b63128d2951e4e8d501bd890d1ef5, type: 2}
   m_sharedMaterial: {fileID: -3295405222342240559, guid: a63b63128d2951e4e8d501bd890d1ef5, type: 2}
@@ -719,6 +719,7 @@ MonoBehaviour:
   scoreContent: {fileID: 539535595}
   scoreDetailRowPrefab: {fileID: 5832552879693906116, guid: bfb9fd9f58532bf44b2f2c5aff45a028, type: 3}
   noScoresText: {fileID: 0}
+  subjectArrow: {fileID: 5784354143301789325, guid: e3871d9171669e646a99d9f76b6b9065, type: 3}
 --- !u!4 &352805299
 Transform:
   m_ObjectHideFlags: 0
@@ -2876,3 +2877,4 @@ SceneRoots:
   - {fileID: 611534014}
   - {fileID: 352805299}
   - {fileID: 202084698}
+

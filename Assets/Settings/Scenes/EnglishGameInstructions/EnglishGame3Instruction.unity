@@ -177,7 +177,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Draw a vertical line on the pizza to split it into two equal halves.
+  m_text: Draw a horizontal line on the pizza to split it into two equal halves.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 390121557d0d49f43bbb561c96a7d8b8, type: 2}
   m_sharedMaterial: {fileID: 4342259942462875801, guid: 390121557d0d49f43bbb561c96a7d8b8, type: 2}
@@ -270,9 +270,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
   textComponent: {fileID: 227521954}
-  englishText: Draw a vertical line on the pizza to split it into two equal halves.
-  tagalogText: Gumuhit ng patayong linya sa pizza upang hatiin ito sa dalawang pantay
-    na bahagi.
+  englishText: Draw a horizontal line on the pizza to split it into two equal halves.
+  tagalogText: Gumuhit ng pahalang na linya sa pizza upang hatiin ito sa dalawang
+    pantay na bahagi.
 --- !u!1 &235199157
 GameObject:
   m_ObjectHideFlags: 0

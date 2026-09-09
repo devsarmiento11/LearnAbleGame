@@ -17,21 +17,39 @@ public class StudentProfileTabManager : MonoBehaviour
     [Tooltip("Row prefab containing ActivityText and LevelText.")]
     public GameObject activityRowPrefab;
 
+    [Header("PROFILE SUBJECT FILTER")]
+    public TMP_Dropdown subjectDropdown;
+
+    [Header("RECENT ACTIVITY SUBJECT FILTER")]
+    public TMP_Dropdown recentSubjectDropdown;
+
     private ListenerRegistration activityListener;
     private GameObject rowTemplate;
     private Transform profileContent;
     private Transform recentContent;
+    private readonly List<ActivitySummary> profileSummaries = new List<ActivitySummary>();
+    private string selectedSubject = "All Subjects";
+    private readonly List<ActivityRecord> recentRecords = new List<ActivityRecord>();
+    private string selectedRecentSubject = "All Subjects";
 
     private void Start()
     {
         ShowProfile();
         PrepareRows();
+        subjectDropdown = PrepareSubjectDropdown(profilePanel, subjectDropdown, 105);
+        subjectDropdown.onValueChanged.AddListener(OnSubjectChanged);
+        recentSubjectDropdown = PrepareSubjectDropdown(recentActivityPanel, recentSubjectDropdown, 136);
+        recentSubjectDropdown.onValueChanged.AddListener(OnRecentSubjectChanged);
         LoadStudentData();
     }
 
     private void OnDestroy()
     {
         activityListener?.Stop();
+        if (subjectDropdown != null)
+            subjectDropdown.onValueChanged.RemoveListener(OnSubjectChanged);
+        if (recentSubjectDropdown != null)
+            recentSubjectDropdown.onValueChanged.RemoveListener(OnRecentSubjectChanged);
     }
 
     public void ShowProfile()
@@ -66,6 +84,53 @@ public class StudentProfileTabManager : MonoBehaviour
             sampleRecentRow.SetActive(false);
         if (rowTemplate != null)
             rowTemplate.SetActive(false);
+    }
+
+    private TMP_Dropdown PrepareSubjectDropdown(GameObject panel, TMP_Dropdown dropdown, float y)
+    {
+        if (dropdown == null)
+            dropdown = panel.GetComponentInChildren<TMP_Dropdown>(true);
+
+        if (dropdown == null)
+        {
+            dropdown = ScoreSubjectDropdown.Create(panel.transform,
+                TMP_Settings.defaultFontAsset, null);
+            var rect = (RectTransform)dropdown.transform;
+            rect.anchorMin = rect.anchorMax = new Vector2(0.5f, 0.5f);
+            rect.anchoredPosition = new Vector2(0, y);
+            rect.sizeDelta = new Vector2(200, 28);
+            Find(rect, "ActivityHeading").gameObject.SetActive(false);
+            dropdown.captionText.rectTransform.offsetMin = new Vector2(10, 0);
+
+            Transform arrow = Find(rect, "SubjectArrow");
+            arrow.GetComponent<UnityEngine.UI.Image>().enabled = false;
+            var arrowText = arrow.gameObject.AddComponent<TextMeshProUGUI>();
+            arrowText.font = dropdown.captionText.font;
+            arrowText.text = "v";
+            arrowText.fontSize = 18;
+            arrowText.alignment = TextAlignmentOptions.Center;
+            arrowText.raycastTarget = false;
+        }
+
+        dropdown.ClearOptions();
+        dropdown.AddOptions(new List<string>(ScoreSubjectFilter.Subjects));
+        dropdown.SetValueWithoutNotify(0);
+        dropdown.RefreshShownValue();
+        return dropdown;
+    }
+
+    private void OnSubjectChanged(int index)
+    {
+        if (index < 0 || index >= ScoreSubjectFilter.Subjects.Length) return;
+        selectedSubject = ScoreSubjectFilter.Subjects[index];
+        BuildProfileRows(profileSummaries);
+    }
+
+    private void OnRecentSubjectChanged(int index)
+    {
+        if (index < 0 || index >= ScoreSubjectFilter.Subjects.Length) return;
+        selectedRecentSubject = ScoreSubjectFilter.Subjects[index];
+        BuildRecentRows(recentRecords);
     }
 
     private void LoadStudentData()
@@ -129,8 +194,12 @@ public class StudentProfileTabManager : MonoBehaviour
         }
 
         records.Sort((a, b) => b.CompletedAt.CompareTo(a.CompletedAt));
-        BuildProfileRows(summaries.Values);
-        BuildRecentRows(records);
+        profileSummaries.Clear();
+        profileSummaries.AddRange(summaries.Values);
+        BuildProfileRows(profileSummaries);
+        recentRecords.Clear();
+        recentRecords.AddRange(records);
+        BuildRecentRows(recentRecords);
     }
 
     private void BuildProfileRows(IEnumerable<ActivitySummary> summaries)
@@ -141,10 +210,27 @@ public class StudentProfileTabManager : MonoBehaviour
 
         foreach (ActivitySummary summary in ordered)
         {
+            if (!ScoreSubjectFilter.Matches(summary.Name, selectedSubject)) continue;
             GameObject row = CreateRow(profileContent);
             if (row == null) return;
             FillRow(row, summary.Name, summary.Attempts.ToString(),
                 FormatTime(summary.TotalSeconds), summary.Highest, summary.Lowest);
+        }
+
+        ResetScrollPosition(profileContent);
+    }
+
+    private static void ResetScrollPosition(Transform content)
+    {
+        if (content is RectTransform contentRect)
+        {
+            UnityEngine.UI.LayoutRebuilder.ForceRebuildLayoutImmediate(contentRect);
+            var scroll = content.GetComponentInParent<UnityEngine.UI.ScrollRect>(true);
+            if (scroll != null)
+            {
+                scroll.StopMovement();
+                scroll.verticalNormalizedPosition = 1;
+            }
         }
     }
 
@@ -153,11 +239,13 @@ public class StudentProfileTabManager : MonoBehaviour
         ClearRows(recentContent);
         foreach (ActivityRecord record in records)
         {
+            if (!ScoreSubjectFilter.Matches(record.Name, selectedRecentSubject)) continue;
             GameObject row = CreateRecentActivityRow();
             if (row == null) return;
             SetText(row, "ActivityText", GetActivityName(record.Name));
             SetText(row, "LevelText", GetLevel(record.Name));
         }
+        ResetScrollPosition(recentContent);
     }
 
     private GameObject CreateRecentActivityRow()
@@ -199,7 +287,10 @@ public class StudentProfileTabManager : MonoBehaviour
         if (content == null) return;
         for (int i = content.childCount - 1; i >= 0; i--)
             if (content.GetChild(i).name == "StudentActivityRow_Generated")
+            {
+                content.GetChild(i).gameObject.SetActive(false);
                 Destroy(content.GetChild(i).gameObject);
+            }
     }
 
     private static void SetText(GameObject row, string name, string value)

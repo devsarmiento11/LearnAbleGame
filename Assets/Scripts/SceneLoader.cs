@@ -82,6 +82,8 @@ public class SceneLoader : MonoBehaviour
 
     private System.Collections.IEnumerator LoadSceneSafely(string sceneName)
     {
+        if (LoginSession.IsParent && !ParentSceneAccess.IsAllowed(sceneName))
+            sceneName = "MainMenuParent";
         isChangingScene = true;
         Time.timeScale = 1f;
 

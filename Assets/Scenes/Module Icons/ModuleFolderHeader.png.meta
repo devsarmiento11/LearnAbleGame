@@ -1,0 +1,1235 @@
+fileFormatVersion: 2
+guid: 69d9cbb7f7ea945489b4ff75243db506
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -528266935199251309
+    second: ModuleFolderHeader_0
+  - first:
+      213: 6921039958483316406
+    second: ModuleFolderHeader_1
+  - first:
+      213: -4020356104971715617
+    second: ModuleFolderHeader_2
+  - first:
+      213: 2525073714349043830
+    second: ModuleFolderHeader_3
+  - first:
+      213: -2839125947147778267
+    second: ModuleFolderHeader_4
+  - first:
+      213: 4772845688870654094
+    second: ModuleFolderHeader_5
+  - first:
+      213: -3976143937724567734
+    second: ModuleFolderHeader_6
+  - first:
+      213: 3884959986665994205
+    second: ModuleFolderHeader_7
+  - first:
+      213: -7551194736359289619
+    second: ModuleFolderHeader_8
+  - first:
+      213: -2055539454510716929
+    second: ModuleFolderHeader_9
+  - first:
+      213: 6676273251082084138
+    second: ModuleFolderHeader_10
+  - first:
+      213: -6560774145889582292
+    second: ModuleFolderHeader_11
+  - first:
+      213: -5162505487061283903
+    second: ModuleFolderHeader_12
+  - first:
+      213: -2444099347718154456
+    second: ModuleFolderHeader_13
+  - first:
+      213: 7275093084068576487
+    second: ModuleFolderHeader_14
+  - first:
+      213: 107534624439799745
+    second: ModuleFolderHeader_15
+  - first:
+      213: 4794177564440324647
+    second: ModuleFolderHeader_16
+  - first:
+      213: 4447192027275493910
+    second: ModuleFolderHeader_17
+  - first:
+      213: -3113522153437248769
+    second: ModuleFolderHeader_18
+  - first:
+      213: -6514281168429939337
+    second: ModuleFolderHeader_19
+  - first:
+      213: -8918298354039746512
+    second: ModuleFolderHeader_20
+  - first:
+      213: -785669641417350925
+    second: ModuleFolderHeader_21
+  - first:
+      213: -8140977116154208025
+    second: ModuleFolderHeader_22
+  - first:
+      213: 898431578908828740
+    second: ModuleFolderHeader_23
+  - first:
+      213: 4681118099066878486
+    second: ModuleFolderHeader_24
+  - first:
+      213: 2073560741642315444
+    second: ModuleFolderHeader_25
+  - first:
+      213: -1509630456900650112
+    second: ModuleFolderHeader_26
+  - first:
+      213: 6744738365135128429
+    second: ModuleFolderHeader_27
+  - first:
+      213: 7565890708992573524
+    second: ModuleFolderHeader_28
+  - first:
+      213: -6154529973964085385
+    second: ModuleFolderHeader_29
+  - first:
+      213: -2768900128760428105
+    second: ModuleFolderHeader_30
+  - first:
+      213: 6373292257672663193
+    second: ModuleFolderHeader_31
+  - first:
+      213: -3388689843696940147
+    second: ModuleFolderHeader_32
+  - first:
+      213: -1464057291909461680
+    second: ModuleFolderHeader_33
+  - first:
+      213: -8690175900359252540
+    second: ModuleFolderHeader_34
+  - first:
+      213: 672147151202250642
+    second: ModuleFolderHeader_35
+  - first:
+      213: -980803822795734966
+    second: ModuleFolderHeader_36
+  - first:
+      213: 482375097249300520
+    second: ModuleFolderHeader_37
+  - first:
+      213: 3255045818848048687
+    second: ModuleFolderHeader_38
+  - first:
+      213: -2473502090734432506
+    second: ModuleFolderHeader_39
+  - first:
+      213: -7974240720475823712
+    second: ModuleFolderHeader_40
+  - first:
+      213: -1582707145506956956
+    second: ModuleFolderHeader_41
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ModuleFolderHeader_0
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 0
+        width: 2118
+        height: 705
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3944dd475083ba8f0800000000000000
+      internalID: -528266935199251309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ModuleFolderHeader_1
+      rect:
+        serializedVersion: 2
+        x: 1297
+        y: 594
+        width: 76
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6beaea94c297c0060800000000000000
+      internalID: 6921039958483316406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ModuleFolderHeader_2
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 693
+        width: 83
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdb769c5c63d438c0800000000000000
+      internalID: -4020356104971715617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ModuleFolderHeader_3
+      rect:
+        serializedVersion: 2
+        x: 1552
+        y: 643
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 670737f2a2dda0320800000000000000
+      internalID: 2525073714349043830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ModuleFolderHeader_4
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 606
+        width: 13
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52789af4ef56998d0800000000000000
+      internalID: -2839125947147778267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ModuleFolderHeader_5
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 597
+        width: 30
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e80d3eccddd8c3240800000000000000
+      internalID: 4772845688870654094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ModuleFolderHeader_6
+      rect:
+        serializedVersion: 2
+        x: 869
+        y: 572
+        width: 94
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4faa18b726e1d8c0800000000000000
+      internalID: -3976143937724567734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ModuleFolderHeader_7
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 618
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd735d346862ae530800000000000000
+      internalID: 3884959986665994205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ModuleFolderHeader_8
+      rect:
+        serializedVersion: 2
+        x: 1432
+        y: 581
+        width: 81
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dec418d2564c43790800000000000000
+      internalID: -7551194736359289619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ModuleFolderHeader_9
+      rect:
+        serializedVersion: 2
+        x: 1512
+        y: 602
+        width: 25
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff7a610c1c14973e0800000000000000
+      internalID: -2055539454510716929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ModuleFolderHeader_10
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 626
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2f90324623e6ac50800000000000000
+      internalID: 6676273251082084138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ModuleFolderHeader_11
+      rect:
+        serializedVersion: 2
+        x: 1550
+        y: 610
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c234faebca273f4a0800000000000000
+      internalID: -6560774145889582292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ModuleFolderHeader_12
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 616
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cb05b49c981b58b0800000000000000
+      internalID: -5162505487061283903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ModuleFolderHeader_13
+      rect:
+        serializedVersion: 2
+        x: 1591
+        y: 598
+        width: 23
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 827de77b790d41ed0800000000000000
+      internalID: -2444099347718154456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ModuleFolderHeader_14
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 609
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ecfec76d9256f460800000000000000
+      internalID: 7275093084068576487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ModuleFolderHeader_15
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 600
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cf0ac2db2a0e7100800000000000000
+      internalID: 107534624439799745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ModuleFolderHeader_16
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 594
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72aec9e1817588240800000000000000
+      internalID: 4794177564440324647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ModuleFolderHeader_17
+      rect:
+        serializedVersion: 2
+        x: 1164
+        y: 578
+        width: 36
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61284b9269997bd30800000000000000
+      internalID: 4447192027275493910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ModuleFolderHeader_18
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 594
+        width: 14
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff2401cf81c8ac4d0800000000000000
+      internalID: -3113522153437248769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ModuleFolderHeader_19
+      rect:
+        serializedVersion: 2
+        x: 1373
+        y: 590
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77587bc9acf9895a0800000000000000
+      internalID: -6514281168429939337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ModuleFolderHeader_20
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 594
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 030928ee5e6db3480800000000000000
+      internalID: -8918298354039746512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ModuleFolderHeader_21
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 575
+        width: 25
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f0a280bf9db815f0800000000000000
+      internalID: -785669641417350925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ModuleFolderHeader_22
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 593
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e06b031270750f80800000000000000
+      internalID: -8140977116154208025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ModuleFolderHeader_23
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 596
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 444aadbc2ced77c00800000000000000
+      internalID: 898431578908828740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ModuleFolderHeader_24
+      rect:
+        serializedVersion: 2
+        x: 1253
+        y: 592
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61a78860c1ca6f040800000000000000
+      internalID: 4681118099066878486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ModuleFolderHeader_25
+      rect:
+        serializedVersion: 2
+        x: 1502
+        y: 553
+        width: 54
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b629c12284c6cc10800000000000000
+      internalID: 2073560741642315444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ModuleFolderHeader_26
+      rect:
+        serializedVersion: 2
+        x: 1623
+        y: 583
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08b735a0917bc0be0800000000000000
+      internalID: -1509630456900650112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ModuleFolderHeader_27
+      rect:
+        serializedVersion: 2
+        x: 1721
+        y: 592
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6704d4decf1a9d50800000000000000
+      internalID: 6744738365135128429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ModuleFolderHeader_28
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 580
+        width: 23
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4504ee693817ff860800000000000000
+      internalID: 7565890708992573524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ModuleFolderHeader_29
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 584
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7776066c897b69aa0800000000000000
+      internalID: -6154529973964085385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ModuleFolderHeader_30
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 580
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b983bec004e299d0800000000000000
+      internalID: -2768900128760428105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ModuleFolderHeader_31
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 580
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 990935c8a8b727850800000000000000
+      internalID: 6373292257672663193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ModuleFolderHeader_32
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 580
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8b487c8a84f8f0d0800000000000000
+      internalID: -3388689843696940147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ModuleFolderHeader_33
+      rect:
+        serializedVersion: 2
+        x: 1359
+        y: 580
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0598ae066af9eabe0800000000000000
+      internalID: -1464057291909461680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ModuleFolderHeader_34
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 570
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c52d67af0b466780800000000000000
+      internalID: -8690175900359252540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ModuleFolderHeader_35
+      rect:
+        serializedVersion: 2
+        x: 1390
+        y: 562
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29f6338d542f35900800000000000000
+      internalID: 672147151202250642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ModuleFolderHeader_36
+      rect:
+        serializedVersion: 2
+        x: 1481
+        y: 572
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a404ae3ae1c7362f0800000000000000
+      internalID: -980803822795734966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ModuleFolderHeader_37
+      rect:
+        serializedVersion: 2
+        x: 1733
+        y: 546
+        width: 28
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8200a00689db1b600800000000000000
+      internalID: 482375097249300520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ModuleFolderHeader_38
+      rect:
+        serializedVersion: 2
+        x: 1561
+        y: 168
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f26fe002dee3c2d20800000000000000
+      internalID: 3255045818848048687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ModuleFolderHeader_39
+      rect:
+        serializedVersion: 2
+        x: 1719
+        y: 152
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60f869224fa5cadd0800000000000000
+      internalID: -2473502090734432506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ModuleFolderHeader_40
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 146
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a16596605ec55190800000000000000
+      internalID: -7974240720475823712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ModuleFolderHeader_41
+      rect:
+        serializedVersion: 2
+        x: 1347
+        y: 91
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 469d5989c38190ae0800000000000000
+      internalID: -1582707145506956956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ModuleFolderHeader_0: -528266935199251309
+      ModuleFolderHeader_1: 6921039958483316406
+      ModuleFolderHeader_10: 6676273251082084138
+      ModuleFolderHeader_11: -6560774145889582292
+      ModuleFolderHeader_12: -5162505487061283903
+      ModuleFolderHeader_13: -2444099347718154456
+      ModuleFolderHeader_14: 7275093084068576487
+      ModuleFolderHeader_15: 107534624439799745
+      ModuleFolderHeader_16: 4794177564440324647
+      ModuleFolderHeader_17: 4447192027275493910
+      ModuleFolderHeader_18: -3113522153437248769
+      ModuleFolderHeader_19: -6514281168429939337
+      ModuleFolderHeader_2: -4020356104971715617
+      ModuleFolderHeader_20: -8918298354039746512
+      ModuleFolderHeader_21: -785669641417350925
+      ModuleFolderHeader_22: -8140977116154208025
+      ModuleFolderHeader_23: 898431578908828740
+      ModuleFolderHeader_24: 4681118099066878486
+      ModuleFolderHeader_25: 2073560741642315444
+      ModuleFolderHeader_26: -1509630456900650112
+      ModuleFolderHeader_27: 6744738365135128429
+      ModuleFolderHeader_28: 7565890708992573524
+      ModuleFolderHeader_29: -6154529973964085385
+      ModuleFolderHeader_3: 2525073714349043830
+      ModuleFolderHeader_30: -2768900128760428105
+      ModuleFolderHeader_31: 6373292257672663193
+      ModuleFolderHeader_32: -3388689843696940147
+      ModuleFolderHeader_33: -1464057291909461680
+      ModuleFolderHeader_34: -8690175900359252540
+      ModuleFolderHeader_35: 672147151202250642
+      ModuleFolderHeader_36: -980803822795734966
+      ModuleFolderHeader_37: 482375097249300520
+      ModuleFolderHeader_38: 3255045818848048687
+      ModuleFolderHeader_39: -2473502090734432506
+      ModuleFolderHeader_4: -2839125947147778267
+      ModuleFolderHeader_40: -7974240720475823712
+      ModuleFolderHeader_41: -1582707145506956956
+      ModuleFolderHeader_5: 4772845688870654094
+      ModuleFolderHeader_6: -3976143937724567734
+      ModuleFolderHeader_7: 3884959986665994205
+      ModuleFolderHeader_8: -7551194736359289619
+      ModuleFolderHeader_9: -2055539454510716929
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

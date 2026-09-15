@@ -101,7 +101,7 @@ public class FirestoreProfileLogin : MonoBehaviour
     {
         if (loginInProgress || initializing) return;
         if (!firebaseReady) { InitializeFirebase(); return; }
-        string schoolId = idInput.text.Trim();
+        string schoolId = idInput.text.Trim().ToUpperInvariant();
         string password = passwordInput.text; // Passwords must never be trimmed.
         if (string.IsNullOrWhiteSpace(schoolId) || schoolId.Contains("/") || schoolId == "." || schoolId == "..")
         {
@@ -148,11 +148,36 @@ public class FirestoreProfileLogin : MonoBehaviour
                 return;
             }
             string role = GetString(profile, "role").ToLowerInvariant();
-            string destination = role == "teacher" ? "MainMenuTeacher" : role == "student" ? "CharacterSelect" : null;
+            string destination = role == "teacher" ? "MainMenuTeacher" : role == "student" ? "CharacterSelect" : role == "parent" ? "MainMenuParent" : null;
             if (destination == null)
             {
                 ShowStatus("This account cannot use the game.", true);
                 return;
+            }
+            string childrenId = "";
+            string childName = "";
+            if (role == "parent")
+            {
+                if (!string.Equals(GetString(profile, "status"), "Active", StringComparison.OrdinalIgnoreCase))
+                {
+                    ShowStatus("This parent account is inactive. Please contact your administrator.", true);
+                    return;
+                }
+                childrenId = GetString(profile, "childrenId");
+                if (string.IsNullOrWhiteSpace(childrenId) || childrenId.Contains("/"))
+                {
+                    ShowStatus("No child is linked to this account. Please contact your administrator.", true);
+                    return;
+                }
+                var child = await FirebaseFirestore.DefaultInstance.Collection(LearningDataStore.UsersCollection)
+                    .Document(childrenId).GetSnapshotAsync(Source.Server);
+                if (this == null) return;
+                if (!child.Exists || GetString(child, "role") != "student")
+                {
+                    ShowStatus("The linked student account is unavailable. Please contact your administrator.", true);
+                    return;
+                }
+                childName = string.Join(" ", new[] { GetString(child, "firstName"), GetString(child, "middleName"), GetString(child, "lastName") }.Where(part => part.Length > 0));
             }
             if (!Application.CanStreamedLevelBeLoaded(destination))
             {
@@ -162,7 +187,8 @@ public class FirestoreProfileLogin : MonoBehaviour
             string fullName = GetString(profile, "name");
             if (string.IsNullOrWhiteSpace(fullName))
                 fullName = string.Join(" ", new[] { GetString(profile, "firstName"), GetString(profile, "middleName"), GetString(profile, "lastName") }.Where(part => part.Length > 0));
-            LoginSession.Login(profile.Id, fullName, GetString(profile, "firstName"));
+            LoginSession.Login(profile.Id, fullName, GetString(profile, "firstName"), role, childrenId);
+            if (role == "parent") LoginSession.SetParentChild(childrenId, childName, result.User.UserId);
             LearningDataStore.SetCurrentUser(profile.Id);
             SceneLoader.SetStudentLoggedIn();
             passwordInput.text = string.Empty;

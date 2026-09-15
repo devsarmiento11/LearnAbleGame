@@ -3,22 +3,12 @@ using UnityEngine;
 public class ModuleManager : MonoBehaviour
 {
     [Header("Module Panels")]
-    public GameObject englishPanel;
-    public GameObject sciencePanel;
-    public GameObject mathPanel;
+    public GameObject[] panels;
 
-    private GameObject[] panels;
     private int currentPanel = 0;
 
     void Start()
     {
-        panels = new GameObject[]
-        {
-            englishPanel,
-            sciencePanel,
-            mathPanel
-        };
-
         currentPanel = 0;
         ShowPanel(currentPanel);
     }
@@ -54,7 +44,9 @@ public class ModuleManager : MonoBehaviour
         for (int i = 0; i < panels.Length; i++)
         {
             if (panels[i] != null)
+            {
                 panels[i].SetActive(i == index);
+            }
         }
     }
 }

@@ -36,6 +36,7 @@ public static class LearningDataStore
 
     public static void CreateOrUpdateUser(string userId, string username, string schoolId, string name, UserRole role)
     {
+        if (LoginSession.IsParent) return;
         if (string.IsNullOrWhiteSpace(userId) || string.IsNullOrWhiteSpace(username))
         {
             Debug.LogError("User ID and username are required when saving a user.");
@@ -61,6 +62,7 @@ public static class LearningDataStore
 
     public static void RecordActivity(string activityName, int score, int correctAnswers, int totalItems, int timeUsedSeconds)
     {
+        if (LoginSession.IsParent) return;
         if (string.IsNullOrWhiteSpace(CurrentUserId))
         {
             Debug.LogWarning("Score was not saved because no logged-in user is set.");

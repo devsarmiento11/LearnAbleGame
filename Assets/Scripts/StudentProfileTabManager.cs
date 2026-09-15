@@ -135,10 +135,10 @@ public class StudentProfileTabManager : MonoBehaviour
 
     private void LoadStudentData()
     {
-        string userId = LearningDataStore.CurrentUserId;
+        string userId = LoginSession.ProfileStudentId;
         if (string.IsNullOrWhiteSpace(userId))
         {
-            SetStudentName(LoginSession.StudentName);
+            SetStudentName(LoginSession.ProfileStudentName);
             Debug.LogWarning("No logged-in student ID is available for StudentProfileScene.");
             return;
         }
@@ -147,18 +147,27 @@ public class StudentProfileTabManager : MonoBehaviour
         db.Collection(LearningDataStore.UsersCollection).Document(userId).GetSnapshotAsync()
             .ContinueWithOnMainThread(task =>
             {
+                if (this == null) return;
                 if (task.Status == TaskStatus.RanToCompletion && task.Result.Exists)
                     SetStudentName(GetStudentName(task.Result));
                 else
                 {
-                    SetStudentName(LoginSession.StudentName);
+                    SetStudentName(LoginSession.ProfileStudentName);
                     Debug.LogError("Unable to load the logged-in student profile: " + task.Exception);
                 }
             });
 
         activityListener = db.Collection(LearningDataStore.ActivityScoresCollection)
             .WhereEqualTo("userId", userId)
-            .Listen(snapshot => RebuildPanels(snapshot.Documents));
+            .Listen(snapshot => { if (this != null) RebuildPanels(snapshot.Documents); });
+        activityListener.ListenerTask.ContinueWithOnMainThread(task =>
+        {
+            if (this != null && task.IsFaulted)
+            {
+                RebuildPanels(new DocumentSnapshot[0]);
+                Debug.LogWarning("Unable to load activity history. Check the connection and account access.");
+            }
+        });
     }
 
     private void SetStudentName(string value)

@@ -10,18 +10,39 @@ public static class LoginSession
 
     public static string StudentId = "";
     public static string StudentName = "";
+    public static string Role { get; private set; } = "";
+    public static string ChildrenId { get; private set; } = "";
+    public static string ChildName { get; private set; } = "";
+    public static string VerifiedParentUid { get; private set; } = "";
+    public static bool IsParent => IsLoggedIn && Role == "parent";
+    public static string ProfileStudentId => IsParent ? ChildrenId : LearningDataStore.CurrentUserId;
+    public static string ProfileStudentName => IsParent ? ChildName : StudentName;
 
-    public static void Login(string studentId, string studentName, string firstName)
+    public static void Login(string studentId, string studentName, string firstName, string role = "student", string childrenId = "")
     {
         IsLoggedIn = true;
         StudentId = studentId;
         StudentName = studentName;
+        Role = role;
+        ChildrenId = role == "parent" ? childrenId : "";
+        ChildName = "";
+        VerifiedParentUid = "";
 
         string resolvedFirstName = ResolveFirstName(firstName, studentName);
         PlayerPrefs.SetString(StudentNameKey, studentName ?? string.Empty);
         PlayerPrefs.SetString(StudentFirstNameKey, resolvedFirstName);
         PlayerPrefs.Save();
     }
+
+    public static void SetParentChild(string id, string name, string parentUid)
+    {
+        if (!IsParent) throw new InvalidOperationException("A parent session is required.");
+        ChildrenId = id;
+        ChildName = name;
+        VerifiedParentUid = parentUid;
+    }
+
+    public static void InvalidateParentChild() => VerifiedParentUid = "";
 
     public static string GetFirstName()
     {
@@ -54,6 +75,13 @@ public static class LoginSession
         IsLoggedIn = false;
         StudentId = "";
         StudentName = "";
+        Role = "";
+        ChildrenId = "";
+        ChildName = "";
+        VerifiedParentUid = "";
+        PlayerPrefs.DeleteKey("SelectedGradeStudentId");
+        PlayerPrefs.DeleteKey("SelectedGradeStudentName");
+        PlayerPrefs.DeleteKey("SelectedGradeStudentGrade");
         PlayerPrefs.DeleteKey(StudentNameKey);
         PlayerPrefs.DeleteKey(StudentFirstNameKey);
         PlayerPrefs.Save();

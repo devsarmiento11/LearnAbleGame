@@ -15,6 +15,7 @@ public class StudentGradesView : MonoBehaviour
 
     private void Awake()
     {
+        if (LoginSession.IsParent) useSelectedStudent = false;
         if (textRoot == null) textRoot = transform;
         foreach (TMP_Text label in textRoot.GetComponentsInChildren<TMP_Text>(true))
         {
@@ -29,7 +30,7 @@ public class StudentGradesView : MonoBehaviour
     {
         string studentId = useSelectedStudent
             ? PlayerPrefs.GetString("SelectedGradeStudentId", string.Empty)
-            : LearningDataStore.CurrentUserId;
+            : LoginSession.ProfileStudentId;
         if (string.IsNullOrWhiteSpace(studentId)) return;
 
         listener = FirebaseFirestore.DefaultInstance.Collection(LearningDataStore.UsersCollection)
@@ -49,7 +50,7 @@ public class StudentGradesView : MonoBehaviour
     {
         var report = new AcademicGradeReport(data);
         string fallback = useSelectedStudent
-            ? PlayerPrefs.GetString("SelectedGradeStudentName", string.Empty) : LoginSession.StudentName;
+            ? PlayerPrefs.GetString("SelectedGradeStudentName", string.Empty) : LoginSession.ProfileStudentName;
         Set("StudentNameText", AcademicGradeReport.StudentName(data, fallback).ToUpperInvariant());
         string grade = AcademicGradeReport.Text(data, "grade");
         if (grade.Length == 0 && useSelectedStudent)

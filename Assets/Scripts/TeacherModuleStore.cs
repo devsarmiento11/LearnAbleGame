@@ -136,6 +136,20 @@ public sealed class TeacherModuleStore
 
     string ObjectUrl(string path) => "https://firebasestorage.googleapis.com/v0/b/" + Uri.EscapeDataString(bucket) + "/o/" + Uri.EscapeDataString(path);
 
+    internal static string TransferError(long status, bool uploading, bool connectionError)
+    {
+        if (connectionError) return "Cannot reach PDF storage. Check your internet connection and try again.";
+        if (status == 401) return "Your sign-in expired. Sign in again before uploading a module.";
+        if (status == 403) return "PDF storage access was denied. Ask the administrator to check teacher permissions and Storage setup.";
+        if (status == 404) return uploading
+            ? "PDF storage has not been set up. Ask the administrator to enable Firebase Storage."
+            : "This PDF is no longer available in storage. Replace the module's PDF and try again.";
+        if (status == 412) return "PDF storage is unavailable. Ask the administrator to check Firebase Storage and billing.";
+        if (status == 413) return "The PDF is too large. Select a PDF no larger than 25 MB.";
+        if (status == 429 || status >= 500) return "PDF storage is temporarily busy. Please try again shortly.";
+        return "The PDF transfer failed (" + status + "). Please try again or contact the administrator.";
+    }
+
     async Task Send(UnityWebRequest request, CancellationToken cancellation, Action<float> progress = null)
     {
         CheckSession();
@@ -154,9 +168,12 @@ public sealed class TeacherModuleStore
             }
             cancellation.ThrowIfCancellationRequested();
             if (request.result != UnityWebRequest.Result.Success)
-                throw new InvalidOperationException(request.responseCode == 401 || request.responseCode == 403
-                    ? "Storage access was denied. Check the teacher sign-in and Firebase module rules."
-                    : "The PDF transfer failed. Check your connection and Firebase Storage setup, then try again.");
+            {
+                // Log transport status without exposing authorization headers or PDF contents.
+                Debug.LogWarning("Module PDF transfer: HTTP " + request.responseCode + ", " + request.error);
+                throw new InvalidOperationException(TransferError(request.responseCode, request.method == "POST",
+                    request.result == UnityWebRequest.Result.ConnectionError));
+            }
         }
         finally { if (!request.isDone) request.Abort(); }
     }

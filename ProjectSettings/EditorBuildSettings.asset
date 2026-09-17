@@ -338,5 +338,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Settings/Scenes/FolderScene.unity
     guid: 2d82036f0d335b3478499b0078f9558f
+  - enabled: 1
+    path: Assets/Settings/Scenes/ArchiveScene.unity
+    guid: 84985716bda6fe5448defad52b8a664d
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

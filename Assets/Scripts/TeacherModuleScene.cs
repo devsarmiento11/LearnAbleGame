@@ -36,7 +36,8 @@ public sealed class TeacherModuleScene : MonoBehaviour
     Vector2[] folderPositions;
     TeacherPdfModule selected;
     string replacement, currentFolder;
-    bool uploadScene, busy, showingArchive;
+    bool uploadScene, archiveScene, busy;
+    GameObject modalBlocker;
     float statusFontSize;
     Task uploadInitialization;
 
@@ -118,7 +119,8 @@ public sealed class TeacherModuleScene : MonoBehaviour
         picker.transform.SetParent(transform, false);
         try
         {
-            if (uploadScene) SetupUpload(); else SetupFolder();
+            archiveScene = SceneManager.GetActiveScene().name == "ArchiveScene";
+            if (uploadScene) SetupUpload(); else if (archiveScene) SetupArchive(); else SetupFolder();
             if (uploadScene)
             {
                 RefreshFolders(); SetInteractive(true);
@@ -129,11 +131,11 @@ public sealed class TeacherModuleScene : MonoBehaviour
             Run(async () =>
             {
                 Message("Loading folders...");
-                var dependencies = await Firebase.FirebaseApp.CheckAndFixDependenciesAsync();
+                var dependencies = await ReadWithTimeout(Firebase.FirebaseApp.CheckAndFixDependenciesAsync());
                 lifetime.Token.ThrowIfCancellationRequested();
                 if (dependencies != Firebase.DependencyStatus.Available) throw new InvalidOperationException("Firebase is unavailable on this device.");
-                store = await TeacherModuleStore.OpenAsync(lifetime.Token);
-                folders = await store.Folders();
+                store = await ReadWithTimeout(TeacherModuleStore.OpenAsync(lifetime.Token));
+                folders = await ReadWithTimeout(store.Folders());
                 lifetime.Token.ThrowIfCancellationRequested();
                 if (uploadScene) { RefreshFolders(); Message(folders.Count == 0 ? "Create a folder to begin." : "Select Module"); }
                 else
@@ -339,7 +341,7 @@ public sealed class TeacherModuleScene : MonoBehaviour
         fileName = editPopup.GetComponentsInChildren<TMP_Text>(true).First(t => t.name == "Current File Name");
         Bind("Buttons/Button", () => Navigate("UploadModuleScene"));
         Bind("Buttons/Button (1)", () => Navigate("SettingsScene"));
-        Bind("Buttons/Button (2)", () => { showingArchive = !showingArchive; RenderModules(); });
+        Bind("Buttons/Button (2)", () => Navigate("ArchiveScene"));
         Bind("EditPopUp/Button", ClosePopups); Bind("EditPopUp/CancelBtn", ClosePopups);
         Bind("ArchivePopUp/CloseBtn", ClosePopups); Bind("ArchivePopUp/CancelBtn", ClosePopups);
         Bind("DeletePopUp/CloseButton", ClosePopups); Bind("DeletePopUp/CancelBtn", ClosePopups);
@@ -355,24 +357,95 @@ public sealed class TeacherModuleScene : MonoBehaviour
             var change = Copy(selected);
             change.Title = editTitle.text; change.FolderId = folders[editFolder.value].Id; change.Grade = editGrade.value + 1;
             await store.Save(change, replacement, lifetime.Token, Progress);
-            lifetime.Token.ThrowIfCancellationRequested(); ClosePopups(); await ReloadModules();
+            lifetime.Token.ThrowIfCancellationRequested();
+            modules.RemoveAll(m => m.Id == change.Id);
+            if (change.FolderId == currentFolder) modules.Add(change);
+            modules = modules.OrderBy(m => m.Title, StringComparer.OrdinalIgnoreCase).ToList();
+            ClosePopups(); RenderModules();
         }));
-        Bind("ArchivePopUp/ArchiveBtn", () => Run(async () =>
-        {
-            var change = Copy(selected); change.Archived = !change.Archived;
-            await store.Save(change, null, lifetime.Token, null);
-            lifetime.Token.ThrowIfCancellationRequested(); ClosePopups(); await ReloadModules();
-        }));
+        Bind("ArchivePopUp/ArchiveBtn", () => Run(() => SetArchived(true)));
         Bind("DeletePopUp/DeleteBtn", () => Run(async () =>
         {
-            await store.Delete(selected); lifetime.Token.ThrowIfCancellationRequested(); ClosePopups(); await ReloadModules();
+            var deleted = selected;
+            await store.Delete(deleted); lifetime.Token.ThrowIfCancellationRequested();
+            modules.RemoveAll(m => m.Id == deleted.Id);
+            ClosePopups(); RenderModules();
         }));
         search.onValueChanged.AddListener(_ => { if (!busy) RenderModules(); });
         filter.onValueChanged.AddListener(_ => { if (!busy) RenderModules(); });
         scroll = At<ScrollRect>("Scroll View"); content = At<RectTransform>("Scroll View/Viewport/Content");
-        template = Obj("Scroll View/Viewport/Content/Modules"); template.SetActive(false);
+        // Reuse the authored row, including its artwork, labels and buttons.
+        template = Obj("ModuieInsidethefolder");
+        foreach (Transform row in transform)
+            if (row.name.StartsWith("ModuieInsidethefolder", StringComparison.Ordinal)) row.gameObject.SetActive(false);
+        foreach (Transform row in content) row.gameObject.SetActive(false);
+        modalBlocker = new GameObject("Folder modal input blocker", typeof(RectTransform), typeof(Image));
+        modalBlocker.transform.SetParent(transform, false);
+        var blockerRect = (RectTransform)modalBlocker.transform;
+        blockerRect.anchorMin = Vector2.zero; blockerRect.anchorMax = Vector2.one;
+        blockerRect.offsetMin = blockerRect.offsetMax = Vector2.zero;
+        modalBlocker.GetComponent<Image>().color = Color.clear;
+        modalBlocker.SetActive(false);
+        foreach (var popup in new[] { editPopup, deletePopup, archivePopup })
+            foreach (var graphic in popup.GetComponentsInChildren<Graphic>(true))
+                graphic.raycastTarget = graphic.GetComponentInParent<Selectable>(true) != null;
         ConfigureScroll(At<RectTransform>("Scroll View/Viewport"));
     }
+    async Task SetArchived(bool archived)
+    {
+        var change = Copy(selected);
+        change.Archived = archived;
+        await store.Save(change, null, lifetime.Token, null);
+        lifetime.Token.ThrowIfCancellationRequested();
+        modules.RemoveAll(m => m.Id == change.Id);
+        modules.Add(change);
+        modules = modules.OrderBy(m => m.Title, StringComparer.OrdinalIgnoreCase).ToList();
+        ClosePopups(); RenderModules();
+    }
+
+    void SetupArchive()
+    {
+        archiveScene = true;
+        status = At<TMP_Text>("NameOfTheArchiveModule");
+        search = At<TMP_InputField>("SearchModule");
+        filter = At<TMP_Dropdown>("Dropdown"); SetGrades(filter, true);
+        archivePopup = Obj("UndoConfirmationPopup");
+        deletePopup = Obj("DeleteConfirmationPopup ");
+        ClosePopups();
+        Bind("Buttons/Back", () => Navigate("FolderScene"));
+        Bind("Buttons/Settings", () => Navigate("SettingsScene"));
+        Bind("UndoConfirmationPopup/Cancel", ClosePopups);
+        Bind("DeleteConfirmationPopup /Cancel", ClosePopups);
+        Bind("UndoConfirmationPopup/Undo", () => Run(() => SetArchived(false)));
+        // The authored delete-confirm button is named Undo in the hierarchy.
+        Bind("DeleteConfirmationPopup /Undo", () => Run(async () =>
+        {
+            var deleted = selected;
+            await store.Delete(deleted); lifetime.Token.ThrowIfCancellationRequested();
+            modules.RemoveAll(m => m.Id == deleted.Id);
+            ClosePopups(); RenderModules();
+        }));
+        search.onValueChanged.AddListener(_ => { if (!busy) RenderModules(); });
+        filter.onValueChanged.AddListener(_ => { if (!busy) RenderModules(); });
+        scroll = At<ScrollRect>("Scroll View");
+        content = At<RectTransform>("Scroll View/Viewport/Content");
+        template = Obj("Scroll View/RowOfTheArchiveModuleInThatFolder");
+        foreach (Transform row in scroll.transform)
+            if (row.name.StartsWith("RowOfTheArchiveModuleInThatFolder", StringComparison.Ordinal)) row.gameObject.SetActive(false);
+        foreach (Transform row in content) row.gameObject.SetActive(false);
+        ConfigureScroll(At<RectTransform>("Scroll View/Viewport"));
+        modalBlocker = new GameObject("Archive modal input blocker", typeof(RectTransform), typeof(Image));
+        modalBlocker.transform.SetParent(transform, false);
+        var rect = (RectTransform)modalBlocker.transform;
+        rect.anchorMin = Vector2.zero; rect.anchorMax = Vector2.one;
+        rect.offsetMin = rect.offsetMax = Vector2.zero;
+        modalBlocker.GetComponent<Image>().color = Color.clear;
+        modalBlocker.SetActive(false);
+        foreach (var popup in new[] { archivePopup, deletePopup })
+            foreach (var graphic in popup.GetComponentsInChildren<Graphic>(true))
+                graphic.raycastTarget = graphic.GetComponentInParent<Selectable>(true) != null;
+    }
+
     static TeacherPdfModule Copy(TeacherPdfModule item) => new TeacherPdfModule
     {
         Id = item.Id, Title = item.Title, FolderId = item.FolderId, Grade = item.Grade,
@@ -380,70 +453,63 @@ public sealed class TeacherModuleScene : MonoBehaviour
     };
     void ClosePopups()
     {
-        editPopup.SetActive(false); archivePopup.SetActive(false); deletePopup.SetActive(false); replacement = null;
+        if (editPopup != null) editPopup.SetActive(false);
+        if (archivePopup != null) archivePopup.SetActive(false);
+        if (deletePopup != null) deletePopup.SetActive(false);
+        replacement = null;
+        if (modalBlocker != null) modalBlocker.SetActive(false);
+        selected = null;
     }
     async Task ReloadModules()
     {
-        modules = await store.Modules(currentFolder); lifetime.Token.ThrowIfCancellationRequested(); RenderModules();
+        modules = await ReadWithTimeout(store.Modules(currentFolder)); lifetime.Token.ThrowIfCancellationRequested(); RenderModules();
+    }
+    void ShowPopup(GameObject popup)
+    {
+        modalBlocker.SetActive(true); modalBlocker.transform.SetAsLastSibling();
+        popup.SetActive(true); popup.transform.SetAsLastSibling();
     }
     void RenderModules()
     {
         if (currentFolder == null) return;
         ClearRows();
-        var items = modules.Where(m => m.Archived == showingArchive && (filter.value == 0 || m.Grade == filter.value)
-            && m.Title.IndexOf(search.text.Trim(), StringComparison.OrdinalIgnoreCase) >= 0).ToList();
-        Message(folders.First(f => f.Id == currentFolder).Name + (showingArchive ? " — Archived" : "") + (items.Count == 0 ? " — No modules" : ""));
-        float width = scroll.viewport.rect.width;
-        content.sizeDelta = new Vector2(width, Math.Max(scroll.viewport.rect.height, items.Count * 100));
+        var items = modules.Where(m => m.Archived == archiveScene && m.FolderId == currentFolder
+            && (filter.value == 0 || m.Grade == filter.value)
+            && (m.Title ?? "").IndexOf(search.text.Trim(), StringComparison.OrdinalIgnoreCase) >= 0).ToList();
+        Message(folders.First(f => f.Id == currentFolder).Name);
+        Canvas.ForceUpdateCanvases();
+        float stride = scroll.viewport.rect.height / (archiveScene ? 3f : 4f);
+        content.sizeDelta = new Vector2(scroll.viewport.rect.width, Math.Max(scroll.viewport.rect.height, items.Count * stride));
         for (int i = 0; i < items.Count; i++)
         {
-            var item = items[i]; var row = Instantiate(template, content); row.SetActive(true); row.name = "Module_" + item.Id;
-            var rect = (RectTransform)row.transform; rect.anchorMin = rect.anchorMax = new Vector2(0, 1); rect.pivot = new Vector2(0, 1);
-            rect.anchoredPosition = new Vector2(0, -i * 100); rect.sizeDelta = new Vector2(width, 90);
-            var textObject = new GameObject("Module title and grade", typeof(RectTransform)); textObject.transform.SetParent(rect, false);
-            var label = textObject.AddComponent<TextMeshProUGUI>(); label.font = status.font; label.fontSize = 22;
-            label.color = new Color(0.25f, 0.12f, 0.04f); label.richText = false; label.alignment = TextAlignmentOptions.MidlineLeft;
-            label.fontSize = 14;
-            label.text = item.Title + "\nGrade " + item.Grade; label.overflowMode = TextOverflowModes.Ellipsis; label.raycastTarget = false;
-            var labelRect = label.rectTransform; labelRect.anchorMin = new Vector2(0, 0); labelRect.anchorMax = new Vector2(1, 1);
-            // BlankField's supplied sprite includes transparent padding. Keep
-            // content inside its visible field without modifying the sprite.
-            labelRect.offsetMin = new Vector2(40, 15); labelRect.offsetMax = new Vector2(-200, -38);
-            RowButton(rect, viewIcon, -164, () => Run(async () =>
-            { Message("Opening PDF..."); var path = await store.Download(item, lifetime.Token); lifetime.Token.ThrowIfCancellationRequested(); TeacherPdfPicker.Open(path); RenderModules(); }));
-            RowButton(rect, editIcon, -126, () => OpenEdit(item));
-            RowButton(rect, archiveIcon, -88, () =>
+            var item = items[i];
+            var row = Instantiate(template, content); row.name = "Module_" + item.Id;
+            var rect = (RectTransform)row.transform;
+            rect.anchorMin = rect.anchorMax = new Vector2(.5f, 1);
+            // Authored controls are centered 16.3 units above the row origin.
+            rect.anchoredPosition = new Vector2(0, -(i + .5f) * stride + (archiveScene ? 17f : -16.3f));
+            var label = row.transform.Find(archiveScene ? "NameOfTheArchiveModule" : "NameOfTheModule").GetComponent<TMP_Text>();
+            label.richText = false; label.text = item.Title;
+            row.transform.Find(archiveScene ? "Grade" : "Grade Level").GetComponent<TMP_Text>().text = "Grade " + item.Grade;
+            foreach (var graphic in row.GetComponentsInChildren<Graphic>(true))
+                graphic.raycastTarget = graphic.GetComponentInParent<Button>(true) != null;
+            if (archiveScene)
+                Bind(row.transform.Find("Button").GetComponent<Button>(), () => { ClosePopups(); selected = item; ShowPopup(archivePopup); });
+            else
+                Bind(row.transform.Find("EditBtn").GetComponent<Button>(), () => OpenEdit(item));
+            Bind(row.transform.Find(archiveScene ? "Button (1)" : "Deletebtn").GetComponent<Button>(), () =>
             {
-                if (item.Archived)
-                {
-                    Run(async () =>
-                    {
-                        var restored = Copy(item); restored.Archived = false;
-                        await store.Save(restored, null, lifetime.Token, null);
-                        lifetime.Token.ThrowIfCancellationRequested(); await ReloadModules();
-                    });
-                    return;
-                }
-                selected = item; archivePopup.SetActive(true);
-                At<TMP_Text>("ArchivePopUp/Text (TMP)").text = item.Archived ? "Restore this item?" : "Archive this item?";
-                At<TMP_Text>("ArchivePopUp/Text (TMP) (1)").text = item.Archived ? "Restore this module to its folder?" : "Are you sure you want to archive this item?";
-                At<TMP_Text>("ArchivePopUp/Text (TMP) (2)").text = item.Archived ? "It will appear in your active modules." : "You can restore it later.";
+                ClosePopups(); selected = item; ShowPopup(deletePopup);
             });
-            RowButton(rect, deleteIcon, -50, () => { selected = item; deletePopup.SetActive(true); });
-            generated.Add(row);
+            if (!archiveScene)
+                Bind(row.transform.Find("Archivebtn").GetComponent<Button>(), () => { ClosePopups(); selected = item; ShowPopup(archivePopup); });
+            row.SetActive(true); generated.Add(row);
         }
-        scroll.verticalNormalizedPosition = 1;
-    }
-    void RowButton(RectTransform parent, Sprite sprite, float x, UnityAction action)
-    {
-        var go = new GameObject("Module action", typeof(RectTransform), typeof(Image), typeof(Button)); go.transform.SetParent(parent, false);
-        var rect = (RectTransform)go.transform; rect.anchorMin = rect.anchorMax = new Vector2(1, .5f); rect.sizeDelta = new Vector2(32, 32); rect.anchoredPosition = new Vector2(x, -12);
-        go.GetComponent<Image>().sprite = sprite; go.GetComponent<Image>().preserveAspect = true;
-        go.GetComponent<Button>().onClick.AddListener(() => { if (!busy) action(); });
+        scroll.StopMovement(); scroll.verticalNormalizedPosition = 1;
     }
     void OpenEdit(TeacherPdfModule item)
     {
-        selected = item; replacement = null; editPopup.SetActive(true); editTitle.text = item.Title;
+        ClosePopups(); selected = item; replacement = null; ShowPopup(editPopup); editTitle.text = item.Title;
         editFolder.ClearOptions(); editFolder.AddOptions(folders.Select(f => f.Name).ToList());
         editFolder.SetValueWithoutNotify(Math.Max(0, folders.FindIndex(f => f.Id == item.FolderId))); editFolder.RefreshShownValue();
         editGrade.SetValueWithoutNotify(item.Grade - 1); editGrade.RefreshShownValue(); fileName.richText = false; fileName.text = item.FileName;

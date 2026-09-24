@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.learnable.modules">
   <application>
+    <activity android:name="com.learnable.modules.PdfSaveActivity" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar" />
     <activity android:name="com.learnable.modules.PdfPickerActivity" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar" />
     <provider android:name="com.learnable.modules.PdfProvider" android:authorities="${applicationId}.modulepdfs" android:exported="false" android:grantUriPermissions="true" />
   </application>

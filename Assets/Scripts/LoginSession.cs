@@ -72,6 +72,9 @@ public static class LoginSession
 
     public static void Logout()
     {
+        StudentModuleStore.SelectedFolder = null;
+        StudentModuleStore.SelectedBy = null;
+        StudentEnrollmentSelection.Clear();
         IsLoggedIn = false;
         StudentId = "";
         StudentName = "";

@@ -341,5 +341,17 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Settings/Scenes/ArchiveScene.unity
     guid: 84985716bda6fe5448defad52b8a664d
+  - enabled: 1
+    path: Assets/Settings/Scenes/EnrollStudent/StudentListScene.unity
+    guid: 61156e7ca7c6b2447b9e34e6d3d529a7
+  - enabled: 1
+    path: Assets/Settings/Scenes/EnrollStudent/EnrollStudentScene.unity
+    guid: 1c204066ca23de64cbc5470dc866daf1
+  - enabled: 1
+    path: Assets/Settings/Scenes/EnrollStudent/EditStudentScene.unity
+    guid: 26f53d73b2dc09646a6cafe4cf03c239
+  - enabled: 1
+    path: Assets/Settings/Scenes/OtherModuleFolderScene.unity
+    guid: 080dbbde96f6d8445817faa0ca099649
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

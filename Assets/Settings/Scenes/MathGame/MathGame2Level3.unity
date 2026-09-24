@@ -481,7 +481,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -487, y: 174}
+  m_AnchoredPosition: {x: -503, y: 174}
   m_SizeDelta: {x: 140.0979, y: 126.6014}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &388934436
@@ -1002,7 +1002,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 495, y: 173.99998}
+  m_AnchoredPosition: {x: 515, y: 173.99998}
   m_SizeDelta: {x: 140.0979, y: 126.6014}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &677472406
@@ -1146,7 +1146,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -433, y: -116}
+  m_AnchoredPosition: {x: -443, y: -116}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1078809240
@@ -1244,8 +1244,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000095367, y: -0.000014544}
-  m_SizeDelta: {x: 821.041, y: 474.3916}
+  m_AnchoredPosition: {x: 9.4477, y: -2.1802}
+  m_SizeDelta: {x: 866.0991, y: 499.1009}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1093616726
 MonoBehaviour:
@@ -2103,7 +2103,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -487, y: -8.9216}
+  m_AnchoredPosition: {x: -503, y: -8.9216}
   m_SizeDelta: {x: 128.4202, y: 117.8431}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1449954184
@@ -2643,7 +2643,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 495, y: -158}
+  m_AnchoredPosition: {x: 515, y: -158}
   m_SizeDelta: {x: 140.0979, y: 126.6014}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1799143287

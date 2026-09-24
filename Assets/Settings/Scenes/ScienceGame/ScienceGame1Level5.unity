@@ -280,7 +280,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1521388292}
   m_Father: {fileID: 643099099}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -308,7 +309,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2345043233156818809, guid: 26432f52b030c1e40842616c8346398e, type: 3}
+  m_Sprite: {fileID: 7098588788290158088, guid: 299117d120ea505428420576f35cb764, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -436,7 +437,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -3, y: -145.2269}
+  m_AnchoredPosition: {x: -3, y: -164}
   m_SizeDelta: {x: 19.4741, y: -59.3167}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &329821467
@@ -465,7 +466,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8235295, g: 0.7058824, b: 0.5490196, a: 1}
+  m_Color: {r: 0.8235295, g: 0.7058824, b: 0.5490196, a: 0.5019608}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -525,8 +526,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 19, y: -10}
-  m_SizeDelta: {x: 105.0498, y: 98.3062}
+  m_AnchoredPosition: {x: 18, y: -0.0000009536743}
+  m_SizeDelta: {x: 117.2546, y: 106.7556}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &423557864
 MonoBehaviour:
@@ -652,7 +653,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -414, y: -170}
+  m_AnchoredPosition: {x: -439, y: -170}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &454388529
@@ -885,7 +886,7 @@ GameObject:
   - component: {fileID: 650437100}
   - component: {fileID: 650437099}
   m_Layer: 5
-  m_Name: Back (2)
+  m_Name: Done
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -907,8 +908,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 491.00003, y: -161.45447}
-  m_SizeDelta: {x: 135.6451, y: 107.7588}
+  m_AnchoredPosition: {x: 513.05, y: -164.19044}
+  m_SizeDelta: {x: 142.4849, y: 113.2307}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &650437099
 MonoBehaviour:
@@ -1039,7 +1040,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -183, y: -145.2269}
+  m_AnchoredPosition: {x: -183, y: -164}
   m_SizeDelta: {x: 19.4741, y: -59.3167}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &664387674
@@ -1068,7 +1069,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8235295, g: 0.7058824, b: 0.5490196, a: 1}
+  m_Color: {r: 0.8235295, g: 0.7058824, b: 0.5490196, a: 0.5019608}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1129,7 +1130,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -167.2, y: 86.6}
+  m_AnchoredPosition: {x: -167.2, y: 57}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &684952272
@@ -1529,7 +1530,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 177, y: -145.2269}
+  m_AnchoredPosition: {x: 177, y: -164}
   m_SizeDelta: {x: 19.4741, y: -59.3167}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1041449300
@@ -1558,7 +1559,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8235295, g: 0.7058824, b: 0.5490196, a: 1}
+  m_Color: {r: 0.8235295, g: 0.7058824, b: 0.5490196, a: 0.5019608}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1769,7 +1770,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.8, y: 86.6}
+  m_AnchoredPosition: {x: -0.8, y: 57}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1207786870
@@ -1950,7 +1951,7 @@ GameObject:
   - component: {fileID: 1212405280}
   - component: {fileID: 1212405279}
   m_Layer: 5
-  m_Name: Back (1)
+  m_Name: Settings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1972,8 +1973,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 491, y: 186.48}
-  m_SizeDelta: {x: 121.75, y: 107.74}
+  m_AnchoredPosition: {x: 513.05, y: 182.32}
+  m_SizeDelta: {x: 133.7375, y: 116.06}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1212405279
 MonoBehaviour:
@@ -2203,7 +2204,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 313, y: 177}
+  m_AnchoredPosition: {x: 353, y: 161}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1405460427
@@ -2322,6 +2323,81 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1521388291
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1521388292}
+  - component: {fileID: 1521388294}
+  - component: {fileID: 1521388293}
+  m_Layer: 5
+  m_Name: Board
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1521388292
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521388291}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 300658520}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 6.1613, y: 2.7383}
+  m_SizeDelta: {x: 867.7216, y: 488.4949}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1521388293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521388291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 2244675313915920380, guid: c60c3cb51f9b63c45b91005f0ab3f662, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1521388294
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521388291}
+  m_CullTransparentMesh: 1
 --- !u!1 &1691456577
 GameObject:
   m_ObjectHideFlags: 0
@@ -2335,7 +2411,7 @@ GameObject:
   - component: {fileID: 1691456580}
   - component: {fileID: 1691456579}
   m_Layer: 5
-  m_Name: Back (3)
+  m_Name: Undo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2357,7 +2433,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -475.86, y: -10}
+  m_AnchoredPosition: {x: -500.86, y: -10}
   m_SizeDelta: {x: 123.6865, y: 106.4784}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1691456579
@@ -2490,7 +2566,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 174.7, y: 86.6}
+  m_AnchoredPosition: {x: 174.7, y: 57}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1760552055
@@ -2655,8 +2731,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -9.138, y: -34}
-  m_SizeDelta: {x: 550.0758, y: 50}
+  m_AnchoredPosition: {x: 0.000030518, y: -34}
+  m_SizeDelta: {x: 602.5082, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1822538543
 MonoBehaviour:
@@ -2678,7 +2754,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Itugma ang larawan sa pamamagitan ng pag-drag at pag-drop ng tamang sagot.
+  m_text: 'Look at the words. Drag the correct word to each matching picture. '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 390121557d0d49f43bbb561c96a7d8b8, type: 2}
   m_sharedMaterial: {fileID: 4342259942462875801, guid: 390121557d0d49f43bbb561c96a7d8b8, type: 2}
@@ -2705,8 +2781,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22
-  m_fontSizeBase: 22
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2771,7 +2847,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
   textComponent: {fileID: 1822538543}
-  englishText: Match the picture by dragging and dropping the correct answer.
+  englishText: 'Look at the words. Drag the correct word to each matching picture. '
   tagalogText: Itugma ang larawan sa pamamagitan ng pag-drag at pag-drop ng tamang
     sagot.
 --- !u!1 &1885434436
@@ -2809,7 +2885,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -22}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1986744232
@@ -2896,8 +2972,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000055312, y: 0.00018692}
-  m_SizeDelta: {x: 105.05, y: 98.307}
+  m_AnchoredPosition: {x: 0.00059748, y: -0.00031066}
+  m_SizeDelta: {x: 117.25, y: 106.76}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2024234510
 MonoBehaviour:
@@ -2972,8 +3048,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -475, y: 190}
-  m_SizeDelta: {x: 121.9652, y: 114.7867}
+  m_AnchoredPosition: {x: -500.86, y: 186.48001}
+  m_SizeDelta: {x: 138.7477, y: 124.3767}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2025820203
 MonoBehaviour:

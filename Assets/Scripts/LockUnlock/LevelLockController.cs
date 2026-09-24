@@ -46,6 +46,11 @@ public class LevelLockController : MonoBehaviour
                 levelNumber
             );
 
+        // A completed level remains replayable, even if its badge is visible.
+        var finishIndicators = GetComponentInParent<EnglishLevelFinishIndicators>();
+        if (finishIndicators != null && finishIndicators.IsComplete(levelNumber))
+            unlocked = true;
+
         // Lock image
         if (lockObject != null)
         {

@@ -1228,7 +1228,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 326.4, y: 184.6}
+  m_AnchoredPosition: {x: 353, y: 192}
   m_SizeDelta: {x: 94.0219, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &334727002
@@ -2840,8 +2840,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7, y: 187}
-  m_SizeDelta: {x: 495.3033, y: 50}
+  m_AnchoredPosition: {x: 0.0050278, y: 192}
+  m_SizeDelta: {x: 596.6089, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1352805800
 MonoBehaviour:
@@ -2957,7 +2957,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
   textComponent: {fileID: 1352805800}
   englishText: Trace the broken lines to form vertical lines.
-  tagalogText: I-trace ang putol-putol na linya nang patayo.
+  tagalogText: Guhitan ang putol-putol na guhit upang maka buo ng vertical lines.
 --- !u!1 &1422645532
 GameObject:
   m_ObjectHideFlags: 0
@@ -3068,7 +3068,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7, y: 221}
+  m_AnchoredPosition: {x: 7, y: 234}
   m_SizeDelta: {x: 495.3033, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1430208716

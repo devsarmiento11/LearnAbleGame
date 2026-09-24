@@ -1,0 +1,663 @@
+fileFormatVersion: 2
+guid: 17e58cbd1edad0e43bbaa961fd0cceea
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -715351831895289536
+    second: TeacherEnrollStudentsIcon_0
+  - first:
+      213: 8184188371819471785
+    second: TeacherEnrollStudentsIcon_1
+  - first:
+      213: -9056507828911988487
+    second: TeacherEnrollStudentsIcon_2
+  - first:
+      213: 8235590505644868271
+    second: TeacherEnrollStudentsIcon_3
+  - first:
+      213: 4964883329089339484
+    second: TeacherEnrollStudentsIcon_4
+  - first:
+      213: -3512038172532271409
+    second: TeacherEnrollStudentsIcon_5
+  - first:
+      213: 900960574833885080
+    second: TeacherEnrollStudentsIcon_6
+  - first:
+      213: 803548807260372018
+    second: TeacherEnrollStudentsIcon_7
+  - first:
+      213: -4510356719688224067
+    second: TeacherEnrollStudentsIcon_8
+  - first:
+      213: 6514036679817341045
+    second: TeacherEnrollStudentsIcon_9
+  - first:
+      213: -6559567832171723236
+    second: TeacherEnrollStudentsIcon_10
+  - first:
+      213: 5425355626872718998
+    second: TeacherEnrollStudentsIcon_11
+  - first:
+      213: -6296326355353234394
+    second: TeacherEnrollStudentsIcon_12
+  - first:
+      213: -8950787592442682007
+    second: TeacherEnrollStudentsIcon_13
+  - first:
+      213: 7626483718377823230
+    second: TeacherEnrollStudentsIcon_14
+  - first:
+      213: 577483835644089509
+    second: TeacherEnrollStudentsIcon_15
+  - first:
+      213: 905910047552985612
+    second: TeacherEnrollStudentsIcon_16
+  - first:
+      213: 5004105756973009142
+    second: TeacherEnrollStudentsIcon_17
+  - first:
+      213: 4544639325653425004
+    second: TeacherEnrollStudentsIcon_18
+  - first:
+      213: 4041514771272145402
+    second: TeacherEnrollStudentsIcon_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TeacherEnrollStudentsIcon_0
+      rect:
+        serializedVersion: 2
+        x: 885
+        y: 1056
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 041d47a8c4f8216f0800000000000000
+      internalID: -715351831895289536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherEnrollStudentsIcon_1
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 31
+        width: 1212
+        height: 1004
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a3ae2566f3149170800000000000000
+      internalID: 8184188371819471785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherEnrollStudentsIcon_2
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 994
+        width: 27
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f02820fc12d05280800000000000000
+      internalID: -9056507828911988487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherEnrollStudentsIcon_3
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 984
+        width: 66
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa2ca8c4ee1ba4270800000000000000
+      internalID: 8235590505644868271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherEnrollStudentsIcon_4
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 1010
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5001ad251fc6e440800000000000000
+      internalID: 4964883329089339484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherEnrollStudentsIcon_5
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 990
+        width: 42
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc61a90c3ebb24fc0800000000000000
+      internalID: -3512038172532271409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherEnrollStudentsIcon_6
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 971
+        width: 29
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89ffa9b8edad08c00800000000000000
+      internalID: 900960574833885080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherEnrollStudentsIcon_7
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 990
+        width: 87
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23c71700267c62b00800000000000000
+      internalID: 803548807260372018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherEnrollStudentsIcon_8
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 988
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db2ffa8d57ef761c0800000000000000
+      internalID: -4510356719688224067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherEnrollStudentsIcon_9
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 962
+        width: 39
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 578a062f8d1866a50800000000000000
+      internalID: 6514036679817341045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherEnrollStudentsIcon_10
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 986
+        width: 38
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c16435b8fcbb7f4a0800000000000000
+      internalID: -6559567832171723236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherEnrollStudentsIcon_11
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 992
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6964ae7a23cba4b40800000000000000
+      internalID: 5425355626872718998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherEnrollStudentsIcon_12
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 991
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6249d370a84fe98a0800000000000000
+      internalID: -6296326355353234394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherEnrollStudentsIcon_13
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 992
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 965ea74ab1a68c380800000000000000
+      internalID: -8950787592442682007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherEnrollStudentsIcon_14
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 979
+        width: 21
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efbd537f886b6d960800000000000000
+      internalID: 7626483718377823230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherEnrollStudentsIcon_15
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 986
+        width: 20
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a498172d72a30800800000000000000
+      internalID: 577483835644089509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherEnrollStudentsIcon_16
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 973
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0a5ad67360729c00800000000000000
+      internalID: 905910047552985612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherEnrollStudentsIcon_17
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 961
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f80dde4ca7227540800000000000000
+      internalID: 5004105756973009142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherEnrollStudentsIcon_18
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 958
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6bd7dd536dc11f30800000000000000
+      internalID: 4544639325653425004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TeacherEnrollStudentsIcon_19
+      rect:
+        serializedVersion: 2
+        x: 1293
+        y: 441
+        width: 11
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af99b288548561830800000000000000
+      internalID: 4041514771272145402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      TeacherEnrollStudentsIcon_0: -715351831895289536
+      TeacherEnrollStudentsIcon_1: 8184188371819471785
+      TeacherEnrollStudentsIcon_10: -6559567832171723236
+      TeacherEnrollStudentsIcon_11: 5425355626872718998
+      TeacherEnrollStudentsIcon_12: -6296326355353234394
+      TeacherEnrollStudentsIcon_13: -8950787592442682007
+      TeacherEnrollStudentsIcon_14: 7626483718377823230
+      TeacherEnrollStudentsIcon_15: 577483835644089509
+      TeacherEnrollStudentsIcon_16: 905910047552985612
+      TeacherEnrollStudentsIcon_17: 5004105756973009142
+      TeacherEnrollStudentsIcon_18: 4544639325653425004
+      TeacherEnrollStudentsIcon_19: 4041514771272145402
+      TeacherEnrollStudentsIcon_2: -9056507828911988487
+      TeacherEnrollStudentsIcon_3: 8235590505644868271
+      TeacherEnrollStudentsIcon_4: 4964883329089339484
+      TeacherEnrollStudentsIcon_5: -3512038172532271409
+      TeacherEnrollStudentsIcon_6: 900960574833885080
+      TeacherEnrollStudentsIcon_7: 803548807260372018
+      TeacherEnrollStudentsIcon_8: -4510356719688224067
+      TeacherEnrollStudentsIcon_9: 6514036679817341045
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

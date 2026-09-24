@@ -2235,8 +2235,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2302,9 +2302,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
   textComponent: {fileID: 958978467}
   englishText: Draw vertical lines (|) between the matching vertical dots.
-  tagalogText: 'Gumuhit ng patayong linya (|) sa pagitan ng magkatugmang mga tuldok.
-
-'
+  tagalogText: Gumuhit ng vertical lines (|) sa magkatapat na patayong tuldok.
 --- !u!1 &1075734486
 GameObject:
   m_ObjectHideFlags: 0

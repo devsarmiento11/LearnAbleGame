@@ -321,7 +321,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 187.7, y: -15.6}
+  m_AnchoredPosition: {x: 187.7, y: -38.000008}
   m_SizeDelta: {x: 8.666, y: 14.2224}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &165610074
@@ -887,7 +887,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4, y: 197}
+  m_AnchoredPosition: {x: 4, y: 210}
   m_SizeDelta: {x: 242.6487, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &817327085
@@ -1244,7 +1244,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 280.6, y: -14.2}
+  m_AnchoredPosition: {x: 280.6, y: -36.600006}
   m_SizeDelta: {x: 9.7965, y: 17.614}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1044800442
@@ -1630,7 +1630,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -23}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1387974621
@@ -1667,7 +1667,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 314, y: 182}
+  m_AnchoredPosition: {x: 376, y: 168.9}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1387974623
@@ -1717,8 +1717,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2215,7 +2215,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -51, y: -16}
+  m_AnchoredPosition: {x: -51, y: -38.400005}
   m_SizeDelta: {x: 12.0574, y: 15.07}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1620946010
@@ -2337,7 +2337,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -183.5, y: -15.6}
+  m_AnchoredPosition: {x: -183.5, y: -38}
   m_SizeDelta: {x: 12.0574, y: 12.5267}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1646286991
@@ -2538,7 +2538,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -298.3, y: -16.6}
+  m_AnchoredPosition: {x: -298.3, y: -39.000008}
   m_SizeDelta: {x: 9.6357, y: 17.614}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1842038866
@@ -2660,7 +2660,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 36.9, y: -14.4}
+  m_AnchoredPosition: {x: 36.9, y: -36.800003}
   m_SizeDelta: {x: 12.807, y: 15.07}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1876084293
@@ -3014,8 +3014,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1, y: 160}
-  m_SizeDelta: {x: 533.5271, y: 50}
+  m_AnchoredPosition: {x: 4, y: 172}
+  m_SizeDelta: {x: 663.988, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2140041924
 MonoBehaviour:
@@ -3064,8 +3064,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22
-  m_fontSizeBase: 22
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3131,7 +3131,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
   textComponent: {fileID: 2140041924}
   englishText: Draw a horizontal line on the pizza to split it into two equal halves.
-  tagalogText: Hatiin ang pizza nang pahalang sa dalawang pantay na bahagi.
+  tagalogText: Gamit ang inyong daliri, Guhitan ang pizza ng vertical line upang
+    mahati ito sa dalawa.
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

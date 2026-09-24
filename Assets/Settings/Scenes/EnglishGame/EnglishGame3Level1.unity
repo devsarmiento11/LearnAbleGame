@@ -1420,8 +1420,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1487,10 +1487,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
   textComponent: {fileID: 1183894920}
   englishText: Draw a horizontal line on the pizza to split it into two equal halves.
-  tagalogText: 'Gumuhit ng pahalang na linya sa pizza upang hatiin ito sa dalawang
-    pantay na bahagi.
-
-'
+  tagalogText: Gamit ang inyong daliri, Guhitan ang pizza ng vertical line upang
+    mahati ito sa dalawa.
 --- !u!1 &1201582917
 GameObject:
   m_ObjectHideFlags: 0

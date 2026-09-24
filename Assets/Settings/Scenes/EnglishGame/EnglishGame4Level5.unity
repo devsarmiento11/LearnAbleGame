@@ -154,7 +154,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 485.83362, y: -175.45444}
+  m_AnchoredPosition: {x: 508.77362, y: -175.45444}
   m_SizeDelta: {x: 138.2158, y: 118.3893}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &41295229
@@ -551,8 +551,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 170.1, y: -92.3}
-  m_SizeDelta: {x: 10.046, y: 13.3056}
+  m_AnchoredPosition: {x: 170.01692, y: -92.3}
+  m_SizeDelta: {x: 10.2122, y: 13.3056}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &245963853
 BoxCollider2D:
@@ -672,7 +672,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 331, y: 185}
+  m_AnchoredPosition: {x: 356, y: 169}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &338032198
@@ -810,7 +810,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -476, y: 188.81}
+  m_AnchoredPosition: {x: -499, y: 188.81}
   m_SizeDelta: {x: 135.847, y: 122.3826}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &474682817
@@ -1431,8 +1431,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -123, y: -97.5}
-  m_SizeDelta: {x: 11.0809, y: 10.7031}
+  m_AnchoredPosition: {x: -127.93209, y: -97.5}
+  m_SizeDelta: {x: 11.2642, y: 10.7031}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1240742233
 BoxCollider2D:
@@ -1518,6 +1518,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1240742231}
   m_CullTransparentMesh: 1
+--- !u!1 &1336767426
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1336767427}
+  - component: {fileID: 1336767429}
+  - component: {fileID: 1336767428}
+  m_Layer: 5
+  m_Name: Board
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1336767427
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336767426}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1521343052}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 9.2096, y: 4.6048}
+  m_SizeDelta: {x: 865.6077, y: 492.0574}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1336767428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336767426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 2244675313915920380, guid: c60c3cb51f9b63c45b91005f0ab3f662, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1336767429
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336767426}
+  m_CullTransparentMesh: 1
 --- !u!1 &1376617235
 GameObject:
   m_ObjectHideFlags: 0
@@ -1593,8 +1668,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -120.8, y: 50.5}
-  m_SizeDelta: {x: 12.1219, y: 9.1415}
+  m_AnchoredPosition: {x: -125.69571, y: 50.5}
+  m_SizeDelta: {x: 12.3224, y: 9.1415}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1394119535
 BoxCollider2D:
@@ -1714,7 +1789,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -31.685402, y: -33.270203}
+  m_AnchoredPosition: {x: -31.685402, y: -61}
   m_SizeDelta: {x: 308.0871, y: 267.6149}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1478312378
@@ -1790,8 +1865,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 17, y: 171}
-  m_SizeDelta: {x: 539.1576, y: 50}
+  m_AnchoredPosition: {x: 17, y: 174}
+  m_SizeDelta: {x: 587.5438, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1489314812
 MonoBehaviour:
@@ -1840,8 +1915,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22
-  m_fontSizeBase: 22
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1907,7 +1982,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
   textComponent: {fileID: 1489314812}
   englishText: Complete the objects by drawing vertical lines (|).
-  tagalogText: Kumpletuhin gamit ang patayong linya (|).
+  tagalogText: 'Guhitan ng vertical lines (|) ang mga nawawalang bahagi (missing
+    parts) ng mga bagay.
+
+'
 --- !u!1 &1521343051
 GameObject:
   m_ObjectHideFlags: 0
@@ -1937,7 +2015,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1336767427}
   m_Father: {fileID: 1028995375}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1965,7 +2044,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2345043233156818809, guid: 26432f52b030c1e40842616c8346398e, type: 3}
+  m_Sprite: {fileID: 7098588788290158088, guid: 299117d120ea505428420576f35cb764, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2018,7 +2097,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -476, y: -12}
+  m_AnchoredPosition: {x: -499, y: -12}
   m_SizeDelta: {x: 129.06, y: 112.3236}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1529600295
@@ -2226,7 +2305,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -411, y: -145}
+  m_AnchoredPosition: {x: -434, y: -145}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1788770349
@@ -2373,8 +2452,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 166.5, y: 50.9}
-  m_SizeDelta: {x: 9.38, y: 13.3056}
+  m_AnchoredPosition: {x: 166.35735, y: 50.9}
+  m_SizeDelta: {x: 9.5352, y: 13.3056}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1871856181
 BoxCollider2D:
@@ -2582,8 +2661,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 17.209599, y: -19.856394}
-  m_SizeDelta: {x: 638.4526, y: 316.9712}
+  m_AnchoredPosition: {x: 17.209599, y: -56.529896}
+  m_SizeDelta: {x: 638.4526, y: 313.957}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1978449709
 MonoBehaviour:
@@ -2680,7 +2759,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 494.06, y: 188.81}
+  m_AnchoredPosition: {x: 513, y: 188.81}
   m_SizeDelta: {x: 121.7574, y: 105.9596}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2074911119

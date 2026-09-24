@@ -1042,13 +1042,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1947218774}
+  m_Children: []
   m_Father: {fileID: 768493731}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5, y: 199.3}
+  m_AnchoredPosition: {x: -5, y: 214}
   m_SizeDelta: {x: 540.1137, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &432182260
@@ -1463,6 +1462,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 432182259}
+  - {fileID: 1947218774}
   m_Father: {fileID: 676997170}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -2770,12 +2770,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 432182259}
+  m_Father: {fileID: 768493731}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -32.299988}
-  m_SizeDelta: {x: 540.1137, y: 50}
+  m_AnchoredPosition: {x: -5.0000253, y: 181}
+  m_SizeDelta: {x: 591.2811, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1947218775
 MonoBehaviour:
@@ -2824,8 +2824,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2891,7 +2891,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
   textComponent: {fileID: 1947218775}
   englishText: Complete the objects by drawing vertical lines (|).
-  tagalogText: Kumpletuhin gamit ang patayong linya (|).
+  tagalogText: 'Guhitan ng vertical lines (|) ang mga nawawalang bahagi (missing
+    parts) ng mga bagay.
+
+'
 --- !u!1 &2004234378
 GameObject:
   m_ObjectHideFlags: 0

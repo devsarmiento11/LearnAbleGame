@@ -1464,7 +1464,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10.6371, y: 167}
+  m_AnchoredPosition: {x: 10.6371, y: 196.99997}
   m_SizeDelta: {x: 619.0101, y: 106.2128}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &672104182
@@ -4032,7 +4032,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -15.595, y: 127}
+  m_AnchoredPosition: {x: -15.595, y: 157}
   m_SizeDelta: {x: 653.19, y: 106.2128}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1501983994
@@ -4082,8 +4082,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4149,7 +4149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
   textComponent: {fileID: 1501983994}
   englishText: Draw vertical lines (|) between the matching vertical dots.
-  tagalogText: Gumuhit ng patayong linya (|) sa pagitan ng magkatugmang mga tuldok.
+  tagalogText: Gumuhit ng vertical lines (|) sa magkatapat na patayong tuldok.
 --- !u!1 &1509384224
 GameObject:
   m_ObjectHideFlags: 0
@@ -5666,7 +5666,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 411, y: 182}
+  m_AnchoredPosition: {x: 420.14, y: 184}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1889823060

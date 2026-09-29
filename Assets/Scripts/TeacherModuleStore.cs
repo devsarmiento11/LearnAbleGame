@@ -246,6 +246,26 @@ public sealed class TeacherModuleStore
         // Retain the blob for administrator recovery; it is no longer listed.
     }
 
+    public async Task DeleteFolder(string folderId)
+    {
+        CheckSession();
+        if (string.IsNullOrWhiteSpace(folderId) || folderId.Contains("/"))
+            throw new InvalidOperationException("Select a folder before deleting it.");
+        var contents = await library.Collection("modules").WhereEqualTo("FolderId", folderId)
+            .GetSnapshotAsync(Source.Server);
+        CheckSession();
+        // Commit together so denied folder permissions cannot leave an emptied folder.
+        // Firestore allows at most 500 writes in a batch, including the folder.
+        if (contents.Documents.Count() > 499)
+            throw new InvalidOperationException("This folder is too large to delete at once. Delete some modules first and try again.");
+        var batch = FirebaseFirestore.DefaultInstance.StartBatch();
+        foreach (var module in contents.Documents) batch.Delete(module.Reference);
+        batch.Delete(library.Collection("folders").Document(folderId));
+        await batch.CommitAsync();
+        CheckSession();
+        // As with single-module deletion, retain PDF blobs for administrator recovery.
+    }
+
     public async Task<string> Download(TeacherPdfModule module, CancellationToken cancellation)
     {
         CheckSession();

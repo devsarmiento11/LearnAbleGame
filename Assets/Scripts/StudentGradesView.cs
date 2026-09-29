@@ -57,7 +57,10 @@ public class StudentGradesView : MonoBehaviour
             grade = PlayerPrefs.GetString("SelectedGradeStudentGrade", string.Empty);
         Set("GradeLevelText", grade.Length == 0 ? string.Empty
             : "GRADE " + grade.ToUpperInvariant().Replace("GRADE", string.Empty).Trim());
-        Set("SectionText", AcademicGradeReport.Text(data, "section"));
+        string studentSet = AcademicGradeReport.Text(data, "set");
+        Set("SetText", studentSet);
+        // The parent scene uses SectionText for the same existing label.
+        Set("SectionText", studentSet.Length > 0 ? studentSet : AcademicGradeReport.Text(data, "section"));
         Set("SchoolYearText", AcademicGradeReport.Text(data, "schoolYear"));
 
         foreach (string subject in AcademicGradeReport.Subjects)

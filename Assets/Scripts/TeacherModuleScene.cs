@@ -30,7 +30,7 @@ public sealed class TeacherModuleScene : MonoBehaviour
     TMP_Text status, fileName;
     [SerializeField] TMP_Text percent;
     [SerializeField] Slider progress;
-    GameObject createPopup, editPopup, archivePopup, deletePopup, template;
+    GameObject createPopup, editPopup, archivePopup, deletePopup, deleteFolderPopup, template;
     [SerializeField] ScrollRect scroll;
     [SerializeField] RectTransform content;
     Vector2[] folderPositions;
@@ -335,13 +335,21 @@ public sealed class TeacherModuleScene : MonoBehaviour
         filter = At<TMP_Dropdown>("Dropdown"); SetGrades(filter, true);
         editPopup = Obj("EditPopUp"); archivePopup = Obj("ArchivePopUp"); deletePopup = Obj("DeletePopUp");
         editPopup.SetActive(false); archivePopup.SetActive(false); deletePopup.SetActive(false);
+        // The authored popup name currently includes a trailing space.
+        deleteFolderPopup = transform.Cast<Transform>()
+            .First(t => t.name.Trim() == "DeleteFolderPopUp").gameObject;
+        deleteFolderPopup.SetActive(false);
+        Bind("Buttons/DeleteFolderBtn", () => { ClosePopups(); ShowPopup(deleteFolderPopup); });
+        Bind(deleteFolderPopup.transform.Find("CancelBtn").GetComponent<Button>(), ClosePopups);
+        Bind(deleteFolderPopup.transform.Find("CloseButton").GetComponent<Button>(), ClosePopups);
+        Bind(deleteFolderPopup.transform.Find("DeleteBtn").GetComponent<Button>(), () => Run(DeleteCurrentFolder));
         editTitle = At<TMP_InputField>("EditPopUp/ExistingModuleName"); editTitle.characterLimit = 100;
         editFolder = At<TMP_Dropdown>("EditPopUp/Folder Options ");
         editGrade = At<TMP_Dropdown>("EditPopUp/CurrentLevelPutted"); SetGrades(editGrade, false);
         fileName = editPopup.GetComponentsInChildren<TMP_Text>(true).First(t => t.name == "Current File Name");
-        Bind("Buttons/Button", () => Navigate("UploadModuleScene"));
-        Bind("Buttons/Button (1)", () => Navigate("SettingsScene"));
-        Bind("Buttons/Button (2)", () => Navigate("ArchiveScene"));
+        Bind("Buttons/BackBtn", () => Navigate("UploadModuleScene"));
+        Bind("Buttons/SettingsBtn", () => Navigate("SettingsScene"));
+        Bind("Buttons/ArchivesBtn", () => Navigate("ArchiveScene"));
         Bind("EditPopUp/Button", ClosePopups); Bind("EditPopUp/CancelBtn", ClosePopups);
         Bind("ArchivePopUp/CloseBtn", ClosePopups); Bind("ArchivePopUp/CancelBtn", ClosePopups);
         Bind("DeletePopUp/CloseButton", ClosePopups); Bind("DeletePopUp/CancelBtn", ClosePopups);
@@ -386,7 +394,7 @@ public sealed class TeacherModuleScene : MonoBehaviour
         blockerRect.offsetMin = blockerRect.offsetMax = Vector2.zero;
         modalBlocker.GetComponent<Image>().color = Color.clear;
         modalBlocker.SetActive(false);
-        foreach (var popup in new[] { editPopup, deletePopup, archivePopup })
+        foreach (var popup in new[] { editPopup, deletePopup, archivePopup, deleteFolderPopup })
             foreach (var graphic in popup.GetComponentsInChildren<Graphic>(true))
                 graphic.raycastTarget = graphic.GetComponentInParent<Selectable>(true) != null;
         ConfigureScroll(At<RectTransform>("Scroll View/Viewport"));
@@ -401,6 +409,19 @@ public sealed class TeacherModuleScene : MonoBehaviour
         modules.Add(change);
         modules = modules.OrderBy(m => m.Title, StringComparer.OrdinalIgnoreCase).ToList();
         ClosePopups(); RenderModules();
+    }
+
+    async Task DeleteCurrentFolder()
+    {
+        if (store == null || string.IsNullOrEmpty(currentFolder) ||
+            TeacherModuleStore.SelectedOwner != store.Owner)
+            throw new InvalidOperationException("Open a folder from Upload Modules before deleting it.");
+        Message("Deleting folder...");
+        await store.DeleteFolder(currentFolder);
+        lifetime.Token.ThrowIfCancellationRequested();
+        TeacherModuleStore.SelectedFolderId = null;
+        TeacherModuleStore.SelectedOwner = null;
+        Navigate("UploadModuleScene");
     }
 
     void SetupArchive()
@@ -456,6 +477,7 @@ public sealed class TeacherModuleScene : MonoBehaviour
         if (editPopup != null) editPopup.SetActive(false);
         if (archivePopup != null) archivePopup.SetActive(false);
         if (deletePopup != null) deletePopup.SetActive(false);
+        if (deleteFolderPopup != null) deleteFolderPopup.SetActive(false);
         replacement = null;
         if (modalBlocker != null) modalBlocker.SetActive(false);
         selected = null;

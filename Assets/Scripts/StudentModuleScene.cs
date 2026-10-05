@@ -249,7 +249,7 @@ public sealed class StudentModuleScene : MonoBehaviour
         catch (OperationCanceledException) { }
         catch (Exception error)
         {
-            if (label != null) label.text = module.Title + "\nDownload failed — tap to retry";
+            if (label != null) label.text = module.Title + "\n" + DownloadErrorMessage(error) + "\nTap to retry";
             Debug.LogWarning("Module download: " + error.GetBaseException().Message);
         }
         finally
@@ -257,6 +257,18 @@ public sealed class StudentModuleScene : MonoBehaviour
             if (path != null && File.Exists(path)) File.Delete(path);
             if (this != null) busy = false;
         }
+    }
+
+    static string DownloadErrorMessage(Exception error)
+    {
+        var root = error.GetBaseException();
+        if (root is IOException || root is UnauthorizedAccessException)
+            return "Unable to save PDF. Check available storage.";
+        if (root is Firebase.Firestore.FirestoreException || root is InvalidOperationException)
+            return ErrorMessage(root);
+        if (root is AndroidJavaException)
+            return "Unable to save PDF. Update the app and check available storage.";
+        return "Download failed. Check your connection.";
     }
 
     void OnApplicationFocus(bool focused) { if (focused && ready && !busy) Reload(); }

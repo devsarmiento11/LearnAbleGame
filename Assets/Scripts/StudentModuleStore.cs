@@ -127,9 +127,9 @@ public sealed class StudentModuleStore
         if (string.IsNullOrEmpty(bucket)) throw new InvalidOperationException("Module storage is not configured.");
         if (string.IsNullOrEmpty(module.StoragePath) || !module.StoragePath.StartsWith("teacherModules/" + folder.Owner + "/" + module.Id + "/", StringComparison.Ordinal))
             throw new InvalidOperationException("The module has an invalid file reference. Ask your teacher to upload it again.");
-        string token = await Read(FirebaseAuth.DefaultInstance.CurrentUser.TokenAsync(false), cancellation);
+        string token = await Read(FirebaseAuth.DefaultInstance.CurrentUser.TokenAsync(true), cancellation);
         CheckSession();
-        string directory = Path.Combine(Application.temporaryCachePath, "module-pdfs");
+        string directory = StudentPdfDownload.DownloadDirectory();
         Directory.CreateDirectory(directory);
         string path = Path.Combine(directory, Guid.NewGuid().ToString("N") + ".pdf");
         try
@@ -153,14 +153,18 @@ public sealed class StudentModuleStore
                     }
                     cancellation.ThrowIfCancellationRequested(); CheckSession();
                     if (request.result != UnityWebRequest.Result.Success)
+                    {
+                        Debug.LogWarning("Student PDF transfer: HTTP " + request.responseCode + ", " + request.error);
                         throw new InvalidOperationException(request.responseCode == 403 || request.responseCode == 401
                             ? "Download access denied. Sign in again or ask your teacher to check module permissions."
                             : request.responseCode == 404 ? "This PDF is no longer available. Ask your teacher to upload it again."
                             : "Download failed. Check your internet connection and tap the module to retry.");
+                    }
                 }
                 finally { if (!request.isDone) request.Abort(); }
             }
             TeacherModuleStore.ValidatePdf(path);
+            progress?.Invoke(1f);
             return path;
         }
         catch { if (File.Exists(path)) File.Delete(path); throw; }

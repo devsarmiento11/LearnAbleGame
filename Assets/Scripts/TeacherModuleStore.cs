@@ -17,6 +17,7 @@ public sealed class TeacherModuleFolder
 {
     [FirestoreDocumentId] public string Id { get; set; }
     [FirestoreProperty] public string Name { get; set; }
+    public string Owner { get; set; }
 }
 
 [FirestoreData]
@@ -91,9 +92,41 @@ public sealed class TeacherModuleStore
     public async Task<List<TeacherModuleFolder>> Folders()
     {
         CheckSession();
-        var result = await library.Collection("folders").GetSnapshotAsync(Source.Server);
+        // Older libraries have no parent document; discover them from teacher profiles.
+        var teachers = await FirebaseFirestore.DefaultInstance.Collection("users")
+            .WhereEqualTo("role", "teacher").GetSnapshotAsync(Source.Server);
         CheckSession();
-        return result.Documents.Select(d => d.ConvertTo<TeacherModuleFolder>()).OrderBy(d => d.Name, StringComparer.OrdinalIgnoreCase).ToList();
+        var owners = teachers.Documents.Select(d => d.TryGetValue<string>("authUid", out var id) ? id : null)
+            .Where(id => !string.IsNullOrEmpty(id) && !id.Contains("/")).Concat(new[] { uid }).Distinct();
+        // Load libraries independently: one denied shared library must never hide
+        // folders already saved in the signed-in teacher's own library.
+        var results = await Task.WhenAll(owners.Select(ReadFolders));
+        CheckSession();
+        return results.SelectMany(f => f).OrderBy(f => f.Name, StringComparer.OrdinalIgnoreCase)
+            .ThenBy(f => f.Owner, StringComparer.Ordinal).ThenBy(f => f.Id, StringComparer.Ordinal).ToList();
+    }
+
+    async Task<List<TeacherModuleFolder>> ReadFolders(string owner)
+    {
+        var folders = new List<TeacherModuleFolder>();
+        try
+        {
+            var result = await FirebaseFirestore.DefaultInstance.Collection("teacherLibraries")
+                .Document(owner).Collection("folders").GetSnapshotAsync(Source.Server);
+            CheckSession();
+            foreach (var document in result.Documents)
+            {
+                var folder = document.ConvertTo<TeacherModuleFolder>();
+                folder.Owner = owner;
+                folders.Add(folder);
+            }
+        }
+        catch (FirestoreException error) when (owner != uid && error.ErrorCode == FirestoreError.PermissionDenied)
+        {
+            CheckSession();
+            Debug.LogWarning("Shared teacher folders are blocked by Firebase rules. Own folders remain available.");
+        }
+        return folders;
     }
 
     public async Task<string> CreateFolder(string name)
@@ -112,10 +145,14 @@ public sealed class TeacherModuleStore
         CheckSession(); return id;
     }
 
-    public async Task<List<TeacherPdfModule>> Modules(string folder)
+    public async Task<List<TeacherPdfModule>> Modules(string folder, string owner = null)
     {
         CheckSession();
-        var result = await library.Collection("modules").WhereEqualTo("FolderId", folder).GetSnapshotAsync(Source.Server);
+        owner = owner ?? uid;
+        if (string.IsNullOrWhiteSpace(owner) || owner.Contains("/"))
+            throw new InvalidOperationException("Select a folder from Upload Modules.");
+        var source = FirebaseFirestore.DefaultInstance.Collection("teacherLibraries").Document(owner);
+        var result = await source.Collection("modules").WhereEqualTo("FolderId", folder).GetSnapshotAsync(Source.Server);
         CheckSession();
         return result.Documents.Select(d => d.ConvertTo<TeacherPdfModule>()).OrderBy(d => d.Title, StringComparer.OrdinalIgnoreCase).ToList();
     }
@@ -178,25 +215,35 @@ public sealed class TeacherModuleStore
         finally { if (!request.isDone) request.Abort(); }
     }
 
-    public async Task Save(TeacherPdfModule module, string replacement, CancellationToken cancellation, Action<float> progress)
+    DocumentReference LibraryFor(string owner)
+    {
+        CheckSession();
+        owner = owner ?? uid;
+        if (string.IsNullOrWhiteSpace(owner) || owner.Contains("/"))
+            throw new InvalidOperationException("Select a folder from Upload Modules.");
+        return FirebaseFirestore.DefaultInstance.Collection("teacherLibraries").Document(owner);
+    }
+
+    public async Task Save(TeacherPdfModule module, string replacement, CancellationToken cancellation, Action<float> progress, string owner = null)
     {
         CheckSession(); module.Title = ValidName(module.Title);
+        var targetLibrary = LibraryFor(owner);
         if (!string.IsNullOrEmpty(replacement) && string.IsNullOrEmpty(bucket))
             throw new InvalidOperationException("PDF Storage is not configured yet. You can still create folders.");
         if (module.Grade < 1 || module.Grade > 6) throw new InvalidOperationException("Select a grade from 1 to 6.");
         if (string.IsNullOrEmpty(module.FolderId)) throw new InvalidOperationException("Create and select a folder first.");
-        if (!(await library.Collection("folders").Document(module.FolderId).GetSnapshotAsync(Source.Server)).Exists)
+        if (!(await targetLibrary.Collection("folders").Document(module.FolderId).GetSnapshotAsync(Source.Server)).Exists)
             throw new InvalidOperationException("The selected folder no longer exists.");
         string oldPath = module.StoragePath;
         string newPath = null;
-        var reference = string.IsNullOrEmpty(module.Id) ? library.Collection("modules").Document() : library.Collection("modules").Document(module.Id);
+        var reference = string.IsNullOrEmpty(module.Id) ? targetLibrary.Collection("modules").Document() : targetLibrary.Collection("modules").Document(module.Id);
         int expectedRevision = module.Revision;
         try
         {
             if (!string.IsNullOrEmpty(replacement))
             {
                 ValidatePdf(replacement);
-                newPath = "teacherModules/" + uid + "/" + reference.Id + "/" + Guid.NewGuid().ToString("N") + ".pdf";
+                newPath = "teacherModules/" + targetLibrary.Id + "/" + reference.Id + "/" + Guid.NewGuid().ToString("N") + ".pdf";
                 using (var request = new UnityWebRequest("https://firebasestorage.googleapis.com/v0/b/" + Uri.EscapeDataString(bucket) + "/o?name=" + Uri.EscapeDataString(newPath), "POST"))
                 {
                     request.uploadHandler = new UploadHandlerFile(replacement);
@@ -232,10 +279,10 @@ public sealed class TeacherModuleStore
         // never lose files. A server retention job can reclaim unreferenced versions.
     }
 
-    public async Task Delete(TeacherPdfModule module)
+    public async Task Delete(TeacherPdfModule module, string owner = null)
     {
         CheckSession();
-        var reference = library.Collection("modules").Document(module.Id);
+        var reference = LibraryFor(owner).Collection("modules").Document(module.Id);
         await FirebaseFirestore.DefaultInstance.RunTransactionAsync(async transaction =>
         {
             var existing = await transaction.GetSnapshotAsync(reference);
@@ -246,12 +293,13 @@ public sealed class TeacherModuleStore
         // Retain the blob for administrator recovery; it is no longer listed.
     }
 
-    public async Task DeleteFolder(string folderId)
+    public async Task DeleteFolder(string folderId, string owner = null)
     {
         CheckSession();
         if (string.IsNullOrWhiteSpace(folderId) || folderId.Contains("/"))
             throw new InvalidOperationException("Select a folder before deleting it.");
-        var contents = await library.Collection("modules").WhereEqualTo("FolderId", folderId)
+        var targetLibrary = LibraryFor(owner);
+        var contents = await targetLibrary.Collection("modules").WhereEqualTo("FolderId", folderId)
             .GetSnapshotAsync(Source.Server);
         CheckSession();
         // Commit together so denied folder permissions cannot leave an emptied folder.
@@ -260,7 +308,7 @@ public sealed class TeacherModuleStore
             throw new InvalidOperationException("This folder is too large to delete at once. Delete some modules first and try again.");
         var batch = FirebaseFirestore.DefaultInstance.StartBatch();
         foreach (var module in contents.Documents) batch.Delete(module.Reference);
-        batch.Delete(library.Collection("folders").Document(folderId));
+        batch.Delete(targetLibrary.Collection("folders").Document(folderId));
         await batch.CommitAsync();
         CheckSession();
         // As with single-module deletion, retain PDF blobs for administrator recovery.

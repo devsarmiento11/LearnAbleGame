@@ -18,10 +18,19 @@ import java.util.UUID;
 public final class PdfDownloads {
     private PdfDownloads() { }
 
+    public static String downloadDirectory() throws Exception {
+        Activity activity = UnityPlayer.currentActivity;
+        if (activity == null) throw new Exception("The app is not ready to download a PDF.");
+        File directory = new File(activity.getCacheDir(), "module-pdfs").getCanonicalFile();
+        if (!directory.isDirectory() && !directory.mkdirs())
+            throw new Exception("Unable to prepare PDF storage.");
+        return directory.getAbsolutePath();
+    }
+
     public static void save(String path, String name, String receiver) throws Exception {
         Activity activity = UnityPlayer.currentActivity;
         File source = new File(path).getCanonicalFile();
-        File allowed = new File(activity.getCacheDir(), "module-pdfs").getCanonicalFile();
+        File allowed = new File(downloadDirectory()).getCanonicalFile();
         if (!allowed.equals(source.getParentFile()) || !source.isFile() || source.length() > 25L * 1024 * 1024)
             throw new Exception("Invalid module download.");
         String clean = name.replaceAll("[^\\p{L}\\p{N} ._()-]", "_");

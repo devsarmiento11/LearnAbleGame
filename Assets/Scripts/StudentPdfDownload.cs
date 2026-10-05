@@ -9,8 +9,21 @@ public sealed class StudentPdfDownload : MonoBehaviour
 {
     TaskCompletionSource<string> pending;
 
+    // Unity's temporary cache can be external on Android. The native exporter
+    // validates internal-cache files, so ask it for the exact staging directory.
+    public static string DownloadDirectory()
+    {
+#if UNITY_ANDROID && !UNITY_EDITOR
+        using (var bridge = new AndroidJavaClass("com.learnable.modules.PdfDownloads"))
+            return bridge.CallStatic<string>("downloadDirectory");
+#else
+        return Path.Combine(Application.temporaryCachePath, "module-pdfs");
+#endif
+    }
+
     public Task<string> Save(string path, string fileName)
     {
+        TeacherModuleStore.ValidatePdf(path);
         fileName = Path.GetFileName((fileName ?? "module.pdf").Replace('\\', '/'));
         foreach (char invalid in Path.GetInvalidFileNameChars()) fileName = fileName.Replace(invalid, '_');
         if (string.IsNullOrWhiteSpace(fileName)) fileName = "module.pdf";
@@ -41,6 +54,7 @@ public sealed class StudentPdfDownload : MonoBehaviour
     public void OnPdfSaved(string result)
     {
         var completion = pending; pending = null;
+        result = result ?? "ERROR:Unable to save the PDF.";
         if (result.StartsWith("ERROR:", StringComparison.Ordinal)) completion?.TrySetException(new IOException(result.Substring(6)));
         else completion?.TrySetResult(result);
     }

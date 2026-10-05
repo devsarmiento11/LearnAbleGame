@@ -1303,8 +1303,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 38, y: -35}
-  m_SizeDelta: {x: 95.6492, y: 97.5694}
+  m_AnchoredPosition: {x: 27.5006, y: 13.4289}
+  m_SizeDelta: {x: 125.7658, y: 117.4993}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &343620049
 MonoBehaviour:
@@ -2378,8 +2378,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 323, y: -22.126}
-  m_SizeDelta: {x: 141.9007, y: 144.2518}
+  m_AnchoredPosition: {x: 311.50143, y: -37.712067}
+  m_SizeDelta: {x: 164.8978, y: 175.4239}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &880811273
 MonoBehaviour:
@@ -3102,6 +3102,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 983225934}
   m_CullTransparentMesh: 1
+--- !u!114 &990000101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637449958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f18553e2b7c83e6fe38d1e97092f3273, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnglishLevelFinishIndicators
+  gameScene: ScienceGame1
+  levels:
+  - levelNumber: 1
+    indicator: {fileID: 795137375}
+  - levelNumber: 2
+    indicator: {fileID: 294667007}
+  - levelNumber: 3
+    indicator: {fileID: 1511143381}
+  - levelNumber: 4
+    indicator: {fileID: 1024629676}
+  - levelNumber: 5
+    indicator: {fileID: 166866894}
 --- !u!1 &1006203226
 GameObject:
   m_ObjectHideFlags: 0
@@ -3661,8 +3685,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -317.15488, y: -22.126007}
-  m_SizeDelta: {x: 136.7809, y: 137.0457}
+  m_AnchoredPosition: {x: -318.89816, y: -37.712}
+  m_SizeDelta: {x: 169.152, y: 175.42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1149487470
 MonoBehaviour:
@@ -3806,8 +3830,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 500, y: 188.32}
-  m_SizeDelta: {x: 119.4292, y: 98.2165}
+  m_AnchoredPosition: {x: 509, y: 188.68}
+  m_SizeDelta: {x: 137.1237, y: 122.7165}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1182854176
 MonoBehaviour:
@@ -4738,8 +4762,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -496.83646, y: 192.96643}
-  m_SizeDelta: {x: 120.0435, y: 107.5048}
+  m_AnchoredPosition: {x: -498.7, y: 196.5}
+  m_SizeDelta: {x: 155.8244, y: 138.3495}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1396577776
 MonoBehaviour:
@@ -4794,7 +4818,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: ScienceLevel1InstructionScene
+          m_StringArgument: ScienceGame1Instruction
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1396577777
@@ -5253,8 +5277,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 990000101}
   - component: {fileID: 1637449962}
+  - component: {fileID: 990000101}
   - component: {fileID: 1637449961}
   - component: {fileID: 1637449960}
   - component: {fileID: 1637449959}
@@ -5582,8 +5606,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000019073, y: -0.000094414}
-  m_SizeDelta: {x: 95.649, y: 97.569}
+  m_AnchoredPosition: {x: -0.00065899, y: -0.0010667}
+  m_SizeDelta: {x: 125.77, y: 117.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1678550025
 MonoBehaviour:
@@ -6765,28 +6789,3 @@ SceneRoots:
   - {fileID: 1281754767}
   - {fileID: 176009289}
   - {fileID: 486631184}
-
---- !u!114 &990000101
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1637449958}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f18553e2b7c83e6fe38d1e97092f3273, type: 3}
-  m_Name:
-  m_EditorClassIdentifier: Assembly-CSharp::EnglishLevelFinishIndicators
-  gameScene: ScienceGame1
-  levels:
-  - levelNumber: 1
-    indicator: {fileID: 795137375}
-  - levelNumber: 2
-    indicator: {fileID: 294667007}
-  - levelNumber: 3
-    indicator: {fileID: 1511143381}
-  - levelNumber: 4
-    indicator: {fileID: 1024629676}
-  - levelNumber: 5
-    indicator: {fileID: 166866894}

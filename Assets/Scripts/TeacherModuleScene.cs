@@ -140,9 +140,10 @@ public sealed class TeacherModuleScene : MonoBehaviour
                 if (uploadScene) { RefreshFolders(); Message(folders.Count == 0 ? "Create a folder to begin." : "Select Module"); }
                 else
                 {
-                    currentFolder = TeacherModuleStore.SelectedOwner == store.Owner ? TeacherModuleStore.SelectedFolderId : null;
-                    if (!folders.Any(f => f.Id == currentFolder))
+                    currentFolder = TeacherModuleStore.SelectedFolderId;
+                    if (!folders.Any(f => f.Id == currentFolder && f.Owner == TeacherModuleStore.SelectedOwner))
                     { Navigate("UploadModuleScene"); return; }
+                    folders = folders.Where(f => f.Owner == TeacherModuleStore.SelectedOwner).ToList();
                     await ReloadModules();
                 }
             });
@@ -168,7 +169,10 @@ public sealed class TeacherModuleScene : MonoBehaviour
         catch (Exception error)
         {
             if (this == null || busy) return;
-            Message(error.GetBaseException() is InvalidOperationException ? error.GetBaseException().Message : "Unable to load folders. Check your connection and try Create Folder again.");
+            var root = error.GetBaseException();
+            Message(root is Firebase.Firestore.FirestoreException firestore && firestore.ErrorCode == Firebase.Firestore.FirestoreError.PermissionDenied
+                ? "Folder access is blocked by Firebase rules. Ask the administrator to check teacher permissions."
+                : root is InvalidOperationException ? root.Message : "Unable to load folders. Check your connection and try Create Folder again.");
             Debug.LogWarning("Teacher folders: " + error.GetBaseException().Message);
         }
     }
@@ -209,8 +213,8 @@ public sealed class TeacherModuleScene : MonoBehaviour
         if (store == null) store = await ReadWithTimeout(TeacherModuleStore.OpenAsync(lifetime.Token));
         string id = await store.CreateFolder(name);
         lifetime.Token.ThrowIfCancellationRequested();
-        folders.RemoveAll(f => f.Id == id);
-        folders.Add(new TeacherModuleFolder { Id = id, Name = name });
+        folders.RemoveAll(f => f.Id == id && f.Owner == store.Owner);
+        folders.Add(new TeacherModuleFolder { Id = id, Name = name, Owner = store.Owner });
         folders = folders.OrderBy(f => f.Name, StringComparer.OrdinalIgnoreCase).ToList();
         createPopup.SetActive(false); folderName.text = "";
         RefreshFolders(id); Message("Folder created. Select your module.");
@@ -276,7 +280,7 @@ public sealed class TeacherModuleScene : MonoBehaviour
         ClearRows();
         folderOptions.ClearOptions();
         folderOptions.AddOptions(folders.Count == 0 ? new List<string> { "Create a folder first" } : folders.Select(f => f.Name).ToList());
-        folderOptions.SetValueWithoutNotify(Math.Max(0, folders.FindIndex(f => f.Id == selectedId)));
+        folderOptions.SetValueWithoutNotify(Math.Max(0, folders.FindIndex(f => f.Id == selectedId && f.Owner == store.Owner)));
         folderOptions.RefreshShownValue();
         float rowHeight = scroll.viewport.rect.height;
         content.sizeDelta = new Vector2(scroll.viewport.rect.width, Math.Max(1, (folders.Count + 3) / 4) * rowHeight);
@@ -292,7 +296,7 @@ public sealed class TeacherModuleScene : MonoBehaviour
             entry.Setup(folder.Name, () =>
             {
                 if (busy) return;
-                TeacherModuleStore.SelectedFolderId = folder.Id; TeacherModuleStore.SelectedOwner = store.Owner;
+                TeacherModuleStore.SelectedFolderId = folder.Id; TeacherModuleStore.SelectedOwner = folder.Owner;
                 Navigate("FolderScene");
             });
             generated.Add(row);
@@ -310,7 +314,7 @@ public sealed class TeacherModuleScene : MonoBehaviour
         progress.gameObject.SetActive(true); Progress(0); Message("Uploading PDF...");
         try
         {
-            await store.Save(module, path, lifetime.Token, Progress);
+            await store.Save(module, path, lifetime.Token, Progress, folders[folderOptions.value].Owner);
             lifetime.Token.ThrowIfCancellationRequested(); title.text = ""; Message("Module uploaded successfully.");
         }
         catch { progress.gameObject.SetActive(false); throw; }
@@ -362,9 +366,10 @@ public sealed class TeacherModuleScene : MonoBehaviour
         }));
         Bind("EditPopUp/UploadBtn", () => Run(async () =>
         {
+            RequireSelectedFolder();
             var change = Copy(selected);
             change.Title = editTitle.text; change.FolderId = folders[editFolder.value].Id; change.Grade = editGrade.value + 1;
-            await store.Save(change, replacement, lifetime.Token, Progress);
+            await store.Save(change, replacement, lifetime.Token, Progress, TeacherModuleStore.SelectedOwner);
             lifetime.Token.ThrowIfCancellationRequested();
             modules.RemoveAll(m => m.Id == change.Id);
             if (change.FolderId == currentFolder) modules.Add(change);
@@ -374,8 +379,9 @@ public sealed class TeacherModuleScene : MonoBehaviour
         Bind("ArchivePopUp/ArchiveBtn", () => Run(() => SetArchived(true)));
         Bind("DeletePopUp/DeleteBtn", () => Run(async () =>
         {
+            RequireSelectedFolder();
             var deleted = selected;
-            await store.Delete(deleted); lifetime.Token.ThrowIfCancellationRequested();
+            await store.Delete(deleted, TeacherModuleStore.SelectedOwner); lifetime.Token.ThrowIfCancellationRequested();
             modules.RemoveAll(m => m.Id == deleted.Id);
             ClosePopups(); RenderModules();
         }));
@@ -401,9 +407,10 @@ public sealed class TeacherModuleScene : MonoBehaviour
     }
     async Task SetArchived(bool archived)
     {
+        RequireSelectedFolder();
         var change = Copy(selected);
         change.Archived = archived;
-        await store.Save(change, null, lifetime.Token, null);
+        await store.Save(change, null, lifetime.Token, null, TeacherModuleStore.SelectedOwner);
         lifetime.Token.ThrowIfCancellationRequested();
         modules.RemoveAll(m => m.Id == change.Id);
         modules.Add(change);
@@ -414,10 +421,10 @@ public sealed class TeacherModuleScene : MonoBehaviour
     async Task DeleteCurrentFolder()
     {
         if (store == null || string.IsNullOrEmpty(currentFolder) ||
-            TeacherModuleStore.SelectedOwner != store.Owner)
+            string.IsNullOrEmpty(TeacherModuleStore.SelectedOwner))
             throw new InvalidOperationException("Open a folder from Upload Modules before deleting it.");
         Message("Deleting folder...");
-        await store.DeleteFolder(currentFolder);
+        await store.DeleteFolder(currentFolder, TeacherModuleStore.SelectedOwner);
         lifetime.Token.ThrowIfCancellationRequested();
         TeacherModuleStore.SelectedFolderId = null;
         TeacherModuleStore.SelectedOwner = null;
@@ -441,8 +448,9 @@ public sealed class TeacherModuleScene : MonoBehaviour
         // The authored delete-confirm button is named Undo in the hierarchy.
         Bind("DeleteConfirmationPopup /Undo", () => Run(async () =>
         {
+            RequireSelectedFolder();
             var deleted = selected;
-            await store.Delete(deleted); lifetime.Token.ThrowIfCancellationRequested();
+            await store.Delete(deleted, TeacherModuleStore.SelectedOwner); lifetime.Token.ThrowIfCancellationRequested();
             modules.RemoveAll(m => m.Id == deleted.Id);
             ClosePopups(); RenderModules();
         }));
@@ -484,7 +492,7 @@ public sealed class TeacherModuleScene : MonoBehaviour
     }
     async Task ReloadModules()
     {
-        modules = await ReadWithTimeout(store.Modules(currentFolder)); lifetime.Token.ThrowIfCancellationRequested(); RenderModules();
+        modules = await ReadWithTimeout(store.Modules(currentFolder, TeacherModuleStore.SelectedOwner)); lifetime.Token.ThrowIfCancellationRequested(); RenderModules();
     }
     void ShowPopup(GameObject popup)
     {
@@ -528,6 +536,11 @@ public sealed class TeacherModuleScene : MonoBehaviour
             row.SetActive(true); generated.Add(row);
         }
         scroll.StopMovement(); scroll.verticalNormalizedPosition = 1;
+    }
+    void RequireSelectedFolder()
+    {
+        if (store == null || string.IsNullOrEmpty(currentFolder) || string.IsNullOrEmpty(TeacherModuleStore.SelectedOwner))
+            throw new InvalidOperationException("Open a folder from Upload Modules before changing it.");
     }
     void OpenEdit(TeacherPdfModule item)
     {

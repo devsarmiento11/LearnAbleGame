@@ -392,7 +392,7 @@ GameObject:
   - component: {fileID: 514472848}
   - component: {fileID: 514472847}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Result
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1258,7 +1258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameTimer
   startingTime: 60
-  timerText: {fileID: 0}
+  timerText: {fileID: 1891193114}
   warningTime: 10
   failedSceneName: ScoreSceneFailed
   normalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -2338,7 +2338,7 @@ MonoBehaviour:
     numberImage: {fileID: 1841525524}
     numberSprite: {fileID: -5406152627854101472, guid: 0f67bb02acf8fee42a5dccc249a56509, type: 3}
     solved: 0
-  result: {fileID: 1891193114}
+  result: {fileID: 514472847}
   allowMultipleAnswersPerSpeech: 0
   scoreSceneName: ScoreScene
   failedScoreSceneName: ScoreSceneFailed
@@ -2626,7 +2626,7 @@ GameObject:
   - component: {fileID: 1891193115}
   - component: {fileID: 1891193114}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: TimerText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

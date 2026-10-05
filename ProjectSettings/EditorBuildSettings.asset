@@ -353,5 +353,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Settings/Scenes/OtherModuleFolderScene.unity
     guid: 080dbbde96f6d8445817faa0ca099649
+  - enabled: 1
+    path: Assets/Settings/Scenes/MathGame/MathGame2Level5.unity
+    guid: cc303ba4cf891b248811ac99ea2679bb
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

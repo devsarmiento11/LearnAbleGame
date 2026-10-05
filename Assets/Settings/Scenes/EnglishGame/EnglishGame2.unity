@@ -18759,8 +18759,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 990000101}
   - component: {fileID: 878575432}
+  - component: {fileID: 990000101}
   - component: {fileID: 878575431}
   - component: {fileID: 878575430}
   - component: {fileID: 878575429}
@@ -20768,8 +20768,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 278, y: -42.178528}
-  m_SizeDelta: {x: 160, y: 128.8183}
+  m_AnchoredPosition: {x: 281, y: -44}
+  m_SizeDelta: {x: 160, y: 155.1054}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &951151441
 MonoBehaviour:
@@ -21744,6 +21744,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 989259288}
   m_CullTransparentMesh: 1
+--- !u!114 &990000101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 878575428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f18553e2b7c83e6fe38d1e97092f3273, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnglishLevelFinishIndicators
+  gameScene: EnglishGame2
+  levels:
+  - levelNumber: 1
+    indicator: {fileID: 829582286}
+  - levelNumber: 2
+    indicator: {fileID: 1302217639}
+  - levelNumber: 3
+    indicator: {fileID: 995780863}
+  - levelNumber: 4
+    indicator: {fileID: 976808803}
+  - levelNumber: 5
+    indicator: {fileID: 601614699}
 --- !u!1 &991784378
 GameObject:
   m_ObjectHideFlags: 0
@@ -25217,8 +25241,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -308, y: -42.178}
-  m_SizeDelta: {x: 147.949, y: 128.82}
+  m_AnchoredPosition: {x: -305.00003, y: -43.99935}
+  m_SizeDelta: {x: 147.949, y: 155.1074}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1103962255
 MonoBehaviour:
@@ -30784,7 +30808,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.38290548, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -47475,28 +47499,3 @@ SceneRoots:
   - {fileID: 1670914849}
   - {fileID: 1653838058}
   - {fileID: 1003084892}
-
---- !u!114 &990000101
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 878575428}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f18553e2b7c83e6fe38d1e97092f3273, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnglishLevelFinishIndicators
-  gameScene: EnglishGame2
-  levels:
-  - levelNumber: 1
-    indicator: {fileID: 829582286}
-  - levelNumber: 2
-    indicator: {fileID: 1302217639}
-  - levelNumber: 3
-    indicator: {fileID: 995780863}
-  - levelNumber: 4
-    indicator: {fileID: 976808803}
-  - levelNumber: 5
-    indicator: {fileID: 601614699}

@@ -1125,8 +1125,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -7.5621, y: -36}
-  m_SizeDelta: {x: 260.9791, y: 126.2391}
+  m_AnchoredPosition: {x: -7.5621, y: -27.55381}
+  m_SizeDelta: {x: 260.9791, y: 147.7576}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &416370938
 MonoBehaviour:
@@ -2462,6 +2462,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 932520084}
   m_CullTransparentMesh: 1
+--- !u!114 &990000101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 991528943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f18553e2b7c83e6fe38d1e97092f3273, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnglishLevelFinishIndicators
+  gameScene: EnglishGame4
+  levels:
+  - levelNumber: 1
+    indicator: {fileID: 776240349}
+  - levelNumber: 2
+    indicator: {fileID: 1638077632}
+  - levelNumber: 3
+    indicator: {fileID: 1675349552}
+  - levelNumber: 4
+    indicator: {fileID: 608298679}
+  - levelNumber: 5
+    indicator: {fileID: 336290917}
 --- !u!1 &991528943
 GameObject:
   m_ObjectHideFlags: 0
@@ -2470,8 +2494,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 990000101}
   - component: {fileID: 991528947}
+  - component: {fileID: 990000101}
   - component: {fileID: 991528946}
   - component: {fileID: 991528945}
   - component: {fileID: 991528944}
@@ -3024,7 +3048,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -7.5621, y: -7.5312}
+  m_AnchoredPosition: {x: -7.5621, y: -31.2}
   m_SizeDelta: {x: 260.9791, y: 214.9008}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1165768097
@@ -3791,8 +3815,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.0778, y: -38.9087}
-  m_SizeDelta: {x: 251.8336, y: 152.1458}
+  m_AnchoredPosition: {x: -7.5621, y: -37.594}
+  m_SizeDelta: {x: 283.8367, y: 214.03}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1454921896
 MonoBehaviour:
@@ -5836,28 +5860,3 @@ SceneRoots:
   - {fileID: 2043285370}
   - {fileID: 365450480}
   - {fileID: 1370943912}
-
---- !u!114 &990000101
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 991528943}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f18553e2b7c83e6fe38d1e97092f3273, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnglishLevelFinishIndicators
-  gameScene: EnglishGame4
-  levels:
-  - levelNumber: 1
-    indicator: {fileID: 776240349}
-  - levelNumber: 2
-    indicator: {fileID: 1638077632}
-  - levelNumber: 3
-    indicator: {fileID: 1675349552}
-  - levelNumber: 4
-    indicator: {fileID: 608298679}
-  - levelNumber: 5
-    indicator: {fileID: 336290917}

@@ -153,8 +153,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 82.83925, y: 5.0717}
-  m_SizeDelta: {x: 109.9219, y: 239.859}
+  m_AnchoredPosition: {x: 103.44013, y: 16.866215}
+  m_SizeDelta: {x: 141.0909, y: 264.4766}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &45538817
 MonoBehaviour:
@@ -789,8 +789,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.302, y: 144.1}
-  m_SizeDelta: {x: 513.57, y: 50}
+  m_AnchoredPosition: {x: -0.000013351, y: 167.10004}
+  m_SizeDelta: {x: 541.2283, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &438707715
 MonoBehaviour:
@@ -812,7 +812,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Find the missing number and say it into the microphone.
+  m_text: Hanapin ang nawawalang numero at sabihin ito sa mikropono.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a63b63128d2951e4e8d501bd890d1ef5, type: 2}
   m_sharedMaterial: {fileID: -3295405222342240559, guid: a63b63128d2951e4e8d501bd890d1ef5, type: 2}
@@ -941,7 +941,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 307, y: 161}
+  m_AnchoredPosition: {x: 327, y: 167.1}
   m_SizeDelta: {x: 488.252, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &506236122
@@ -1325,8 +1325,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -213.93033, y: -88.42751}
-  m_SizeDelta: {x: 82.0832, y: 142.7555}
+  m_AnchoredPosition: {x: -277.48026, y: -86.22914}
+  m_SizeDelta: {x: 105.3584, y: 157.407}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &860270828
 MonoBehaviour:
@@ -1401,7 +1401,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 179}
+  m_AnchoredPosition: {x: 0, y: 202}
   m_SizeDelta: {x: 518.174, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &954085289
@@ -1566,7 +1566,7 @@ MonoBehaviour:
     numberSprite: {fileID: 6355930428044131633, guid: 51843429a4422a141bab950ddb1f8d6e, type: 3}
     solved: 0
   result: {fileID: 1743144644}
-  allowMultipleAnswersPerSpeech: 0
+  allowMultipleAnswersPerSpeech: 1
   scoreSceneName: ScoreScene
   failedScoreSceneName: ScoreSceneFailed
   testTranscript: seven
@@ -1695,8 +1695,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 182.53822, y: 8.0761}
-  m_SizeDelta: {x: 100.8101, y: 233.8488}
+  m_AnchoredPosition: {x: 231.40942, y: 20.178999}
+  m_SizeDelta: {x: 129.3954, y: 257.8495}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1104960884
 MonoBehaviour:
@@ -1988,8 +1988,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -12.484406, y: 22.0966}
-  m_SizeDelta: {x: 91.6981, y: 205.8092}
+  m_AnchoredPosition: {x: -18.913124, y: 35.638412}
+  m_SizeDelta: {x: 117.6996, y: 226.9322}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1239546501
 MonoBehaviour:
@@ -2063,8 +2063,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -116.70923, y: -88.427}
-  m_SizeDelta: {x: 87.7041, y: 142.7555}
+  m_AnchoredPosition: {x: -152.69154, y: -86.22857}
+  m_SizeDelta: {x: 112.5731, y: 157.407}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1241527187
 MonoBehaviour:
@@ -2138,8 +2138,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -17.41101, y: -100.681}
-  m_SizeDelta: {x: 124.0372, y: 183.0187}
+  m_AnchoredPosition: {x: -25.236725, y: -99.74024}
+  m_SizeDelta: {x: 159.2087, y: 201.8026}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1273043225
 MonoBehaviour:
@@ -2213,8 +2213,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -104.187, y: -26.47429}
-  m_SizeDelta: {x: 91.6981, y: 302.9512}
+  m_AnchoredPosition: {x: -136.61855, y: -17.917385}
+  m_SizeDelta: {x: 117.6996, y: 334.0442}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1336328887
 MonoBehaviour:
@@ -2420,8 +2420,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 188.20433, y: -86.905}
-  m_SizeDelta: {x: 138.0895, y: 173.81}
+  m_AnchoredPosition: {x: 238.68216, y: -84.55036}
+  m_SizeDelta: {x: 177.2456, y: 191.6487}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1670600096
 MonoBehaviour:
@@ -2495,8 +2495,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -197.6}
-  m_SizeDelta: {x: 488.252, y: 50}
+  m_AnchoredPosition: {x: -1.3991, y: -204}
+  m_SizeDelta: {x: 634.7476, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1743144644
 MonoBehaviour:
@@ -2632,8 +2632,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -194.85815, y: 43.28361}
-  m_SizeDelta: {x: 73.4743, y: 119.6834}
+  m_AnchoredPosition: {x: -253, y: 59}
+  m_SizeDelta: {x: 94.3083, y: 131.9669}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1815228928
 MonoBehaviour:
@@ -2888,8 +2888,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 80.61767, y: -90.844154}
-  m_SizeDelta: {x: 138.0895, y: 192.19}
+  m_AnchoredPosition: {x: 100.5886, y: -88.89381}
+  m_SizeDelta: {x: 177.2456, y: 211.9152}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1848871781
 MonoBehaviour:

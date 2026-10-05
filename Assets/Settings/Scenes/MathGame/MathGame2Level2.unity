@@ -489,7 +489,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 387.9, y: 175.1}
+  m_AnchoredPosition: {x: 406.3, y: 158.9}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &319226118
@@ -1267,8 +1267,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000024796, y: 159.8}
-  m_SizeDelta: {x: 511.1743, y: 50}
+  m_AnchoredPosition: {x: 0.000024796, y: 158.9}
+  m_SizeDelta: {x: 554.0798, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &501823400
 MonoBehaviour:
@@ -1384,7 +1384,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LocalizedText
   textComponent: {fileID: 501823400}
   englishText: Find the missing number and say it into the microphone.
-  tagalogText: 
+  tagalogText: Hanapin ang nawawalang numero at sabihin ito sa mikropono.
 --- !u!1 &679241542
 GameObject:
   m_ObjectHideFlags: 0
@@ -2698,7 +2698,7 @@ MonoBehaviour:
     numberSprite: {fileID: -5986654554808657203, guid: 470ef716f0bbc2449aacec71b5fd6835, type: 3}
     solved: 0
   result: {fileID: 1199221994}
-  allowMultipleAnswersPerSpeech: 0
+  allowMultipleAnswersPerSpeech: 1
   scoreSceneName: ScoreScene
   failedScoreSceneName: ScoreSceneFailed
   testTranscript: seven

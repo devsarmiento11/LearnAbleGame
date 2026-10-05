@@ -414,8 +414,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -213}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 8.9131, y: -213}
+  m_SizeDelta: {x: 846.8385, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &514472847
 MonoBehaviour:
@@ -464,8 +464,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32
-  m_fontSizeBase: 32
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2324,22 +2324,22 @@ MonoBehaviour:
   missingNumbers:
   - correctNumber: 6
     numberImage: {fileID: 1512890723}
-    numberSprite: {fileID: 401589434800551211, guid: 0eefa34194d53bb43b0d250cda7d0586, type: 3}
+    numberSprite: {fileID: -1478877019678316705, guid: 0ddb9a2c624fa14488c4584ba8d2849e, type: 3}
     solved: 0
   - correctNumber: 7
     numberImage: {fileID: 1234092529}
-    numberSprite: {fileID: -1478877019678316705, guid: 0ddb9a2c624fa14488c4584ba8d2849e, type: 3}
+    numberSprite: {fileID: -5986654554808657203, guid: 470ef716f0bbc2449aacec71b5fd6835, type: 3}
     solved: 0
   - correctNumber: 8
     numberImage: {fileID: 1072200534}
-    numberSprite: {fileID: -5986654554808657203, guid: 470ef716f0bbc2449aacec71b5fd6835, type: 3}
+    numberSprite: {fileID: 6355930428044131633, guid: 51843429a4422a141bab950ddb1f8d6e, type: 3}
     solved: 0
   - correctNumber: 9
     numberImage: {fileID: 1841525524}
     numberSprite: {fileID: -5406152627854101472, guid: 0f67bb02acf8fee42a5dccc249a56509, type: 3}
     solved: 0
   result: {fileID: 514472847}
-  allowMultipleAnswersPerSpeech: 0
+  allowMultipleAnswersPerSpeech: 1
   scoreSceneName: ScoreScene
   failedScoreSceneName: ScoreSceneFailed
   testTranscript: seven

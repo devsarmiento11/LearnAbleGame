@@ -281,7 +281,7 @@ public class TeacherScoreManager : MonoBehaviour
         if (popupStudentNameText != null)
         {
             popupStudentNameText.text =
-                studentName.ToUpper();
+                (studentName ?? string.Empty).Trim().ToUpperInvariant();
         }
 
         // Clean grade so "GRADE 2" becomes just "2"
@@ -330,7 +330,12 @@ public class TeacherScoreManager : MonoBehaviour
         }
 
         if (string.IsNullOrWhiteSpace(selectedStudentId))
+        {
+            scoresFailed = true;
+            scoreLoadError = "This student has no valid profile ID.";
+            ShowScoreStatus(scoreLoadError);
             return;
+        }
 
         if (FirebaseAuth.DefaultInstance.CurrentUser == null)
         {
@@ -344,7 +349,7 @@ public class TeacherScoreManager : MonoBehaviour
             .WhereEqualTo("userId", selectedStudentId)
             .Listen(snapshot =>
             {
-                if (requestVersion != scoreRequestVersion)
+                if (this == null || requestVersion != scoreRequestVersion)
                     return;
 
                 cachedScores.Clear();
@@ -358,6 +363,9 @@ public class TeacherScoreManager : MonoBehaviour
             if (this == null || requestVersion != scoreRequestVersion || !task.IsFaulted) return;
             scoresFailed = true;
             var error = task.Exception.GetBaseException();
+            scoresLoaded = false;
+            cachedScores.Clear();
+            ClearScoreRows();
             scoreLoadError = error is FirestoreException firestore && firestore.ErrorCode == FirestoreError.PermissionDenied
                 ? "Score access denied. Sign in again with your teacher account."
                 : "Unable to connect. Close and reopen to retry.";
@@ -369,8 +377,11 @@ public class TeacherScoreManager : MonoBehaviour
     private void SetupSubjectFilter()
     {
         if (studentScorePopup == null) return;
-        subjectDropdown = ScoreSubjectDropdown.Create(studentScorePopup.transform,
+        subjectDropdown = studentScorePopup.GetComponentInChildren<TMP_Dropdown>(true);
+        if (subjectDropdown == null) subjectDropdown = ScoreSubjectDropdown.Create(studentScorePopup.transform,
             TMP_Settings.defaultFontAsset, subjectArrow);
+        subjectDropdown.ClearOptions();
+        subjectDropdown.AddOptions(new List<string>(ScoreSubjectFilter.Subjects));
         subjectDropdown.onValueChanged.AddListener(OnSubjectChanged);
         if (noScoresText == null)
         {
@@ -417,10 +428,10 @@ public class TeacherScoreManager : MonoBehaviour
                 continue;
 
             Dictionary<string, object> data = document.ToDictionary();
-            string sceneName = GetText(data, "activityName", "Unknown Activity");
+            string sceneName = StudentScoreData.NormalizeActivity(GetText(data, "activityName", "Unknown Activity"));
             if (!ScoreSubjectFilter.Matches(sceneName, selectedSubject)) continue;
-            int score = GetInt(data, "score");
-            int timeUsed = GetInt(data, "timeUsedSeconds");
+            int? score = StudentScoreData.ReadPercentage(data);
+            long timeUsed = StudentScoreData.ReadSeconds(data);
             DateTime completedAt = GetDateTime(data, "completedAt");
 
             ActivitySummary summary;
@@ -435,8 +446,8 @@ public class TeacherScoreManager : MonoBehaviour
 
         var ordered = new List<ActivitySummary>(summaries.Values);
         ordered.Sort((a, b) => {
-            int recent = b.LatestCompletion.CompareTo(a.LatestCompletion);
-            return recent != 0 ? recent : string.Compare(a.SceneName, b.SceneName, StringComparison.OrdinalIgnoreCase);
+            int activityOrder = StudentScoreData.CompareActivities(a.SceneName, b.SceneName);
+            return activityOrder;
         });
 
         foreach (ActivitySummary summary in ordered)
@@ -483,8 +494,8 @@ public class TeacherScoreManager : MonoBehaviour
         row.Setup(
             activity,
             level,
-            summary.LowestScore + "%",
-            summary.HighestScore + "%",
+            summary.ScoredAttempts == 0 ? "—" : summary.LowestScore + "%",
+            summary.ScoredAttempts == 0 ? "—" : summary.HighestScore + "%",
             FormatDuration(summary.TotalTimeUsedSeconds),
             summary.Attempts.ToString(),
             summary.LatestCompletion == DateTime.MinValue ? "—" : summary.LatestCompletion.ToLocalTime().ToString("MM/dd/yy")
@@ -504,16 +515,6 @@ public class TeacherScoreManager : MonoBehaviour
         scoreRows.Clear();
     }
 
-    private static int GetInt(Dictionary<string, object> data, string field)
-    {
-        object value;
-        if (!data.TryGetValue(field, out value) || value == null)
-            return 0;
-
-        try { return Convert.ToInt32(value); }
-        catch (Exception) { return 0; }
-    }
-
     private static DateTime GetDateTime(Dictionary<string, object> data, string field)
     {
         object value;
@@ -526,9 +527,9 @@ public class TeacherScoreManager : MonoBehaviour
         return DateTime.MinValue;
     }
 
-    private static string FormatDuration(int totalSeconds)
+    private static string FormatDuration(long totalSeconds)
     {
-        TimeSpan duration = TimeSpan.FromSeconds(Mathf.Max(0, totalSeconds));
+        TimeSpan duration = TimeSpan.FromSeconds(Math.Max(0L, totalSeconds));
         return duration.TotalHours >= 1d
             ? string.Format("{0}:{1:00}:{2:00}", (int)duration.TotalHours, duration.Minutes, duration.Seconds)
             : string.Format("{0}:{1:00}", duration.Minutes, duration.Seconds);
@@ -621,7 +622,8 @@ public class TeacherScoreManager : MonoBehaviour
         public int Attempts { get; private set; }
         public int LowestScore { get; private set; }
         public int HighestScore { get; private set; }
-        public int TotalTimeUsedSeconds { get; private set; }
+        public long TotalTimeUsedSeconds { get; private set; }
+        public int ScoredAttempts { get; private set; }
         public DateTime LatestCompletion { get; private set; }
 
         public ActivitySummary(string sceneName)
@@ -632,13 +634,17 @@ public class TeacherScoreManager : MonoBehaviour
             LatestCompletion = DateTime.MinValue;
         }
 
-        public void AddAttempt(int score, int timeUsedSeconds, DateTime completedAt)
+        public void AddAttempt(int? score, long timeUsedSeconds, DateTime completedAt)
         {
-            score = Mathf.Clamp(score, 0, 100);
+            
             Attempts++;
-            LowestScore = Mathf.Min(LowestScore, score);
-            HighestScore = Mathf.Max(HighestScore, score);
-            TotalTimeUsedSeconds += Mathf.Max(0, timeUsedSeconds);
+            if (score.HasValue)
+            {
+                ScoredAttempts++;
+                LowestScore = Math.Min(LowestScore, score.Value);
+                HighestScore = Math.Max(HighestScore, score.Value);
+            }
+            TotalTimeUsedSeconds += Math.Max(0L, timeUsedSeconds);
             if (completedAt > LatestCompletion)
                 LatestCompletion = completedAt;
         }
@@ -766,6 +772,7 @@ public static class ScoreSubjectDropdown
         rect.offsetMax = new Vector2(-right, -top);
     }
 }
+
 
 
 

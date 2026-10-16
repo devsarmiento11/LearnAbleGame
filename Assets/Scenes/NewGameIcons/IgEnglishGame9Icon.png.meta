@@ -1,0 +1,533 @@
+fileFormatVersion: 2
+guid: b4a842f4067b0d2449eccba0b9a09e2a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7208027422829597217
+    second: IgEnglishGame9Icon_0
+  - first:
+      213: 6541840521061306461
+    second: IgEnglishGame9Icon_1
+  - first:
+      213: -3826018823390478776
+    second: IgEnglishGame9Icon_2
+  - first:
+      213: -5600481394895233069
+    second: IgEnglishGame9Icon_3
+  - first:
+      213: 9085519937244387871
+    second: IgEnglishGame9Icon_4
+  - first:
+      213: -7818211672685277343
+    second: IgEnglishGame9Icon_5
+  - first:
+      213: 9184852937577954773
+    second: IgEnglishGame9Icon_6
+  - first:
+      213: -5260082771053273295
+    second: IgEnglishGame9Icon_7
+  - first:
+      213: -2932746190993105094
+    second: IgEnglishGame9Icon_8
+  - first:
+      213: -6982925020546446048
+    second: IgEnglishGame9Icon_9
+  - first:
+      213: 7928857915727677294
+    second: IgEnglishGame9Icon_10
+  - first:
+      213: 8367807836388314077
+    second: IgEnglishGame9Icon_11
+  - first:
+      213: 4071063889762316242
+    second: IgEnglishGame9Icon_12
+  - first:
+      213: 5195766580217148653
+    second: IgEnglishGame9Icon_13
+  - first:
+      213: -2535453335098094606
+    second: IgEnglishGame9Icon_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: IgEnglishGame9Icon_0
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1431
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdda7faaf31f7fb90800000000000000
+      internalID: -7208027422829597217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgEnglishGame9Icon_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 81
+        width: 161
+        height: 1342
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d509d133b4949ca50800000000000000
+      internalID: 6541840521061306461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgEnglishGame9Icon_2
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 1377
+        width: 38
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84e3ad7b62047eac0800000000000000
+      internalID: -3826018823390478776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgEnglishGame9Icon_3
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 693
+        width: 287
+        height: 727
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dfd51e08d71742b0800000000000000
+      internalID: -5600481394895233069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgEnglishGame9Icon_4
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 85
+        width: 139
+        height: 1339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1a5e2bee30461e70800000000000000
+      internalID: 9085519937244387871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgEnglishGame9Icon_5
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 725
+        width: 273
+        height: 619
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16f08c608e1208390800000000000000
+      internalID: -7818211672685277343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgEnglishGame9Icon_6
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 733
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dd79825517277f70800000000000000
+      internalID: 9184852937577954773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgEnglishGame9Icon_7
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 725
+        width: 21
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13f973eb69e6007b0800000000000000
+      internalID: -5260082771053273295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgEnglishGame9Icon_8
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 149
+        width: 45
+        height: 1201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3fd97da0eacc47d0800000000000000
+      internalID: -2932746190993105094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgEnglishGame9Icon_9
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 687
+        width: 124
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02d4421e0baa71f90800000000000000
+      internalID: -6982925020546446048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgEnglishGame9Icon_10
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 691
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e670e75f346f80e60800000000000000
+      internalID: 7928857915727677294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgEnglishGame9Icon_11
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 107
+        width: 275
+        height: 552
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddbc7a484ec602470800000000000000
+      internalID: 8367807836388314077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgEnglishGame9Icon_12
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 149
+        width: 271
+        height: 510
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dfe33fc9035f7830800000000000000
+      internalID: 4071063889762316242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgEnglishGame9Icon_13
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 519
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de470b52d221b1840800000000000000
+      internalID: 5195766580217148653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgEnglishGame9Icon_14
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 145
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fb06e800a240dcd0800000000000000
+      internalID: -2535453335098094606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      IgEnglishGame9Icon_0: -7208027422829597217
+      IgEnglishGame9Icon_1: 6541840521061306461
+      IgEnglishGame9Icon_10: 7928857915727677294
+      IgEnglishGame9Icon_11: 8367807836388314077
+      IgEnglishGame9Icon_12: 4071063889762316242
+      IgEnglishGame9Icon_13: 5195766580217148653
+      IgEnglishGame9Icon_14: -2535453335098094606
+      IgEnglishGame9Icon_2: -3826018823390478776
+      IgEnglishGame9Icon_3: -5600481394895233069
+      IgEnglishGame9Icon_4: 9085519937244387871
+      IgEnglishGame9Icon_5: -7818211672685277343
+      IgEnglishGame9Icon_6: 9184852937577954773
+      IgEnglishGame9Icon_7: -5260082771053273295
+      IgEnglishGame9Icon_8: -2932746190993105094
+      IgEnglishGame9Icon_9: -6982925020546446048
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

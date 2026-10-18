@@ -356,5 +356,173 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Settings/Scenes/MathGame/MathGame2Level5.unity
     guid: cc303ba4cf891b248811ac99ea2679bb
+  - enabled: 1
+    path: Assets/Settings/Scenes/2ndQuarterEnglishGame/EnglishGame6.unity
+    guid: c98938662ce33344192637112f028e53
+  - enabled: 1
+    path: Assets/Settings/Scenes/2ndQuarterEnglishGame/EnglishGame6Level1.unity
+    guid: 5873f267aa96ac74487f095dae27b02e
+  - enabled: 1
+    path: Assets/Settings/Scenes/2ndQuarterEnglishGame/EnglishGame6Level2.unity
+    guid: 244f08120c878e14e804732c3b831bfe
+  - enabled: 1
+    path: Assets/Settings/Scenes/2ndQuarterEnglishGame/EnglishGame6Level3.unity
+    guid: 7871c60ad5517854aa4d8161308a54e6
+  - enabled: 1
+    path: Assets/Settings/Scenes/2ndQuarterEnglishGame/EnglishGame6Level4.unity
+    guid: de3e1e84c3ac62a44bd4873c7bf2a50a
+  - enabled: 1
+    path: Assets/Settings/Scenes/2ndQuarterEnglishGame/EnglishGame6Level5.unity
+    guid: 3e139cae259e4d34bbe6987d8b9ec1a2
+  - enabled: 1
+    path: Assets/Settings/Scenes/2ndQuarterEnglishGameInstructions/EnglishGame6InstructionScene.unity
+    guid: 131e5bbef1f5b6446aa8bce23400045d
+  - enabled: 1
+    path: Assets/Settings/Scenes/2ndQuarterEnglishGame/EnglishGame7.unity
+    guid: a9dbbb9fe9aa54a48ab9929270e1b2f7
+  - enabled: 1
+    path: Assets/Settings/Scenes/2ndQuarterEnglishGame/EnglishGame7Level1.unity
+    guid: 9433a30c61accf24fa9d8d30335c9078
+  - enabled: 1
+    path: Assets/Settings/Scenes/2ndQuarterEnglishGame/EnglishGame7Level2.unity
+    guid: 65571a3eddeb8ad43bc09d0a4374a834
+  - enabled: 1
+    path: Assets/Settings/Scenes/2ndQuarterEnglishGame/EnglishGame7Level3.unity
+    guid: a75778992d536c149b96fd6730b6315d
+  - enabled: 1
+    path: Assets/Settings/Scenes/2ndQuarterEnglishGame/EnglishGame7Level4.unity
+    guid: eab3220f4f35f914190dbee0f20daa88
+  - enabled: 1
+    path: Assets/Settings/Scenes/2ndQuarterEnglishGame/EnglishGame7Level5.unity
+    guid: b727c4f0f1ddeb2479db2fbe2e179e8f
+  - enabled: 1
+    path: Assets/Settings/Scenes/2ndQuarterEnglishGameInstructions/EnglishGame7InstructionScene.unity
+    guid: 4f93d50f6915e1b409289b3ac20951f7
+  - enabled: 1
+    path: Assets/Settings/Scenes/2ndQuarterEnglishGame/EnglishGame8.unity
+    guid: c1ff934959b67fd4cb542f55daa5f789
+  - enabled: 1
+    path: Assets/Settings/Scenes/2ndQuarterEnglishGame/EnglishGame8Level1.unity
+    guid: 9750e15ec8c9cb747aa38476fb20e3e3
+  - enabled: 1
+    path: Assets/Settings/Scenes/2ndQuarterEnglishGame/EnglishGame8Level2.unity
+    guid: d971d522906c21246b62c9fcd0e56a1c
+  - enabled: 1
+    path: Assets/Settings/Scenes/2ndQuarterEnglishGame/EnglishGame8Level3.unity
+    guid: 3e6ebb270637406419fefd781db9e764
+  - enabled: 1
+    path: Assets/Settings/Scenes/2ndQuarterEnglishGame/EnglishGame8Level4.unity
+    guid: a158d37411ed4e94e820a2e04be8b5f2
+  - enabled: 1
+    path: Assets/Settings/Scenes/2ndQuarterEnglishGame/EnglishGame8Level5.unity
+    guid: ac3f9c34a773e35429b732064e293029
+  - enabled: 1
+    path: Assets/Settings/Scenes/2ndQuarterEnglishGameInstructions/EnglishGame8InstructionScene.unity
+    guid: 81b184e0291236840b987b3e52be6635
+  - enabled: 1
+    path: Assets/Settings/Scenes/2ndQuarterEnglishGame/EnglishGame9.unity
+    guid: 8277edc4901eed042bb12967d567eaa3
+  - enabled: 1
+    path: Assets/Settings/Scenes/2ndQuarterEnglishGame/EnglishGame9Level1.unity
+    guid: bade26f6cfd630f4ba98e282eccd8808
+  - enabled: 1
+    path: Assets/Settings/Scenes/2ndQuarterEnglishGame/EnglishGame9Level2.unity
+    guid: ca5a2e513bc07f74ca70d48283fa8abe
+  - enabled: 1
+    path: Assets/Settings/Scenes/2ndQuarterEnglishGame/EnglishGame9Level3.unity
+    guid: 91854fcb62cd7d547997c3f3243a5fdc
+  - enabled: 1
+    path: Assets/Settings/Scenes/2ndQuarterEnglishGame/EnglishGame9Level4.unity
+    guid: c46ff906e72ea064ebfdd6f05c149ac1
+  - enabled: 1
+    path: Assets/Settings/Scenes/2ndQuarterEnglishGame/EnglishGame9Level5.unity
+    guid: b1c8208cccb29d948a6a7cacf40c4c58
+  - enabled: 1
+    path: Assets/Settings/Scenes/2ndQuarterEnglishGameInstructions/EnglishGame9InstructionScene.unity
+    guid: 8475c149d2844d6448dfaedcaacdefb1
+  - enabled: 1
+    path: Assets/Settings/Scenes/2ndQuarterEnglishGame/EnglishGame10.unity
+    guid: 4d95f39beb0af504bbc0dd7525b7f0ee
+  - enabled: 1
+    path: Assets/Settings/Scenes/2ndQuarterEnglishGame/EnglishGame10Level1.unity
+    guid: 0be0c7389495dca48aa3e6f51cefa9c8
+  - enabled: 1
+    path: Assets/Settings/Scenes/2ndQuarterEnglishGame/EnglishGame10Level2.unity
+    guid: df2a24a1744c6fc45bdaf58063b0ce4c
+  - enabled: 1
+    path: Assets/Settings/Scenes/2ndQuarterEnglishGame/EnglishGame10Level3.unity
+    guid: 81770a0993464e5489b506a9de493c1a
+  - enabled: 1
+    path: Assets/Settings/Scenes/2ndQuarterEnglishGame/EnglishGame10Level4.unity
+    guid: eedde502e7f15724682a68d7f2cf90ce
+  - enabled: 1
+    path: Assets/Settings/Scenes/2ndQuarterEnglishGame/EnglishGame10Level5.unity
+    guid: 22763280b1f9c31489b132740d746b05
+  - enabled: 1
+    path: Assets/Settings/Scenes/2ndQuarterEnglishGameInstructions/EnglishGame10InstructionScene.unity
+    guid: 03f1af6fadadfad43a2d71d2c1945eca
+  - enabled: 1
+    path: Assets/Settings/Scenes/3rdQuarterEnglishGame/EnglishGame11.unity
+    guid: 7ffc4a411c644ba40aea69fe547f6690
+  - enabled: 1
+    path: Assets/Settings/Scenes/3rdQuarterEnglishGame/EnglishGame11Level1.unity
+    guid: 8159d2ed9b605794f9ba753e1ddc6ba1
+  - enabled: 1
+    path: Assets/Settings/Scenes/3rdQuarterEnglishGame/EnglishGame11Level2.unity
+    guid: 190cabdd5db6df74b9e362dcfa3c1675
+  - enabled: 1
+    path: Assets/Settings/Scenes/3rdQuarterEnglishGame/EnglishGame11Level3.unity
+    guid: 08d3a1d37c462d146838fb2b7de721d5
+  - enabled: 1
+    path: Assets/Settings/Scenes/3rdQuarterEnglishGame/EnglishGame11Level4.unity
+    guid: fe01ec02f5877a7449802a34db50a36f
+  - enabled: 1
+    path: Assets/Settings/Scenes/3rdQuarterEnglishGame/EnglishGame11Level5.unity
+    guid: 910fa26290c2f5242ab965f91ca5bfd9
+  - enabled: 1
+    path: Assets/Settings/Scenes/3rdQuarterEnglishGameInstructions/EnglishGame11InstructionScene.unity
+    guid: fe1ae9ff9c2e5ed4997df07d71a828cd
+  - enabled: 1
+    path: Assets/Settings/Scenes/3rdQuarterEnglishGame/EnglishGame12.unity
+    guid: 539c8d9b21606a84f930a446d5a16f6a
+  - enabled: 1
+    path: Assets/Settings/Scenes/3rdQuarterEnglishGame/EnglishGame12Level1.unity
+    guid: d5bfdff9dafb14946902694a8acc0ea2
+  - enabled: 1
+    path: Assets/Settings/Scenes/3rdQuarterEnglishGame/EnglishGame12Level2.unity
+    guid: 3a9d0aa957cfb3f4595859a6d7bd8fce
+  - enabled: 1
+    path: Assets/Settings/Scenes/3rdQuarterEnglishGame/EnglishGame12Level3.unity
+    guid: 4781fe3eef3eafc4c9a4f0e0b43e99eb
+  - enabled: 1
+    path: Assets/Settings/Scenes/3rdQuarterEnglishGame/EnglishGame12Level4.unity
+    guid: 89b74ca9625d1714c97b9efcb071b240
+  - enabled: 1
+    path: Assets/Settings/Scenes/3rdQuarterEnglishGame/EnglishGame12Level5.unity
+    guid: 967ef616efd81a94383c653a18ffd2cb
+  - enabled: 1
+    path: Assets/Settings/Scenes/3rdQuarterEnglishGameInstructions/EnglishGame12InstructionScene.unity
+    guid: a3c9413ace7f225459aab123b4abf99e
+  - enabled: 1
+    path: Assets/Settings/Scenes/3rdQuarterEnglishGame/EnglishGame13.unity
+    guid: f86209e11b9e1d249bf3045835ecdbb9
+  - enabled: 1
+    path: Assets/Settings/Scenes/3rdQuarterEnglishGame/EnglishGame13Level1.unity
+    guid: 8c0b27e64092edc44b7b7cc1d1d6e602
+  - enabled: 1
+    path: Assets/Settings/Scenes/3rdQuarterEnglishGame/EnglishGame13Level2.unity
+    guid: 4f4c0ea4df278fc4eb2e12212b2b9be9
+  - enabled: 1
+    path: Assets/Settings/Scenes/3rdQuarterEnglishGame/EnglishGame13Level3.unity
+    guid: 59d63051d7561ac45911dbb5ccb8a7a2
+  - enabled: 1
+    path: Assets/Settings/Scenes/3rdQuarterEnglishGame/EnglishGame13Level4.unity
+    guid: 96c2582d3bff2fc41bc556f5ee600376
+  - enabled: 1
+    path: Assets/Settings/Scenes/3rdQuarterEnglishGame/EnglishGame13Level5.unity
+    guid: 79ba89eaca0cedc45813be29e4b73df4
+  - enabled: 1
+    path: Assets/Settings/Scenes/3rdQuarterEnglishGameInstructions/EnglishGame13InstructionScene.unity
+    guid: ba88e6d7347387d4db6ff8dd49a73108
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

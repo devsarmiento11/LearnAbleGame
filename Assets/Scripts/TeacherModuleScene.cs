@@ -9,7 +9,7 @@ using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-// Attached only to the two teacher module scenes. Existing artwork is reused.
+// Shared teacher library, folder and archive controller. Existing artwork is reused.
 public sealed class TeacherModuleScene : MonoBehaviour
 {
     public Sprite viewIcon, editIcon, archiveIcon, deleteIcon;
@@ -34,12 +34,17 @@ public sealed class TeacherModuleScene : MonoBehaviour
     [SerializeField] ScrollRect scroll;
     [SerializeField] RectTransform content;
     Vector2[] folderPositions;
+    float[] folderBottomExtents;
+    float folderBlockHeight, folderPadding;
     TeacherPdfModule selected;
     string replacement, currentFolder;
     bool uploadScene, archiveScene, busy;
     GameObject modalBlocker;
     float statusFontSize;
     Task uploadInitialization;
+    GameObject uploadPopup;
+    TMP_Text popupStatus;
+    TMP_Text popupPercent;
 
     T At<T>(string path) where T : Component
     {
@@ -76,14 +81,14 @@ public sealed class TeacherModuleScene : MonoBehaviour
             if (this != null)
             {
                 var root = error.GetBaseException();
-                Message(root is Firebase.Firestore.FirestoreException firestore && firestore.ErrorCode == Firebase.Firestore.FirestoreError.PermissionDenied
+                string errorMessage = root is Firebase.Firestore.FirestoreException firestore && firestore.ErrorCode == Firebase.Firestore.FirestoreError.PermissionDenied
                     ? "Folder access is blocked by Firebase rules. The teacher-library rules must be published."
-                    : root is InvalidOperationException ? root.Message : "Unable to complete this action. Check your connection and Firebase module permissions, then try again.");
-                if (folderPopup != null && folderPopup.gameObject.activeSelf) folderPopup.ShowMessage(status.text);
+                    : root is InvalidOperationException ? root.Message : "Unable to complete this action. Check your connection and Firebase module permissions, then try again.";
+                Message(errorMessage);
                 if (editPopup != null && editPopup.activeSelf && fileName != null)
                 {
                     fileName.enableAutoSizing = true; fileName.fontSizeMin = 10;
-                    fileName.text = status.text;
+                    fileName.text = errorMessage;
                 }
                 Debug.LogWarning("Teacher modules: " + root.Message);
             }
@@ -98,6 +103,14 @@ public sealed class TeacherModuleScene : MonoBehaviour
     }
     void Message(string message)
     {
+        if (folderPopup != null && folderPopup.gameObject.activeSelf)
+            folderPopup.ShowMessage(message);
+        if (uploadPopup != null && uploadPopup.activeSelf && popupStatus != null)
+        {
+            popupStatus.richText = false;
+            popupStatus.text = message;
+            return;
+        }
         if (status != null)
         {
             if (statusFontSize <= 0) statusFontSize = status.fontSize;
@@ -160,7 +173,7 @@ public sealed class TeacherModuleScene : MonoBehaviour
         folders = await ReadWithTimeout(store.Folders());
         lifetime.Token.ThrowIfCancellationRequested();
         RefreshFolders();
-        if (!busy) { SetInteractive(true); Message(folders.Count == 0 ? "Create a folder to begin." : "Select Module"); }
+        if (!busy) { SetInteractive(true); Message(folders.Count == 0 ? "Create a folder to begin." : "Open a folder to add or manage modules."); }
     }
 
     async void ObserveUploadInitialization()
@@ -198,7 +211,6 @@ public sealed class TeacherModuleScene : MonoBehaviour
 
     public void ConfirmCreateFolder() => Run(CreateFolderFromPopup);
     public void CancelCreateFolder() { if (!busy) createPopup.SetActive(false); }
-    public void UploadModule() => Run(Upload);
 
     async Task CreateFolderFromPopup()
     {
@@ -217,20 +229,13 @@ public sealed class TeacherModuleScene : MonoBehaviour
         folders.Add(new TeacherModuleFolder { Id = id, Name = name, Owner = store.Owner });
         folders = folders.OrderBy(f => f.Name, StringComparer.OrdinalIgnoreCase).ToList();
         createPopup.SetActive(false); folderName.text = "";
-        RefreshFolders(id); Message("Folder created. Select your module.");
+        RefreshFolders(id); Message("Folder created. Open it to add modules.");
     }
 
     void SetupUpload()
     {
-        if (title == null) title = At<TMP_InputField>("InputField (TMP)"); title.characterLimit = 100;
-        if (folderOptions == null) folderOptions = At<TMP_Dropdown>("Dropdown/Select Folder");
-        if (grade == null) grade = At<TMP_Dropdown>("Dropdown/Select Grade Level"); SetGrades(grade, false);
-        // Find the existing Select Module label, independent of sibling order.
-        status = uploadStatus != null ? uploadStatus : At<TMP_Text>("Texts/Text (TMP) (3)");
-        if (progress == null) progress = At<Slider>("DownloadProgress");
-        if (percent == null) percent = At<TMP_Text>("DownloadProgress/UploadPercent");
-        progress.minValue = 0; progress.maxValue = 1; progress.wholeNumbers = false;
-        progress.gameObject.SetActive(false);
+        // This scene is now a folder browser; uploading lives in FolderScene.
+        status = uploadStatus;
         createPopup = folderPopup != null ? folderPopup.gameObject : Obj("ConfirmationPopup"); createPopup.SetActive(false);
         if (folderName == null) folderName = At<TMP_InputField>("ConfirmationPopup/InputField (TMP) (1)"); folderName.characterLimit = 100;
         if (folderPopup == null) folderPopup = createPopup.GetComponent<TeacherFolderPopup>();
@@ -239,21 +244,30 @@ public sealed class TeacherModuleScene : MonoBehaviour
         folderPopup.confirmButton = At<Button>("ConfirmationPopup/Button (1)");
         folderPopup.cancelButton = At<Button>("ConfirmationPopup/Button");
         createFolderButton = UploadButton(createFolderButton, "CreateFolderBtn", "Button");
-        uploadModuleButton = UploadButton(uploadModuleButton, "UploadModuleBtn", "Button (1)");
         backButton = UploadButton(backButton, "BackBtn", "Button (2)");
         settingsButton = UploadButton(settingsButton, "Settings", "Button (3)");
         Bind(createFolderButton, OpenCreateFolder);
         Bind("ConfirmationPopup/Button", CancelCreateFolder);
         Bind("ConfirmationPopup/Button (1)", ConfirmCreateFolder);
-        Bind(uploadModuleButton, UploadModule);
         Bind(backButton, () => Navigate("MainMenuTeacher"));
         Bind(settingsButton, () => Navigate("SettingsScene"));
         if (scroll == null) scroll = At<ScrollRect>("FoldersScrollView");
         Canvas.ForceUpdateCanvases();
-        var originals = At<Transform>("FoldersScrollView/Folders").Cast<Transform>().ToArray();
         var viewport = At<RectTransform>("FoldersScrollView/Viewport");
+        var originals = At<Transform>("FoldersScrollView/Folders").Cast<Transform>()
+            .OrderByDescending(t => Mathf.Round(viewport.InverseTransformPoint(t.position).y * 10))
+            .ThenBy(t => viewport.InverseTransformPoint(t.position).x).ToArray();
         folderPositions = originals.Select(t => (Vector2)viewport.InverseTransformPoint(t.position) - new Vector2(viewport.rect.xMin, viewport.rect.yMax)).ToArray();
-        template = folderEntryPrefab != null ? folderEntryPrefab : originals[0].gameObject;
+        folderBottomExtents = originals.Select(t =>
+            viewport.InverseTransformPoint(t.position).y - RectTransformUtility.CalculateRelativeRectTransformBounds(viewport, t).min.y).ToArray();
+        var rowTops = folderPositions.Select(p => p.y).OrderByDescending(y => y)
+            .Aggregate(new List<float>(), (rows, y) => { if (rows.Count == 0 || Mathf.Abs(rows.Last() - y) > .1f) rows.Add(y); return rows; });
+        float rowStride = rowTops.Count > 1 ? rowTops[0] - rowTops[1]
+            : RectTransformUtility.CalculateRelativeRectTransformBounds(viewport, originals[0]).size.y;
+        folderBlockHeight = rowTops[0] - rowTops.Last() + rowStride;
+        folderPadding = Mathf.Max(0, viewport.rect.yMax - RectTransformUtility.CalculateRelativeRectTransformBounds(viewport, originals[0]).max.y);
+        // Clone the authored folder so its dimensions and label match the current scene.
+        template = originals[0].gameObject;
         foreach (var item in originals) item.gameObject.SetActive(false);
         if (content == null) content = At<RectTransform>("FoldersScrollView/Viewport/Content");
         ConfigureScroll(viewport);
@@ -278,19 +292,16 @@ public sealed class TeacherModuleScene : MonoBehaviour
     void RefreshFolders(string selectedId = null)
     {
         ClearRows();
-        folderOptions.ClearOptions();
-        folderOptions.AddOptions(folders.Count == 0 ? new List<string> { "Create a folder first" } : folders.Select(f => f.Name).ToList());
-        folderOptions.SetValueWithoutNotify(Math.Max(0, folders.FindIndex(f => f.Id == selectedId && f.Owner == store.Owner)));
-        folderOptions.RefreshShownValue();
-        float rowHeight = scroll.viewport.rect.height;
-        content.sizeDelta = new Vector2(scroll.viewport.rect.width, Math.Max(1, (folders.Count + 3) / 4) * rowHeight);
+        float requiredHeight = scroll.viewport.rect.height;
         for (int i = 0; i < folders.Count; i++)
         {
             var folder = folders[i];
             var row = Instantiate(template, content); row.name = "Folder_" + folder.Id; row.SetActive(true);
             var rect = (RectTransform)row.transform;
             rect.anchorMin = rect.anchorMax = new Vector2(0, 1);
-            rect.anchoredPosition = folderPositions[i % 4] - new Vector2(0, i / 4 * rowHeight);
+            int slot = i % folderPositions.Length;
+            rect.anchoredPosition = folderPositions[slot] - new Vector2(0, i / folderPositions.Length * folderBlockHeight);
+            requiredHeight = Mathf.Max(requiredHeight, -rect.anchoredPosition.y + folderBottomExtents[slot] + folderPadding);
             var entry = row.GetComponent<TeacherFolderEntry>();
             if (entry == null) entry = row.AddComponent<TeacherFolderEntry>();
             entry.Setup(folder.Name, () =>
@@ -301,28 +312,23 @@ public sealed class TeacherModuleScene : MonoBehaviour
             });
             generated.Add(row);
         }
+        content.sizeDelta = new Vector2(scroll.viewport.rect.width, requiredHeight);
+        Canvas.ForceUpdateCanvases();
+        scroll.StopMovement();
+        content.anchoredPosition = Vector2.zero;
         scroll.verticalNormalizedPosition = 1;
-    }
-    async Task Upload()
-    {
-        string moduleTitle = TeacherModuleStore.ValidName(title.text);
-        if (folders.Count == 0) throw new InvalidOperationException("Create a folder before uploading a module.");
-        var module = new TeacherPdfModule { Title = moduleTitle, FolderId = folders[folderOptions.value].Id, Grade = grade.value + 1 };
-        string path = await picker.Pick(); lifetime.Token.ThrowIfCancellationRequested();
-        if (string.IsNullOrEmpty(path)) { Message("Selection cancelled."); return; }
-        TeacherModuleStore.ValidatePdf(path);
-        progress.gameObject.SetActive(true); Progress(0); Message("Uploading PDF...");
-        try
-        {
-            await store.Save(module, path, lifetime.Token, Progress, folders[folderOptions.value].Owner);
-            lifetime.Token.ThrowIfCancellationRequested(); title.text = ""; Message("Module uploaded successfully.");
-        }
-        catch { progress.gameObject.SetActive(false); throw; }
     }
     void Progress(float value)
     {
         if (this == null) return;
-        if (progress != null) { progress.value = value; percent.text = Mathf.FloorToInt(value * 100) + "%"; }
+        if (uploadPopup != null && uploadPopup.activeSelf)
+        {
+            value = Mathf.Clamp01(value);
+            progress.value = value;
+            if (popupPercent != null) popupPercent.text = Mathf.FloorToInt(value * 100) + "%";
+            Message("Uploading PDF... " + Mathf.FloorToInt(value * 100) + "%");
+        }
+        else if (progress != null && uploadScene) { progress.value = value; if (percent != null) percent.text = Mathf.FloorToInt(value * 100) + "%"; }
         else if (fileName != null) fileName.text = "Uploading PDF... " + Mathf.FloorToInt(value * 100) + "%";
     }
     static void SetGrades(TMP_Dropdown dropdown, bool all)
@@ -404,6 +410,90 @@ public sealed class TeacherModuleScene : MonoBehaviour
             foreach (var graphic in popup.GetComponentsInChildren<Graphic>(true))
                 graphic.raycastTarget = graphic.GetComponentInParent<Selectable>(true) != null;
         ConfigureScroll(At<RectTransform>("Scroll View/Viewport"));
+        SetupFolderUpload();
+    }
+    void SetupFolderUpload()
+    {
+        uploadPopup = Obj("UploadModulePopUp");
+        uploadPopup.SetActive(false);
+        title = At<TMP_InputField>("UploadModulePopUp/NameOftheModule");
+        title.characterLimit = 100;
+        grade = At<TMP_Dropdown>("UploadModulePopUp/GradeSelection");
+        SetGrades(grade, false);
+        progress = At<Slider>("UploadModulePopUp/UploadProgressBar");
+        progress.minValue = 0; progress.maxValue = 1; progress.wholeNumbers = false;
+        progress.interactable = false;
+        popupPercent = At<TMP_Text>("UploadModulePopUp/PercentOfTheUploadingModule");
+        if (popupPercent != null)
+        {
+            popupPercent.gameObject.SetActive(true);
+            popupPercent.enabled = true;
+            popupPercent.transform.SetAsLastSibling();
+            popupPercent.richText = false;
+            popupPercent.raycastTarget = false;
+            popupPercent.text = "0%";
+        }
+        popupStatus = uploadPopup.GetComponentsInChildren<TMP_Text>(true)
+            .First(t => t.text.Trim() == "Select Module");
+        popupStatus.enableAutoSizing = true;
+        popupStatus.fontSizeMax = popupStatus.fontSize;
+        popupStatus.fontSizeMin = 10;
+        Bind("Buttons/UploadModuleBtn", () =>
+        {
+            ClosePopups();
+            title.SetTextWithoutNotify("");
+            grade.SetValueWithoutNotify(0); grade.RefreshShownValue();
+            progress.value = 0;
+            if (popupPercent != null)
+            {
+                popupPercent.gameObject.SetActive(true);
+                popupPercent.enabled = true;
+                popupPercent.text = "0%";
+            }
+            // Keep the authored progress display visible even before selecting a PDF.
+            progress.gameObject.SetActive(true);
+            ShowPopup(uploadPopup);
+            popupPercent.transform.SetAsLastSibling();
+            popupPercent.ForceMeshUpdate();
+            Message("Select Module");
+        });
+        Bind("UploadModulePopUp/CloseBtn", ClosePopups);
+        Bind("UploadModulePopUp/UploadBtn", () => Run(UploadIntoCurrentFolder));
+        foreach (var graphic in uploadPopup.GetComponentsInChildren<Graphic>(true))
+            graphic.raycastTarget = graphic.GetComponentInParent<Selectable>(true) != null;
+    }
+
+    async Task UploadIntoCurrentFolder()
+    {
+        RequireSelectedFolder();
+        var destination = folders.FirstOrDefault(f => f.Id == currentFolder && f.Owner == TeacherModuleStore.SelectedOwner);
+        if (destination == null) throw new InvalidOperationException("Open a valid folder before uploading a module.");
+        var module = new TeacherPdfModule
+        {
+            Title = TeacherModuleStore.ValidName(title.text),
+            FolderId = destination.Id,
+            Grade = grade.value + 1
+        };
+        string path = await picker.Pick();
+        lifetime.Token.ThrowIfCancellationRequested();
+        if (string.IsNullOrEmpty(path)) { Message("Selection cancelled."); return; }
+        TeacherModuleStore.ValidatePdf(path);
+        progress.gameObject.SetActive(true); Progress(0);
+        try
+        {
+            await store.Save(module, path, lifetime.Token, Progress, destination.Owner);
+            lifetime.Token.ThrowIfCancellationRequested();
+            modules.RemoveAll(m => m.Id == module.Id);
+            modules.Add(module);
+            modules = modules.OrderBy(m => m.Title, StringComparer.OrdinalIgnoreCase).ToList();
+            // Reveal the new module even if the list was previously filtered.
+            search.SetTextWithoutNotify("");
+            filter.SetValueWithoutNotify(0); filter.RefreshShownValue();
+            RenderModules();
+            title.SetTextWithoutNotify("");
+            Message("Module uploaded successfully.");
+        }
+        catch { progress.gameObject.SetActive(true); throw; }
     }
     async Task SetArchived(bool archived)
     {
@@ -486,6 +576,7 @@ public sealed class TeacherModuleScene : MonoBehaviour
         if (archivePopup != null) archivePopup.SetActive(false);
         if (deletePopup != null) deletePopup.SetActive(false);
         if (deleteFolderPopup != null) deleteFolderPopup.SetActive(false);
+        if (uploadPopup != null) uploadPopup.SetActive(false);
         replacement = null;
         if (modalBlocker != null) modalBlocker.SetActive(false);
         selected = null;

@@ -13,6 +13,7 @@ public sealed class LocalizedVideoPopup : MonoBehaviour
     private static LocalizedVideoPopup activePopup;
     private VideoPlayer introPlayer;
     private AudioSource introAudio;
+    private VideoPopupManager selectedManager;
 
     public void OpenVideo()
     {
@@ -31,6 +32,7 @@ public sealed class LocalizedVideoPopup : MonoBehaviour
         }
 
         activePopup = this;
+        selectedManager = selected;
         ConfigureIntroAudio(selected.videoPlayer);
         selected.OpenVideo();
     }
@@ -43,7 +45,8 @@ public sealed class LocalizedVideoPopup : MonoBehaviour
             player.timeUpdateMode = VideoTimeUpdateMode.DSPTime;
 
         // Only the selected player needs an audio source; do not start ten decoders.
-        AudioSource source = player.gameObject.AddComponent<AudioSource>();
+        AudioSource source = introPlayer == player && introAudio != null
+            ? introAudio : player.gameObject.AddComponent<AudioSource>();
         source.playOnAwake = false;
         source.spatialBlend = 0f;
         source.dopplerLevel = 0f;
@@ -80,5 +83,17 @@ public sealed class LocalizedVideoPopup : MonoBehaviour
             introAudio.mute = true;
         if (activePopup == this)
             activePopup = null;
+    }
+
+    private void LateUpdate()
+    {
+        // Release the click guard if an intro returned to the menu because its
+        // gameplay scene is not available yet. Keep the other menus responsive.
+        if (activePopup == this && selectedManager != null &&
+            !selectedManager.videoPopupPanel.activeSelf)
+        {
+            OnDisable();
+            selectedManager = null;
+        }
     }
 }

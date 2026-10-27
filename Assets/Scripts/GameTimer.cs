@@ -21,6 +21,9 @@ public class GameTimer : MonoBehaviour
     private bool timerRunning = true;
 
     public float ElapsedTime => elapsedTime;
+    // Optional activity-specific scoring on timeout; legacy scenes retain their behavior.
+    public System.Action Expired;
+    public void StopTimer() { timerRunning = false; }
 
     // Colors
     public Color normalColor = Color.white;
@@ -93,6 +96,11 @@ public class GameTimer : MonoBehaviour
 
     void TimeUp()
     {
+        if (Expired != null)
+        {
+            Expired.Invoke();
+            return;
+        }
         Debug.Log("TIME'S UP!");
 
         ScoreManager.CurrentScore = 0;

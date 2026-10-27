@@ -1,0 +1,6 @@
+Final verification:
+- Full project scripts compile with Unity 6000.4.10f1 compiler (two pre-existing SpeechGameManager unused-field warnings).
+- Isolated Unity Play mode: 16 checks passed for drag, snap, replacement, Undo, outside drop, score, saved counts, repeated submission and timeout partial scoring.
+- Every unrelated scene component unchanged from backup; UI images, positions and sizes unchanged.
+- Build settings differ from pre-task backup only by appending MathGame3Level1.
+- Cloud persistence uses existing ScoreManager; live Firebase writes were not performed by tests.

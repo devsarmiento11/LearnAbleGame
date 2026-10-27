@@ -80,6 +80,15 @@ public class VideoPopupManager : MonoBehaviour
         videoPlayer.Stop();
 
         // Go to next scene
+        if (!Application.CanStreamedLevelBeLoaded(nextSceneName))
+        {
+            // A menu can be configured before its gameplay scenes are supplied.
+            // Return control instead of leaving a stopped video over the buttons.
+            Debug.LogWarning("VideoPopupManager: Gameplay scene is unavailable: " + nextSceneName, this);
+            alreadyPlaying = false;
+            videoPopupPanel.SetActive(false);
+            yield break;
+        }
         SceneManager.LoadScene(nextSceneName);
     }
 }

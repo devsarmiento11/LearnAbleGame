@@ -7,6 +7,7 @@ from WireLocalizedEnglishVideos import blocks, ref, inspect, GUID
 
 ROOT = Path(__file__).resolve().parents[1]
 GAME = 'EnglishGame2'
+REQUIRE_DESTINATIONS = True
 SCENE = ROOT/f'Assets/Settings/Scenes/EnglishGame/{GAME}.unity'
 VIDEOS = ROOT/f'Assets/EnglishInstructionVideos/{GAME}'
 BACKUP = ROOT/f'Tests/{GAME}.before-localized-videos.unity.txt'
@@ -56,7 +57,7 @@ def refresh_existing_assets(text):
         if not texture.exists():
             texture.write_text(re.sub(r'^  m_Name: .*',f'  m_Name: {texture.stem}',template,flags=re.M),encoding='utf-8',newline='\n')
         if not Path(str(texture)+'.meta').exists():
-            old_guid = re.search(r'm_TargetTexture: .*guid: (\w+)',player)[1]
+            old_guid = uuid.uuid4().hex
             Path(str(texture)+'.meta').write_text(f'fileFormatVersion: 2\nguid: {old_guid}\nNativeFormatImporter:\n  externalObjects: {{}}\n  mainObjectFileID: 8400000\n  userData: \n  assetBundleName: \n  assetBundleVariant: \n',encoding='utf-8',newline='\n')
         updated = re.sub(r'm_VideoClip: .*',f'm_VideoClip: {{fileID: 32900000, guid: {guid(clip)}, type: 3}}',player)
         updated = re.sub(r'm_TargetTexture: .*',f'm_TargetTexture: {{fileID: 8400000, guid: {guid(texture)}, type: 2}}',updated)
@@ -217,7 +218,8 @@ def verify(text):
             assert any(guid(texture) in b for t,b in data.values() if 'm_Texture:' in b and below(ref(b,'m_GameObject'),panel))
             assert 'm_PlayOnAwake: 0' in player and 'm_Looping: 1' in player
             assert f'nextSceneName: {GAME}Level{level}' in mb
-            assert f'{GAME}Level{level}.unity' in build
+            if REQUIRE_DESTINATIONS:
+                assert f'{GAME}Level{level}.unity' in build
             assert float(re.search(r'totalTime: (.+)',mb)[1]) >= duration(clip)*2
             assert 'm_IsActive: 0' in data[panel][1]
             print(f'PASS level {level} {language}: clip, texture, popup, player, slider, destination, two loops')

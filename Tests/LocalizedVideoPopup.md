@@ -145,3 +145,72 @@ The saved language selects the matching English or Tagalog panel for every level
 All clips fit two passes in the 18-second intro. Its game and instruction scenes
 are registered for loading. Tests/WireScienceGame1Videos.py validates all ten
 videos, 15 existing video button calls, destinations and unchanged UI properties.
+
+ScienceGame2 uses its own unchanged popup appearance and the same saved-language
+router with silent-first-loop and audible-second-loop behavior. Its ten render
+textures are in Assets/ScienceInsctructionvideos/ScienceGame2 and match Game1's
+settings. All clips fit two passes in the 18-second intro. Run
+Tests/WireScienceGame2Videos.py to validate all ten clips, five level button
+callbacks, scene references, destinations and unchanged UI properties.
+
+ScienceGame3 uses its own unchanged popup appearance and the same saved-language
+router with silent-first-loop and audible-second-loop behavior. Its ten textures
+are in Assets/ScienceInsctructionvideos/ScienceGame3 and match EnglishGame1's
+settings. All clips fit two passes in the 18-second intro. Run
+Tests/WireScienceGame3Videos.py to validate ten videos, eight existing video
+button callbacks, scene references, destinations and unchanged UI properties.
+
+ScienceGame4 reused a configured ScienceGame2 scene. Its ten existing popup
+panels now reference ScienceGame4's own clips and unique render textures in
+Assets/ScienceInsctructionvideos/ScienceGame4. Texture settings match EnglishGame1.
+The shared router retains saved-language selection and second-loop audio, and
+all clips fit two passes within 18 seconds. Level destinations and progress keys
+now target Game4. Its six game scenes are registered; no Game4 instruction scene
+exists, so Back returns to ScienceGameScene. Validate with
+Tests/WireScienceGame4Videos.py, which compares the original visual properties.
+
+ScienceGame6 uses its own clips and ten unique render textures in
+Assets/ScienceInsctructionvideos/ScienceGame6, with EnglishGame1's settings.
+Its copied Game2 popup layout is preserved, and all seven existing video button
+calls route through saved-language selection with audio starting on loop two.
+The user confirmed that ScienceGame6Level1–5 are still being created. Destinations
+are reserved for those names; do not substitute another game's content. Until
+the destination is available in the build, the intro closes and releases input
+after its 18-second timer. Add the new level scenes to Build Settings when ready.
+Tests/WireScienceGame6Videos.py reports these pending destinations separately.
+
+ScienceGame7 uses its own clips and ten unique render textures in
+Assets/ScienceInsctructionvideos/ScienceGame7, matching EnglishGame1's settings.
+Its copied ScienceGame2 popup appearance is preserved; destinations, instruction
+link and progress identifier now target Game7. All 17 existing video button
+calls use the saved-language router and second-loop audio. Clips fit two passes
+within the 18-second intro. All six game scenes and the instruction scene are
+registered. Tests/WireScienceGame7Videos.py verifies the connections and compares
+the original visual properties and object hierarchy.
+
+ScienceGame5 uses its own clips and ten unique render textures in
+Assets/ScienceInsctructionvideos/ScienceGame5, matching EnglishGame1's settings.
+Its copied ScienceGame2 popup appearance is preserved; destinations, instruction
+link and progress identifier now target Game5. All seven existing video button
+calls use the saved-language router and second-loop audio. Clips fit two passes
+within the 18-second intro. All six game scenes and the instruction scene are
+registered. Tests/WireScienceGame5Videos.py verifies the connections and compares
+the original visual properties and object hierarchy.
+
+ScienceGame8 uses its own clips and ten unique render textures in
+Assets/ScienceInsctructionvideos/ScienceGame8, matching EnglishGame1's settings.
+Its copied ScienceGame2 popup appearance is preserved; destinations, instruction
+link and progress identifier now target Game8. All 13 existing video button
+calls use the saved-language router and second-loop audio. Clips fit two passes
+within the 18-second intro. All six game scenes and the instruction scene are
+registered. Tests/WireScienceGame8Videos.py verifies the connections and compares
+the original visual properties and object hierarchy.
+
+ScienceGame9 uses its own clips and ten unique render textures in
+Assets/ScienceInsctructionvideos/ScienceGame9, matching EnglishGame1's settings.
+Its copied ScienceGame2 popup appearance is preserved; destinations, instruction
+link and progress identifier now target Game9. All five existing video button
+calls use the saved-language router and second-loop audio. Clips fit two passes
+within the 18-second intro. All six game scenes and the instruction scene are
+registered. Tests/WireScienceGame9Videos.py verifies the connections and compares
+the original visual properties and object hierarchy.

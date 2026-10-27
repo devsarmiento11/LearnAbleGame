@@ -524,5 +524,185 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Settings/Scenes/3rdQuarterEnglishGameInstructions/EnglishGame13InstructionScene.unity
     guid: ba88e6d7347387d4db6ff8dd49a73108
+  - enabled: 1
+    path: Assets/Settings/Scenes/2ndQuarterScienceGame/ScienceGame4.unity
+    guid: 26c307e2e2f4e0041894bfeaba51c336
+  - enabled: 1
+    path: Assets/Settings/Scenes/2ndQuarterScienceGame/ScienceGame4Level1.unity
+    guid: 3e17a8e5bd56299418489f8dda4393a3
+  - enabled: 1
+    path: Assets/Settings/Scenes/2ndQuarterScienceGame/ScienceGame4Level2.unity
+    guid: a305a9500690b3b4b9dcaf5116a0899b
+  - enabled: 1
+    path: Assets/Settings/Scenes/2ndQuarterScienceGame/ScienceGame4Level3.unity
+    guid: 5e03e65e64084494d83dd308b1625689
+  - enabled: 1
+    path: Assets/Settings/Scenes/2ndQuarterScienceGame/ScienceGame4Level4.unity
+    guid: 44c1b37390861dd41944889f3465d14e
+  - enabled: 1
+    path: Assets/Settings/Scenes/2ndQuarterScienceGame/ScienceGame4Level5.unity
+    guid: bbbe39a5a15e39841af9eb4759936695
+  - enabled: 1
+    path: Assets/Settings/Scenes/2ndQuarterEnglishGame/2ndQuarterEnglishGameScene.unity
+    guid: 6a84054e4c5c3af43badce89d1aad331
+  - enabled: 1
+    path: Assets/Settings/Scenes/3rdQuarterEnglishGame/3rdQuarterEnglishGameScene.unity
+    guid: ae7bdc8cee5f61547bc45e544c2a2980
+  - enabled: 1
+    path: Assets/Settings/Scenes/2ndQuarterScienceGameInstructions/ScienceGame6InstructionScene.unity
+    guid: 85587a29f399e1041975d84708a22626
+  - enabled: 1
+    path: Assets/Settings/Scenes/2ndQuarterScienceGameInstructions/ScienceGame5InstructionScene.unity
+    guid: 2a46ddd96afe2794482bc887a92fd148
+  - enabled: 1
+    path: Assets/Settings/Scenes/2ndQuarterScienceGameInstructions/ScienceGame4InstructionScene.unity
+    guid: df988865194e9a14ab1474501275457c
+  - enabled: 1
+    path: Assets/Settings/Scenes/2ndQuarterScienceGame/2ndQuarterScienceGameScene.unity
+    guid: fdef1bcedcf8dcf45b67e8602b55d834
+  - enabled: 1
+    path: Assets/Settings/Scenes/3rdQuarterScienceGame/3rdQuarterScienceGameScene.unity
+    guid: 595f8a8a2ea8cce40998a698d7e79108
+  - enabled: 1
+    path: Assets/Settings/Scenes/3rdQuarterScienceGameInstructions/ScienceGame7InstructionScene.unity
+    guid: 337663b464e78ac41a6c972551a4f510
+  - enabled: 1
+    path: Assets/Settings/Scenes/3rdQuarterScienceGameInstructions/ScienceGame8InstructionScene.unity
+    guid: e4de9d5f87ce2e34ba80c9511a0aab01
+  - enabled: 1
+    path: Assets/Settings/Scenes/3rdQuarterScienceGameInstructions/ScienceGame9InstructionScene.unity
+    guid: 9b2d57e2c4a09b94cb1d8199a3f9ba72
+  - enabled: 1
+    path: Assets/Settings/Scenes/3rdQuarterScienceGame/ScienceGame7.unity
+    guid: 6194c8eb2c790084b98b5378abd62178
+  - enabled: 1
+    path: Assets/Settings/Scenes/3rdQuarterScienceGame/ScienceGame7Level1.unity
+    guid: 48d4221eea79cb34182d10661375cd47
+  - enabled: 1
+    path: Assets/Settings/Scenes/3rdQuarterScienceGame/ScienceGame7Level2.unity
+    guid: 93ca353573b9b4e44b373f453644d699
+  - enabled: 1
+    path: Assets/Settings/Scenes/3rdQuarterScienceGame/ScienceGame7Level3.unity
+    guid: 01f1aab5775650547a4adf5ba07ebf6b
+  - enabled: 1
+    path: Assets/Settings/Scenes/3rdQuarterScienceGame/ScienceGame7Level4.unity
+    guid: 6f2ac010f1de4cb48863fc989cc83de0
+  - enabled: 1
+    path: Assets/Settings/Scenes/3rdQuarterScienceGame/ScienceGame7Level5.unity
+    guid: e666b442f29e373439a60f7acad54f58
+  - enabled: 1
+    path: Assets/Settings/Scenes/3rdQuarterScienceGame/ScienceGame8.unity
+    guid: 51c523516276ca3419045e4d8f0b09a5
+  - enabled: 1
+    path: Assets/Settings/Scenes/3rdQuarterScienceGame/ScienceGame8Level1.unity
+    guid: 9186c5f95f4a3384fb47b33aa8b222fd
+  - enabled: 1
+    path: Assets/Settings/Scenes/3rdQuarterScienceGame/ScienceGame8Level2.unity
+    guid: 8acf638deb585194bac5e84aa7c98a22
+  - enabled: 1
+    path: Assets/Settings/Scenes/3rdQuarterScienceGame/ScienceGame8Level3.unity
+    guid: 65206ac46a98b314caffbc539df39961
+  - enabled: 1
+    path: Assets/Settings/Scenes/3rdQuarterScienceGame/ScienceGame8Level4.unity
+    guid: ce27527249bab224cb131035172f68e2
+  - enabled: 1
+    path: Assets/Settings/Scenes/3rdQuarterScienceGame/ScienceGame8Level5.unity
+    guid: 3d5f4d0339aa2b744a3f446918663b39
+  - enabled: 1
+    path: Assets/Settings/Scenes/3rdQuarterScienceGame/ScienceGame9.unity
+    guid: 56aab219110620047b2e637ab840e82d
+  - enabled: 1
+    path: Assets/Settings/Scenes/3rdQuarterScienceGame/ScienceGame9Level1.unity
+    guid: fc985c368323a24488443f9c4db00a06
+  - enabled: 1
+    path: Assets/Settings/Scenes/3rdQuarterScienceGame/ScienceGame9Level2.unity
+    guid: 9354574f5e3c2a3419b5b3da13dcdfe2
+  - enabled: 1
+    path: Assets/Settings/Scenes/3rdQuarterScienceGame/ScienceGame9Level3.unity
+    guid: 694a0e6c5f945f44d9e202e0ff403143
+  - enabled: 1
+    path: Assets/Settings/Scenes/3rdQuarterScienceGame/ScienceGame9Level4.unity
+    guid: 69fd57cfa5f0c4144b9d616da60893da
+  - enabled: 1
+    path: Assets/Settings/Scenes/3rdQuarterScienceGame/ScienceGame9Level5.unity
+    guid: 215b3479fad66b848b7602647077ed1a
+  - enabled: 1
+    path: Assets/Settings/Scenes/2ndQuarterScienceGame/ScienceGame6.unity
+    guid: e88209cdb28472c45b9c2502930eb8e9
+  - enabled: 1
+    path: Assets/Settings/Scenes/2ndQuarterScienceGame/ScienceGame5.unity
+    guid: a6e2e287aa50e0443a5a12c00253db4e
+  - enabled: 1
+    path: Assets/Settings/Scenes/2ndQuarterScienceGame/ScienceGame5Level1.unity
+    guid: 939ae14457e0890469b30795ad4d54a3
+  - enabled: 1
+    path: Assets/Settings/Scenes/2ndQuarterScienceGame/ScienceGame5Level2.unity
+    guid: dff9f69a6bacf0444b8dc5b095673ab3
+  - enabled: 1
+    path: Assets/Settings/Scenes/2ndQuarterScienceGame/ScienceGame5Level3.unity
+    guid: 9a814f8e0e5f0a449a185d9935453797
+  - enabled: 1
+    path: Assets/Settings/Scenes/2ndQuarterScienceGame/ScienceGame5Level4.unity
+    guid: c15e01a0b810f9e468004811b5bac1e4
+  - enabled: 1
+    path: Assets/Settings/Scenes/2ndQuarterScienceGame/ScienceGame5Level5.unity
+    guid: c2a63a2e3683fcc46bc89efcf1c6f71a
+  - enabled: 1
+    path: Assets/Settings/Scenes/EnglishUnlock2ndQuarterFolder/EnglishUnlock2ndQtr.unity
+    guid: bbf39216f4717534987f2113803a610f
+  - enabled: 1
+    path: Assets/Settings/Scenes/EnglishUnlock2ndQuarterFolder/EnglishUnlockGame10.unity
+    guid: 5142fbaffa8ce91429b32a6335f9ab44
+  - enabled: 1
+    path: Assets/Settings/Scenes/EnglishUnlock2ndQuarterFolder/EnglishUnlockGame6.unity
+    guid: 17bdb8bfaf04b204eb8f3e18911b40d3
+  - enabled: 1
+    path: Assets/Settings/Scenes/EnglishUnlock2ndQuarterFolder/EnglishUnlockGame7.unity
+    guid: 38cdd013498ea6c43b716b5a8959b264
+  - enabled: 1
+    path: Assets/Settings/Scenes/EnglishUnlock2ndQuarterFolder/EnglishUnlockGame8.unity
+    guid: c75c305e2a1c3bd4dae5605cf1f415bb
+  - enabled: 1
+    path: Assets/Settings/Scenes/EnglishUnlock2ndQuarterFolder/EnglishUnlockGame9.unity
+    guid: 132b4080ddeed1744b3add88fd217af0
+  - enabled: 1
+    path: Assets/Settings/Scenes/EnglishUnlock3rdQuarterFolder/EnglishUnlock3rdQtr.unity
+    guid: 11ef73b43dea8b94d9f8c88f6ad49a03
+  - enabled: 1
+    path: Assets/Settings/Scenes/EnglishUnlock3rdQuarterFolder/EnglishUnlockGame11.unity
+    guid: 919910517631da9479b9c5af5e3ad5c7
+  - enabled: 1
+    path: Assets/Settings/Scenes/EnglishUnlock3rdQuarterFolder/EnglishUnlockGame12.unity
+    guid: 9332677226f25e048bf9425490ff7b7b
+  - enabled: 1
+    path: Assets/Settings/Scenes/EnglishUnlock3rdQuarterFolder/EnglishUnlockGame13.unity
+    guid: 33ac0db8356a9d846bf1cf551224544f
+  - enabled: 1
+    path: Assets/Settings/Scenes/ScienceUnlock2ndQuarterFolder/ScienceUnlock2ndQtr.unity
+    guid: 4d2bf760bac65984381d751186482f76
+  - enabled: 1
+    path: Assets/Settings/Scenes/ScienceUnlock2ndQuarterFolder/ScienceUnlockGame4.unity
+    guid: 638c94f25603147408082eb88042126f
+  - enabled: 1
+    path: Assets/Settings/Scenes/ScienceUnlock2ndQuarterFolder/ScienceUnlockGame5.unity
+    guid: eed29fc5b6b84de4f8fb8a16366bcce5
+  - enabled: 1
+    path: Assets/Settings/Scenes/ScienceUnlock2ndQuarterFolder/ScienceUnlockGame6.unity
+    guid: 9a62d50d7d28a244b9e82694e34c802f
+  - enabled: 1
+    path: Assets/Settings/Scenes/ScienceUnlock3rdQuarterFolder/ScienceUnlock3rdQtr.unity
+    guid: 14372b5e1fa367944bfe872b586286bd
+  - enabled: 1
+    path: Assets/Settings/Scenes/ScienceUnlock3rdQuarterFolder/ScienceUnlockGame7.unity
+    guid: 564fe99597828d64caba6455b548cd4a
+  - enabled: 1
+    path: Assets/Settings/Scenes/ScienceUnlock3rdQuarterFolder/ScienceUnlockGame8.unity
+    guid: 5e1ca5c891d833242b2c08250d8e61da
+  - enabled: 1
+    path: Assets/Settings/Scenes/ScienceUnlock3rdQuarterFolder/ScienceUnlockGame9.unity
+    guid: ff6a9f241a3f77d46a2165609f4ff048
+  - enabled: 1
+    path: Assets/Settings/Scenes/2ndQuarterMathGame/MathGame3Level1.unity
+    guid: a4d9db7124d6a0445ab3ebca6f4583d3
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

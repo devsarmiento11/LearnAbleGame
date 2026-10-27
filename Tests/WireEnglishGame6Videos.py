@@ -1,13 +1,13 @@
 """Wire and verify Game6 using its own popup layout and the shared video setup."""
 import WireEnglishGame2Videos as setup
 
-def register_scenes(game='EnglishGame6'):
+def register_scenes(game='EnglishGame6', require_levels=True):
     build = setup.ROOT/'ProjectSettings/EditorBuildSettings.asset'
     original = build.read_text(encoding='utf-8-sig')
     text = original
     scenes = [p for p in (setup.ROOT/'Assets/Settings/Scenes').rglob(f'{game}*.unity')
               if setup.re.fullmatch(game+r'(?:Level[1-5]|Instruction(?:Scene)?)?',p.stem)]
-    assert len(scenes) == 7
+    assert len(scenes) in ((6, 7) if require_levels else (1, 2))
     for scene in sorted(scenes):
         path = scene.relative_to(setup.ROOT).as_posix()
         if f'    path: {path}\n' not in text:

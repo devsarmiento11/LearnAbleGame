@@ -29,7 +29,8 @@ public final class PdfPickerActivity extends Activity {
         if (state != null) return;
         Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
         intent.addCategory(Intent.CATEGORY_OPENABLE);
-        intent.setType("application/pdf");
+        intent.setType("*/*");
+        intent.putExtra(Intent.EXTRA_MIME_TYPES, new String[]{"application/pdf", "video/*", "image/*"});
         intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
         try { startActivityForResult(intent, 71); }
         catch (Exception error) { complete("ERROR:No document picker is available on this phone."); }
@@ -43,30 +44,27 @@ public final class PdfPickerActivity extends Activity {
         new Thread(() -> {
             File target = null;
             try {
-                String name = "module.pdf";
+                String name = null;
                 try (Cursor cursor = getContentResolver().query(uri, new String[]{OpenableColumns.DISPLAY_NAME}, null, null, null)) {
                     if (cursor != null && cursor.moveToFirst()) name = cursor.getString(0);
                 }
-                if (name == null || !name.toLowerCase(java.util.Locale.ROOT).endsWith(".pdf"))
-                    throw new Exception("Select a PDF file.");
-                name = name.replaceAll("[^\\p{L}\\p{N} ._()-]", "_");
-                if (name.length() > 150) name = name.substring(0, 146) + ".pdf";
+                name = ModuleFiles.cleanName(name);
                 File directory = new File(getCacheDir(), "module-imports/" + UUID.randomUUID());
                 if (!directory.mkdirs()) throw new Exception("Unable to prepare the selected file.");
                 target = new File(directory, name);
                 try (InputStream input = getContentResolver().openInputStream(uri); FileOutputStream output = new FileOutputStream(target)) {
-                    if (input == null) throw new Exception("Unable to read the selected PDF.");
+                    if (input == null) throw new Exception("Unable to read the selected file.");
                     byte[] buffer = new byte[65536]; long size = 0; int count;
                     while ((count = input.read(buffer)) != -1) {
                         size += count;
-                        if (size > 25L * 1024 * 1024) throw new Exception("Select a PDF no larger than 25 MB.");
+                        if (size > 25L * 1024 * 1024) throw new Exception("Select a module file no larger than 25 MB.");
                         output.write(buffer, 0, count);
                     }
                 }
                 complete(target.getAbsolutePath());
             } catch (Exception error) {
                 if (target != null) target.delete();
-                complete("ERROR:" + (error.getMessage() == null ? "Unable to read the PDF." : error.getMessage()));
+                complete("ERROR:" + (error.getMessage() == null ? "Unable to read the file." : error.getMessage()));
             }
         }, "LearnAble PDF import").start();
     }
@@ -79,12 +77,12 @@ public final class PdfPickerActivity extends Activity {
             try {
                 File file = new File(path).getCanonicalFile();
                 File directory = new File(activity.getCacheDir(), "module-pdfs").getCanonicalFile();
-                if (!directory.equals(file.getParentFile())) throw new Exception("Invalid PDF path.");
+                if (!directory.equals(file.getParentFile())) throw new Exception("Invalid module path.");
                 Uri uri = new Uri.Builder().scheme("content").authority(activity.getPackageName() + ".modulepdfs").appendPath(file.getName()).build();
-                Intent intent = new Intent(Intent.ACTION_VIEW).setDataAndType(uri, "application/pdf");
+                Intent intent = new Intent(Intent.ACTION_VIEW).setDataAndType(uri, ModuleFiles.mime(path));
                 intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-                activity.startActivity(Intent.createChooser(intent, "Open module PDF"));
-            } catch (Exception error) { Toast.makeText(activity, "Install a PDF reader to open this module.", Toast.LENGTH_LONG).show(); }
+                activity.startActivity(Intent.createChooser(intent, "Open module"));
+            } catch (Exception error) { Toast.makeText(activity, "Install an app that can open this module file.", Toast.LENGTH_LONG).show(); }
         });
     }
 }

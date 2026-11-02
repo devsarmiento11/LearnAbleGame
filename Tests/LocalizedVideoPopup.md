@@ -214,3 +214,51 @@ calls use the saved-language router and second-loop audio. Clips fit two passes
 within the 18-second intro. All six game scenes and the instruction scene are
 registered. Tests/WireScienceGame9Videos.py verifies the connections and compares
 the original visual properties and object hierarchy.
+
+MathGame1 uses the same saved-language router and second-loop audio. Its two
+original popup templates are preserved per level, with ten separate localized
+panels, clips, players, sliders and render textures. Textures live in
+Assets/MathInsctructionvideos/MathGame1 and match EnglishGame1's settings.
+Intro duration is at least 18 seconds, extended when two full passes need longer.
+All gameplay and instruction scenes are registered. Tests/WireMathGame1Videos.py
+checks all ten videos, 11 existing video button calls, destinations, and unchanged
+original UI properties. The setup helper now supports multiple popup templates.
+
+MathGame2 uses the same saved-language router and second-loop audio, preserving
+its original popup appearance. Its ten existing render textures in
+Assets/MathInsctructionvideos/MathGame2 match EnglishGame1's settings and are reused.
+All clips fit two passes in the 18-second intro. Its menu and five gameplay
+scenes are registered. Tests/WireMathGame2Videos.py validates ten videos, the
+five existing level button calls, destinations and unchanged UI properties.
+
+MathGame3's copied ScienceGame4 popup appearance is preserved, with references
+updated to MathGame3. Its ten unique render textures in
+Assets/MathInsctructionvideos/MathGame3 match EnglishGame1's settings. The shared
+saved-language router keeps the first loop silent and enables audio at loop two.
+English intros last 18 seconds; Tagalog intros last 22.396 seconds to allow both
+complete passes. All seven scenes are registered. Tests/WireMathGame3Videos.py
+validates ten videos, nine existing video button calls and unchanged visuals.
+
+MathGame4's copied ScienceGame4 popup appearance is preserved, with references
+updated to MathGame4. Its ten unique render textures in
+Assets/MathInsctructionvideos/MathGame4 match EnglishGame1's settings. The shared
+saved-language router keeps the first loop silent and enables audio at loop two.
+English intros last 22.906 seconds; Tagalog intros last 24.718 seconds, allowing
+two complete passes. All seven scenes are registered. Tests/WireMathGame4Videos.py
+validates ten videos, 16 existing video button calls and unchanged visuals.
+
+MathGame5's copied ScienceGame4 popup appearance is preserved, with references
+updated to MathGame5. Its ten unique render textures in
+Assets/MathInsctructionvideos/MathGame5 match EnglishGame1's settings. The shared
+saved-language router keeps the first loop silent and enables audio at loop two.
+All clips fit two passes in the 18-second intro. All seven scenes are registered.
+Tests/WireMathGame5Videos.py validates ten videos, five existing video button
+calls, correct destinations and unchanged visuals.
+
+MathGame6's copied ScienceGame4 popup appearance is preserved, with references
+updated to MathGame6. Its ten unique render textures in
+Assets/MathInsctructionvideos/MathGame6 match EnglishGame1's settings. The shared
+saved-language router keeps the first loop silent and enables audio at loop two.
+All clips fit two passes in the 18-second intro. All seven scenes are registered.
+Tests/WireMathGame6Videos.py validates ten videos, seven existing video button
+calls, correct destinations and unchanged visuals.

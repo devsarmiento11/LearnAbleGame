@@ -19,11 +19,20 @@ public class GameTimer : MonoBehaviour
     private float currentTime;
     private float elapsedTime;
     private bool timerRunning = true;
+    private const float AudioWarningTime = 10f;
+    private AudioSource timerAudioSource;
+    private TimerAudioSettings timerAudioSettings;
+    private bool audioPaused;
 
     public float ElapsedTime => elapsedTime;
     // Optional activity-specific scoring on timeout; legacy scenes retain their behavior.
     public System.Action Expired;
-    public void StopTimer() { timerRunning = false; }
+    public void StopTimer()
+    {
+        timerRunning = false;
+        if (timerAudioSource != null)
+            timerAudioSource.Stop();
+    }
 
     // Colors
     public Color normalColor = Color.white;
@@ -34,6 +43,7 @@ public class GameTimer : MonoBehaviour
         ScoreManager.BeginActivity();
         currentTime = startingTime;
         elapsedTime = 0f;
+        InitializeTimerAudio();
 
         // Start with normal color
         if (timerText != null)
@@ -59,7 +69,7 @@ public class GameTimer : MonoBehaviour
 
             UpdateTimerDisplay();
 
-            timerRunning = false;
+            StopTimer();
 
             TimeUp();
 
@@ -67,6 +77,73 @@ public class GameTimer : MonoBehaviour
         }
 
         UpdateTimerDisplay();
+        UpdateTimerAudio();
+    }
+
+    private void InitializeTimerAudio()
+    {
+        timerAudioSettings = Resources.Load<TimerAudioSettings>("TimerAudioSettings");
+        if (timerAudioSettings == null)
+        {
+            Debug.LogWarning("TimerAudioSettings is missing from Resources.", this);
+            return;
+        }
+
+        // A dedicated source keeps timer loops separate from other game sounds.
+        timerAudioSource = gameObject.AddComponent<AudioSource>();
+        timerAudioSource.playOnAwake = false;
+        timerAudioSource.loop = true;
+        timerAudioSource.spatialBlend = 0f;
+        UpdateTimerAudio();
+    }
+
+    private void UpdateTimerAudio()
+    {
+        if (timerAudioSource == null || !timerRunning || currentTime <= 0f)
+            return;
+
+        timerAudioSource.volume = Mathf.Clamp01(PlayerPrefs.GetFloat("SFXVolume", 1f));
+        timerAudioSource.mute = !SFXToggle.IsSFXOn();
+
+        if (Time.timeScale == 0f)
+        {
+            if (!audioPaused)
+            {
+                timerAudioSource.Pause();
+                audioPaused = true;
+            }
+            return;
+        }
+
+        AudioClip clip = currentTime <= AudioWarningTime
+            ? timerAudioSettings.lastTenSeconds
+            : timerAudioSettings.normalCountdown;
+        if (timerAudioSource.clip != clip)
+        {
+            timerAudioSource.Stop();
+            timerAudioSource.clip = clip;
+            audioPaused = false;
+        }
+
+        if (audioPaused)
+        {
+            timerAudioSource.UnPause();
+            audioPaused = false;
+        }
+        if (clip != null && !timerAudioSource.isPlaying)
+            timerAudioSource.Play();
+    }
+
+    private void OnEnable()
+    {
+        UpdateTimerAudio();
+    }
+
+    private void OnDisable()
+    {
+        if (timerAudioSource != null)
+            timerAudioSource.Stop();
+        audioPaused = false;
     }
 
     public int GetElapsedSeconds()

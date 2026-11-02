@@ -1,0 +1,1521 @@
+fileFormatVersion: 2
+guid: e694ab6bd5f8e4e48b85a63c3dd85984
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3140184539788861240
+    second: DownloadBtnIcon_0
+  - first:
+      213: -2320558457765186023
+    second: DownloadBtnIcon_1
+  - first:
+      213: 7984687976238183387
+    second: DownloadBtnIcon_2
+  - first:
+      213: -3580541612634980862
+    second: DownloadBtnIcon_3
+  - first:
+      213: -7147939989105043749
+    second: DownloadBtnIcon_4
+  - first:
+      213: -1437606895336701695
+    second: DownloadBtnIcon_5
+  - first:
+      213: -4013716992319163289
+    second: DownloadBtnIcon_6
+  - first:
+      213: 7669642564935885077
+    second: DownloadBtnIcon_7
+  - first:
+      213: 1111945399586435165
+    second: DownloadBtnIcon_8
+  - first:
+      213: 1762327188390411644
+    second: DownloadBtnIcon_9
+  - first:
+      213: -1262609560485483470
+    second: DownloadBtnIcon_10
+  - first:
+      213: 3884515019435686126
+    second: DownloadBtnIcon_11
+  - first:
+      213: -4215973542979374221
+    second: DownloadBtnIcon_12
+  - first:
+      213: 7984413727862493003
+    second: DownloadBtnIcon_13
+  - first:
+      213: 5908146424815209085
+    second: DownloadBtnIcon_14
+  - first:
+      213: -5362785775568792078
+    second: DownloadBtnIcon_15
+  - first:
+      213: 8250264106807329512
+    second: DownloadBtnIcon_16
+  - first:
+      213: -7745293179426903552
+    second: DownloadBtnIcon_17
+  - first:
+      213: 5911157429330968590
+    second: DownloadBtnIcon_18
+  - first:
+      213: -1884426862131747029
+    second: DownloadBtnIcon_19
+  - first:
+      213: 643472706658118067
+    second: DownloadBtnIcon_20
+  - first:
+      213: -1552786899314116638
+    second: DownloadBtnIcon_21
+  - first:
+      213: 6532190355923171216
+    second: DownloadBtnIcon_22
+  - first:
+      213: 806033811217221427
+    second: DownloadBtnIcon_23
+  - first:
+      213: -6333497808770259115
+    second: DownloadBtnIcon_24
+  - first:
+      213: 8384875482058123660
+    second: DownloadBtnIcon_25
+  - first:
+      213: 8682659259633788037
+    second: DownloadBtnIcon_26
+  - first:
+      213: -4838045410333791705
+    second: DownloadBtnIcon_27
+  - first:
+      213: -3049530361089694085
+    second: DownloadBtnIcon_28
+  - first:
+      213: 3954927142675486846
+    second: DownloadBtnIcon_29
+  - first:
+      213: -1241849930503554718
+    second: DownloadBtnIcon_30
+  - first:
+      213: 7709982239848948399
+    second: DownloadBtnIcon_31
+  - first:
+      213: -1303388933558913079
+    second: DownloadBtnIcon_32
+  - first:
+      213: -8106640151915555918
+    second: DownloadBtnIcon_33
+  - first:
+      213: 5160582207395168968
+    second: DownloadBtnIcon_34
+  - first:
+      213: -5347916792908431488
+    second: DownloadBtnIcon_35
+  - first:
+      213: 8404980243214475382
+    second: DownloadBtnIcon_36
+  - first:
+      213: -9209053324649277907
+    second: DownloadBtnIcon_37
+  - first:
+      213: 5419848859598162412
+    second: DownloadBtnIcon_38
+  - first:
+      213: -7266875179220922814
+    second: DownloadBtnIcon_39
+  - first:
+      213: 7442761891832622506
+    second: DownloadBtnIcon_40
+  - first:
+      213: -553113430918690426
+    second: DownloadBtnIcon_41
+  - first:
+      213: 1174623007602966058
+    second: DownloadBtnIcon_42
+  - first:
+      213: -2937669641594590085
+    second: DownloadBtnIcon_43
+  - first:
+      213: 1337389090958291307
+    second: DownloadBtnIcon_44
+  - first:
+      213: -9042307278682679257
+    second: DownloadBtnIcon_45
+  - first:
+      213: -2808645559648144204
+    second: DownloadBtnIcon_46
+  - first:
+      213: 9052055328828693654
+    second: DownloadBtnIcon_47
+  - first:
+      213: 7417312167996264768
+    second: DownloadBtnIcon_48
+  - first:
+      213: -7073117248664445104
+    second: DownloadBtnIcon_49
+  - first:
+      213: 7157341170483347596
+    second: DownloadBtnIcon_50
+  - first:
+      213: 4861748559059245100
+    second: DownloadBtnIcon_51
+  - first:
+      213: 6536484175265055037
+    second: DownloadBtnIcon_52
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DownloadBtnIcon_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 2170
+        height: 725
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c026b86cc2db64d0800000000000000
+      internalID: -3140184539788861240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DownloadBtnIcon_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 258
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 916b064a068bbcfd0800000000000000
+      internalID: -2320558457765186023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DownloadBtnIcon_2
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 23
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd37202e86f4fce60800000000000000
+      internalID: 7984687976238183387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DownloadBtnIcon_3
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 31
+        width: 54
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20e3363bf5c5f4ec0800000000000000
+      internalID: -3580541612634980862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DownloadBtnIcon_4
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 15
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd69599837a6dcc90800000000000000
+      internalID: -7147939989105043749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DownloadBtnIcon_5
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 17
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 101cdcc35289c0ce0800000000000000
+      internalID: -1437606895336701695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DownloadBtnIcon_6
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 13
+        width: 24
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 764fddb39a96c48c0800000000000000
+      internalID: -4013716992319163289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DownloadBtnIcon_7
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 9
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 511283df64b007a60800000000000000
+      internalID: 7669642564935885077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DownloadBtnIcon_8
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 33
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d50baf7137c6e6f00800000000000000
+      internalID: 1111945399586435165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DownloadBtnIcon_9
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 21
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7df50a9d3b057810800000000000000
+      internalID: 1762327188390411644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DownloadBtnIcon_10
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 25
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23c20495b4f4a7ee0800000000000000
+      internalID: -1262609560485483470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DownloadBtnIcon_11
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 21
+        width: 47
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee8322244d198e530800000000000000
+      internalID: 3884515019435686126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DownloadBtnIcon_12
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 39
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 373f44c566add75c0800000000000000
+      internalID: -4215973542979374221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DownloadBtnIcon_13
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 33
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4f0ff47bf55ece60800000000000000
+      internalID: 7984413727862493003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DownloadBtnIcon_14
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 38
+        width: 27
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7aca14eed3fdf150800000000000000
+      internalID: 5908146424815209085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DownloadBtnIcon_15
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 39
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f554b810ce8395b0800000000000000
+      internalID: -5362785775568792078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DownloadBtnIcon_16
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 7
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e2086d4e73de7270800000000000000
+      internalID: 8250264106807329512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DownloadBtnIcon_17
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 39
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00ae00fb3e0338490800000000000000
+      internalID: -7745293179426903552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DownloadBtnIcon_18
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 45
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e000fa20d56a80250800000000000000
+      internalID: 5911157429330968590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DownloadBtnIcon_19
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 17
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b27ee65c0cb29d5e0800000000000000
+      internalID: -1884426862131747029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DownloadBtnIcon_20
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 31
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b9240774031ee800800000000000000
+      internalID: 643472706658118067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DownloadBtnIcon_21
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 53
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e77086ca84637ae0800000000000000
+      internalID: -1552786899314116638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DownloadBtnIcon_22
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 32
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 097780a058007aa50800000000000000
+      internalID: 6532190355923171216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DownloadBtnIcon_23
+      rect:
+        serializedVersion: 2
+        x: 962
+        y: 41
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3378e821b7b9f2b00800000000000000
+      internalID: 806033811217221427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DownloadBtnIcon_24
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 23
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 557a88a9c45ea18a0800000000000000
+      internalID: -6333497808770259115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DownloadBtnIcon_25
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 53
+        width: 21
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c89e4f173df0d5470800000000000000
+      internalID: 8384875482058123660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DownloadBtnIcon_26
+      rect:
+        serializedVersion: 2
+        x: 1031
+        y: 29
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5846a3c08900f7870800000000000000
+      internalID: 8682659259633788037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DownloadBtnIcon_27
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 53
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72a68d5155fcbdcb0800000000000000
+      internalID: -4838045410333791705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DownloadBtnIcon_28
+      rect:
+        serializedVersion: 2
+        x: 1059
+        y: 18
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b76ea7f2b44eda5d0800000000000000
+      internalID: -3049530361089694085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DownloadBtnIcon_29
+      rect:
+        serializedVersion: 2
+        x: 1079
+        y: 25
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7819bb3849b2e630800000000000000
+      internalID: 3954927142675486846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DownloadBtnIcon_30
+      rect:
+        serializedVersion: 2
+        x: 1097
+        y: 31
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 269fdfb511014cee0800000000000000
+      internalID: -1241849930503554718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DownloadBtnIcon_31
+      rect:
+        serializedVersion: 2
+        x: 1107
+        y: 47
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa264c67ffb5ffa60800000000000000
+      internalID: 7709982239848948399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DownloadBtnIcon_32
+      rect:
+        serializedVersion: 2
+        x: 1153
+        y: 13
+        width: 74
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c7bb0babae69ede0800000000000000
+      internalID: -1303388933558913079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DownloadBtnIcon_33
+      rect:
+        serializedVersion: 2
+        x: 1226
+        y: 20
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b3972f8bbd6f7f80800000000000000
+      internalID: -8106640151915555918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DownloadBtnIcon_34
+      rect:
+        serializedVersion: 2
+        x: 1337
+        y: 18
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c28df9fc221e9740800000000000000
+      internalID: 5160582207395168968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DownloadBtnIcon_35
+      rect:
+        serializedVersion: 2
+        x: 1390
+        y: 31
+        width: 52
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08fb856e20268c5b0800000000000000
+      internalID: -5347916792908431488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DownloadBtnIcon_36
+      rect:
+        serializedVersion: 2
+        x: 1462
+        y: 24
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 670a9fceffc74a470800000000000000
+      internalID: 8404980243214475382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DownloadBtnIcon_37
+      rect:
+        serializedVersion: 2
+        x: 1513
+        y: 25
+        width: 13
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2656aafaced23080800000000000000
+      internalID: -9209053324649277907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DownloadBtnIcon_38
+      rect:
+        serializedVersion: 2
+        x: 1515
+        y: 53
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce987ac72db273b40800000000000000
+      internalID: 5419848859598162412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DownloadBtnIcon_39
+      rect:
+        serializedVersion: 2
+        x: 1549
+        y: 53
+        width: 9
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24e0f6ba68fd62b90800000000000000
+      internalID: -7266875179220922814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DownloadBtnIcon_40
+      rect:
+        serializedVersion: 2
+        x: 1549
+        y: 38
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aad6f76d1800a4760800000000000000
+      internalID: 7442761891832622506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DownloadBtnIcon_41
+      rect:
+        serializedVersion: 2
+        x: 1623
+        y: 31
+        width: 28
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 689089dd342f258f0800000000000000
+      internalID: -553113430918690426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DownloadBtnIcon_42
+      rect:
+        serializedVersion: 2
+        x: 1626
+        y: 49
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2efc29e6691d4010800000000000000
+      internalID: 1174623007602966058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DownloadBtnIcon_43
+      rect:
+        serializedVersion: 2
+        x: 1627
+        y: 53
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7c2e41860d4b37d0800000000000000
+      internalID: -2937669641594590085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DownloadBtnIcon_44
+      rect:
+        serializedVersion: 2
+        x: 1670
+        y: 51
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b613d0dda4c5f8210800000000000000
+      internalID: 1337389090958291307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DownloadBtnIcon_45
+      rect:
+        serializedVersion: 2
+        x: 1672
+        y: 32
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72890303075438280800000000000000
+      internalID: -9042307278682679257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DownloadBtnIcon_46
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 20
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b4b13d8ebfa509d0800000000000000
+      internalID: -2808645559648144204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DownloadBtnIcon_47
+      rect:
+        serializedVersion: 2
+        x: 1716
+        y: 23
+        width: 33
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69c140a9c5c5f9d70800000000000000
+      internalID: 9052055328828693654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DownloadBtnIcon_48
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 53
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04199914e169fe660800000000000000
+      internalID: 7417312167996264768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DownloadBtnIcon_49
+      rect:
+        serializedVersion: 2
+        x: 1768
+        y: 36
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05fdaaa565d37dd90800000000000000
+      internalID: -7073117248664445104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DownloadBtnIcon_50
+      rect:
+        serializedVersion: 2
+        x: 1823
+        y: 54
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8040f29fdbf35360800000000000000
+      internalID: 7157341170483347596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DownloadBtnIcon_51
+      rect:
+        serializedVersion: 2
+        x: 1855
+        y: 36
+        width: 29
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c285ef94e86687340800000000000000
+      internalID: 4861748559059245100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DownloadBtnIcon_52
+      rect:
+        serializedVersion: 2
+        x: 1926
+        y: 0
+        width: 244
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d31c2a2c9b146ba50800000000000000
+      internalID: 6536484175265055037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      DownloadBtnIcon_0: -3140184539788861240
+      DownloadBtnIcon_1: -2320558457765186023
+      DownloadBtnIcon_10: -1262609560485483470
+      DownloadBtnIcon_11: 3884515019435686126
+      DownloadBtnIcon_12: -4215973542979374221
+      DownloadBtnIcon_13: 7984413727862493003
+      DownloadBtnIcon_14: 5908146424815209085
+      DownloadBtnIcon_15: -5362785775568792078
+      DownloadBtnIcon_16: 8250264106807329512
+      DownloadBtnIcon_17: -7745293179426903552
+      DownloadBtnIcon_18: 5911157429330968590
+      DownloadBtnIcon_19: -1884426862131747029
+      DownloadBtnIcon_2: 7984687976238183387
+      DownloadBtnIcon_20: 643472706658118067
+      DownloadBtnIcon_21: -1552786899314116638
+      DownloadBtnIcon_22: 6532190355923171216
+      DownloadBtnIcon_23: 806033811217221427
+      DownloadBtnIcon_24: -6333497808770259115
+      DownloadBtnIcon_25: 8384875482058123660
+      DownloadBtnIcon_26: 8682659259633788037
+      DownloadBtnIcon_27: -4838045410333791705
+      DownloadBtnIcon_28: -3049530361089694085
+      DownloadBtnIcon_29: 3954927142675486846
+      DownloadBtnIcon_3: -3580541612634980862
+      DownloadBtnIcon_30: -1241849930503554718
+      DownloadBtnIcon_31: 7709982239848948399
+      DownloadBtnIcon_32: -1303388933558913079
+      DownloadBtnIcon_33: -8106640151915555918
+      DownloadBtnIcon_34: 5160582207395168968
+      DownloadBtnIcon_35: -5347916792908431488
+      DownloadBtnIcon_36: 8404980243214475382
+      DownloadBtnIcon_37: -9209053324649277907
+      DownloadBtnIcon_38: 5419848859598162412
+      DownloadBtnIcon_39: -7266875179220922814
+      DownloadBtnIcon_4: -7147939989105043749
+      DownloadBtnIcon_40: 7442761891832622506
+      DownloadBtnIcon_41: -553113430918690426
+      DownloadBtnIcon_42: 1174623007602966058
+      DownloadBtnIcon_43: -2937669641594590085
+      DownloadBtnIcon_44: 1337389090958291307
+      DownloadBtnIcon_45: -9042307278682679257
+      DownloadBtnIcon_46: -2808645559648144204
+      DownloadBtnIcon_47: 9052055328828693654
+      DownloadBtnIcon_48: 7417312167996264768
+      DownloadBtnIcon_49: -7073117248664445104
+      DownloadBtnIcon_5: -1437606895336701695
+      DownloadBtnIcon_50: 7157341170483347596
+      DownloadBtnIcon_51: 4861748559059245100
+      DownloadBtnIcon_52: 6536484175265055037
+      DownloadBtnIcon_6: -4013716992319163289
+      DownloadBtnIcon_7: 7669642564935885077
+      DownloadBtnIcon_8: 1111945399586435165
+      DownloadBtnIcon_9: 1762327188390411644
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -3,7 +3,7 @@ import re
 import WireEnglishGame2Videos as setup
 from WireEnglishGame6Videos import register_scenes
 
-def wire_copied_science_game(game='ScienceGame4', register=True):
+def wire_copied_science_game(game='ScienceGame4', register=True, source='ScienceGame2'):
     setup.configure(game)
     text = setup.SCENE.read_text(encoding='utf-8-sig')
     backup = setup.ROOT/f'Tests/{game}.before-localized-videos.unity.txt'
@@ -11,8 +11,8 @@ def wire_copied_science_game(game='ScienceGame4', register=True):
         backup.write_text(text,encoding='utf-8',newline='\n')
     instructions = list((setup.ROOT/'Assets/Settings/Scenes').rglob(f'{game}Instruction*.unity'))
     instruction = instructions[0].stem if len(instructions) == 1 else 'ScienceGameScene'
-    updated = text.replace('ScienceGame2Instruction', instruction)
-    updated = updated.replace('ScienceGame2', game)
+    updated = re.sub(source+r'Instruction(?:Scene)?\b',instruction,text)
+    updated = updated.replace(source, game)
     if updated != text:
         setup.SCENE.write_text(updated,encoding='utf-8',newline='\n')
     if register:
@@ -28,7 +28,7 @@ def wire_copied_science_game(game='ScienceGame4', register=True):
         new = after[i][1]
         if 'nextSceneName:' in b or 'm_VideoClip:' in b or 'm_Texture:' in b:
             continue
-        expected = b.replace('ScienceGame2Instruction',instruction).replace('ScienceGame2',game)
+        expected = re.sub(source+r'Instruction(?:Scene)?\b',instruction,b).replace(source,game)
         assert expected == new, ('Unexpected UI change',i)
     print('PASS original UI layout, artwork, button controls and object hierarchy unchanged')
 

@@ -175,16 +175,16 @@ public sealed class TeacherModuleStore
 
     internal static string TransferError(long status, bool uploading, bool connectionError)
     {
-        if (connectionError) return "Cannot reach PDF storage. Check your internet connection and try again.";
+        if (connectionError) return "Cannot reach Module storage. Check your internet connection and try again.";
         if (status == 401) return "Your sign-in expired. Sign in again before uploading a module.";
-        if (status == 403) return "PDF storage access was denied. Ask the administrator to check teacher permissions and Storage setup.";
+        if (status == 403) return "Module storage access was denied. Ask the administrator to check teacher permissions and Storage setup.";
         if (status == 404) return uploading
-            ? "PDF storage has not been set up. Ask the administrator to enable Firebase Storage."
-            : "This PDF is no longer available in storage. Replace the module's PDF and try again.";
-        if (status == 412) return "PDF storage is unavailable. Ask the administrator to check Firebase Storage and billing.";
-        if (status == 413) return "The PDF is too large. Select a PDF no larger than 25 MB.";
-        if (status == 429 || status >= 500) return "PDF storage is temporarily busy. Please try again shortly.";
-        return "The PDF transfer failed (" + status + "). Please try again or contact the administrator.";
+            ? "Module storage has not been set up. Ask the administrator to enable Firebase Storage."
+            : "This file is no longer available in storage. Replace the module file and try again.";
+        if (status == 412) return "Module storage is unavailable. Ask the administrator to check Firebase Storage and billing.";
+        if (status == 413) return "The file is too large. Select a module file no larger than 25 MB.";
+        if (status == 429 || status >= 500) return "Module storage is temporarily busy. Please try again shortly.";
+        return "The module transfer failed (" + status + "). Please try again or contact the administrator.";
     }
 
     async Task Send(UnityWebRequest request, CancellationToken cancellation, Action<float> progress = null)
@@ -229,7 +229,7 @@ public sealed class TeacherModuleStore
         CheckSession(); module.Title = ValidName(module.Title);
         var targetLibrary = LibraryFor(owner);
         if (!string.IsNullOrEmpty(replacement) && string.IsNullOrEmpty(bucket))
-            throw new InvalidOperationException("PDF Storage is not configured yet. You can still create folders.");
+            throw new InvalidOperationException("Module storage is not configured yet. You can still create folders.");
         if (module.Grade < 1 || module.Grade > 6) throw new InvalidOperationException("Select a grade from 1 to 6.");
         if (string.IsNullOrEmpty(module.FolderId)) throw new InvalidOperationException("Create and select a folder first.");
         if (!(await targetLibrary.Collection("folders").Document(module.FolderId).GetSnapshotAsync(Source.Server)).Exists)
@@ -242,20 +242,20 @@ public sealed class TeacherModuleStore
         {
             if (!string.IsNullOrEmpty(replacement))
             {
-                ValidatePdf(replacement);
-                newPath = "teacherModules/" + targetLibrary.Id + "/" + reference.Id + "/" + Guid.NewGuid().ToString("N") + ".pdf";
+                ModuleFile.Validate(replacement);
+                newPath = "teacherModules/" + targetLibrary.Id + "/" + reference.Id + "/" + Guid.NewGuid().ToString("N") + ModuleFile.Extension(replacement);
                 using (var request = new UnityWebRequest("https://firebasestorage.googleapis.com/v0/b/" + Uri.EscapeDataString(bucket) + "/o?name=" + Uri.EscapeDataString(newPath), "POST"))
                 {
                     request.uploadHandler = new UploadHandlerFile(replacement);
                     request.downloadHandler = new DownloadHandlerBuffer();
-                    request.SetRequestHeader("Content-Type", "application/pdf");
+                    request.SetRequestHeader("Content-Type", ModuleFile.ContentType(replacement));
                     request.SetRequestHeader("X-Goog-Upload-Protocol", "raw");
                     await Send(request, cancellation, progress);
                 }
                 module.StoragePath = newPath;
                 module.FileName = Path.GetFileName(replacement);
             }
-            if (string.IsNullOrEmpty(module.StoragePath)) throw new InvalidOperationException("Select a PDF first.");
+            if (string.IsNullOrEmpty(module.StoragePath)) throw new InvalidOperationException("Select a PDF, video, or image first.");
             cancellation.ThrowIfCancellationRequested(); CheckSession();
             module.Revision = expectedRevision + 1;
             await FirebaseFirestore.DefaultInstance.RunTransactionAsync(async transaction =>
@@ -317,10 +317,10 @@ public sealed class TeacherModuleStore
     public async Task<string> Download(TeacherPdfModule module, CancellationToken cancellation)
     {
         CheckSession();
-        if (string.IsNullOrEmpty(bucket)) throw new InvalidOperationException("PDF Storage is not configured yet.");
-        string directory = Path.Combine(Application.temporaryCachePath, "module-pdfs");
+        if (string.IsNullOrEmpty(bucket)) throw new InvalidOperationException("Module storage is not configured yet.");
+        string directory = StudentPdfDownload.DownloadDirectory();
         Directory.CreateDirectory(directory);
-        string path = Path.Combine(directory, Guid.NewGuid().ToString("N") + ".pdf");
+        string path = Path.Combine(directory, Guid.NewGuid().ToString("N") + ModuleFile.Extension(module.StoragePath));
         try
         {
             using (var request = UnityWebRequest.Get(ObjectUrl(module.StoragePath) + "?alt=media"))
@@ -328,7 +328,7 @@ public sealed class TeacherModuleStore
                 request.downloadHandler = new DownloadHandlerFile(path) { removeFileOnAbort = true };
                 await Send(request, cancellation);
             }
-            ValidatePdf(path); return path;
+            ModuleFile.Validate(path); return path;
         }
         catch { if (File.Exists(path)) File.Delete(path); throw; }
     }

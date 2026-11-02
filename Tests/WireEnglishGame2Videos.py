@@ -14,12 +14,13 @@ BACKUP = ROOT/f'Tests/{GAME}.before-localized-videos.unity.txt'
 
 def configure(game):
     global GAME, SCENE, VIDEOS, BACKUP
-    assert re.fullmatch(r'(?:English|Science)Game\d+', game)
+    assert re.fullmatch(r'(?:English|Science|Math)Game\d+', game)
     GAME = game
     matches = list((ROOT/'Assets/Settings/Scenes').rglob(f'{GAME}.unity'))
     assert len(matches) == 1, matches
     SCENE = matches[0]
-    folder = 'ScienceInsctructionvideos' if GAME.startswith('Science') else 'EnglishInstructionVideos'
+    folder = ('MathInsctructionvideos' if GAME.startswith('Math') else
+              'ScienceInsctructionvideos' if GAME.startswith('Science') else 'EnglishInstructionVideos')
     VIDEOS = ROOT/f'Assets/{folder}/{GAME}'
     BACKUP = ROOT/f'Tests/{GAME}.before-localized-videos.unity.txt'
 
@@ -91,16 +92,7 @@ def wire():
                       lambda m:m[1]+instructions[0].stem,text)
     data,names,below,managers = inspect(text)
     panels = {ref(b,'videoPopupPanel') for b in managers.values()}
-    assert len(panels) == 1, 'Expected the existing shared video popup'
-    panel = next(iter(panels))
-    subtree = {i:b for i,(t,b) in data.items() if
-               (t == 1 and below(i,panel)) or ('m_GameObject:' in b and below(ref(b,'m_GameObject'),panel))}
-    root_transform = next(i for i,b in subtree.items() if data[i][0] == 224 and ref(b,'m_GameObject') == panel)
-    parent = ref(subtree[root_transform],'m_Father')
-    player = next(i for i in subtree if data[i][0] == 328)
-    slider = next(i for i,b in subtree.items() if 'm_WholeNumbers:' in b)
-    image = next(i for i,b in subtree.items() if 'm_Texture:' in b)
-    en_managers = {int(re.search(r'nextSceneName: (?:English|Science)Game\d+Level(\d)',b)[1]):i for i,b in managers.items()}
+    en_managers = {int(re.search(r'nextSceneName: (?:English|Science|Math)Game\d+Level(\d)',b)[1]):i for i,b in managers.items()}
     assert len(en_managers) == 5
     replacements, additions, new_roots = {}, [], []
     ids_used = set(data)
@@ -113,8 +105,18 @@ def wire():
         return next_id
     routers = {level:allocate() for level in range(1,6)}
     template = (ROOT/'Assets/EnglishInstructionVideos/EnglishGame1/EnglishLevel1InstructionEnglish.renderTexture').read_text()
+    used_panels = set()
+    parent_roots = {}
     for level in range(1,6):
         english = en_managers[level]
+        panel = ref(managers[english],'videoPopupPanel')
+        subtree = {i:b for i,(t,b) in data.items() if
+                   (t == 1 and below(i,panel)) or ('m_GameObject:' in b and below(ref(b,'m_GameObject'),panel))}
+        root_transform = next(i for i,b in subtree.items() if data[i][0] == 224 and ref(b,'m_GameObject') == panel)
+        parent = ref(subtree[root_transform],'m_Father')
+        player = next(i for i in subtree if data[i][0] == 328)
+        slider = next(i for i,b in subtree.items() if 'm_WholeNumbers:' in b)
+        image = next(i for i,b in subtree.items() if 'm_Texture:' in b)
         tagalog = allocate()
         go = ref(managers[english],'m_GameObject')
         replacements[go] = data[go][1].replace('  m_Layer:',
@@ -134,8 +136,10 @@ NativeFormatImporter:
   assetBundleName: 
   assetBundleVariant: 
 ''',encoding='utf-8',newline='\n')
-            mapping = {i:i for i in subtree} if (level,language)==(1,'English') else {i:allocate() for i in subtree}
-            if (level,language)!=(1,'English'): new_roots.append(mapping[root_transform])
+            reuse = language == 'English' and panel not in used_panels
+            mapping = {i:i for i in subtree} if reuse else {i:allocate() for i in subtree}
+            if reuse: used_panels.add(panel)
+            else: parent_roots.setdefault(parent,[]).append(mapping[root_transform])
             for i,b in subtree.items():
                 b = remap(b,mapping)
                 if i == panel:
@@ -152,7 +156,7 @@ NativeFormatImporter:
                 if mapping[i] == i: replacements[i] = b
                 else: additions.append(b)
             b = remap(managers[english],{english:manager})
-            b = re.sub(r'nextSceneName: (?:English|Science)Game\d+Level\d',f'nextSceneName: {GAME}Level{level}',b)
+            b = re.sub(r'nextSceneName: (?:English|Science|Math)Game\d+Level\d',f'nextSceneName: {GAME}Level{level}',b)
             for key,value in [('videoPopupPanel',mapping[panel]),('videoPlayer',mapping[player]),('progressBar',mapping[slider])]:
                 b = replace_ref(b,key,value)
             # Preserve Game1's 18-second minimum, extending long intros to include
@@ -176,14 +180,15 @@ MonoBehaviour:
   english: {{fileID: {english}}}
   tagalog: {{fileID: {tagalog}}}
 ''')
-    pb = data[parent][1]
-    pb = pb.replace('  m_Father:', ''.join(f'  - {{fileID: {i}}}\n' for i in new_roots)+'  m_Father:',1)
-    replacements[parent] = pb
+    for parent,new_roots in parent_roots.items():
+        pb = data[parent][1]
+        pb = pb.replace('  m_Father:', ''.join(f'  - {{fileID: {i}}}\n' for i in new_roots)+'  m_Father:',1)
+        replacements[parent] = pb
     for i,(t,b) in data.items():
         if 'm_MethodName: OpenVideo' not in b: continue
         candidates = {int(re.search(r'Level(\d)',n)[1]) for go,n in names.items()
                       if re.fullmatch(r'Level\d(?:Panel|Btn)',n) and below(ref(b,'m_GameObject'),go)}
-        args = set(map(int,re.findall(r'm_StringArgument: (?:English|Science)Game\d+Level(\d)',b)))
+        args = set(map(int,re.findall(r'm_StringArgument: (?:English|Science|Math)Game\d+Level(\d)',b)))
         assert len(candidates or args)==1,(i,candidates,args)
         level = next(iter(candidates or args))
         routed = re.sub(r'm_Target: \{fileID: \d+\}\n'
@@ -191,7 +196,7 @@ MonoBehaviour:
             r'        m_MethodName: OpenVideo',f'm_Target: {{fileID: {routers[level]}}}\n'
             '        m_TargetAssemblyTypeName: LocalizedVideoPopup, Assembly-CSharp\n'
             '        m_MethodName: OpenVideo',b)
-        replacements[i] = re.sub(r'm_StringArgument: (?:English|Science)Game\d+Level\d',f'm_StringArgument: {GAME}Level{level}',routed)
+        replacements[i] = re.sub(r'm_StringArgument: (?:English|Science|Math)Game\d+Level\d',f'm_StringArgument: {GAME}Level{level}',routed)
     for i,b in replacements.items(): text = text.replace(data[i][1],b,1)
     # Components must precede Unity's final SceneRoots document.
     root_marker = '--- !u!1660057539 '
@@ -238,7 +243,7 @@ def verify(text):
             assert int(m[1])==0 or int(m[1]) in data, ('Missing scene reference',m[1])
     if BACKUP.exists():
         old,old_names,old_below,old_managers = inspect(BACKUP.read_text())
-        old_panel = ref(next(iter(old_managers.values())),'videoPopupPanel')
+        old_panels = {ref(b,'videoPopupPanel') for b in old_managers.values()}
         for i,(t,b) in old.items():
             if i in old_managers or 'm_MethodName: OpenVideo' in b: continue
             after = data[i][1]
@@ -248,8 +253,8 @@ def verify(text):
                 after = re.sub(r'^  - component: \{fileID: 3\d{9}\}\n','',after,flags=re.M)
                 if GAME == 'EnglishGame13':
                     after = after.replace('  - component: {fileID: 4000000001}\n','')
-                if i==old_panel:
-                    after = re.sub(r'^  m_Name: .*','  m_Name: '+old_names[old_panel],after,flags=re.M)
+                if i in old_panels:
+                    after = re.sub(r'^  m_Name: .*','  m_Name: '+old_names[i],after,flags=re.M)
                     after = re.sub(r'^  m_IsActive: \d',re.search(r'^  m_IsActive: \d',b,re.M)[0],after,flags=re.M)
             if t in (224,4): after = re.sub(r'^  - \{fileID: 3\d{9}\}\n','',after,flags=re.M)
             if t==328: continue

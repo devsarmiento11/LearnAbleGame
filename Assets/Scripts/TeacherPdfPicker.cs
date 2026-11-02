@@ -9,7 +9,8 @@ public sealed class TeacherPdfPicker : MonoBehaviour
     {
         if (pending != null) throw new InvalidOperationException("The file picker is already open.");
 #if UNITY_EDITOR
-        return Task.FromResult(UnityEditor.EditorUtility.OpenFilePanel("Select a PDF module", "", "pdf"));
+        return Task.FromResult(UnityEditor.EditorUtility.OpenFilePanelWithFilters("Select a module", "",
+            new[] { "PDF, videos and images", ModuleFile.Extensions }));
 #elif UNITY_ANDROID
         pending = new TaskCompletionSource<string>();
         try
@@ -17,10 +18,10 @@ public sealed class TeacherPdfPicker : MonoBehaviour
             using (var bridge = new AndroidJavaClass("com.learnable.modules.PdfPickerActivity"))
                 bridge.CallStatic("pick", gameObject.name);
         }
-        catch (Exception e) { pending.SetException(e); }
+        catch (Exception e) { var failed = pending; pending = null; failed.SetException(e); return failed.Task; }
         return pending.Task;
 #else
-        throw new PlatformNotSupportedException("PDF selection is supported in the Unity Editor and on Android phones.");
+        throw new PlatformNotSupportedException("Module selection is supported in the Unity Editor and on Android phones.");
 #endif
     }
 

@@ -1,0 +1,5 @@
+WebP decoder: dwebp 1.6.0 (Windows x64)
+Source: https://storage.googleapis.com/downloads.webmproject.org/releases/webp/libwebp-1.6.0-windows-x64.zip
+Project: https://chromium.googlesource.com/webm/libwebp/
+Used to decode a local WebP image into a temporary PNG for the existing image popup.
+Android uses its built-in BitmapFactory decoder instead.

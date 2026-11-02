@@ -14,7 +14,8 @@ public final class PdfSaveActivity extends Activity {
         if (state != null) return;
         Intent intent = new Intent(Intent.ACTION_CREATE_DOCUMENT);
         intent.addCategory(Intent.CATEGORY_OPENABLE);
-        intent.setType("application/pdf");
+        try { intent.setType(ModuleFiles.mime(getIntent().getStringExtra("name"))); }
+        catch (Exception error) { complete("ERROR:Unsupported module file."); return; }
         intent.putExtra(Intent.EXTRA_TITLE, getIntent().getStringExtra("name"));
         try { startActivityForResult(intent, 72); }
         catch (Exception error) { complete("ERROR:No document save app is available."); }
@@ -29,7 +30,7 @@ public final class PdfSaveActivity extends Activity {
                 PdfDownloads.copy(new File(getIntent().getStringExtra("path")), output);
             } catch (Exception error) {
                 try { android.provider.DocumentsContract.deleteDocument(getContentResolver(), uri); } catch (Exception ignored) { }
-                complete("ERROR:Unable to save the PDF. Check available storage and retry."); return;
+                complete("ERROR:Unable to save the module. Check available storage and retry."); return;
             }
             complete(uri.toString());
         }, "LearnAble PDF save").start();

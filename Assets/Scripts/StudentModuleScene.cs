@@ -17,6 +17,7 @@ public sealed class StudentModuleScene : MonoBehaviour
     StudentModuleStore store;
     StudentModuleFolder folder;
     StudentPdfDownload exporter;
+    StudentModulePreview preview;
     ScrollRect scroll;
     RectTransform content;
     GameObject template;
@@ -96,6 +97,11 @@ public sealed class StudentModuleScene : MonoBehaviour
         var exportObject = new GameObject("StudentPdfDownload_" + Guid.NewGuid().ToString("N"));
         exportObject.transform.SetParent(transform, false);
         exporter = exportObject.AddComponent<StudentPdfDownload>();
+        if (folderScene)
+        {
+            preview = gameObject.AddComponent<StudentModulePreview>();
+            preview.Initialize(transform, exporter, label);
+        }
         ready = true;
     }
 
@@ -109,7 +115,7 @@ public sealed class StudentModuleScene : MonoBehaviour
 
     async void Reload()
     {
-        if (busy || !ready) return;
+        if (busy || !ready || (preview != null && (preview.IsOpen || preview.IsSaving))) return;
         busy = true;
         try
         {
@@ -224,51 +230,9 @@ public sealed class StudentModuleScene : MonoBehaviour
             var item = items[i];
             var button = AddRow(i, "Module_" + item.Id, item.Title);
             var label = button.GetComponentInChildren<TMP_Text>(true);
-            button.onClick.AddListener(() => Download(item, label));
+            button.onClick.AddListener(() => { if (!busy) preview.Open(store, folder, item); });
         }
         if (items.Count == 0) Message("No Grade " + store.Grade + " modules in this folder yet.\nTap to refresh.");
-    }
-
-    async void Download(TeacherPdfModule module, TMP_Text label)
-    {
-        if (busy) return;
-        busy = true;
-        string path = null;
-        try
-        {
-            label.text = "Downloading...";
-            path = await store.Download(folder, module.Id, lifetime.Token,
-                value => { if (label != null) label.text = "Downloading " + Mathf.FloorToInt(value * 100) + "%"; });
-            lifetime.Token.ThrowIfCancellationRequested();
-            label.text = "Saving PDF...";
-            string saved = await exporter.Save(path, module.FileName);
-            lifetime.Token.ThrowIfCancellationRequested();
-            label.text = string.IsNullOrEmpty(saved) ? module.Title + "\nSave cancelled" : module.Title + "\nDownloaded";
-            if (!string.IsNullOrEmpty(saved)) Debug.Log("Module saved: " + saved);
-        }
-        catch (OperationCanceledException) { }
-        catch (Exception error)
-        {
-            if (label != null) label.text = module.Title + "\n" + DownloadErrorMessage(error) + "\nTap to retry";
-            Debug.LogWarning("Module download: " + error.GetBaseException().Message);
-        }
-        finally
-        {
-            if (path != null && File.Exists(path)) File.Delete(path);
-            if (this != null) busy = false;
-        }
-    }
-
-    static string DownloadErrorMessage(Exception error)
-    {
-        var root = error.GetBaseException();
-        if (root is IOException || root is UnauthorizedAccessException)
-            return "Unable to save PDF. Check available storage.";
-        if (root is Firebase.Firestore.FirestoreException || root is InvalidOperationException)
-            return ErrorMessage(root);
-        if (root is AndroidJavaException)
-            return "Unable to save PDF. Update the app and check available storage.";
-        return "Download failed. Check your connection.";
     }
 
     void OnApplicationFocus(bool focused) { if (focused && ready && !busy) Reload(); }

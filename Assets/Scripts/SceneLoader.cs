@@ -61,6 +61,8 @@ public class SceneLoader : MonoBehaviour
         if (sceneName == "SettingsScene")
         {
             SaveCurrentScene();
+            if (GameplaySettingsSession.TryOpen())
+                return;
         }
 
         StartCoroutine(LoadSceneSafely(sceneName));
@@ -77,6 +79,8 @@ public class SceneLoader : MonoBehaviour
             return;
 
         SaveCurrentScene();
+        if (GameplaySettingsSession.TryOpen())
+            return;
         StartCoroutine(LoadSceneSafely("SettingsScene"));
     }
 
@@ -136,6 +140,13 @@ public class SceneLoader : MonoBehaviour
     {
         if (isChangingScene)
             return;
+
+        if (GameplaySettingsSession.TryResume())
+        {
+            PlayerPrefs.DeleteKey(PreviousSceneKey);
+            PlayerPrefs.Save();
+            return;
+        }
 
         string previousScene =
             PlayerPrefs.GetString(

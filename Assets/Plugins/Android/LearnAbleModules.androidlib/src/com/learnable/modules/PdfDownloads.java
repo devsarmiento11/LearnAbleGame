@@ -20,10 +20,10 @@ public final class PdfDownloads {
 
     public static String downloadDirectory() throws Exception {
         Activity activity = UnityPlayer.currentActivity;
-        if (activity == null) throw new Exception("The app is not ready to download a PDF.");
+        if (activity == null) throw new Exception("The app is not ready to download a module.");
         File directory = new File(activity.getCacheDir(), "module-pdfs").getCanonicalFile();
         if (!directory.isDirectory() && !directory.mkdirs())
-            throw new Exception("Unable to prepare PDF storage.");
+            throw new Exception("Unable to prepare module storage.");
         return directory.getAbsolutePath();
     }
 
@@ -33,12 +33,14 @@ public final class PdfDownloads {
         File allowed = new File(downloadDirectory()).getCanonicalFile();
         if (!allowed.equals(source.getParentFile()) || !source.isFile() || source.length() > 25L * 1024 * 1024)
             throw new Exception("Invalid module download.");
-        String clean = name.replaceAll("[^\\p{L}\\p{N} ._()-]", "_");
-        if (clean.length() > 150) clean = clean.substring(0, 146) + ".pdf";
+        String clean = ModuleFiles.cleanName(name);
+        final String mimeType = ModuleFiles.mime(clean);
+        String extension = ModuleFiles.extension(source.getName());
+        if (!extension.equals(ModuleFiles.extension(clean))) throw new Exception("Invalid module filename.");
         final String fileName = clean;
         File directory = new File(activity.getCacheDir(), "module-exports");
-        if (!directory.isDirectory() && !directory.mkdirs()) throw new Exception("Unable to save the PDF.");
-        File staged = new File(directory, UUID.randomUUID() + ".pdf");
+        if (!directory.isDirectory() && !directory.mkdirs()) throw new Exception("Unable to save the module.");
+        File staged = new File(directory, UUID.randomUUID() + extension);
         // Own an independent copy before returning to Unity, so leaving the scene
         // cannot delete the source while the Android worker or picker uses it.
         try (OutputStream output = new FileOutputStream(staged)) { copy(source, output); }
@@ -62,7 +64,7 @@ public final class PdfDownloads {
             try {
                 ContentValues values = new ContentValues();
                 values.put(MediaStore.MediaColumns.DISPLAY_NAME, fileName);
-                values.put(MediaStore.MediaColumns.MIME_TYPE, "application/pdf");
+                values.put(MediaStore.MediaColumns.MIME_TYPE, mimeType);
                 values.put(MediaStore.MediaColumns.RELATIVE_PATH, Environment.DIRECTORY_DOWNLOADS + "/LearnAble");
                 values.put(MediaStore.MediaColumns.IS_PENDING, 1);
                 uri = activity.getContentResolver().insert(MediaStore.Downloads.EXTERNAL_CONTENT_URI, values);
@@ -74,7 +76,7 @@ public final class PdfDownloads {
                 complete(activity, receiver, "Downloads/LearnAble/" + fileName);
             } catch (Exception error) {
                 if (uri != null) try { activity.getContentResolver().delete(uri, null, null); } catch (Exception ignored) { }
-                complete(activity, receiver, "ERROR:Unable to save the PDF. Check available phone storage and retry.");
+                complete(activity, receiver, "ERROR:Unable to save the module. Check available phone storage and retry.");
             } finally { staged.delete(); }
         }, "LearnAble PDF download").start();
     }
@@ -92,7 +94,7 @@ public final class PdfDownloads {
         activity.runOnUiThread(() -> {
             UnityPlayer.UnitySendMessage(receiver, "OnPdfSaved", result);
             if (!result.isEmpty()) Toast.makeText(activity,
-                result.startsWith("ERROR:") ? result.substring(6) : "PDF saved to " + result, Toast.LENGTH_LONG).show();
+                result.startsWith("ERROR:") ? result.substring(6) : "Module saved to " + result, Toast.LENGTH_LONG).show();
         });
     }
 }

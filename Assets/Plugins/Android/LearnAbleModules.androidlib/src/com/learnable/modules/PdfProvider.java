@@ -16,14 +16,18 @@ public final class PdfProvider extends ContentProvider {
     private File resolve(Uri uri) throws FileNotFoundException {
         try {
             String name = uri.getLastPathSegment();
-            if (name == null || !name.matches("[a-f0-9]{32}\\.pdf")) throw new Exception();
+            if (name == null || !name.matches("[a-f0-9]{32}\\.[a-z0-9]+")) throw new Exception();
+            ModuleFiles.extension(name);
             File root = new File(getContext().getCacheDir(), "module-pdfs").getCanonicalFile();
             File file = new File(root, name).getCanonicalFile();
             if (!root.equals(file.getParentFile()) || !file.isFile()) throw new Exception();
             return file;
         } catch (Exception error) { throw new FileNotFoundException("PDF unavailable"); }
     }
-    @Override public String getType(Uri uri) { return "application/pdf"; }
+    @Override public String getType(Uri uri) {
+        try { return ModuleFiles.mime(uri.getLastPathSegment()); }
+        catch (Exception error) { return "application/octet-stream"; }
+    }
     @Override public ParcelFileDescriptor openFile(Uri uri, String mode) throws FileNotFoundException {
         if (!"r".equals(mode)) throw new FileNotFoundException("Read only");
         return ParcelFileDescriptor.open(resolve(uri), ParcelFileDescriptor.MODE_READ_ONLY);
@@ -34,11 +38,11 @@ public final class PdfProvider extends ContentProvider {
         try {
             File file = resolve(uri); Object[] row = new Object[columns.length];
             for (int i = 0; i < columns.length; i++) {
-                if (OpenableColumns.DISPLAY_NAME.equals(columns[i])) row[i] = "module.pdf";
+                if (OpenableColumns.DISPLAY_NAME.equals(columns[i])) row[i] = "module" + ModuleFiles.extension(file.getName());
                 else if (OpenableColumns.SIZE.equals(columns[i])) row[i] = file.length();
             }
             cursor.addRow(row);
-        } catch (FileNotFoundException ignored) { }
+        } catch (Exception ignored) { }
         return cursor;
     }
     @Override public Uri insert(Uri uri, ContentValues values) { throw new UnsupportedOperationException(); }

@@ -23,11 +23,12 @@ public sealed class StudentPdfDownload : MonoBehaviour
 
     public Task<string> Save(string path, string fileName)
     {
-        TeacherModuleStore.ValidatePdf(path);
+        ModuleFile.Validate(path);
         fileName = Path.GetFileName((fileName ?? "module.pdf").Replace('\\', '/'));
         foreach (char invalid in Path.GetInvalidFileNameChars()) fileName = fileName.Replace(invalid, '_');
         if (string.IsNullOrWhiteSpace(fileName)) fileName = "module.pdf";
-        if (!fileName.EndsWith(".pdf", StringComparison.OrdinalIgnoreCase)) fileName += ".pdf";
+        string extension = ModuleFile.Extension(path);
+        fileName = Path.GetFileNameWithoutExtension(fileName) + extension;
 #if UNITY_ANDROID && !UNITY_EDITOR
         if (pending != null) throw new InvalidOperationException("A PDF is already being saved.");
         pending = new TaskCompletionSource<string>();
@@ -44,7 +45,7 @@ public sealed class StudentPdfDownload : MonoBehaviour
         Directory.CreateDirectory(directory);
         string target = Path.Combine(directory, fileName);
         for (int index = 1; File.Exists(target); index++)
-            target = Path.Combine(directory, Path.GetFileNameWithoutExtension(fileName) + " (" + index + ").pdf");
+            target = Path.Combine(directory, Path.GetFileNameWithoutExtension(fileName) + " (" + index + ")" + extension);
         File.Copy(path, target, false);
         return Task.FromResult(target);
 #endif
@@ -54,7 +55,7 @@ public sealed class StudentPdfDownload : MonoBehaviour
     public void OnPdfSaved(string result)
     {
         var completion = pending; pending = null;
-        result = result ?? "ERROR:Unable to save the PDF.";
+        result = result ?? "ERROR:Unable to save the module.";
         if (result.StartsWith("ERROR:", StringComparison.Ordinal)) completion?.TrySetException(new IOException(result.Substring(6)));
         else completion?.TrySetResult(result);
     }

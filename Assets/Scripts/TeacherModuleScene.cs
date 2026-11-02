@@ -326,10 +326,10 @@ public sealed class TeacherModuleScene : MonoBehaviour
             value = Mathf.Clamp01(value);
             progress.value = value;
             if (popupPercent != null) popupPercent.text = Mathf.FloorToInt(value * 100) + "%";
-            Message("Uploading PDF... " + Mathf.FloorToInt(value * 100) + "%");
+            Message("Uploading module... " + Mathf.FloorToInt(value * 100) + "%");
         }
         else if (progress != null && uploadScene) { progress.value = value; if (percent != null) percent.text = Mathf.FloorToInt(value * 100) + "%"; }
-        else if (fileName != null) fileName.text = "Uploading PDF... " + Mathf.FloorToInt(value * 100) + "%";
+        else if (fileName != null) fileName.text = "Uploading module... " + Mathf.FloorToInt(value * 100) + "%";
     }
     static void SetGrades(TMP_Dropdown dropdown, bool all)
     {
@@ -367,7 +367,7 @@ public sealed class TeacherModuleScene : MonoBehaviour
         {
             string path = await picker.Pick(); lifetime.Token.ThrowIfCancellationRequested();
             if (string.IsNullOrEmpty(path)) return;
-            TeacherModuleStore.ValidatePdf(path); replacement = path;
+            ModuleFile.Validate(path); replacement = path;
             fileName.text = System.IO.Path.GetFileName(path);
         }));
         Bind("EditPopUp/UploadBtn", () => Run(async () =>
@@ -477,7 +477,7 @@ public sealed class TeacherModuleScene : MonoBehaviour
         string path = await picker.Pick();
         lifetime.Token.ThrowIfCancellationRequested();
         if (string.IsNullOrEmpty(path)) { Message("Selection cancelled."); return; }
-        TeacherModuleStore.ValidatePdf(path);
+        ModuleFile.Validate(path);
         progress.gameObject.SetActive(true); Progress(0);
         try
         {

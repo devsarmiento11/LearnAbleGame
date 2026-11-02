@@ -131,7 +131,7 @@ public sealed class StudentModuleStore
         CheckSession();
         string directory = StudentPdfDownload.DownloadDirectory();
         Directory.CreateDirectory(directory);
-        string path = Path.Combine(directory, Guid.NewGuid().ToString("N") + ".pdf");
+        string path = Path.Combine(directory, Guid.NewGuid().ToString("N") + ModuleFile.Extension(module.StoragePath));
         try
         {
             using (var request = UnityWebRequest.Get("https://firebasestorage.googleapis.com/v0/b/" + Uri.EscapeDataString(bucket)
@@ -147,7 +147,7 @@ public sealed class StudentModuleStore
                     {
                         cancellation.ThrowIfCancellationRequested(); CheckSession();
                         if (request.downloadedBytes > (ulong)TeacherModuleStore.MaxPdfBytes)
-                            throw new InvalidOperationException("This PDF exceeds the 25 MB module limit.");
+                            throw new InvalidOperationException("This file exceeds the 25 MB module limit.");
                         progress?.Invoke(Mathf.Clamp01(request.downloadProgress));
                         await Task.Yield();
                     }
@@ -157,13 +157,13 @@ public sealed class StudentModuleStore
                         Debug.LogWarning("Student PDF transfer: HTTP " + request.responseCode + ", " + request.error);
                         throw new InvalidOperationException(request.responseCode == 403 || request.responseCode == 401
                             ? "Download access denied. Sign in again or ask your teacher to check module permissions."
-                            : request.responseCode == 404 ? "This PDF is no longer available. Ask your teacher to upload it again."
+                            : request.responseCode == 404 ? "This module file is no longer available. Ask your teacher to upload it again."
                             : "Download failed. Check your internet connection and tap the module to retry.");
                     }
                 }
                 finally { if (!request.isDone) request.Abort(); }
             }
-            TeacherModuleStore.ValidatePdf(path);
+            ModuleFile.Validate(path);
             progress?.Invoke(1f);
             return path;
         }

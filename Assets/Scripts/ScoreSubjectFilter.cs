@@ -6,7 +6,8 @@ public static class ScoreSubjectFilter
 
     public static bool Matches(string activityName, string subject)
     {
-        if (subject == "All Subjects") return true;
+        subject = (subject ?? string.Empty).Trim();
+        if (string.Equals(subject, "All Subjects", StringComparison.OrdinalIgnoreCase)) return true;
         if (string.IsNullOrWhiteSpace(activityName) || string.IsNullOrWhiteSpace(subject)) return false;
         string name = activityName.Trim();
         if (!name.StartsWith(subject, StringComparison.OrdinalIgnoreCase)) return false;

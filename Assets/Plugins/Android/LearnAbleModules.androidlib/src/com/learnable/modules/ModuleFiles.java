@@ -14,6 +14,8 @@ final class ModuleFiles {
     private static String mimeForExtension(String ext) throws Exception {
         switch (ext) {
             case ".pdf": return "application/pdf";
+            case ".doc": return "application/msword";
+            case ".docx": return "application/vnd.openxmlformats-officedocument.wordprocessingml.document";
             case ".mp4": return "video/mp4";
             case ".m4v": return "video/x-m4v";
             case ".mov": return "video/quicktime";

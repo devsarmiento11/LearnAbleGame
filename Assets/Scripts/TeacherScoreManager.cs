@@ -35,6 +35,7 @@ public class TeacherScoreManager : MonoBehaviour
     private ListenerRegistration scoreListener;
     private int scoreRequestVersion;
     private readonly List<GameObject> scoreRows = new List<GameObject>();
+    private Coroutine scoreLayoutRefresh;
 
     private Dictionary<string, GameObject> studentRows =
         new Dictionary<string, GameObject>();
@@ -55,6 +56,8 @@ public class TeacherScoreManager : MonoBehaviour
         }
 
         EnsureScoreContent();
+        if (scoreContent != null)
+            ScoreTableScroll.Configure(scoreContent.GetComponentInParent<ScrollRect>(true));
         SetupSubjectFilter();
 
         ListenForStudents();
@@ -90,6 +93,7 @@ public class TeacherScoreManager : MonoBehaviour
             .WhereEqualTo("role", "student")
             .Listen(snapshot =>
             {
+                if (this == null) return;
                 var students = new List<StudentProfile>();
 
                 foreach (DocumentSnapshot document in snapshot.Documents)
@@ -310,7 +314,7 @@ public class TeacherScoreManager : MonoBehaviour
         {
             subjectDropdown.Hide();
             subjectDropdown.SetValueWithoutNotify(0);
-            subjectDropdown.captionText.text = "All Subjects";
+            subjectDropdown.RefreshShownValue();
         }
         ClearScoreRows();
         ShowScoreStatus("Loading scores...");
@@ -382,6 +386,9 @@ public class TeacherScoreManager : MonoBehaviour
             TMP_Settings.defaultFontAsset, subjectArrow);
         subjectDropdown.ClearOptions();
         subjectDropdown.AddOptions(new List<string>(ScoreSubjectFilter.Subjects));
+        subjectDropdown.SetValueWithoutNotify(0);
+        subjectDropdown.RefreshShownValue();
+        subjectDropdown.onValueChanged.RemoveListener(OnSubjectChanged);
         subjectDropdown.onValueChanged.AddListener(OnSubjectChanged);
         if (noScoresText == null)
         {
@@ -404,7 +411,7 @@ public class TeacherScoreManager : MonoBehaviour
     {
         if (index < 0 || index >= ScoreSubjectFilter.Subjects.Length) return;
         selectedSubject = ScoreSubjectFilter.Subjects[index];
-        subjectDropdown.captionText.text = selectedSubject;
+        subjectDropdown.RefreshShownValue();
         if (scoresLoaded) RebuildScoreRows(cachedScores);
         else ShowScoreStatus(scoresFailed ? scoreLoadError : "Loading scores...");
     }
@@ -418,8 +425,6 @@ public class TeacherScoreManager : MonoBehaviour
 
     private void RebuildScoreRows(IEnumerable<DocumentSnapshot> documents)
     {
-        ClearScoreRows();
-
         var summaries = new Dictionary<string, ActivitySummary>(StringComparer.OrdinalIgnoreCase);
 
         foreach (DocumentSnapshot document in documents)
@@ -450,6 +455,8 @@ public class TeacherScoreManager : MonoBehaviour
             return activityOrder;
         });
 
+        // Prepare the entire replacement before touching the visible table.
+        ClearScoreRows();
         foreach (ActivitySummary summary in ordered)
             AddScoreRow(summary);
 
@@ -460,11 +467,33 @@ public class TeacherScoreManager : MonoBehaviour
 
     private void ResetScoreScrollToTop()
     {
+        if (scoreLayoutRefresh != null)
+            StopCoroutine(scoreLayoutRefresh);
+        RefreshScoreLayout();
+        if (isActiveAndEnabled && studentScorePopup != null && studentScorePopup.activeInHierarchy)
+            scoreLayoutRefresh = StartCoroutine(RefreshScoreLayoutAfterFrame());
+    }
+
+    private System.Collections.IEnumerator RefreshScoreLayoutAfterFrame()
+    {
+        // Destroy, TMP sizing and ContentSizeFitter finish on the next frame.
+        // Reapply the position only for the latest table, after that work settles.
+        yield return null;
+        if (studentScorePopup != null && studentScorePopup.activeInHierarchy)
+            RefreshScoreLayout();
+        scoreLayoutRefresh = null;
+    }
+
+    private void RefreshScoreLayout()
+    {
         RectTransform contentRect = scoreContent as RectTransform;
-        if (contentRect == null)
+        if (contentRect == null || !contentRect.gameObject.activeInHierarchy)
             return;
 
+        ScoreTableScroll.Configure(scoreContent.GetComponentInParent<ScrollRect>());
+        Canvas.ForceUpdateCanvases();
         LayoutRebuilder.ForceRebuildLayoutImmediate(contentRect);
+        Canvas.ForceUpdateCanvases();
 
         ScrollRect scrollRect = scoreContent.GetComponentInParent<ScrollRect>();
         if (scrollRect == null)
@@ -524,6 +553,14 @@ public class TeacherScoreManager : MonoBehaviour
         if (value is Timestamp timestamp)
             return timestamp.ToDateTime();
 
+        if (value is DateTime date)
+            return date;
+        if (value is string text && DateTime.TryParse(text,
+            System.Globalization.CultureInfo.InvariantCulture,
+            System.Globalization.DateTimeStyles.AssumeUniversal | System.Globalization.DateTimeStyles.AdjustToUniversal,
+            out DateTime parsed))
+            return parsed;
+
         return DateTime.MinValue;
     }
 
@@ -555,6 +592,11 @@ public class TeacherScoreManager : MonoBehaviour
     public void CloseStudentScores()
     {
         scoreRequestVersion++;
+        if (scoreLayoutRefresh != null)
+        {
+            StopCoroutine(scoreLayoutRefresh);
+            scoreLayoutRefresh = null;
+        }
         if (subjectDropdown != null) subjectDropdown.Hide();
 
         if (scoreListener != null)
@@ -587,6 +629,7 @@ public class TeacherScoreManager : MonoBehaviour
 
     void OnDestroy()
     {
+        scoreRequestVersion++;
         if (subjectDropdown != null) subjectDropdown.onValueChanged.RemoveListener(OnSubjectChanged);
         if (studentListener != null)
         {

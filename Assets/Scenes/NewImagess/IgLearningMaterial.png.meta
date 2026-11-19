@@ -1,0 +1,819 @@
+fileFormatVersion: 2
+guid: 7ddcda5f58879774994f60dd66954d4c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -9010581251738498321
+    second: IgLearningMaterial_0
+  - first:
+      213: -3993341962404757096
+    second: IgLearningMaterial_1
+  - first:
+      213: -1905766388062150060
+    second: IgLearningMaterial_2
+  - first:
+      213: -3425136847474517770
+    second: IgLearningMaterial_3
+  - first:
+      213: 2945473997976626199
+    second: IgLearningMaterial_4
+  - first:
+      213: -8115942131253940198
+    second: IgLearningMaterial_5
+  - first:
+      213: -5337529238719916834
+    second: IgLearningMaterial_6
+  - first:
+      213: -77873028294786643
+    second: IgLearningMaterial_7
+  - first:
+      213: 3056718401258446879
+    second: IgLearningMaterial_8
+  - first:
+      213: 765035394738108293
+    second: IgLearningMaterial_9
+  - first:
+      213: 1752630337233696574
+    second: IgLearningMaterial_10
+  - first:
+      213: 2197986953150313212
+    second: IgLearningMaterial_11
+  - first:
+      213: -5727793093703153564
+    second: IgLearningMaterial_12
+  - first:
+      213: 2925515824382153373
+    second: IgLearningMaterial_13
+  - first:
+      213: -717860276725016365
+    second: IgLearningMaterial_14
+  - first:
+      213: -8475231056011342975
+    second: IgLearningMaterial_15
+  - first:
+      213: 5749440555480256794
+    second: IgLearningMaterial_16
+  - first:
+      213: 8810698258331710735
+    second: IgLearningMaterial_17
+  - first:
+      213: -183606968243511093
+    second: IgLearningMaterial_18
+  - first:
+      213: -8233347230128514348
+    second: IgLearningMaterial_19
+  - first:
+      213: 1066988332621810038
+    second: IgLearningMaterial_20
+  - first:
+      213: -3762071426612483311
+    second: IgLearningMaterial_21
+  - first:
+      213: -6269349207620057770
+    second: IgLearningMaterial_22
+  - first:
+      213: 4030358902381050008
+    second: IgLearningMaterial_23
+  - first:
+      213: -592337348027256765
+    second: IgLearningMaterial_24
+  - first:
+      213: -7146699245472295132
+    second: IgLearningMaterial_25
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: IgLearningMaterial_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 59
+        width: 1764
+        height: 804
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fea0556771cf3f280800000000000000
+      internalID: -9010581251738498321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgLearningMaterial_1
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 844
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 891043094acc498c0800000000000000
+      internalID: -3993341962404757096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgLearningMaterial_2
+      rect:
+        serializedVersion: 2
+        x: 1095
+        y: 811
+        width: 144
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4522da6319b5d85e0800000000000000
+      internalID: -1905766388062150060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgLearningMaterial_3
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 781
+        width: 43
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f81e233f287770d0800000000000000
+      internalID: -3425136847474517770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgLearningMaterial_4
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 825
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 714eb80defc60e820800000000000000
+      internalID: 2945473997976626199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgLearningMaterial_5
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 819
+        width: 10
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a107bf8b1a16e5f80800000000000000
+      internalID: -8115942131253940198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgLearningMaterial_6
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 795
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed496d3df694de5b0800000000000000
+      internalID: -5337529238719916834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgLearningMaterial_7
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 793
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da1c7e2b4e65beef0800000000000000
+      internalID: -77873028294786643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgLearningMaterial_8
+      rect:
+        serializedVersion: 2
+        x: 933
+        y: 793
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f10e865d035ab6a20800000000000000
+      internalID: 3056718401258446879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgLearningMaterial_9
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 791
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58737ff53a3fd9a00800000000000000
+      internalID: 765035394738108293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgLearningMaterial_10
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 803
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3733618108925810800000000000000
+      internalID: 1752630337233696574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgLearningMaterial_11
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 791
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf2b77b0d71d08e10800000000000000
+      internalID: 2197986953150313212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgLearningMaterial_12
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 791
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46843e6478ac280b0800000000000000
+      internalID: -5727793093703153564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgLearningMaterial_13
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 773
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9215196425899820800000000000000
+      internalID: 2925515824382153373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgLearningMaterial_14
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 773
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d81177b1e5a906f0800000000000000
+      internalID: -717860276725016365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgLearningMaterial_15
+      rect:
+        serializedVersion: 2
+        x: 954
+        y: 124
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18bc51d124ee16a80800000000000000
+      internalID: -8475231056011342975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgLearningMaterial_16
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 110
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1110ae29bd1acf40800000000000000
+      internalID: 5749440555480256794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgLearningMaterial_17
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 82
+        width: 18
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f05b3078263e54a70800000000000000
+      internalID: 8810698258331710735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgLearningMaterial_18
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 78
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc02f876f62b37df0800000000000000
+      internalID: -183606968243511093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgLearningMaterial_19
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 84
+        width: 21
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4da5ebbf0564dbd80800000000000000
+      internalID: -8233347230128514348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgLearningMaterial_20
+      rect:
+        serializedVersion: 2
+        x: 949
+        y: 80
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 679c8614c34bece00800000000000000
+      internalID: 1066988332621810038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgLearningMaterial_21
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 86
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11bad1548ff6acbc0800000000000000
+      internalID: -3762071426612483311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgLearningMaterial_22
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 82
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6550ee2bc1ccef8a0800000000000000
+      internalID: -6269349207620057770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgLearningMaterial_23
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 86
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89871c56116bee730800000000000000
+      internalID: 4030358902381050008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgLearningMaterial_24
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 64
+        width: 11
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34073aff15897c7f0800000000000000
+      internalID: -592337348027256765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IgLearningMaterial_25
+      rect:
+        serializedVersion: 2
+        x: 1031
+        y: 63
+        width: 18
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 427521da6e2d1dc90800000000000000
+      internalID: -7146699245472295132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      IgLearningMaterial_0: -9010581251738498321
+      IgLearningMaterial_1: -3993341962404757096
+      IgLearningMaterial_10: 1752630337233696574
+      IgLearningMaterial_11: 2197986953150313212
+      IgLearningMaterial_12: -5727793093703153564
+      IgLearningMaterial_13: 2925515824382153373
+      IgLearningMaterial_14: -717860276725016365
+      IgLearningMaterial_15: -8475231056011342975
+      IgLearningMaterial_16: 5749440555480256794
+      IgLearningMaterial_17: 8810698258331710735
+      IgLearningMaterial_18: -183606968243511093
+      IgLearningMaterial_19: -8233347230128514348
+      IgLearningMaterial_2: -1905766388062150060
+      IgLearningMaterial_20: 1066988332621810038
+      IgLearningMaterial_21: -3762071426612483311
+      IgLearningMaterial_22: -6269349207620057770
+      IgLearningMaterial_23: 4030358902381050008
+      IgLearningMaterial_24: -592337348027256765
+      IgLearningMaterial_25: -7146699245472295132
+      IgLearningMaterial_3: -3425136847474517770
+      IgLearningMaterial_4: 2945473997976626199
+      IgLearningMaterial_5: -8115942131253940198
+      IgLearningMaterial_6: -5337529238719916834
+      IgLearningMaterial_7: -77873028294786643
+      IgLearningMaterial_8: 3056718401258446879
+      IgLearningMaterial_9: 765035394738108293
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -785,5 +785,101 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Settings/Scenes/3rdQuarterMathGameInstructions/MathGame6InstructionScene.unity
     guid: 8112748e55cdfd7458f23e63d3dd1dca
+  - enabled: 1
+    path: Assets/Settings/Scenes/3rdQuarterMathGame/MathGame7.unity
+    guid: 292bd34dacfa883489acb005da4cd312
+  - enabled: 1
+    path: Assets/Settings/Scenes/3rdQuarterMathGame/MathGame7Level1.unity
+    guid: 7641702839ea8944b88e5a1190e40173
+  - enabled: 1
+    path: Assets/Settings/Scenes/3rdQuarterMathGame/MathGame7Level2.unity
+    guid: 22a6291503597b04781bc05083228c81
+  - enabled: 1
+    path: Assets/Settings/Scenes/3rdQuarterMathGame/MathGame7Level3.unity
+    guid: cd708298a3fa3e7409feb4d5a32482e7
+  - enabled: 1
+    path: Assets/Settings/Scenes/3rdQuarterMathGame/MathGame7Level4.unity
+    guid: 52c2f0111f7f6a9499e1e35f6907c641
+  - enabled: 1
+    path: Assets/Settings/Scenes/3rdQuarterMathGame/MathGame7Level5.unity
+    guid: ef4152ad44d861f43bbaf01490df7562
+  - enabled: 1
+    path: Assets/Settings/Scenes/3rdQuarterMathGameInstructions/MathGame7InstructionScene.unity
+    guid: e8b5ff34638abfa47afa66dd90f55c7b
+  - enabled: 1
+    path: Assets/Settings/Scenes/3rdQuarterMathGame/MathGame8.unity
+    guid: aad4b7f931e715448a7f45ba236ce27e
+  - enabled: 1
+    path: Assets/Settings/Scenes/3rdQuarterMathGame/MathGame8Level1.unity
+    guid: eaf9a29ae83ca694a945da8ad96a44f4
+  - enabled: 1
+    path: Assets/Settings/Scenes/3rdQuarterMathGame/MathGame8Level2.unity
+    guid: aceaf3ce7cb668b41a5261afee21907d
+  - enabled: 1
+    path: Assets/Settings/Scenes/3rdQuarterMathGame/MathGame8Level3.unity
+    guid: 989d48f7f20ec2f4ea08df332f527a0e
+  - enabled: 1
+    path: Assets/Settings/Scenes/3rdQuarterMathGame/MathGame8Level4.unity
+    guid: 11d81959d6051514d9f9ddaebd3bbe43
+  - enabled: 1
+    path: Assets/Settings/Scenes/3rdQuarterMathGame/MathGame8Level5.unity
+    guid: 2c3653a0b7acbe34f9959ffb7028a039
+  - enabled: 1
+    path: Assets/Settings/Scenes/3rdQuarterMathGameInstructions/MathGame8InstructionScene.unity
+    guid: a88366310921d3b45808195070d24e7e
+  - enabled: 1
+    path: Assets/Settings/Scenes/MathUnlock2ndQuarterFolder/MathUnlock2ndQtr.unity
+    guid: bfbfb2684a809314fbde1e7e660a7be7
+  - enabled: 1
+    path: Assets/Settings/Scenes/MathUnlock2ndQuarterFolder/MathUnlockGame3.unity
+    guid: d13a9280abd2c6e4b9fb22228180ac9f
+  - enabled: 1
+    path: Assets/Settings/Scenes/MathUnlock2ndQuarterFolder/MathUnlockGame4.unity
+    guid: ce79ce4b24444c1409833a617ae08bad
+  - enabled: 1
+    path: Assets/Settings/Scenes/MathUnlock2ndQuarterFolder/MathUnlockGame5.unity
+    guid: 62fe4eaacbc486a46a9a7068b1e63803
+  - enabled: 1
+    path: Assets/Settings/Scenes/MathUnlock3rdQuarterFolder/MathUnlock3rdQtr.unity
+    guid: e142fdff88b083f48b4dc28a5bbf8bed
+  - enabled: 1
+    path: Assets/Settings/Scenes/MathUnlock3rdQuarterFolder/MathUnlockGame6.unity
+    guid: 036c1fa7663c11444b01e426c36bd2ad
+  - enabled: 1
+    path: Assets/Settings/Scenes/MathUnlock3rdQuarterFolder/MathUnlockGame7.unity
+    guid: 0174c4c225c56c84494d9ded05755d35
+  - enabled: 1
+    path: Assets/Settings/Scenes/MathUnlock3rdQuarterFolder/MathUnlockGame8.unity
+    guid: e14b444313cb2ad4a9f7c0c4a461c1f7
+  - enabled: 1
+    path: Assets/Settings/Scenes/Modules/2ndQuarterEnglishModule.unity
+    guid: 5b7d7893c96699344987ca90285effeb
+  - enabled: 1
+    path: Assets/Settings/Scenes/Modules/3rdQuarterEnglishModule.unity
+    guid: b05bfaaccdad6b84f9d3c3e76eb07683
+  - enabled: 1
+    path: Assets/Settings/Scenes/Modules/2ndQuarterScienceModule.unity
+    guid: 3b33082bebc202e4598f219987165065
+  - enabled: 1
+    path: Assets/Settings/Scenes/Modules/3rdQuarterScienceModule.unity
+    guid: 538a6c6d3ffddda45a37077c3b30c6f5
+  - enabled: 1
+    path: Assets/Settings/Scenes/Modules/2ndQuarterMathModule.unity
+    guid: 879138f9b4e48124a956b12db541c632
+  - enabled: 1
+    path: Assets/Settings/Scenes/Modules/3rdQuarterMathModule.unity
+    guid: 679b4e04a6938d249ab7b82abd35ef2c
+  - enabled: 1
+    path: Assets/Settings/Scenes/2ndQuarterMathGame/2ndQuarterMathGameScene.unity
+    guid: 6e589aee012d54c489a05ec8f828e051
+  - enabled: 1
+    path: Assets/Settings/Scenes/3rdQuarterMathGame/3rdQuarterMathGameScene.unity
+    guid: 70c14c238c527e44e8705d9d48654b5d
+  - enabled: 1
+    path: Assets/Settings/Scenes/DocumentsTeacher.unity
+    guid: ffde1ef9b6b10b5479dd970aa9217059
+  - enabled: 1
+    path: Assets/Settings/Scenes/OnGoingScenes/LeaderboardScene.unity
+    guid: a47f766f8f83c90489ff6e7e1c02fd43
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

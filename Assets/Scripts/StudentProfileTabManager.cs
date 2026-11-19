@@ -349,13 +349,17 @@ public class StudentProfileTabManager : MonoBehaviour
 
     private static string GetLevel(string name)
     {
-        int index = name.Length - 1;
-        while (index >= 0 && char.IsDigit(name[index])) index--;
-        return index == name.Length - 1 ? "-" : name.Substring(index + 1);
+        return StudentActivityLabels.Level(name);
     }
 
     private static string GetActivityName(string name)
     {
+        string englishTitle = StudentActivityLabels.EnglishTitle(name);
+        if (englishTitle != null) return englishTitle;
+        string scienceTitle = StudentActivityLabels.ScienceTitle(name);
+        if (scienceTitle != null) return scienceTitle;
+        string mathTitle = StudentActivityLabels.MathTitle(name);
+        if (mathTitle != null) return mathTitle;
         int levelMarker = name.LastIndexOf("Level", StringComparison.OrdinalIgnoreCase);
         string activity = levelMarker < 0 ? name : name.Substring(0, levelMarker);
         return FormatActivityName(activity.Replace("Game", " Game ").Trim());

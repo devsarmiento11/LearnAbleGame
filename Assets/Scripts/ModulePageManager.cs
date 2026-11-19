@@ -10,6 +10,7 @@ public class ModulePageManager : MonoBehaviour
     [Header("BUTTONS")]
     public Button nextButton;
     public Button previousButton;
+    [SerializeField] private Button skipButton;
 
     [Header("PROGRESS BAR")]
     public Slider progressBar;
@@ -18,6 +19,16 @@ public class ModulePageManager : MonoBehaviour
     public string nextSceneName;
 
     private int currentPage = 0;
+    private string completionKey;
+
+    private void Awake()
+    {
+        if (skipButton == null)
+            return;
+
+        completionKey = $"LearnAble_ModuleCompleted_{gameObject.scene.name}_{LearningDataStore.CurrentUserId}";
+        skipButton.gameObject.SetActive(PlayerPrefs.GetInt(completionKey) == 1);
+    }
 
     void Start()
     {
@@ -84,6 +95,9 @@ public class ModulePageManager : MonoBehaviour
 
     public void NextPage()
     {
+        if (pages == null || pages.Length == 0)
+            return;
+
         // Still have another page
         if (currentPage < pages.Length - 1)
         {
@@ -91,9 +105,20 @@ public class ModulePageManager : MonoBehaviour
         }
         else
         {
-            // Last page completed
+            if (skipButton != null && PlayerPrefs.GetInt(completionKey) != 1)
+            {
+                PlayerPrefs.SetInt(completionKey, 1);
+                PlayerPrefs.Save();
+            }
+
             LoadNextScene();
         }
+    }
+
+    public void SkipModule()
+    {
+        if (skipButton != null && PlayerPrefs.GetInt(completionKey) == 1)
+            LoadNextScene();
     }
 
     // ==========================================

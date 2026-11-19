@@ -16,10 +16,17 @@ import java.util.UUID;
 public final class PdfPickerActivity extends Activity {
     private String receiver;
     public static void pick(String receiver) {
+        launch(receiver, false);
+    }
+    public static void pickDocuments(String receiver) {
+        launch(receiver, true);
+    }
+    private static void launch(String receiver, boolean documents) {
         Activity activity = UnityPlayer.currentActivity;
         activity.runOnUiThread(() -> {
             Intent intent = new Intent(activity, PdfPickerActivity.class);
             intent.putExtra("receiver", receiver);
+            intent.putExtra("documents", documents);
             activity.startActivity(intent);
         });
     }
@@ -30,7 +37,9 @@ public final class PdfPickerActivity extends Activity {
         Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
         intent.addCategory(Intent.CATEGORY_OPENABLE);
         intent.setType("*/*");
-        intent.putExtra(Intent.EXTRA_MIME_TYPES, new String[]{"application/pdf", "video/*", "image/*"});
+        intent.putExtra(Intent.EXTRA_MIME_TYPES, getIntent().getBooleanExtra("documents", false)
+            ? new String[]{"application/pdf", "video/*", "image/*", "application/msword", "application/vnd.openxmlformats-officedocument.wordprocessingml.document"}
+            : new String[]{"application/pdf", "video/*", "image/*"});
         intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
         try { startActivityForResult(intent, 71); }
         catch (Exception error) { complete("ERROR:No document picker is available on this phone."); }

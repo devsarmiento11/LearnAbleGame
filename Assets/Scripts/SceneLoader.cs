@@ -56,6 +56,8 @@ public class SceneLoader : MonoBehaviour
         if (isChangingScene || string.IsNullOrWhiteSpace(sceneName))
             return;
 
+        sceneName = PassedLevelNavigation.ContinueDestination(sceneName);
+
         // If this button is loading SettingsScene,
         // automatically save the current scene first.
         if (sceneName == "SettingsScene")

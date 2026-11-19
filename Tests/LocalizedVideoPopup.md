@@ -262,3 +262,19 @@ saved-language router keeps the first loop silent and enables audio at loop two.
 All clips fit two passes in the 18-second intro. All seven scenes are registered.
 Tests/WireMathGame6Videos.py validates ten videos, seven existing video button
 calls, correct destinations and unchanged visuals.
+
+MathGame7's copied ScienceGame4 popup appearance is preserved, with references
+updated to MathGame7. Its ten unique render textures in
+Assets/MathInsctructionvideos/MathGame7 match EnglishGame1's settings. The shared
+saved-language router keeps the first loop silent and enables audio at loop two.
+All clips fit two passes in the 18-second intro. All seven scenes are registered.
+Tests/WireMathGame7Videos.py validates ten videos, five existing video button
+calls, correct destinations and unchanged visuals.
+
+MathGame8's copied MathGame7 popup appearance is preserved, with references
+updated to MathGame8. Its ten unique render textures in
+Assets/MathInsctructionvideos/MathGame8 match EnglishGame1's settings. The shared
+saved-language router keeps the first loop silent and enables audio at loop two.
+All clips fit two passes in the 18-second intro. All seven scenes are registered.
+Tests/WireMathGame8Videos.py validates ten videos, five existing video button
+calls, correct destinations and unchanged visuals.

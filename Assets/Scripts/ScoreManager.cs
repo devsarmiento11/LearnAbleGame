@@ -7,6 +7,7 @@ public static class ScoreManager
 
     public static void Reset()
     {
+        PassedLevelNavigation.Reset();
         CurrentScore = 0;
         CorrectLines = 0;
         activityRecorded = false;
@@ -15,6 +16,8 @@ public static class ScoreManager
     public static void BeginActivity()
     {
         Reset();
+        if (LeaderboardScoring.ActivityKey(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name) != null)
+            LearningDataStore.MarkLeaderboardParticipation();
     }
 
     public static void RecordActivity(string activityName, int totalItems)

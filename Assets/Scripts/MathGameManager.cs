@@ -8,7 +8,8 @@ public class MathGameManager : MonoBehaviour
 
     void Start()
     {
-        currentLevel = 0;
+        currentLevel = PassedLevelNavigation.ConsumePreview(
+            gameObject.scene.name, levels.Length);
         ShowLevel(currentLevel);
     }
 

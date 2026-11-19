@@ -776,7 +776,7 @@ MonoBehaviour:
   missingNumbers:
   - correctNumber: 7
     numberImage: {fileID: 1910820517}
-    numberSprite: {fileID: -1057562847575928414, guid: 6a381f124670a084f80c3f0e04086aed, type: 3}
+    numberSprite: {fileID: 7293001829911201005, guid: e1b6c5298a124b74faeba70ef77fd0c6, type: 3}
     solved: 0
   result: {fileID: 304794120}
   allowMultipleAnswersPerSpeech: 0
@@ -2912,8 +2912,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -151.82498, y: -89.58101}
-  m_SizeDelta: {x: 105.7464, y: 139.42}
+  m_AnchoredPosition: {x: -151.82498, y: -85.13}
+  m_SizeDelta: {x: 105.7464, y: 148.32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1910820517
 MonoBehaviour:
@@ -2935,7 +2935,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1057562847575928414, guid: 6a381f124670a084f80c3f0e04086aed, type: 3}
+  m_Sprite: {fileID: 7293001829911201005, guid: e1b6c5298a124b74faeba70ef77fd0c6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

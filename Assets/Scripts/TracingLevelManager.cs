@@ -46,7 +46,7 @@ public class TracingLevelManager : MonoBehaviour
         // 50 or higher = passed
         if (ScoreManager.CurrentScore >= 50)
         {
-            SceneManager.LoadScene(scoreSceneName);
+            SceneManager.LoadScene(PassedLevelNavigation.Destination(scoreSceneName));
         }
         else
         {

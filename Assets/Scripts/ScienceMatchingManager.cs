@@ -44,7 +44,7 @@ public class ScienceMatchingManager : MonoBehaviour
         // 50 or higher = PASS
         if (ScoreManager.CurrentScore >= 50)
         {
-            SceneManager.LoadScene(scoreScene);
+            SceneManager.LoadScene(PassedLevelNavigation.Destination(scoreScene));
         }
         else
         {

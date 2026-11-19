@@ -66,6 +66,6 @@ public class DragAnswerLevel : MonoBehaviour
         PlayerPrefs.Save();
         ScoreManager.RecordActivity(scene, zones.Length);
         SceneManager.LoadScene(!timedOut && ScoreManager.CurrentScore >= passingScore
-            ? scoreSceneName : failedScoreSceneName);
+            ? PassedLevelNavigation.Destination(scoreSceneName) : failedScoreSceneName);
     }
 }

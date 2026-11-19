@@ -19,7 +19,10 @@ public class EnglishLevel1Manager : MonoBehaviour
     Debug.Log("Completed Lines = " + completed);
     Debug.Log("Final Score = " + ScoreManager.CurrentScore);
 
-    ScoreManager.RecordActivity(SceneManager.GetActiveScene().name, 18);
-    SceneManager.LoadScene("ScoreScene");
+    PlayerPrefs.SetString("PreviousGameScene", SceneManager.GetActiveScene().name);
+        PlayerPrefs.Save();
+        ScoreManager.RecordActivity(SceneManager.GetActiveScene().name, 18);
+    SceneManager.LoadScene(ScoreManager.CurrentScore >= 50
+            ? PassedLevelNavigation.Destination("ScoreScene") : "ScoreSceneFailed");
 }
 }

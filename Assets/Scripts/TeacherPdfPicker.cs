@@ -5,18 +5,18 @@ using UnityEngine;
 public sealed class TeacherPdfPicker : MonoBehaviour
 {
     TaskCompletionSource<string> pending;
-    public Task<string> Pick()
+    public Task<string> Pick(bool documents = false)
     {
         if (pending != null) throw new InvalidOperationException("The file picker is already open.");
 #if UNITY_EDITOR
         return Task.FromResult(UnityEditor.EditorUtility.OpenFilePanelWithFilters("Select a module", "",
-            new[] { "PDF, videos and images", ModuleFile.Extensions }));
+            new[] { documents ? "Documents, videos and images" : "PDF, videos and images", documents ? ParentDocumentFile.Extensions : ModuleFile.Extensions }));
 #elif UNITY_ANDROID
         pending = new TaskCompletionSource<string>();
         try
         {
             using (var bridge = new AndroidJavaClass("com.learnable.modules.PdfPickerActivity"))
-                bridge.CallStatic("pick", gameObject.name);
+                bridge.CallStatic(documents ? "pickDocuments" : "pick", gameObject.name);
         }
         catch (Exception e) { var failed = pending; pending = null; failed.SetException(e); return failed.Task; }
         return pending.Task;

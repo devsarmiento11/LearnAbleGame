@@ -211,7 +211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f347e9b0c08dcd4d9f6015cbe72c5ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelLockController
-  activityId: Science_FoodOrNotFood
+  activityId: Math_LetsCompareNumbers
   levelNumber: 4
   lockObject: {fileID: 1150051344}
   buttonsToLock:
@@ -303,7 +303,7 @@ MonoBehaviour:
   videoPopupPanel: {fileID: 281069160}
   videoPlayer: {fileID: 602115911}
   progressBar: {fileID: 586279205}
-  totalTime: 18.000
+  totalTime: 18
   nextSceneName: MathGame5Level1
 --- !u!4 &36815680
 Transform:
@@ -1226,7 +1226,7 @@ MonoBehaviour:
   videoPopupPanel: {fileID: 3000000030}
   videoPlayer: {fileID: 3000000041}
   progressBar: {fileID: 3000000037}
-  totalTime: 18.000
+  totalTime: 18
   nextSceneName: MathGame5Level2
 --- !u!4 &341095516
 Transform:
@@ -1277,7 +1277,7 @@ MonoBehaviour:
   videoPopupPanel: {fileID: 3000000165}
   videoPlayer: {fileID: 3000000176}
   progressBar: {fileID: 3000000172}
-  totalTime: 18.000
+  totalTime: 18
   nextSceneName: MathGame5Level5
 --- !u!4 &355161899
 Transform:
@@ -2644,7 +2644,7 @@ MonoBehaviour:
   videoPopupPanel: {fileID: 3000000120}
   videoPlayer: {fileID: 3000000131}
   progressBar: {fileID: 3000000127}
-  totalTime: 18.000
+  totalTime: 18
   nextSceneName: MathGame5Level4
 --- !u!4 &751375822
 Transform:
@@ -2753,7 +2753,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f347e9b0c08dcd4d9f6015cbe72c5ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelLockController
-  activityId: Science_FoodOrNotFood
+  activityId: Math_LetsCompareNumbers
   levelNumber: 3
   lockObject: {fileID: 1746963629}
   buttonsToLock:
@@ -3046,7 +3046,7 @@ MonoBehaviour:
   videoPopupPanel: {fileID: 3000000075}
   videoPlayer: {fileID: 3000000086}
   progressBar: {fileID: 3000000082}
-  totalTime: 18.000
+  totalTime: 18
   nextSceneName: MathGame5Level3
 --- !u!4 &960615073
 Transform:
@@ -4497,7 +4497,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f347e9b0c08dcd4d9f6015cbe72c5ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelLockController
-  activityId: Science_FoodOrNotFood
+  activityId: Math_LetsCompareNumbers
   levelNumber: 5
   lockObject: {fileID: 1327919797}
   buttonsToLock:
@@ -4900,7 +4900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f347e9b0c08dcd4d9f6015cbe72c5ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelLockController
-  activityId: Science_FoodOrNotFood
+  activityId: Math_LetsCompareNumbers
   levelNumber: 2
   lockObject: {fileID: 1817606080}
   buttonsToLock:
@@ -5253,7 +5253,7 @@ MonoBehaviour:
   videoPopupPanel: {fileID: 3000000007}
   videoPlayer: {fileID: 3000000018}
   progressBar: {fileID: 3000000014}
-  totalTime: 18.000
+  totalTime: 18
   nextSceneName: MathGame5Level1
 --- !u!1 &3000000007
 GameObject:
@@ -5727,7 +5727,7 @@ MonoBehaviour:
   videoPopupPanel: {fileID: 3000000052}
   videoPlayer: {fileID: 3000000063}
   progressBar: {fileID: 3000000059}
-  totalTime: 18.000
+  totalTime: 18
   nextSceneName: MathGame5Level2
 --- !u!1 &3000000030
 GameObject:
@@ -6658,7 +6658,7 @@ MonoBehaviour:
   videoPopupPanel: {fileID: 3000000097}
   videoPlayer: {fileID: 3000000108}
   progressBar: {fileID: 3000000104}
-  totalTime: 18.000
+  totalTime: 18
   nextSceneName: MathGame5Level3
 --- !u!1 &3000000075
 GameObject:
@@ -7589,7 +7589,7 @@ MonoBehaviour:
   videoPopupPanel: {fileID: 3000000142}
   videoPlayer: {fileID: 3000000153}
   progressBar: {fileID: 3000000149}
-  totalTime: 18.000
+  totalTime: 18
   nextSceneName: MathGame5Level4
 --- !u!1 &3000000120
 GameObject:
@@ -8520,7 +8520,7 @@ MonoBehaviour:
   videoPopupPanel: {fileID: 3000000187}
   videoPlayer: {fileID: 3000000198}
   progressBar: {fileID: 3000000194}
-  totalTime: 18.000
+  totalTime: 18
   nextSceneName: MathGame5Level5
 --- !u!1 &3000000165
 GameObject:

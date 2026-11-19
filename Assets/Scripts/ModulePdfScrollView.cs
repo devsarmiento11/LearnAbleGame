@@ -15,6 +15,7 @@ public sealed class ModulePdfScrollView : MonoBehaviour
     private readonly List<float> heights = new List<float>();
     private Action<string> error;
     private bool ready;
+    public ScrollRect Scroll => scroll;
 
     public void Open(string path, Action<string> onError)
     {
@@ -66,8 +67,10 @@ public sealed class ModulePdfScrollView : MonoBehaviour
     private void DrawVisible()
     {
         if (document == null || pages == null) return;
-        float start = pages.anchoredPosition.y;
-        float end = start + scroll.viewport.rect.height;
+        var viewport = scroll.viewport;
+        float start = -pages.InverseTransformPoint(viewport.TransformPoint(
+            new Vector3(viewport.rect.xMin, viewport.rect.yMax))).y;
+        float end = start + viewport.rect.height / pages.localScale.y;
         // Render at most one new page per frame, keeping scroll and Close responsive.
         bool rendered = false;
         for (int i = 0; i < images.Count; i++)

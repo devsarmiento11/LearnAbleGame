@@ -13,6 +13,7 @@ using UnityEngine.Networking;
 public sealed class StudentModuleFolder
 {
     public string Owner, Id, Name;
+    public DateTime CreatedAt;
 }
 
 // Reads the same library as UploadModuleScene; no copied catalogue can go stale.
@@ -83,7 +84,10 @@ public sealed class StudentModuleStore
             var result = await Read(Database.Collection("teacherLibraries").Document(owner).Collection("folders").GetSnapshotAsync(Source.Server), cancellation);
             CheckSession();
             folders.AddRange(result.Documents.Select(d => new StudentModuleFolder
-            { Owner = owner, Id = d.Id, Name = d.GetValue<string>("Name") }));
+            {
+                Owner = owner, Id = d.Id, Name = d.GetValue<string>("Name"),
+                CreatedAt = d.TryGetValue<Timestamp>("CreatedAt", out var created) ? created.ToDateTime() : DateTime.MinValue
+            }));
         }
         return folders.OrderBy(f => f.Name, StringComparer.OrdinalIgnoreCase).ThenBy(f => f.Owner).ThenBy(f => f.Id).ToList();
     }
@@ -114,7 +118,7 @@ public sealed class StudentModuleStore
             .OrderBy(m => m.Title, StringComparer.OrdinalIgnoreCase).ThenBy(m => m.Id).ToList();
     }
 
-    public async Task<string> Download(StudentModuleFolder folder, string moduleId, CancellationToken cancellation, Action<float> progress)
+    public async Task<(string Path, string FileName)> Download(StudentModuleFolder folder, string moduleId, CancellationToken cancellation, Action<float> progress)
     {
         await VerifyProfile(cancellation);
         var snapshot = await Read(Library(folder).Collection("modules").Document(moduleId).GetSnapshotAsync(Source.Server), cancellation);
@@ -165,7 +169,7 @@ public sealed class StudentModuleStore
             }
             ModuleFile.Validate(path);
             progress?.Invoke(1f);
-            return path;
+            return (path, module.FileName);
         }
         catch { if (File.Exists(path)) File.Delete(path); throw; }
     }

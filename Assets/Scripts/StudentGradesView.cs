@@ -11,7 +11,7 @@ public class StudentGradesView : MonoBehaviour
     private ListenerRegistration listener;
     private readonly Dictionary<string, TMP_Text> labels = new Dictionary<string, TMP_Text>();
     private readonly Dictionary<string, Color> originalColors = new Dictionary<string, Color>();
-    private static readonly string[] QuarterLabels = { "First", "Second", "Third", "Fourth" };
+    private static readonly string[] QuarterLabels = { "First", "Second", "Third" };
 
     private void Awake()
     {

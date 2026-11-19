@@ -960,9 +960,7 @@ public class SpeechGameManager : MonoBehaviour, ISpeechToTextListener
 
         if (ScoreManager.CurrentScore >= 50)
         {
-            SceneManager.LoadScene(
-                scoreSceneName
-            );
+            SceneManager.LoadScene(PassedLevelNavigation.Destination(scoreSceneName));
         }
         else
         {

@@ -115,7 +115,7 @@ public class ScienceSelectionManager : MonoBehaviour
         // 50 or higher = pass
         if (finalScore >= 50)
         {
-            SceneManager.LoadScene(scoreSceneName);
+            SceneManager.LoadScene(PassedLevelNavigation.Destination(scoreSceneName));
         }
         else
         {

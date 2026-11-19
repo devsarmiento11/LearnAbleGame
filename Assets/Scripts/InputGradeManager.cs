@@ -143,13 +143,7 @@ public class InputGradeManager : MonoBehaviour
             quarterDropdown.ClearOptions();
 
             quarterDropdown.AddOptions(
-                new System.Collections.Generic.List<string>
-                {
-                    "1ST",
-                    "2ND",
-                    "3RD",
-                    "4TH"
-                }
+                new List<string>(AcademicGradeReport.Quarters)
             );
 
             quarterDropdown.value = 0;
@@ -173,6 +167,15 @@ public class InputGradeManager : MonoBehaviour
         }
         if (gradeInputField == null)
             return;
+
+        if (subjectDropdown.value < 0 || subjectDropdown.value >= subjectDropdown.options.Count ||
+            quarterDropdown.value < 0 || quarterDropdown.value >= quarterDropdown.options.Count ||
+            System.Array.IndexOf(AcademicGradeReport.Quarters,
+                quarterDropdown.options[quarterDropdown.value].text) < 0)
+        {
+            ShowStatus("Select a valid subject and quarter first.", true);
+            return;
+        }
 
         // Make sure teacher entered a grade
         if (string.IsNullOrWhiteSpace(

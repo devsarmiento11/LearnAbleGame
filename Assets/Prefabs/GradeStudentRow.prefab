@@ -269,8 +269,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -131.2097, y: -0.7441}
-  m_SizeDelta: {x: 354.604, y: 22.4882}
+  m_AnchoredPosition: {x: -98.44766, y: -0.7441}
+  m_SizeDelta: {x: 420.1281, y: 22.4882}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5732114471159365131
 CanvasRenderer:
@@ -300,7 +300,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ALEXIS JOHN ADVIENTESI
+  m_text: james albert sarmiento
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a63b63128d2951e4e8d501bd890d1ef5, type: 2}
   m_sharedMaterial: {fileID: -3295405222342240559, guid: a63b63128d2951e4e8d501bd890d1ef5, type: 2}

@@ -3,7 +3,7 @@ using System.IO;
 using System.Threading.Tasks;
 using UnityEngine;
 
-// Android 10+: publish a completed PDF to Downloads through MediaStore. Older
+// Android 10+: publish a completed module to Downloads through MediaStore. Older
 // Android: system Save dialog; neither path needs broad storage permission.
 public sealed class StudentPdfDownload : MonoBehaviour
 {
@@ -24,13 +24,13 @@ public sealed class StudentPdfDownload : MonoBehaviour
     public Task<string> Save(string path, string fileName)
     {
         ModuleFile.Validate(path);
-        fileName = Path.GetFileName((fileName ?? "module.pdf").Replace('\\', '/'));
+        fileName = Path.GetFileName((fileName ?? "").Replace('\\', '/'));
         foreach (char invalid in Path.GetInvalidFileNameChars()) fileName = fileName.Replace(invalid, '_');
-        if (string.IsNullOrWhiteSpace(fileName)) fileName = "module.pdf";
         string extension = ModuleFile.Extension(path);
-        fileName = Path.GetFileNameWithoutExtension(fileName) + extension;
+        string baseName = Path.GetFileNameWithoutExtension(fileName).Trim();
+        fileName = (string.IsNullOrEmpty(baseName) ? "module" : baseName) + extension;
 #if UNITY_ANDROID && !UNITY_EDITOR
-        if (pending != null) throw new InvalidOperationException("A PDF is already being saved.");
+        if (pending != null) throw new InvalidOperationException("A module is already being saved.");
         pending = new TaskCompletionSource<string>();
         var result = pending.Task;
         try

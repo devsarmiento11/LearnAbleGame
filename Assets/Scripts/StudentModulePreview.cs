@@ -25,7 +25,7 @@ public sealed class StudentModulePreview : MonoBehaviour
     private AudioSource videoAudio;
     private RenderTexture videoTexture;
     private CancellationTokenSource request;
-    private TeacherPdfModule selected;
+    private string fileName;
     private string localPath;
     private int generation;
     private bool saving;
@@ -54,17 +54,18 @@ public sealed class StudentModulePreview : MonoBehaviour
         int version = ++generation;
         request = new CancellationTokenSource();
         CancellationToken token = request.Token;
-        selected = module;
         try
         {
             string mime = ModuleFile.ContentType(module.StoragePath);
             panel = panels[mime == "application/pdf" ? "PdfPopUpScreen" : mime.StartsWith("video/") ? "VideoPopUpScreen" : "ImagePopUpScreen"];
             ShowPanel();
             SetMessage("Loading " + module.Title + "...");
-            string path = await store.Download(folder, module.Id, token,
+            var file = await store.Download(folder, module.Id, token,
                 progress => { if (version == generation) SetMessage("Loading " + Mathf.FloorToInt(progress * 100) + "%"); });
+            string path = file.Path;
             if (version != generation || token.IsCancellationRequested) { DeleteFile(path); return; }
             localPath = path;
+            fileName = file.FileName;
             // Use the verified downloaded extension if the teacher replaced a file.
             mime = ModuleFile.ContentType(path);
             string correctPanel = mime == "application/pdf" ? "PdfPopUpScreen" : mime.StartsWith("video/") ? "VideoPopUpScreen" : "ImagePopUpScreen";
@@ -204,14 +205,14 @@ public sealed class StudentModulePreview : MonoBehaviour
 
     private async void Save()
     {
-        if (saving || localPath == null || selected == null || !File.Exists(localPath)) return;
+        if (saving || localPath == null) return;
         saving = true;
         int version = generation;
         download.interactable = false;
         SetMessage("Saving module...");
         try
         {
-            string result = await exporter.Save(localPath, selected.FileName);
+            string result = await exporter.Save(localPath, fileName);
             if (version == generation) SetMessage(string.IsNullOrEmpty(result) ? "Save cancelled." : "Module downloaded.");
         }
         catch (OperationCanceledException) { }
@@ -240,7 +241,7 @@ public sealed class StudentModulePreview : MonoBehaviour
         if (request != null) { request.Cancel(); request.Dispose(); request = null; }
         HideSurface();
         foreach (var popup in panels.Values) if (popup != null) popup.SetActive(false);
-        panel = null; selected = null; download = null;
+        panel = null; fileName = null; download = null;
         if (blocker != null) blocker.SetActive(false);
         foreach (var pair in backgroundControls) if (pair.Key != null) pair.Key.interactable = pair.Value;
         backgroundControls.Clear();

@@ -6,7 +6,7 @@ using System.Globalization;
 public sealed class AcademicGradeReport
 {
     public static readonly string[] Subjects = { "English", "Math", "Science" };
-    public static readonly string[] Quarters = { "1ST", "2ND", "3RD", "4TH" };
+    public static readonly string[] Quarters = { "1ST", "2ND", "3RD" };
     private readonly Dictionary<string, object> grades;
     public readonly string TeacherRemark;
 
@@ -25,6 +25,8 @@ public sealed class AcademicGradeReport
 
     public decimal? Grade(string subject, string quarter)
     {
+        // Retain legacy saved data, but only use the current three quarters.
+        if (Array.IndexOf(Quarters, quarter) < 0) return null;
         if (grades.TryGetValue(Key(subject, quarter), out object value) && value != null
             && decimal.TryParse(Convert.ToString(value, CultureInfo.InvariantCulture),
                 NumberStyles.Number, CultureInfo.InvariantCulture, out decimal grade)

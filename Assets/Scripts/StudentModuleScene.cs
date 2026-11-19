@@ -24,6 +24,10 @@ public sealed class StudentModuleScene : MonoBehaviour
     TMP_Text status;
     Vector2[] slots;
     float pageHeight;
+    TMP_Dropdown sorting;
+    static int sortMode;
+    List<StudentModuleFolder> loadedFolders;
+    List<TeacherPdfModule> loadedModules;
     bool folderScene, busy, ready;
 
     void Start()
@@ -102,7 +106,21 @@ public sealed class StudentModuleScene : MonoBehaviour
             preview = gameObject.AddComponent<StudentModulePreview>();
             preview.Initialize(transform, exporter, label);
         }
+        sorting = GetComponentsInChildren<TMP_Dropdown>(true)
+            .FirstOrDefault(d => d.name == "DropdownSorting");
+        if (sorting != null)
+        {
+            sorting.SetValueWithoutNotify(sortMode);
+            sorting.onValueChanged.AddListener(ChangeSorting);
+        }
         ready = true;
+    }
+
+    void ChangeSorting(int value)
+    {
+        sortMode = value;
+        if (folderScene && loadedModules != null) RenderModules(loadedModules);
+        else if (!folderScene && loadedFolders != null) RenderFolders(loadedFolders);
     }
 
     void Message(string message)
@@ -206,6 +224,13 @@ public sealed class StudentModuleScene : MonoBehaviour
 
     void RenderFolders(List<StudentModuleFolder> folders)
     {
+        loadedFolders = folders;
+        var ordered = sortMode == 1
+            ? folders.OrderByDescending(f => f.Name, StringComparer.OrdinalIgnoreCase)
+            : sortMode == 2
+                ? folders.OrderByDescending(f => f.CreatedAt).ThenBy(f => f.Name, StringComparer.OrdinalIgnoreCase)
+                : folders.OrderBy(f => f.Name, StringComparer.OrdinalIgnoreCase);
+        folders = ordered.ThenBy(f => f.Owner, StringComparer.Ordinal).ThenBy(f => f.Id, StringComparer.Ordinal).ToList();
         BeginRows(folders.Count);
         for (int i = 0; i < folders.Count; i++)
         {
@@ -222,8 +247,16 @@ public sealed class StudentModuleScene : MonoBehaviour
 
     void RenderModules(List<TeacherPdfModule> modules)
     {
+        loadedModules = modules;
         // Defence in depth: never render wrong-grade, archived or foreign-folder rows.
         var items = modules.Where(m => m.Grade == store.Grade && !m.Archived && m.FolderId == folder.Id).ToList();
+        var ordered = sortMode == 1
+            ? items.OrderByDescending(m => m.Title, StringComparer.OrdinalIgnoreCase)
+            : sortMode == 2
+                ? items.OrderByDescending(m => m.CreatedAt?.ToDateTime() ?? DateTime.MinValue)
+                    .ThenBy(m => m.Title, StringComparer.OrdinalIgnoreCase)
+                : items.OrderBy(m => m.Title, StringComparer.OrdinalIgnoreCase);
+        items = ordered.ThenBy(m => m.Id, StringComparer.Ordinal).ToList();
         BeginRows(items.Count);
         for (int i = 0; i < items.Count; i++)
         {

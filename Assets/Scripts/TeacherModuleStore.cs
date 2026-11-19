@@ -23,6 +23,7 @@ public sealed class TeacherModuleFolder
 [FirestoreData]
 public sealed class TeacherPdfModule
 {
+    [FirestoreProperty] public Timestamp? CreatedAt { get; set; }
     [FirestoreDocumentId] public string Id { get; set; }
     [FirestoreProperty] public string Title { get; set; }
     [FirestoreProperty] public string FolderId { get; set; }
@@ -141,6 +142,7 @@ public sealed class TeacherModuleStore
             var existing = await transaction.GetSnapshotAsync(reference);
             if (existing.Exists) throw new InvalidOperationException("A folder with this name already exists.");
             transaction.Set(reference, new TeacherModuleFolder { Name = name });
+            transaction.Update(reference, new Dictionary<string, object> { { "CreatedAt", FieldValue.ServerTimestamp } });
         });
         CheckSession(); return id;
     }
@@ -263,7 +265,12 @@ public sealed class TeacherModuleStore
                 var existing = await transaction.GetSnapshotAsync(reference);
                 if ((expectedRevision == 0 && existing.Exists) || (expectedRevision > 0 && (!existing.Exists || existing.ConvertTo<TeacherPdfModule>().Revision != expectedRevision)))
                     throw new InvalidOperationException("This module changed on another device. Reload the folder and try again.");
+                // Preserve creation time through edits, including older clients' saves.
+                module.CreatedAt = existing.Exists && existing.TryGetValue<Timestamp>("CreatedAt", out var created)
+                    ? (Timestamp?)created : null;
                 transaction.Set(reference, module);
+                if (!existing.Exists)
+                    transaction.Update(reference, new Dictionary<string, object> { { "CreatedAt", FieldValue.ServerTimestamp } });
             });
             module.Id = reference.Id;
         }

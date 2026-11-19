@@ -12,6 +12,8 @@ public static class LearningDataStore
     public const string UsersCollection = "users";
     public const string ActivityScoresCollection = "activityScores";
 
+    public const string LeaderboardStartsCollection = "leaderboardStarts";
+
     private const string CurrentUserIdKey = "CurrentUserId";
 
     public static string CurrentUserId => PlayerPrefs.GetString(CurrentUserIdKey, string.Empty);
@@ -58,6 +60,18 @@ public static class LearningDataStore
             .Document(userId.Trim())
             .SetAsync(user, SetOptions.MergeAll)
             .ContinueWith(task => LogResult(task, "save user profile"));
+    }
+
+    public static void MarkLeaderboardParticipation()
+    {
+        if (!LoginSession.IsLoggedIn || LoginSession.Role != "student") return;
+        string id = CurrentUserId;
+        var user = Firebase.Auth.FirebaseAuth.DefaultInstance.CurrentUser;
+        if (user == null || string.IsNullOrWhiteSpace(id)) return;
+
+        FirebaseFirestore.DefaultInstance.Collection(LeaderboardStartsCollection)
+            .Document(id).SetAsync(new Dictionary<string, object> { { "authUid", user.UserId } })
+            .ContinueWith(task => LogResult(task, "mark leaderboard participation"));
     }
 
     public static void RecordActivity(string activityName, int score, int correctAnswers, int totalItems, int timeUsedSeconds)

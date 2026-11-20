@@ -86,6 +86,16 @@ public class SceneLoader : MonoBehaviour
         StartCoroutine(LoadSceneSafely("SettingsScene"));
     }
 
+    public void GoBack(string fallbackScene)
+    {
+        if (isChangingScene)
+            return;
+
+        string destination = SceneReturnHistory.BackDestination(fallbackScene);
+        if (!string.IsNullOrWhiteSpace(destination))
+            StartCoroutine(LoadSceneSafely(destination));
+    }
+
     private System.Collections.IEnumerator LoadSceneSafely(string sceneName)
     {
         if (LoginSession.IsParent && !ParentSceneAccess.IsAllowed(sceneName))
@@ -191,7 +201,7 @@ public class SceneLoader : MonoBehaviour
             previousScene
         );
 
-        StartCoroutine(LoadSceneSafely(previousScene));
+        GoBack(previousScene);
     }
 
 

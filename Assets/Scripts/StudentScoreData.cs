@@ -10,6 +10,39 @@ public static class StudentScoreData
         @"^(English|Science|Math)[\s_-]*Game[\s_-]*(\d+)(?:[\s_-]*Level[\s_-]*(\d+))?$",
         RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
 
+    private static readonly Dictionary<string, string[]> ActivityTitles =
+        new Dictionary<string, string[]>(StringComparer.OrdinalIgnoreCase)
+        {
+            ["English"] = new[]
+            {
+                "Let's Trace Vertical Lines", "Connecting Vertical Dots", "Dividing the Pizza in Half",
+                "Missing Parts", "Drawing Shapes", "Let's Trace Horizontal Lines",
+                "Connecting Horizontal Dots", "Dividing the Pizza in Half", "Missing Parts",
+                "Color Shapes", "Let's Trace Curved Lines", "Trace the Egg", "Let's Trace Curved Lines"
+            },
+            ["Science"] = new[]
+            {
+                "Drag The Correct Answer", "What Does Body Need?", "Math It!", "Food or Not Food",
+                "Good,Bad For Health?", "Do You Do These?", "My Morning Routine",
+                "Caring For Environment", "Help The Environment"
+            },
+            ["Math"] = new[]
+            {
+                "Draw Above the Cake", "Find The Missing Number", "Let's Count!", "Comparing Numbers",
+                "Let's Compare Numbers!", "Match The Coins", "Match The Money", "How Much?"
+            }
+        };
+
+    public static string DescribeActivity(string activity, out string level)
+    {
+        Match match = ScenePattern.Match(activity);
+        level = match.Groups[3].Success ? NormalizeNumber(match.Groups[3].Value) : "";
+        if (match.Success && ActivityTitles.TryGetValue(match.Groups[1].Value, out string[] titles) &&
+            int.TryParse(match.Groups[2].Value, out int game) && game > 0 && game <= titles.Length)
+            return titles[game - 1];
+        return activity;
+    }
+
     public static string NormalizeActivity(string name)
     {
         name = (name ?? string.Empty).Trim();

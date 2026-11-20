@@ -189,7 +189,7 @@ public sealed class EnrollStudentSceneController : MonoBehaviour
         if (busy) return;
         if (!editing && board > 0) { ShowBoard(board - 1); return; }
         StudentEnrollmentSelection.Editing = false;
-        SceneManager.LoadScene(editing ? "EditStudentScene" : "StudentListScene");
+        SceneReturnHistory.GoBack(editing ? "EditStudentScene" : "StudentListScene");
     }
     void ClearMessage() { foreach (var entry in labels) entry.Key.text = entry.Value; }
     void Message(string message)

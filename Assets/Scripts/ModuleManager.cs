@@ -15,6 +15,7 @@ public class ModuleManager : MonoBehaviour
     private readonly List<Button> blockedButtons = new List<Button>();
 
     private int currentPanel = 0;
+    private GameObject openPopup;
 
     private void Awake()
     {
@@ -33,6 +34,8 @@ public class ModuleManager : MonoBehaviour
         ClosePopups();
         popup.transform.SetAsLastSibling();
         popup.SetActive(true);
+        openPopup = popup;
+        SaveLocation();
 
         // Keep clicks and keyboard navigation inside the active popup.
         Canvas canvas = popup.GetComponentInParent<Canvas>();
@@ -60,18 +63,31 @@ public class ModuleManager : MonoBehaviour
             if (button != null) button.interactable = true;
         }
         blockedButtons.Clear();
+        openPopup = null;
+        SaveLocation();
     }
 
     private void OnDisable()
     {
+        var location = GetLocation();
         ClosePopups();
+        SceneReturnHistory.Save(this, location);
     }
 
     void Start()
     {
-        currentPanel = 0;
+        var location = SceneReturnHistory.Restore(this, (panel: 0, subject: 0));
+        currentPanel = Mathf.Clamp(location.panel, 0, Mathf.Max(0, panels.Length - 1));
         ShowPanel(currentPanel);
+        if (location.subject == 1) OpenEnglishPopup();
+        if (location.subject == 2) OpenSciencePopup();
+        if (location.subject == 3) OpenMathPopup();
     }
+
+    private (int panel, int subject) GetLocation() =>
+        (currentPanel, openPopup == null ? 0 : openPopup == englishPopup ? 1 : openPopup == sciencePopup ? 2 : 3);
+
+    private void SaveLocation() => SceneReturnHistory.Save(this, GetLocation());
 
     public void NextPanel()
     {

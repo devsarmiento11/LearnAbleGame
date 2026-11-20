@@ -120,6 +120,9 @@ public sealed class TeacherModuleScene : MonoBehaviour
     }
     void Navigate(string scene)
     {
+        if (scroll != null)
+            SceneReturnHistory.Save(this, (position: scroll.verticalNormalizedPosition,
+                query: search != null ? search.text : string.Empty, grade: filter != null ? filter.value : 0));
         if (scene == "SettingsScene") PlayerPrefs.SetString("SettingsPreviousScene", SceneManager.GetActiveScene().name);
         SceneManager.LoadScene(scene);
     }
@@ -249,7 +252,7 @@ public sealed class TeacherModuleScene : MonoBehaviour
         Bind(createFolderButton, OpenCreateFolder);
         Bind("ConfirmationPopup/Button", CancelCreateFolder);
         Bind("ConfirmationPopup/Button (1)", ConfirmCreateFolder);
-        Bind(backButton, () => Navigate("MainMenuTeacher"));
+        Bind(backButton, () => SceneReturnHistory.GoBack("MainMenuTeacher"));
         Bind(settingsButton, () => Navigate("SettingsScene"));
         if (scroll == null) scroll = At<ScrollRect>("FoldersScrollView");
         Canvas.ForceUpdateCanvases();
@@ -316,7 +319,7 @@ public sealed class TeacherModuleScene : MonoBehaviour
         Canvas.ForceUpdateCanvases();
         scroll.StopMovement();
         content.anchoredPosition = Vector2.zero;
-        scroll.verticalNormalizedPosition = 1;
+        RestoreScroll();
     }
     void Progress(float value)
     {
@@ -343,6 +346,7 @@ public sealed class TeacherModuleScene : MonoBehaviour
         status = At<TMP_Text>("Title Of Folder");
         search = At<TMP_InputField>("InputField (TMP)");
         filter = At<TMP_Dropdown>("Dropdown"); SetGrades(filter, true);
+        RestoreFilters();
         editPopup = Obj("EditPopUp"); archivePopup = Obj("ArchivePopUp"); deletePopup = Obj("DeletePopUp");
         editPopup.SetActive(false); archivePopup.SetActive(false); deletePopup.SetActive(false);
         // The authored popup name currently includes a trailing space.
@@ -357,7 +361,7 @@ public sealed class TeacherModuleScene : MonoBehaviour
         editFolder = At<TMP_Dropdown>("EditPopUp/Folder Options ");
         editGrade = At<TMP_Dropdown>("EditPopUp/CurrentLevelPutted"); SetGrades(editGrade, false);
         fileName = editPopup.GetComponentsInChildren<TMP_Text>(true).First(t => t.name == "Current File Name");
-        Bind("Buttons/BackBtn", () => Navigate("UploadModuleScene"));
+        Bind("Buttons/BackBtn", () => SceneReturnHistory.GoBack("UploadModuleScene"));
         Bind("Buttons/SettingsBtn", () => Navigate("SettingsScene"));
         Bind("Buttons/ArchivesBtn", () => Navigate("ArchiveScene"));
         Bind("EditPopUp/Button", ClosePopups); Bind("EditPopUp/CancelBtn", ClosePopups);
@@ -527,10 +531,11 @@ public sealed class TeacherModuleScene : MonoBehaviour
         status = At<TMP_Text>("NameOfTheArchiveModule");
         search = At<TMP_InputField>("SearchModule");
         filter = At<TMP_Dropdown>("Dropdown"); SetGrades(filter, true);
+        RestoreFilters();
         archivePopup = Obj("UndoConfirmationPopup");
         deletePopup = Obj("DeleteConfirmationPopup ");
         ClosePopups();
-        Bind("Buttons/Back", () => Navigate("FolderScene"));
+        Bind("Buttons/Back", () => SceneReturnHistory.GoBack("FolderScene"));
         Bind("Buttons/Settings", () => Navigate("SettingsScene"));
         Bind("UndoConfirmationPopup/Cancel", ClosePopups);
         Bind("DeleteConfirmationPopup /Cancel", ClosePopups);
@@ -626,7 +631,22 @@ public sealed class TeacherModuleScene : MonoBehaviour
                 Bind(row.transform.Find("Archivebtn").GetComponent<Button>(), () => { ClosePopups(); selected = item; ShowPopup(archivePopup); });
             row.SetActive(true); generated.Add(row);
         }
-        scroll.StopMovement(); scroll.verticalNormalizedPosition = 1;
+        scroll.StopMovement(); RestoreScroll();
+    }
+    bool restoredScroll;
+    void RestoreFilters()
+    {
+        var location = SceneReturnHistory.Restore(this, (position: 1f, query: string.Empty, grade: 0));
+        search.SetTextWithoutNotify(location.query);
+        filter.SetValueWithoutNotify(location.grade);
+    }
+
+    void RestoreScroll()
+    {
+        var location = SceneReturnHistory.Restore(this, (position: 1f, query: string.Empty, grade: 0));
+        scroll.verticalNormalizedPosition = restoredScroll ? 1f : location.position;
+        if (generated.Count > 0)
+            restoredScroll = true;
     }
     void RequireSelectedFolder()
     {

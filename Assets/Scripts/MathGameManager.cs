@@ -9,7 +9,7 @@ public class MathGameManager : MonoBehaviour
     void Start()
     {
         currentLevel = PassedLevelNavigation.ConsumePreview(
-            gameObject.scene.name, levels.Length);
+            gameObject.scene.name, levels.Length, SceneReturnHistory.Restore(this, 0));
         ShowLevel(currentLevel);
     }
 
@@ -41,6 +41,7 @@ public class MathGameManager : MonoBehaviour
 
     private void ShowLevel(int index)
     {
+        SceneReturnHistory.Save(this, index);
         for (int i = 0; i < levels.Length; i++)
         {
             if (levels[i] != null)

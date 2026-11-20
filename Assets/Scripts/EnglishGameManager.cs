@@ -9,7 +9,7 @@ public class EnglishGameManager : MonoBehaviour
     void Start()
     {
         currentLevel = PassedLevelNavigation.ConsumePreview(
-            gameObject.scene.name, levels.Length);
+            gameObject.scene.name, levels.Length, SceneReturnHistory.Restore(this, 0));
         ShowLevel(currentLevel);
     }
 
@@ -47,6 +47,7 @@ public class EnglishGameManager : MonoBehaviour
         }
 
         levels[index].SetActive(true);
+        SceneReturnHistory.Save(this, index);
 
         Debug.Log("Current Level: " + (index + 1));
     }

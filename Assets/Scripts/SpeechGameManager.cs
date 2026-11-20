@@ -73,6 +73,75 @@ public class SpeechGameManager : MonoBehaviour, ISpeechToTextListener
     private bool awaitingResult = false;
     private bool activityFinished = false;
     private bool speechAvailable = false;
+    private string recognitionLocale;
+
+#if UNITY_ANDROID && !UNITY_EDITOR
+    private bool useLanguageSwitching;
+    private AndroidJavaObject bilingualRecognizer;
+    private BilingualSpeechCallback bilingualCallback;
+
+    [UnityEngine.Scripting.Preserve]
+    private sealed class BilingualSpeechCallback : AndroidJavaProxy
+    {
+        // Android invokes the listener on its UI thread. Unity handles the results in Update.
+        public readonly System.Collections.Concurrent.ConcurrentQueue<(string Text, int Error, bool Partial)>
+            Results = new System.Collections.Concurrent.ConcurrentQueue<(string, int, bool)>();
+
+        public BilingualSpeechCallback() : base("com.learnable.modules.BilingualSpeech$Callback") {}
+
+        [UnityEngine.Scripting.Preserve]
+        public void onTranscript(string text, int error) => Results.Enqueue((text, error, false));
+
+        [UnityEngine.Scripting.Preserve]
+        public void onPartial(string text) => Results.Enqueue((text, 0, true));
+    }
+
+    private void Update()
+    {
+        while (bilingualCallback != null && bilingualCallback.Results.TryDequeue(out var result))
+        {
+            if (result.Partial)
+            {
+                OnPartialResultReceived(result.Text);
+                continue;
+            }
+
+            ReleaseBilingualRecognizer();
+            OnResultReceived(result.Text, result.Error == 0 ? (int?)null : result.Error);
+        }
+    }
+
+    private bool StartBilingualRecognition()
+    {
+        try
+        {
+            using var player = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
+            using var activity = player.GetStatic<AndroidJavaObject>("currentActivity");
+            bilingualCallback = new BilingualSpeechCallback();
+            bilingualRecognizer = new AndroidJavaObject(
+                "com.learnable.modules.BilingualSpeech", activity, bilingualCallback);
+            bilingualRecognizer.Call("start", recognitionLocale);
+            return true;
+        }
+        catch (AndroidJavaException error)
+        {
+            Debug.LogWarning("[SpeechGame] Could not start bilingual recognition: " + error.Message);
+            ReleaseBilingualRecognizer();
+            return false;
+        }
+    }
+
+    private void ReleaseBilingualRecognizer()
+    {
+        bilingualCallback = null;
+        if (bilingualRecognizer == null)
+            return;
+
+        bilingualRecognizer.Call("cancel");
+        bilingualRecognizer.Dispose();
+        bilingualRecognizer = null;
+    }
+#endif
 
     private readonly List<MissingNumber> answerHistory =
         new List<MissingNumber>();
@@ -86,7 +155,15 @@ public class SpeechGameManager : MonoBehaviour, ISpeechToTextListener
     {
         ScoreManager.BeginActivity();
 
-        bool initialized = SpeechToText.Initialize("en-US");
+        recognitionLocale =
+            LanguageManager.EnsureInstance().CurrentLanguage == LanguageManager.Language.Tagalog
+                ? "fil-PH"
+                : "en-US";
+#if UNITY_ANDROID && !UNITY_EDITOR
+        using var version = new AndroidJavaClass("android.os.Build$VERSION");
+        useLanguageSwitching = version.GetStatic<int>("SDK_INT") >= 34;
+#endif
+        bool initialized = SpeechToText.Initialize(recognitionLocale);
 
         speechAvailable =
             initialized &&
@@ -290,8 +367,12 @@ public class SpeechGameManager : MonoBehaviour, ISpeechToTextListener
 
         awaitingResult = true;
 
-        bool started =
+#if UNITY_ANDROID
+        bool started = (useLanguageSwitching && StartBilingualRecognition()) ||
             SpeechToText.Start(this);
+#else
+        bool started = SpeechToText.Start(this);
+#endif
 
 
         if (started)
@@ -339,6 +420,14 @@ public class SpeechGameManager : MonoBehaviour, ISpeechToTextListener
         if (!isListening)
             return;
 
+#if UNITY_ANDROID
+        if (bilingualRecognizer != null)
+        {
+            bilingualRecognizer.Call("stop");
+            isListening = false;
+            return;
+        }
+#endif
 
         if (SpeechToText.IsBusy())
         {
@@ -667,46 +756,29 @@ public class SpeechGameManager : MonoBehaviour, ISpeechToTextListener
     // NUMBER MATCHING
     // =========================================================
 
+    private static readonly string[] TagalogNumberWords =
+    {
+        "sero", "isa", "dalawa", "tatlo", "apat", "lima",
+        "anim", "pito", "walo", "siyam", "sampu"
+    };
+
+    private static bool ContainsAnswerWord(string spokenText, string answerWord)
+    {
+        return Regex.IsMatch(
+            spokenText, @"\b" + Regex.Escape(answerWord) + @"\b", RegexOptions.IgnoreCase);
+    }
+
     private bool ContainsNumber(
         string spokenText,
         int number
     )
     {
-        string numberWord =
-            NumberToWord(number);
+        bool englishWordFound = ContainsAnswerWord(spokenText, NumberToWord(number));
+        bool digitFound = ContainsAnswerWord(spokenText, number.ToString());
+        bool tagalogWordFound = number >= 0 && number < TagalogNumberWords.Length &&
+            ContainsAnswerWord(spokenText, TagalogNumberWords[number]);
 
-
-        bool wordFound =
-            Regex.IsMatch(
-                spokenText,
-                @"\b" +
-                Regex.Escape(numberWord) +
-                @"\b",
-                RegexOptions.IgnoreCase
-            );
-
-
-        bool digitFound =
-            Regex.IsMatch(
-                spokenText,
-                @"\b" +
-                number.ToString() +
-                @"\b"
-            );
-
-
-        Debug.Log(
-            "[SpeechGame] Number " +
-            number +
-            " | Word match = " +
-            wordFound +
-            " | Digit match = " +
-            digitFound
-        );
-
-
-        return wordFound ||
-               digitFound;
+        return englishWordFound || digitFound || tagalogWordFound;
     }
 
 
@@ -1153,6 +1225,10 @@ public class SpeechGameManager : MonoBehaviour, ISpeechToTextListener
         awaitingResult = false;
         isListening = false;
 
+
+#if UNITY_ANDROID && !UNITY_EDITOR
+        ReleaseBilingualRecognizer();
+#endif
 
 #if !UNITY_EDITOR
 

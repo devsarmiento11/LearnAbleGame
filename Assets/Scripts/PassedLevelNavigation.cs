@@ -50,9 +50,9 @@ public static class PassedLevelNavigation
         return requestedScene;
     }
 
-    public static int ConsumePreview(string menuScene, int levelCount)
+    public static int ConsumePreview(string menuScene, int levelCount, int previousIndex = 0)
     {
-        int index = 0;
+        int index = previousIndex;
         if (pendingMenu == menuScene && pendingStudent == LearningDataStore.CurrentUserId)
             index = Mathf.Clamp(pendingLevel - 1, 0, Mathf.Max(0, levelCount - 1));
         Reset();

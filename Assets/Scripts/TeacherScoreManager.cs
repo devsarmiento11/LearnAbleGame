@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Firebase.Firestore;
 using Firebase.Extensions;
 using Firebase.Auth;
@@ -36,6 +37,15 @@ public class TeacherScoreManager : MonoBehaviour
     private int scoreRequestVersion;
     private readonly List<GameObject> scoreRows = new List<GameObject>();
     private Coroutine scoreLayoutRefresh;
+    private Button historyButton;
+    private GameObject historyPopup;
+    private ScrollRect historyScroll;
+    private GameObject historyRowTemplate;
+    private TMP_Dropdown historySubject;
+    private TMP_Dropdown historyLevel;
+    private readonly List<GameObject> historyRows = new List<GameObject>();
+    private const float AttemptRowSpacing = 58.2f;
+    private const int AttemptHistoryLimit = 50;
 
     private Dictionary<string, GameObject> studentRows =
         new Dictionary<string, GameObject>();
@@ -58,9 +68,145 @@ public class TeacherScoreManager : MonoBehaviour
         EnsureScoreContent();
         if (scoreContent != null)
             ScoreTableScroll.Configure(scoreContent.GetComponentInParent<ScrollRect>(true));
+        SetupAttemptHistory();
         SetupSubjectFilter();
 
         ListenForStudents();
+    }
+
+    private void SetupAttemptHistory()
+    {
+        if (studentScorePopup == null) return;
+        Transform panel = studentScorePopup.transform;
+        historyPopup = panel.Find("AttemptsHistoryPopup")?.gameObject;
+        historyButton = panel.Find("AttemptsHistoryButton")?.GetComponent<Button>();
+        if (historyPopup == null || historyButton == null) return;
+
+        historyPopup.SetActive(false);
+        historyButton.interactable = false;
+        Transform popup = historyPopup.transform;
+        historyScroll = popup.Find("AttemptsScrollView")?.GetComponent<ScrollRect>();
+        historySubject = popup.Find("SortingSubjectDropdown")?.GetComponent<TMP_Dropdown>();
+        historyLevel = popup.Find("SortingLevelDropdown")?.GetComponent<TMP_Dropdown>();
+        Button close = popup.Find("CloseBtn")?.GetComponent<Button>();
+        if (historyScroll == null || historyScroll.content == null || historyScroll.viewport == null || historySubject == null ||
+            historyLevel == null || close == null) return;
+
+        historyRowTemplate = historyScroll.transform.Find("Data1")?.gameObject;
+        if (historyRowTemplate == null) return;
+        foreach (Transform child in historyScroll.transform)
+            if (child.name == "Data1" || child.name.StartsWith("Data1 (", StringComparison.Ordinal))
+                child.gameObject.SetActive(false);
+
+        historyScroll.horizontal = false;
+        historyScroll.vertical = true;
+        historyScroll.movementType = ScrollRect.MovementType.Clamped;
+        historySubject.ClearOptions();
+        historySubject.AddOptions(new List<string>(ScoreSubjectFilter.Subjects));
+        historyLevel.ClearOptions();
+        historyLevel.AddOptions(new List<string> { "All Levels", "Level 1", "Level 2", "Level 3", "Level 4", "Level 5" });
+        historySubject.onValueChanged.AddListener(OnHistoryFilterChanged);
+        historyLevel.onValueChanged.AddListener(OnHistoryFilterChanged);
+        historyButton.onClick.AddListener(OpenAttemptHistory);
+        close.onClick.AddListener(CloseAttemptHistory);
+    }
+
+    private void OpenAttemptHistory()
+    {
+        if (string.IsNullOrEmpty(selectedStudentId) || !studentScorePopup.activeInHierarchy) return;
+        historySubject.SetValueWithoutNotify(0);
+        historyLevel.SetValueWithoutNotify(0);
+        historySubject.RefreshShownValue();
+        historyLevel.RefreshShownValue();
+        historyPopup.transform.SetAsLastSibling();
+        historyPopup.SetActive(true);
+        RefreshAttemptHistory(true);
+    }
+
+    private void CloseAttemptHistory()
+    {
+        if (historyPopup == null || !historyPopup.activeSelf) return;
+        historySubject?.Hide();
+        historyLevel?.Hide();
+        historyPopup.SetActive(false);
+    }
+
+    private void OnHistoryFilterChanged(int _) => RefreshAttemptHistory(true);
+
+    private void RefreshAttemptHistory(bool resetScroll)
+    {
+        if (historyPopup == null || !historyPopup.activeInHierarchy || historyRowTemplate == null) return;
+        float position = resetScroll ? 1f : Mathf.Clamp01(historyScroll.verticalNormalizedPosition);
+        foreach (GameObject row in historyRows)
+        {
+            row.SetActive(false);
+            Destroy(row);
+        }
+        historyRows.Clear();
+
+        string subject = historySubject.options[historySubject.value].text;
+        int filterLevel = historyLevel.value;
+        var attempts = cachedScores.Where(document => document.Exists)
+            .Select(document => new { document.Id, Data = document.ToDictionary() })
+            .Select(attempt => new
+            {
+                attempt.Id,
+                attempt.Data,
+                Activity = StudentScoreData.NormalizeActivity(GetText(attempt.Data, "activityName", "Unknown Activity")),
+                Completed = GetDateTime(attempt.Data, "completedAt")
+            })
+            .OrderByDescending(attempt => attempt.Completed)
+            .ThenByDescending(attempt => attempt.Id, StringComparer.Ordinal)
+            .Take(AttemptHistoryLimit);
+        foreach (var attempt in attempts)
+        {
+            if (!ScoreSubjectFilter.Matches(attempt.Activity, subject)) continue;
+            string title = StudentScoreData.DescribeActivity(attempt.Activity, out string level);
+            if (filterLevel != 0 && level != filterLevel.ToString()) continue;
+
+            string duration = StudentScoreData.TryNumber(attempt.Data, "timeUsedSeconds", out double seconds) && seconds >= 0
+                ? FormatDuration(StudentScoreData.ReadSeconds(attempt.Data)) : "—";
+            AddAttemptRow(title, duration);
+        }
+
+        if (historyRows.Count == 0)
+            AddAttemptRow(scoresFailed ? scoreLoadError :
+                scoresLoaded ? "No attempts for this selection." : "Loading attempts...", "", isStatus: true);
+
+        float height = 8f + AttemptRowSpacing * historyRows.Count;
+        historyScroll.content.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical,
+            Mathf.Max(historyScroll.viewport.rect.height, height));
+        Canvas.ForceUpdateCanvases();
+        historyScroll.StopMovement();
+        historyScroll.verticalNormalizedPosition = position;
+    }
+
+    private void AddAttemptRow(string title, string duration, bool isStatus = false)
+    {
+        GameObject row = Instantiate(historyRowTemplate, historyScroll.content);
+        var rect = (RectTransform)row.transform;
+        rect.anchorMin = rect.anchorMax = new Vector2(0.5f, 1f);
+        // The scene's sample row offsets its two cells upward from its own center.
+        float cellOffset = ((RectTransform)rect.GetChild(0)).anchoredPosition.y;
+        rect.anchoredPosition = new Vector2(0f, -cellOffset - 34f - AttemptRowSpacing * historyRows.Count);
+        TMP_Text activityLabel = rect.GetChild(0).GetComponentInChildren<TMP_Text>(true);
+        TMP_Text timeLabel = rect.GetChild(1).GetComponentInChildren<TMP_Text>(true);
+        if (isStatus)
+        {
+            RectTransform labelRect = activityLabel.rectTransform;
+            labelRect.anchorMin = Vector2.zero;
+            labelRect.anchorMax = Vector2.one;
+            labelRect.offsetMin = new Vector2(16f, 6f);
+            labelRect.offsetMax = new Vector2(-16f, -6f);
+            activityLabel.alignment = TextAlignmentOptions.Center;
+            activityLabel.enableAutoSizing = true;
+            activityLabel.fontSizeMin = 12f;
+            activityLabel.fontSizeMax = activityLabel.fontSize;
+        }
+        activityLabel.text = title;
+        timeLabel.text = duration;
+        historyRows.Add(row);
+        row.SetActive(true);
     }
 
     private void EnsureScoreContent()
@@ -320,6 +466,8 @@ public class TeacherScoreManager : MonoBehaviour
         ShowScoreStatus("Loading scores...");
         // Show popup
         studentScorePopup.SetActive(true);
+        CloseAttemptHistory();
+        if (historyRowTemplate != null) historyButton.interactable = true;
         ListenForSelectedStudentScores();
     }
 
@@ -361,6 +509,7 @@ public class TeacherScoreManager : MonoBehaviour
                 scoresLoaded = true;
                 scoresFailed = false;
                 RebuildScoreRows(cachedScores);
+                RefreshAttemptHistory(false);
             });
         scoreListener.ListenerTask.ContinueWithOnMainThread(task =>
         {
@@ -374,6 +523,7 @@ public class TeacherScoreManager : MonoBehaviour
                 ? "Score access denied. Sign in again with your teacher account."
                 : "Unable to connect. Close and reopen to retry.";
             ShowScoreStatus(scoreLoadError);
+            RefreshAttemptHistory(false);
             Debug.LogWarning("Score listener failed: " + task.Exception.GetBaseException().Message);
         });
     }
@@ -381,7 +531,8 @@ public class TeacherScoreManager : MonoBehaviour
     private void SetupSubjectFilter()
     {
         if (studentScorePopup == null) return;
-        subjectDropdown = studentScorePopup.GetComponentInChildren<TMP_Dropdown>(true);
+        subjectDropdown = studentScorePopup.GetComponentsInChildren<TMP_Dropdown>(true)
+            .FirstOrDefault(dropdown => historyPopup == null || !dropdown.transform.IsChildOf(historyPopup.transform));
         if (subjectDropdown == null) subjectDropdown = ScoreSubjectDropdown.Create(studentScorePopup.transform,
             TMP_Settings.defaultFontAsset, subjectArrow);
         subjectDropdown.ClearOptions();
@@ -591,6 +742,8 @@ public class TeacherScoreManager : MonoBehaviour
     // Connect this to your Close / X button
     public void CloseStudentScores()
     {
+        CloseAttemptHistory();
+        if (historyButton != null) historyButton.interactable = false;
         scoreRequestVersion++;
         if (scoreLayoutRefresh != null)
         {

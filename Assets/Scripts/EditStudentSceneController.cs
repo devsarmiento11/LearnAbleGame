@@ -12,7 +12,12 @@ public sealed class EditStudentSceneController : MonoBehaviour
     ColorBlock[] sectionColors;
     StudentInfoSection selected = StudentInfoSection.None;
     bool ready;
-    void Start() { ConfigureUI(); LoadStudent(); }
+    void Start()
+    {
+        ConfigureUI();
+        Select(SceneReturnHistory.Restore(this, StudentInfoSection.None));
+        LoadStudent();
+    }
     public void ConfigureUI()
     {
         edit = StudentSceneUI.Bind(transform, "Buttons/Edit", () => {
@@ -32,6 +37,7 @@ public sealed class EditStudentSceneController : MonoBehaviour
     public void Select(StudentInfoSection section)
     {
         selected = section; edit.interactable = ready && section != StudentInfoSection.None;
+        SceneReturnHistory.Save(this, section);
         for (int i = 0; i < sectionButtons.Length; i++) {
             var colors = sectionColors[i];
             if (i == (int)section) {

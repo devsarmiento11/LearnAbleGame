@@ -545,10 +545,10 @@ MonoBehaviour:
   levelNumber: 4
   lockObject: {fileID: 1749653568}
   buttonsToLock:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 262547479}
+  - {fileID: 605395879}
+  - {fileID: 928067446}
+  - {fileID: 604653887}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -3810,11 +3810,11 @@ MonoBehaviour:
   levelNumber: 5
   lockObject: {fileID: 1771021649}
   buttonsToLock:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1517888987}
+  - {fileID: 1260067447}
+  - {fileID: 329766044}
+  - {fileID: 2146803584}
+  - {fileID: 1297847565}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -4368,8 +4368,8 @@ MonoBehaviour:
   levelNumber: 2
   lockObject: {fileID: 425920279}
   buttonsToLock:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 45253396}
+  - {fileID: 1804005556}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -4809,7 +4809,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1646516359}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: LoadScene
+        m_MethodName: GoBack
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5012,9 +5012,9 @@ MonoBehaviour:
   levelNumber: 3
   lockObject: {fileID: 605108219}
   buttonsToLock:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1906265371}
+  - {fileID: 1338452607}
+  - {fileID: 1200046486}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}

@@ -40,7 +40,7 @@ public class ModulePageManager : MonoBehaviour
             progressBar.interactable = false;
         }
 
-        ShowPage(0);
+        ShowPage(SceneReturnHistory.Restore(this, 0));
     }
 
     // ==========================================
@@ -57,6 +57,7 @@ public class ModulePageManager : MonoBehaviour
             0,
             pages.Length - 1
         );
+        SceneReturnHistory.Save(this, currentPage);
 
         // Hide all pages
         for (int i = 0; i < pages.Length; i++)

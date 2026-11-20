@@ -110,6 +110,7 @@ public sealed class StudentModuleScene : MonoBehaviour
             .FirstOrDefault(d => d.name == "DropdownSorting");
         if (sorting != null)
         {
+            sortMode = SceneReturnHistory.Restore(this, (sort: sortMode, position: 1f)).sort;
             sorting.SetValueWithoutNotify(sortMode);
             sorting.onValueChanged.AddListener(ChangeSorting);
         }
@@ -238,12 +239,21 @@ public sealed class StudentModuleScene : MonoBehaviour
             AddRow(i, "Folder_" + item.Owner + "_" + item.Id, item.Name).onClick.AddListener(() =>
             {
                 if (busy) return;
+                SceneReturnHistory.Save(this, (sortMode, scroll.verticalNormalizedPosition));
                 StudentModuleStore.SelectedFolder = item; StudentModuleStore.SelectedBy = store.UserId;
                 SceneManager.LoadScene("OtherModuleFolderScene");
             });
         }
+        if (!restoredFolderScroll && folders.Count > 0)
+        {
+            Canvas.ForceUpdateCanvases();
+            scroll.verticalNormalizedPosition = SceneReturnHistory.Restore(this, (sort: sortMode, position: 1f)).position;
+            restoredFolderScroll = true;
+        }
         if (folders.Count == 0) Message("No folders have been uploaded yet.\nTap to refresh.");
     }
+
+    bool restoredFolderScroll;
 
     void RenderModules(List<TeacherPdfModule> modules)
     {

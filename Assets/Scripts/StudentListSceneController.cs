@@ -17,6 +17,7 @@ public sealed class StudentListSceneController : MonoBehaviour
     TMP_Dropdown grades;
     Vector2 firstPosition;
     bool loading;
+    float? returnScroll;
     const float RowSpacing = 74;
 
     void Start() { ConfigureUI(); Reload(); }
@@ -40,9 +41,12 @@ public sealed class StudentListSceneController : MonoBehaviour
             if (child.name == "Row" || child.name.StartsWith("Row (", StringComparison.Ordinal)) child.gameObject.SetActive(false);
         grades = StudentSceneUI.At<TMP_Dropdown>(transform, "SortingGradeDropDown");
         grades.ClearOptions(); grades.AddOptions(new List<string> { "All Grades", "Grade 1", "Grade 2", "Grade 3", "Grade 4", "Grade 5", "Grade 6" });
-        grades.SetValueWithoutNotify(0); grades.onValueChanged.AddListener(_ => Render());
+        var location = SceneReturnHistory.Restore(this, (grade: 0, position: 1f));
+        returnScroll = location.position;
+        grades.SetValueWithoutNotify(location.grade); grades.onValueChanged.AddListener(_ => Render());
         StudentSceneUI.Bind(transform, "Buttons/Button", () => {
             if (loading) return;
+            SaveLocation();
             StudentEnrollmentSelection.Clear(); SceneManager.LoadScene("EnrollStudentScene");
         });
     }
@@ -80,6 +84,7 @@ public sealed class StudentListSceneController : MonoBehaviour
             StudentSceneUI.Text(row, "NameOftheStudent", student.FullName.Length == 0 ? student.id : student.FullName);
             StudentSceneUI.Text(row, "CurrentGradeOfStudent", student.grade);
             StudentSceneUI.Bind(row, "Button", () => {
+                SaveLocation();
                 StudentEnrollmentSelection.StudentId = student.id;
                 StudentEnrollmentSelection.Section = StudentInfoSection.None; StudentEnrollmentSelection.Editing = false;
                 SceneManager.LoadScene("EditStudentScene");
@@ -87,7 +92,13 @@ public sealed class StudentListSceneController : MonoBehaviour
         }
         if (rows.Count == 0) { ShowMessage("No students found.", false); return; }
         ResizeContent();
+        if (returnScroll.HasValue)
+        {
+            scroll.verticalNormalizedPosition = returnScroll.Value;
+            returnScroll = null;
+        }
     }
+    void SaveLocation() => SceneReturnHistory.Save(this, (grades.value, scroll.verticalNormalizedPosition));
     void ShowMessage(string text, bool retry)
     {
         ClearRows(); var row = AddRow(0);

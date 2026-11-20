@@ -31,15 +31,21 @@ public class StudentProfileTabManager : MonoBehaviour
     private string selectedSubject = "All Subjects";
     private readonly List<ActivityRecord> recentRecords = new List<ActivityRecord>();
     private string selectedRecentSubject = "All Subjects";
+    private int activeTab;
 
     private void Start()
     {
-        ShowProfile();
+        var location = SceneReturnHistory.Restore(this, (tab: 0, profileFilter: 0, activityFilter: 0));
         PrepareRows();
         subjectDropdown = PrepareSubjectDropdown(profilePanel, subjectDropdown, 105);
         subjectDropdown.onValueChanged.AddListener(OnSubjectChanged);
         recentSubjectDropdown = PrepareSubjectDropdown(recentActivityPanel, recentSubjectDropdown, 136);
         recentSubjectDropdown.onValueChanged.AddListener(OnRecentSubjectChanged);
+        subjectDropdown.value = location.profileFilter;
+        recentSubjectDropdown.value = location.activityFilter;
+        if (location.tab == 1) ShowRecentActivity();
+        else if (location.tab == 2) ShowGrades();
+        else ShowProfile();
         LoadStudentData();
     }
 
@@ -57,6 +63,8 @@ public class StudentProfileTabManager : MonoBehaviour
         profilePanel.SetActive(true);
         recentActivityPanel.SetActive(false);
         gradesPanel.SetActive(false);
+        activeTab = 0;
+        SaveLocation();
     }
 
     public void ShowRecentActivity()
@@ -64,6 +72,8 @@ public class StudentProfileTabManager : MonoBehaviour
         profilePanel.SetActive(false);
         recentActivityPanel.SetActive(true);
         gradesPanel.SetActive(false);
+        activeTab = 1;
+        SaveLocation();
     }
 
     public void ShowGrades()
@@ -71,6 +81,14 @@ public class StudentProfileTabManager : MonoBehaviour
         profilePanel.SetActive(false);
         recentActivityPanel.SetActive(false);
         gradesPanel.SetActive(true);
+        activeTab = 2;
+        SaveLocation();
+    }
+
+    private void SaveLocation()
+    {
+        if (subjectDropdown != null && recentSubjectDropdown != null)
+            SceneReturnHistory.Save(this, (activeTab, subjectDropdown.value, recentSubjectDropdown.value));
     }
 
     private void PrepareRows()
@@ -123,6 +141,7 @@ public class StudentProfileTabManager : MonoBehaviour
     {
         if (index < 0 || index >= ScoreSubjectFilter.Subjects.Length) return;
         selectedSubject = ScoreSubjectFilter.Subjects[index];
+        SaveLocation();
         BuildProfileRows(profileSummaries);
     }
 
@@ -130,6 +149,7 @@ public class StudentProfileTabManager : MonoBehaviour
     {
         if (index < 0 || index >= ScoreSubjectFilter.Subjects.Length) return;
         selectedRecentSubject = ScoreSubjectFilter.Subjects[index];
+        SaveLocation();
         BuildRecentRows(recentRecords);
     }
 

@@ -102,7 +102,7 @@ EditorBuildSettings:
     path: Assets/Settings/Scenes/ScoreScene.unity
     guid: 4246ac24e29d894479e4b857093a302e
   - enabled: 1
-    path: Assets/Settings/Scenes/ModuleActivitiesScene.unity
+    path: Assets/Settings/Scenes/OnGoingScenes/ModuleActivitiesScene.unity
     guid: bb71ef99cf1417a458477944c291cb7b
   - enabled: 1
     path: Assets/Settings/Scenes/EnglishGame/EnglishGame1Level2.unity
@@ -234,7 +234,7 @@ EditorBuildSettings:
     path: Assets/Settings/Scenes/ScienceGame/ScienceGame3Level3.unity
     guid: c2a0ffeb3311795459ea813dcd34d1be
   - enabled: 1
-    path: Assets/Settings/Scenes/StudentsScoreScene.unity
+    path: Assets/Settings/Scenes/OnGoingScenes/StudentsScoreScene.unity
     guid: c2969d73a6cc8c74fbe7a9ecff6b35ac
   - enabled: 1
     path: Assets/Settings/Scenes/EnglishGame/EnglishGame5Level5.unity
@@ -249,7 +249,7 @@ EditorBuildSettings:
     path: Assets/Settings/Scenes/Modules/MathModule.unity
     guid: a8d31abdf4f8b8644826811de2a4fd86
   - enabled: 1
-    path: Assets/Settings/Scenes/UnlocklLevelActivities.unity
+    path: Assets/Settings/Scenes/OnGoingScenes/UnlocklLevelActivities.unity
     guid: 3e018c0ed361fc24a91ee242df120227
   - enabled: 1
     path: Assets/Settings/Scenes/EnglishUnlockFolder/EnglishUnlock.unity
@@ -303,7 +303,7 @@ EditorBuildSettings:
     path: Assets/Settings/Scenes/GradesScene.unity
     guid: 03b64214e40098c488ae2eb2edac7051
   - enabled: 1
-    path: Assets/Settings/Scenes/StudentGradesScene.unity
+    path: Assets/Settings/Scenes/OnGoingScenes/StudentGradesScene.unity
     guid: 1a50f34f677da1f4da98c70f80359599
   - enabled: 1
     path: Assets/Settings/Scenes/InputGradeScene.unity

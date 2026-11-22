@@ -303,7 +303,7 @@ MonoBehaviour:
   videoPopupPanel: {fileID: 281069160}
   videoPlayer: {fileID: 602115911}
   progressBar: {fileID: 586279205}
-  totalTime: 18
+  totalTime: 18.000
   nextSceneName: MathGame5Level1
 --- !u!4 &36815680
 Transform:
@@ -415,7 +415,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3000000001}
+      - m_Target: {fileID: 3000000005}
         m_TargetAssemblyTypeName: LocalizedVideoPopup, Assembly-CSharp
         m_MethodName: OpenVideo
         m_Mode: 1
@@ -424,7 +424,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: MathGame5Level1
+          m_StringArgument: MathGame5Level5
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &39923263
@@ -967,7 +967,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3000000001}
+      - m_Target: {fileID: 3000000003}
         m_TargetAssemblyTypeName: LocalizedVideoPopup, Assembly-CSharp
         m_MethodName: OpenVideo
         m_Mode: 1
@@ -976,7 +976,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: MathGame5Level1
+          m_StringArgument: MathGame5Level3
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &242654120
@@ -1226,7 +1226,7 @@ MonoBehaviour:
   videoPopupPanel: {fileID: 3000000030}
   videoPlayer: {fileID: 3000000041}
   progressBar: {fileID: 3000000037}
-  totalTime: 18
+  totalTime: 18.000
   nextSceneName: MathGame5Level2
 --- !u!4 &341095516
 Transform:
@@ -1277,7 +1277,7 @@ MonoBehaviour:
   videoPopupPanel: {fileID: 3000000165}
   videoPlayer: {fileID: 3000000176}
   progressBar: {fileID: 3000000172}
-  totalTime: 18
+  totalTime: 18.000
   nextSceneName: MathGame5Level5
 --- !u!4 &355161899
 Transform:
@@ -1534,7 +1534,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3000000001}
+      - m_Target: {fileID: 3000000002}
         m_TargetAssemblyTypeName: LocalizedVideoPopup, Assembly-CSharp
         m_MethodName: OpenVideo
         m_Mode: 1
@@ -1543,7 +1543,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: MathGame5Level1
+          m_StringArgument: MathGame5Level2
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &395135791
@@ -2560,7 +2560,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3000000001}
+      - m_Target: {fileID: 3000000004}
         m_TargetAssemblyTypeName: LocalizedVideoPopup, Assembly-CSharp
         m_MethodName: OpenVideo
         m_Mode: 1
@@ -2569,7 +2569,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: MathGame5Level1
+          m_StringArgument: MathGame5Level4
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &658995715
@@ -2644,7 +2644,7 @@ MonoBehaviour:
   videoPopupPanel: {fileID: 3000000120}
   videoPlayer: {fileID: 3000000131}
   progressBar: {fileID: 3000000127}
-  totalTime: 18
+  totalTime: 18.000
   nextSceneName: MathGame5Level4
 --- !u!4 &751375822
 Transform:
@@ -3046,7 +3046,7 @@ MonoBehaviour:
   videoPopupPanel: {fileID: 3000000075}
   videoPlayer: {fileID: 3000000086}
   progressBar: {fileID: 3000000082}
-  totalTime: 18
+  totalTime: 18.000
   nextSceneName: MathGame5Level3
 --- !u!4 &960615073
 Transform:
@@ -3935,7 +3935,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 2ndQuarterScienceGameScene
+          m_StringArgument: 2ndQuarterMathGameScene
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1402964311
@@ -5253,7 +5253,7 @@ MonoBehaviour:
   videoPopupPanel: {fileID: 3000000007}
   videoPlayer: {fileID: 3000000018}
   progressBar: {fileID: 3000000014}
-  totalTime: 18
+  totalTime: 18.000
   nextSceneName: MathGame5Level1
 --- !u!1 &3000000007
 GameObject:
@@ -5727,7 +5727,7 @@ MonoBehaviour:
   videoPopupPanel: {fileID: 3000000052}
   videoPlayer: {fileID: 3000000063}
   progressBar: {fileID: 3000000059}
-  totalTime: 18
+  totalTime: 18.000
   nextSceneName: MathGame5Level2
 --- !u!1 &3000000030
 GameObject:
@@ -6658,7 +6658,7 @@ MonoBehaviour:
   videoPopupPanel: {fileID: 3000000097}
   videoPlayer: {fileID: 3000000108}
   progressBar: {fileID: 3000000104}
-  totalTime: 18
+  totalTime: 18.000
   nextSceneName: MathGame5Level3
 --- !u!1 &3000000075
 GameObject:
@@ -7589,7 +7589,7 @@ MonoBehaviour:
   videoPopupPanel: {fileID: 3000000142}
   videoPlayer: {fileID: 3000000153}
   progressBar: {fileID: 3000000149}
-  totalTime: 18
+  totalTime: 18.000
   nextSceneName: MathGame5Level4
 --- !u!1 &3000000120
 GameObject:
@@ -8520,7 +8520,7 @@ MonoBehaviour:
   videoPopupPanel: {fileID: 3000000187}
   videoPlayer: {fileID: 3000000198}
   progressBar: {fileID: 3000000194}
-  totalTime: 18
+  totalTime: 18.000
   nextSceneName: MathGame5Level5
 --- !u!1 &3000000165
 GameObject:

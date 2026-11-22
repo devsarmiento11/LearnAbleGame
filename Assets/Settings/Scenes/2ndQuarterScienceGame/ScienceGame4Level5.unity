@@ -1236,7 +1236,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GlowOnClick
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   glowColor: {r: 1, g: 1, b: 0.4, a: 1}
-  isCorrect: 1
+  isCorrect: 0
 --- !u!114 &1051019792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2208,7 +2208,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GlowOnClick
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   glowColor: {r: 1, g: 1, b: 0.4, a: 1}
-  isCorrect: 0
+  isCorrect: 1
 --- !u!114 &1456248061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2415,7 +2415,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GlowOnClick
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   glowColor: {r: 1, g: 1, b: 0.4, a: 1}
-  isCorrect: 0
+  isCorrect: 1
 --- !u!114 &1641677156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3099,7 +3099,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GlowOnClick
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   glowColor: {r: 1, g: 1, b: 0.4, a: 1}
-  isCorrect: 1
+  isCorrect: 0
 --- !u!114 &2143433454
 MonoBehaviour:
   m_ObjectHideFlags: 0

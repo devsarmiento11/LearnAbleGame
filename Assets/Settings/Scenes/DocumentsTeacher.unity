@@ -266,6 +266,7 @@ GameObject:
   m_Component:
   - component: {fileID: 104068614}
   - component: {fileID: 104068615}
+  - component: {fileID: 104068616}
   m_Layer: 5
   m_Name: MusicToggle
   m_TagString: Untagged
@@ -341,6 +342,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_IsOn: 1
+--- !u!114 &104068616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104068613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adb26dabdfbf9a1479b509d08a6c5f88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MusicToggle
+  musicToggle: {fileID: 104068615}
 --- !u!1 &202084696
 GameObject:
   m_ObjectHideFlags: 0

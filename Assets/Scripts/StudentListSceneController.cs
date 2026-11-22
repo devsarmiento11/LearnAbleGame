@@ -81,7 +81,11 @@ public sealed class StudentListSceneController : MonoBehaviour
         string filter = grades.options[grades.value].text;
         foreach (var student in students.Where(s => grades.value == 0 || StudentEnrollmentData.NormalizeGrade(s.grade) == filter)) {
             var row = AddRow(rows.Count);
-            StudentSceneUI.Text(row, "NameOftheStudent", student.FullName.Length == 0 ? student.id : student.FullName);
+            string displayName = $"{student.firstName?.Trim()} {student.lastName?.Trim()}".Trim();
+            StudentSceneUI.Text(row, "NameOftheStudent", displayName);
+            var nameLabel = StudentSceneUI.At<TMP_Text>(row, "NameOftheStudent");
+            nameLabel.textWrappingMode = TextWrappingModes.NoWrap;
+            nameLabel.overflowMode = TextOverflowModes.Ellipsis;
             StudentSceneUI.Text(row, "CurrentGradeOfStudent", student.grade);
             StudentSceneUI.Bind(row, "Button", () => {
                 SaveLocation();

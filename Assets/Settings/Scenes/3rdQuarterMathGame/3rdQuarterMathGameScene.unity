@@ -326,7 +326,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: ScienceGame8InstructionScene
+          m_StringArgument: MathGame7InstructionScene
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &165827193
@@ -1434,7 +1434,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: EnglishGame9InstructionScene
+          m_StringArgument: MathGame8InstructionScene
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &890309946
@@ -2598,7 +2598,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: ScienceGame7InstructionScene
+          m_StringArgument: MathGame6InstructionScene
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1507838971
@@ -3119,7 +3119,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: ScienceGame7InstructionScene
+          m_StringArgument: MathGame6InstructionScene
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2138346745

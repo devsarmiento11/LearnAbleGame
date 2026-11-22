@@ -551,11 +551,13 @@ VideoPlayer:
   m_TimeUpdateMode: 2
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
-  m_TargetAudioSources: []
-  m_DirectAudioVolumes: []
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
   m_Url: 
   m_EnabledAudioTracks: 01
-  m_DirectAudioMutes: 
+  m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
   m_PlayOnAwake: 0
   m_SkipOnDrop: 1
@@ -672,7 +674,7 @@ MonoBehaviour:
   videoPopupPanel: {fileID: 3000000123}
   videoPlayer: {fileID: 3000000122}
   progressBar: {fileID: 3000000140}
-  totalTime: 18.000
+  totalTime: 18
   nextSceneName: ScienceGame1Level4
 --- !u!4 &176009289
 Transform:
@@ -1016,8 +1018,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -54.33, y: -41}
-  m_SizeDelta: {x: 108.66, y: 122.5915}
+  m_AnchoredPosition: {x: -62, y: -46.088}
+  m_SizeDelta: {x: 136.3681, y: 154.68}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &305843415
 MonoBehaviour:
@@ -1107,7 +1109,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -6279154268086027915, guid: 59d63ae7fecc0a9448b4d9836f59ff2e, type: 3}
+  m_Sprite: {fileID: -6812909396790712969, guid: 894ed8aff0623e34e9b00f4567827e1b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1161,8 +1163,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 31.4944, y: 49.433716}
-  m_SizeDelta: {x: 107.2782, y: 76.3355}
+  m_AnchoredPosition: {x: 30.977, y: 39.0854}
+  m_SizeDelta: {x: 106.2433, y: 105.311}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &310998428
 MonoBehaviour:
@@ -1252,7 +1254,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 5488867633606455852, guid: 4dfa953b63ccf3a45996587b79010132, type: 3}
+  m_Sprite: {fileID: 6704942573431928661, guid: 78d44584d84b5bb41b4d786620ca4a32, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1382,8 +1384,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 30.24889, y: 51.513702}
-  m_SizeDelta: {x: 62.2444, y: 55.3784}
+  m_AnchoredPosition: {x: 40.3, y: 43.694}
+  m_SizeDelta: {x: 137.0258, y: 87.3889}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &405766733
 MonoBehaviour:
@@ -1405,7 +1407,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -3716275067566593264, guid: b87c7da61f01c8945bbf088e18b2d65f, type: 3}
+  m_Sprite: {fileID: 5488867633606455852, guid: 4dfa953b63ccf3a45996587b79010132, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1680,8 +1682,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3, y: -40}
-  m_SizeDelta: {x: 231.7451, y: 196.1074}
+  m_AnchoredPosition: {x: -74.1, y: -41.709}
+  m_SizeDelta: {x: 99.8053, y: 131.0667}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &454573090
 MonoBehaviour:
@@ -1703,7 +1705,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 5809222337511324073, guid: b87c7da61f01c8945bbf088e18b2d65f, type: 3}
+  m_Sprite: {fileID: 5106570479996364167, guid: 6bfaec2c743642f488039c5a0e46dcfb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1823,7 +1825,7 @@ MonoBehaviour:
   videoPopupPanel: {fileID: 3000000168}
   videoPlayer: {fileID: 3000000167}
   progressBar: {fileID: 3000000185}
-  totalTime: 18.000
+  totalTime: 18
   nextSceneName: ScienceGame1Level5
 --- !u!4 &486631184
 Transform:
@@ -2133,7 +2135,7 @@ MonoBehaviour:
   videoPopupPanel: {fileID: 3000000033}
   videoPlayer: {fileID: 3000000032}
   progressBar: {fileID: 3000000050}
-  totalTime: 18.000
+  totalTime: 18
   nextSceneName: ScienceGame1Level2
 --- !u!4 &689782388
 Transform:
@@ -2347,6 +2349,151 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 795137375}
+  m_CullTransparentMesh: 1
+--- !u!1 &837403432
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 837403433}
+  - component: {fileID: 837403437}
+  - component: {fileID: 837403436}
+  - component: {fileID: 837403435}
+  - component: {fileID: 837403434}
+  m_Layer: 5
+  m_Name: Image (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &837403433
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837403432}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 947282343}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 27.944, y: -75.79516}
+  m_SizeDelta: {x: 94.7647, y: 133.7869}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &837403434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837403432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f7fb6f57e1bbbe4cbfeb3024275056e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIButton
+--- !u!114 &837403435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837403432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 837403436}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3000000003}
+        m_TargetAssemblyTypeName: LocalizedVideoPopup, Assembly-CSharp
+        m_MethodName: OpenVideo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ScienceGame1Level3
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &837403436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837403432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -6416111399725633637, guid: db2c5a6cb3492eb4f9a6d9ee2017c19f, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &837403437
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837403432}
   m_CullTransparentMesh: 1
 --- !u!1 &880811271
 GameObject:
@@ -2690,6 +2837,7 @@ MonoBehaviour:
   buttonsToLock:
   - {fileID: 454573092}
   - {fileID: 405766735}
+  - {fileID: 837403435}
 --- !u!1 &911479974
 GameObject:
   m_ObjectHideFlags: 0
@@ -3026,6 +3174,7 @@ RectTransform:
   m_Children:
   - {fileID: 454573089}
   - {fileID: 405766732}
+  - {fileID: 837403433}
   m_Father: {fileID: 908792086}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -3205,8 +3354,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 50.544, y: -61.714}
-  m_SizeDelta: {x: 101.0889, y: 123.4284}
+  m_AnchoredPosition: {x: 72.095894, y: -77.25709}
+  m_SizeDelta: {x: 144.1927, y: 92.3422}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1016617834
 MonoBehaviour:
@@ -3296,7 +3445,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -4594683102323557944, guid: 1393dfc532de2354392399d1c55bc4d8, type: 3}
+  m_Sprite: {fileID: 2905203726426845712, guid: 4c2caa7751e054d439ac70ccc36250b8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4427,7 +4576,7 @@ MonoBehaviour:
   videoPopupPanel: {fileID: 3000000078}
   videoPlayer: {fileID: 3000000077}
   progressBar: {fileID: 3000000095}
-  totalTime: 18.000
+  totalTime: 18
   nextSceneName: ScienceGame1Level3
 --- !u!4 &1281754767
 Transform:
@@ -4915,8 +5064,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -62, y: -21}
-  m_SizeDelta: {x: 79.7117, y: 131.5569}
+  m_AnchoredPosition: {x: -81.1445, y: -27.209}
+  m_SizeDelta: {x: 118.0007, y: 143.975}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1476781466
 MonoBehaviour:
@@ -5006,7 +5155,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 5106570479996364167, guid: 6bfaec2c743642f488039c5a0e46dcfb, type: 3}
+  m_Sprite: {fileID: -6279154268086027915, guid: 59d63ae7fecc0a9448b4d9836f59ff2e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5700,8 +5849,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 46.08, y: 48.642}
-  m_SizeDelta: {x: 92.16, y: 97.284}
+  m_AnchoredPosition: {x: 16.4, y: 34.5}
+  m_SizeDelta: {x: 107.7031, y: 122.7181}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1701104838
 MonoBehaviour:
@@ -5791,7 +5940,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 6704942573431928661, guid: 78d44584d84b5bb41b4d786620ca4a32, type: 3}
+  m_Sprite: {fileID: 235154174668210090, guid: 762f2ae5fe3447a4a98d20ecd1f88677, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6100,7 +6249,7 @@ MonoBehaviour:
   videoPopupPanel: {fileID: 209859117}
   videoPlayer: {fileID: 151806863}
   progressBar: {fileID: 1917546120}
-  totalTime: 18.000
+  totalTime: 18
   nextSceneName: ScienceGame1Level1
 --- !u!4 &1860637868
 Transform:
@@ -6540,8 +6689,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 24.541, y: -61.714}
-  m_SizeDelta: {x: 93.371, y: 123.4284}
+  m_AnchoredPosition: {x: 24.541, y: -73.15577}
+  m_SizeDelta: {x: 93.371, y: 119.1735}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2046218119
 MonoBehaviour:
@@ -6631,7 +6780,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -6416111399725633637, guid: db2c5a6cb3492eb4f9a6d9ee2017c19f, type: 3}
+  m_Sprite: {fileID: -4594683102323557944, guid: 1393dfc532de2354392399d1c55bc4d8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6794,6 +6943,93 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f7fb6f57e1bbbe4cbfeb3024275056e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIButton
+--- !u!114 &3000000001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860637866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fa6812ebcb741c5bba7e85ad5beeb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedVideoPopup
+  english: {fileID: 1860637867}
+  tagalog: {fileID: 3000000006}
+--- !u!114 &3000000002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 689782386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fa6812ebcb741c5bba7e85ad5beeb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedVideoPopup
+  english: {fileID: 689782387}
+  tagalog: {fileID: 3000000029}
+--- !u!114 &3000000003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1281754765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fa6812ebcb741c5bba7e85ad5beeb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedVideoPopup
+  english: {fileID: 1281754766}
+  tagalog: {fileID: 3000000074}
+--- !u!114 &3000000004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176009287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fa6812ebcb741c5bba7e85ad5beeb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedVideoPopup
+  english: {fileID: 176009288}
+  tagalog: {fileID: 3000000119}
+--- !u!114 &3000000005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486631182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fa6812ebcb741c5bba7e85ad5beeb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizedVideoPopup
+  english: {fileID: 486631183}
+  tagalog: {fileID: 3000000164}
+--- !u!114 &3000000006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860637866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8edeba1ec197c944985bfbc9460d17b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VideoPopupManager
+  videoPopupPanel: {fileID: 3000000010}
+  videoPlayer: {fileID: 3000000009}
+  progressBar: {fileID: 3000000027}
+  totalTime: 18
+  nextSceneName: ScienceGame1Level1
 --- !u!1 &3000000007
 GameObject:
   m_ObjectHideFlags: 0
@@ -6852,11 +7088,13 @@ VideoPlayer:
   m_TimeUpdateMode: 2
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
-  m_TargetAudioSources: []
-  m_DirectAudioVolumes: []
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
   m_Url: 
   m_EnabledAudioTracks: 01
-  m_DirectAudioMutes: 
+  m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
   m_PlayOnAwake: 0
   m_SkipOnDrop: 1
@@ -7249,37 +7487,23 @@ RectTransform:
   m_AnchoredPosition: {x: 2.1489, y: -228.24597}
   m_SizeDelta: {x: 897.18, y: 40.6914}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &3000000006
+--- !u!114 &3000000029
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1860637866}
+  m_GameObject: {fileID: 689782386}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8edeba1ec197c944985bfbc9460d17b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VideoPopupManager
-  videoPopupPanel: {fileID: 3000000010}
-  videoPlayer: {fileID: 3000000009}
-  progressBar: {fileID: 3000000027}
-  totalTime: 18.000
-  nextSceneName: ScienceGame1Level1
---- !u!114 &3000000001
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1860637866}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fa6812ebcb741c5bba7e85ad5beeb86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LocalizedVideoPopup
-  english: {fileID: 1860637867}
-  tagalog: {fileID: 3000000006}
+  videoPopupPanel: {fileID: 3000000055}
+  videoPlayer: {fileID: 3000000054}
+  progressBar: {fileID: 3000000072}
+  totalTime: 18
+  nextSceneName: ScienceGame1Level2
 --- !u!1 &3000000030
 GameObject:
   m_ObjectHideFlags: 0
@@ -7338,11 +7562,13 @@ VideoPlayer:
   m_TimeUpdateMode: 2
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
-  m_TargetAudioSources: []
-  m_DirectAudioVolumes: []
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
   m_Url: 
   m_EnabledAudioTracks: 01
-  m_DirectAudioMutes: 
+  m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
   m_PlayOnAwake: 0
   m_SkipOnDrop: 1
@@ -7793,11 +8019,13 @@ VideoPlayer:
   m_TimeUpdateMode: 2
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
-  m_TargetAudioSources: []
-  m_DirectAudioVolumes: []
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
   m_Url: 
   m_EnabledAudioTracks: 01
-  m_DirectAudioMutes: 
+  m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
   m_PlayOnAwake: 0
   m_SkipOnDrop: 1
@@ -8190,37 +8418,23 @@ RectTransform:
   m_AnchoredPosition: {x: 2.1489, y: -228.24597}
   m_SizeDelta: {x: 897.18, y: 40.6914}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &3000000029
+--- !u!114 &3000000074
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 689782386}
+  m_GameObject: {fileID: 1281754765}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8edeba1ec197c944985bfbc9460d17b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VideoPopupManager
-  videoPopupPanel: {fileID: 3000000055}
-  videoPlayer: {fileID: 3000000054}
-  progressBar: {fileID: 3000000072}
-  totalTime: 18.000
-  nextSceneName: ScienceGame1Level2
---- !u!114 &3000000002
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 689782386}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fa6812ebcb741c5bba7e85ad5beeb86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LocalizedVideoPopup
-  english: {fileID: 689782387}
-  tagalog: {fileID: 3000000029}
+  videoPopupPanel: {fileID: 3000000100}
+  videoPlayer: {fileID: 3000000099}
+  progressBar: {fileID: 3000000117}
+  totalTime: 18
+  nextSceneName: ScienceGame1Level3
 --- !u!1 &3000000075
 GameObject:
   m_ObjectHideFlags: 0
@@ -8279,11 +8493,13 @@ VideoPlayer:
   m_TimeUpdateMode: 2
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
-  m_TargetAudioSources: []
-  m_DirectAudioVolumes: []
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
   m_Url: 
   m_EnabledAudioTracks: 01
-  m_DirectAudioMutes: 
+  m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
   m_PlayOnAwake: 0
   m_SkipOnDrop: 1
@@ -8734,11 +8950,13 @@ VideoPlayer:
   m_TimeUpdateMode: 2
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
-  m_TargetAudioSources: []
-  m_DirectAudioVolumes: []
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
   m_Url: 
   m_EnabledAudioTracks: 01
-  m_DirectAudioMutes: 
+  m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
   m_PlayOnAwake: 0
   m_SkipOnDrop: 1
@@ -9131,37 +9349,23 @@ RectTransform:
   m_AnchoredPosition: {x: 2.1489, y: -228.24597}
   m_SizeDelta: {x: 897.18, y: 40.6914}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &3000000074
+--- !u!114 &3000000119
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1281754765}
+  m_GameObject: {fileID: 176009287}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8edeba1ec197c944985bfbc9460d17b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VideoPopupManager
-  videoPopupPanel: {fileID: 3000000100}
-  videoPlayer: {fileID: 3000000099}
-  progressBar: {fileID: 3000000117}
-  totalTime: 18.000
-  nextSceneName: ScienceGame1Level3
---- !u!114 &3000000003
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1281754765}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fa6812ebcb741c5bba7e85ad5beeb86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LocalizedVideoPopup
-  english: {fileID: 1281754766}
-  tagalog: {fileID: 3000000074}
+  videoPopupPanel: {fileID: 3000000145}
+  videoPlayer: {fileID: 3000000144}
+  progressBar: {fileID: 3000000162}
+  totalTime: 18
+  nextSceneName: ScienceGame1Level4
 --- !u!1 &3000000120
 GameObject:
   m_ObjectHideFlags: 0
@@ -9220,11 +9424,13 @@ VideoPlayer:
   m_TimeUpdateMode: 2
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
-  m_TargetAudioSources: []
-  m_DirectAudioVolumes: []
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
   m_Url: 
   m_EnabledAudioTracks: 01
-  m_DirectAudioMutes: 
+  m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
   m_PlayOnAwake: 0
   m_SkipOnDrop: 1
@@ -9675,11 +9881,13 @@ VideoPlayer:
   m_TimeUpdateMode: 2
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
-  m_TargetAudioSources: []
-  m_DirectAudioVolumes: []
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
   m_Url: 
   m_EnabledAudioTracks: 01
-  m_DirectAudioMutes: 
+  m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
   m_PlayOnAwake: 0
   m_SkipOnDrop: 1
@@ -10072,37 +10280,23 @@ RectTransform:
   m_AnchoredPosition: {x: 2.1489, y: -228.24597}
   m_SizeDelta: {x: 897.18, y: 40.6914}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &3000000119
+--- !u!114 &3000000164
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 176009287}
+  m_GameObject: {fileID: 486631182}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8edeba1ec197c944985bfbc9460d17b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VideoPopupManager
-  videoPopupPanel: {fileID: 3000000145}
-  videoPlayer: {fileID: 3000000144}
-  progressBar: {fileID: 3000000162}
-  totalTime: 18.000
-  nextSceneName: ScienceGame1Level4
---- !u!114 &3000000004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 176009287}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fa6812ebcb741c5bba7e85ad5beeb86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LocalizedVideoPopup
-  english: {fileID: 176009288}
-  tagalog: {fileID: 3000000119}
+  videoPopupPanel: {fileID: 3000000190}
+  videoPlayer: {fileID: 3000000189}
+  progressBar: {fileID: 3000000207}
+  totalTime: 18
+  nextSceneName: ScienceGame1Level5
 --- !u!1 &3000000165
 GameObject:
   m_ObjectHideFlags: 0
@@ -10161,11 +10355,13 @@ VideoPlayer:
   m_TimeUpdateMode: 2
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
-  m_TargetAudioSources: []
-  m_DirectAudioVolumes: []
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
   m_Url: 
   m_EnabledAudioTracks: 01
-  m_DirectAudioMutes: 
+  m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
   m_PlayOnAwake: 0
   m_SkipOnDrop: 1
@@ -10616,11 +10812,13 @@ VideoPlayer:
   m_TimeUpdateMode: 2
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
-  m_TargetAudioSources: []
-  m_DirectAudioVolumes: []
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
   m_Url: 
   m_EnabledAudioTracks: 01
-  m_DirectAudioMutes: 
+  m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
   m_PlayOnAwake: 0
   m_SkipOnDrop: 1
@@ -11013,37 +11211,6 @@ RectTransform:
   m_AnchoredPosition: {x: 2.1489, y: -228.24597}
   m_SizeDelta: {x: 897.18, y: 40.6914}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &3000000164
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 486631182}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8edeba1ec197c944985bfbc9460d17b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::VideoPopupManager
-  videoPopupPanel: {fileID: 3000000190}
-  videoPlayer: {fileID: 3000000189}
-  progressBar: {fileID: 3000000207}
-  totalTime: 18.000
-  nextSceneName: ScienceGame1Level5
---- !u!114 &3000000005
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 486631182}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fa6812ebcb741c5bba7e85ad5beeb86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LocalizedVideoPopup
-  english: {fileID: 486631183}
-  tagalog: {fileID: 3000000164}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

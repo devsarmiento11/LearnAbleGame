@@ -236,6 +236,18 @@ def verify(text):
         assert re.search('nextSceneName: (.*)',managers[en])[1]==re.search('nextSceneName: (.*)',managers[tg])[1]
     calls = re.findall(r'm_Target: \{fileID: (\d+)\}\n        m_TargetAssemblyTypeName: LocalizedVideoPopup, Assembly-CSharp\n        m_MethodName: OpenVideo',text)
     assert calls and all(int(i) in routers for i in calls)
+    # A valid copied reference can still open the wrong level's video.
+    for kind,b in data.values():
+        if 'm_MethodName: OpenVideo' not in b: continue
+        target = int(re.search(r'm_Target: \{fileID: (\d+)\}',b)[1])
+        go = ref(b,'m_GameObject')
+        levels = {int(re.search(r'Level(\d)',name)[1]) for panel,name in names.items()
+                  if re.fullmatch(r'Level\d(?:Panel|Btn)',name) and below(go,panel)}
+        if levels:
+            assert len(levels)==1
+            expected = f'{GAME}Level{next(iter(levels))}'
+            english = managers[ref(routers[target],'english')]
+            assert re.search(r'nextSceneName: (.*)',english)[1]==expected, ('Wrong level button destination',go,expected)
     assert 'm_TargetAssemblyTypeName: VideoPopupManager, Assembly-CSharp' not in text
     # Every local scene reference resolves (asset references are external).
     for t,b in data.values():

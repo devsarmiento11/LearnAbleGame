@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
 using Firebase.Firestore;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GradesSceneManager : MonoBehaviour
 {
@@ -15,6 +17,11 @@ public class GradesSceneManager : MonoBehaviour
     [Header("NEXT SCENE")]
     public string studentGradesSceneName;
 
+    [SerializeField] private TMP_Dropdown nameSortingDropdown;
+    [SerializeField] private TMP_Dropdown gradeSortingDropdown;
+
+    private readonly List<StudentProfile> students = new List<StudentProfile>();
+    private ScrollRect studentScrollView;
     private FirebaseFirestore db;
     private ListenerRegistration studentListener;
 
@@ -25,6 +32,10 @@ public class GradesSceneManager : MonoBehaviour
     private void Start()
     {
         db = FirebaseFirestore.DefaultInstance;
+
+        studentScrollView = content != null ? content.GetComponentInParent<ScrollRect>() : null;
+        nameSortingDropdown?.onValueChanged.AddListener(OnSortingChanged);
+        gradeSortingDropdown?.onValueChanged.AddListener(OnSortingChanged);
 
         ListenForStudents();
     }
@@ -41,8 +52,7 @@ public class GradesSceneManager : MonoBehaviour
             .WhereEqualTo("role", "student")
             .Listen(snapshot =>
             {
-                List<StudentProfile> students =
-                    new List<StudentProfile>();
+                students.Clear();
 
                 foreach (DocumentSnapshot document
                          in snapshot.Documents)
@@ -78,16 +88,8 @@ public class GradesSceneManager : MonoBehaviour
                     );
                 }
 
-                students.Sort(
-                    (a, b) =>
-                        string.Compare(
-                            a.Name,
-                            b.Name,
-                            StringComparison.OrdinalIgnoreCase
-                        )
-                );
-
                 RebuildRows(students);
+                ApplyStudentSorting();
             });
     }
 
@@ -96,6 +98,48 @@ public class GradesSceneManager : MonoBehaviour
     // REBUILD STUDENT LIST
     // ==========================================
 
+    private void OnSortingChanged(int _)
+    {
+        ApplyStudentSorting();
+
+        if (studentScrollView != null)
+        {
+            studentScrollView.StopMovement();
+            LayoutRebuilder.ForceRebuildLayoutImmediate(studentScrollView.content);
+            studentScrollView.verticalNormalizedPosition = 1f;
+        }
+    }
+
+    private void ApplyStudentSorting()
+    {
+        // Grade options 0–5 select one grade. The last option shows all grades.
+        int selectedGrade = gradeSortingDropdown != null ? gradeSortingDropdown.value + 1 : 7;
+        bool descendingNames = nameSortingDropdown != null && nameSortingDropdown.value == 1;
+
+        students.Sort((a, b) =>
+        {
+            int gradeOrder = a.GradeNumber.CompareTo(b.GradeNumber);
+            if (gradeOrder != 0)
+                return gradeOrder;
+
+            int nameOrder = descendingNames
+                ? StringComparer.OrdinalIgnoreCase.Compare(b.Name, a.Name)
+                : StringComparer.OrdinalIgnoreCase.Compare(a.Name, b.Name);
+            return nameOrder != 0 ? nameOrder : StringComparer.Ordinal.Compare(a.Id, b.Id);
+        });
+
+        foreach (StudentProfile student in students)
+        {
+            if (!studentRows.TryGetValue(student.Id, out GameObject row))
+                continue;
+
+            bool visible = selectedGrade > 6 || student.GradeNumber == selectedGrade;
+            row.SetActive(visible);
+            if (visible)
+                row.transform.SetAsLastSibling();
+        }
+    }
+
     private void RebuildRows(
         List<StudentProfile> students)
     {
@@ -103,7 +147,10 @@ public class GradesSceneManager : MonoBehaviour
                  in studentRows.Values)
         {
             if (row != null)
+            {
+                row.SetActive(false);
                 Destroy(row);
+            }
         }
 
         studentRows.Clear();
@@ -241,6 +288,9 @@ public class GradesSceneManager : MonoBehaviour
 
     private void OnDestroy()
     {
+        nameSortingDropdown?.onValueChanged.RemoveListener(OnSortingChanged);
+        gradeSortingDropdown?.onValueChanged.RemoveListener(OnSortingChanged);
+
         if (studentListener != null)
         {
             studentListener.Stop();
@@ -253,6 +303,7 @@ public class GradesSceneManager : MonoBehaviour
         public readonly string Id;
         public readonly string Name;
         public readonly string Grade;
+        public readonly int GradeNumber;
 
         public StudentProfile(
             string id,
@@ -262,6 +313,12 @@ public class GradesSceneManager : MonoBehaviour
             Id = id;
             Name = name;
             Grade = grade;
+            string gradeValue = grade.StartsWith("Grade ", StringComparison.OrdinalIgnoreCase)
+                ? grade.Substring("Grade ".Length)
+                : grade;
+            GradeNumber = int.TryParse(gradeValue, out int number) && number >= 1 && number <= 6
+                ? number
+                : int.MaxValue;
         }
     }
 }

@@ -67,7 +67,7 @@ public class SceneLoader : MonoBehaviour
                 return;
         }
 
-        StartCoroutine(LoadSceneSafely(sceneName));
+        StartCoroutine(LoadSceneSafely(sceneName, forward: true));
     }
 
 
@@ -83,23 +83,32 @@ public class SceneLoader : MonoBehaviour
         SaveCurrentScene();
         if (GameplaySettingsSession.TryOpen())
             return;
-        StartCoroutine(LoadSceneSafely("SettingsScene"));
+        StartCoroutine(LoadSceneSafely("SettingsScene", forward: true));
     }
 
-    public void GoBack(string fallbackScene)
+    public void GoBack(string fallbackScene) => LoadBack(fallbackScene, requireDestination: false);
+
+    public void GoBackTo(string sceneName) => LoadBack(sceneName, requireDestination: true);
+
+    private void LoadBack(string sceneName, bool requireDestination)
     {
         if (isChangingScene)
             return;
 
-        string destination = SceneReturnHistory.BackDestination(fallbackScene);
+        string destination = SceneReturnHistory.BackDestination(sceneName, requireDestination);
         if (!string.IsNullOrWhiteSpace(destination))
             StartCoroutine(LoadSceneSafely(destination));
     }
 
-    private System.Collections.IEnumerator LoadSceneSafely(string sceneName)
+    private System.Collections.IEnumerator LoadSceneSafely(string sceneName, bool forward = false)
     {
         if (LoginSession.IsParent && !ParentSceneAccess.IsAllowed(sceneName))
             sceneName = "MainMenuParent";
+        if (!Application.CanStreamedLevelBeLoaded(sceneName))
+        {
+            Debug.LogError("Unable to load scene: " + sceneName);
+            yield break;
+        }
         isChangingScene = true;
         Time.timeScale = 1f;
 
@@ -110,6 +119,9 @@ public class SceneLoader : MonoBehaviour
             Debug.LogError("Unable to load scene: " + sceneName);
             yield break;
         }
+
+        if (forward)
+            SceneReturnHistory.BeginForward(sceneName);
 
         while (!operation.isDone)
             yield return null;

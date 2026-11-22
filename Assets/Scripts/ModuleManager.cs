@@ -19,7 +19,7 @@ public class ModuleManager : MonoBehaviour
 
     private void Awake()
     {
-        ClosePopups();
+        HidePopups();
     }
 
     public void OpenEnglishPopup() { OpenPopup(englishPopup); }
@@ -31,7 +31,7 @@ public class ModuleManager : MonoBehaviour
         if (popup == null)
             return;
 
-        ClosePopups();
+        HidePopups();
         popup.transform.SetAsLastSibling();
         popup.SetActive(true);
         openPopup = popup;
@@ -54,6 +54,12 @@ public class ModuleManager : MonoBehaviour
 
     public void ClosePopups()
     {
+        HidePopups();
+        SaveLocation();
+    }
+
+    private void HidePopups()
+    {
         if (englishPopup != null) englishPopup.SetActive(false);
         if (sciencePopup != null) sciencePopup.SetActive(false);
         if (mathPopup != null) mathPopup.SetActive(false);
@@ -64,14 +70,11 @@ public class ModuleManager : MonoBehaviour
         }
         blockedButtons.Clear();
         openPopup = null;
-        SaveLocation();
     }
 
     private void OnDisable()
     {
-        var location = GetLocation();
-        ClosePopups();
-        SceneReturnHistory.Save(this, location);
+        HidePopups();
     }
 
     void Start()
